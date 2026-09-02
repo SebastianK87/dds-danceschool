@@ -1,0 +1,3155 @@
+{
+ "stand": "2026-09-02",
+ "school": {
+  "name": "D!'s Dance School",
+  "gruender": "Detlef Soost",
+  "seit": 2002,
+  "adresse": "Holzmarktstraße 66, 3. Etage, 10179 Berlin",
+  "station": "S+U Jannowitzbrücke, zwei Minuten zu Fuß",
+  "whatsapp": "+49 1517 3048373",
+  "whatsapp_link": "https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School.",
+  "telefon": "+49 30 20605924 (Mo bis Fr 10 bis 15 Uhr)",
+  "mail": "info@deesworld.de",
+  "counter": "Counter: Mo bis Fr 16:30 bis 21:30 Uhr, Sa 10 bis 15 Uhr",
+  "google": "4,7 Sterne bei 98 Bewertungen",
+  "classes_pro_woche": 128,
+  "coaches": 51,
+  "styles": 12,
+  "saele": 5,
+  "seite": "https://www.deesworld.de/dance-school/",
+  "shop": "https://www.eversports.de/sp/ds-dance-school",
+  "kursplan": "https://www.deesworld.de/dance-school/#kalender",
+  "schulprojekte": "/dance-school/schulprojekte/"
+ },
+ "preise": {
+  "welcome_pass": {
+   "preis": 29,
+   "text": "2 Classes, 2 Styles, 10 Tage gültig, ohne Bindung. Für alle, die neu sind.",
+   "url": "https://www.eversports.de/sp/ds-dance-school"
+  },
+  "einzelticket": {
+   "preis": 17,
+   "text": "1 Class",
+   "url": "https://www.eversports.de/sp/ds-dance-school"
+  },
+  "5er_karte": {
+   "preis": 79,
+   "text": "5 Check-ins, 3 Monate gültig",
+   "url": "https://www.eversports.de/sp/ds-dance-school"
+  },
+  "10er_karte": {
+   "preis": 149,
+   "text": "10 Check-ins, 6 Monate gültig",
+   "url": "https://www.eversports.de/sp/ds-dance-school"
+  },
+  "basic": {
+   "preis_12_monate": 59,
+   "preis_flex": 69,
+   "text": "6 Check-ins im Monat. 12 Monate Laufzeit oder Flex monatlich kündbar.",
+   "url": "https://www.eversports.de/sp/ds-dance-school"
+  },
+  "unlimited": {
+   "preis_12_monate": 74,
+   "preis_flex": 84,
+   "text": "Unbegrenzt tanzen. 12 Monate Laufzeit oder Flex monatlich kündbar. Beliebteste Wahl.",
+   "url": "https://www.eversports.de/sp/ds-dance-school"
+  },
+  "membership_drin": [
+   "Alle zwölf Styles, jede Class",
+   "Vorab buchen mit Vorrang",
+   "Functional Fitness Area inklusive",
+   "Wasser gratis an der Refill-Station"
+  ],
+  "regeln": [
+   "Buchen bis 6 Stunden vor Kursbeginn über Eversports.",
+   "Kostenlos absagen bis 6 Stunden vor Beginn.",
+   "Alle Preise inkl. MwSt. 12 Monate Laufzeit: Kündigungsfrist 30 Tage zum Laufzeitende."
+  ]
+ },
+ "events": [
+  {
+   "name": "360D!GREES Special Coaching",
+   "wann": "16. bis 18. Oktober 2026",
+   "text": "Drei Tage, sechs Themenfelder, internationale Coaches. Choreo und Technik, Ausstrahlung, Bodycare, Business. Das Wochenende, aus dem das Video oben stammt.",
+   "url": "https://360.deesworld.de/",
+   "ticket": "https://www.eversports.de/org/activity/7d76fad6-6f28-4aa3-960d-439458bc3bae"
+  },
+  {
+   "name": "Family & Friends",
+   "wann": "12. Dezember 2026",
+   "text": "Der Abend, an dem die ganze School auf der Bühne steht. Alle Kurse, eine Show, ein Haus voller Leute.",
+   "url": "https://www.deesworld.de/dance-school/#events",
+   "ticket": ""
+  }
+ ],
+ "schulprojekte": {
+  "satz": "Tanz gehört nicht nur ins Studio. Mit vier Formaten bringen wir Bewegung, Teamgeist und Selbstvertrauen direkt an Berliner Schulen.",
+  "formate": [
+   {
+    "name": "Tanz AG",
+    "text": "Ein D!’s Coach kommt wöchentlich an eure Schule. Eine feste Gruppe, ein Schuljahr, echte Fortschritte."
+   },
+   {
+    "name": "Dance School Day",
+    "text": "Ein ganzer Tag an eurer Schule: Workshops, Bewegung, mentale Stärke, Teamgeist."
+   },
+   {
+    "name": "Wandertag",
+    "text": "Die Klasse kommt zu uns ins Haus und erlebt die School von innen. Tanz, Motivation, gemeinsam was schaffen."
+   },
+   {
+    "name": "Dance School Program",
+    "text": "Das Choreo-Portal für Lehrkräfte: bringt Tanz schnell und einfach ins Klassenzimmer."
+   }
+  ],
+  "url": "/dance-school/schulprojekte/",
+  "mail": "info@deesworld.de"
+ },
+ "faq": [
+  {
+   "frage": "Ich habe noch nie getanzt. Kann ich einfach kommen?",
+   "antwort": "Ja. Alles, was Beginner oder Neubeginner heißt, ist genau dafür gemacht. Du musst nichts können und nichts vorbereiten."
+  },
+  {
+   "frage": "Bis wann kann ich buchen?",
+   "antwort": "Bis sechs Stunden vor Kursbeginn über Eversports. Danach ist der Termin zu."
+  },
+  {
+   "frage": "Ich komme allein. Ist das komisch?",
+   "antwort": "Nein, das ist der Normalfall. Die meisten kommen allein und kennen nach der zweiten Class die halbe Gruppe."
+  },
+  {
+   "frage": "Wie komme ich hin?",
+   "antwort": "Holzmarktstraße 66, 10179 Berlin. Nächste Station: S+U Jannowitzbrücke, zwei Minuten zu Fuß."
+  },
+  {
+   "frage": "Was bringt mir eine Mitgliedschaft?",
+   "antwort": "Du hast Vorrang beim Buchen, alle Styles sind drin und die Fitness Area kannst du frei nutzen."
+  },
+  {
+   "frage": "Kann ich absagen, wenn ich es doch nicht schaffe?",
+   "antwort": "Ja. Bis sechs Stunden vor Beginn kannst du über Eversports absagen. Danach ist der Platz verbraucht."
+  },
+  {
+   "frage": "Was ist der Unterschied zwischen Beginner und Intermediate?",
+   "antwort": "Beginner setzt nichts voraus. Intermediate geht davon aus, dass du eine Choreo in einer Stunde aufnehmen kannst. Dazwischen liegen meist ein paar Monate, es gibt keine Prüfung."
+  },
+  {
+   "frage": "Wie alt sind die Leute im Kurs?",
+   "antwort": "Gemischt. Wer lieber unter Gleichaltrigen tanzt: Dance Ü25 und Pop Ü25 sind eigene Classes dafür."
+  },
+  {
+   "frage": "Was ziehe ich an, muss ich etwas mitbringen?",
+   "antwort": "Bequeme Sachen, in denen du dich bewegen kannst, und saubere Sneaker. Wasser gibt es gratis an der Refill-Station. Bei Pole und Heels steht es genau auf der Kursseite: kurze Hose für Pole, Absatzschuhe für Heels."
+  },
+  {
+   "frage": "Was kostet ein Tanzkurs bei D!’s Dance School?",
+   "antwort": "Einzelticket 17 €, Welcome Pass 29 € für zwei Classes in zehn Tagen, 5er-Karte 79 €, 10er-Karte 149 €. Memberships: Basic 59 € im Monat bei 12 Monaten oder 69 € monatlich kündbar, Unlimited 74 € beziehungsweise 84 €."
+  },
+  {
+   "frage": "Welche Tanzstile gibt es bei D!’s Dance School?",
+   "antwort": "Zwölf Styles: Pole Dance, Commercial, Hip Hop, Heels, Choreography, Contemporary & Jazz, Fitness, Latin & Afro, Aerial Hoop, Kids & Teens, House und K-Pop. 128 Classes pro Woche, alle Level."
+  }
+ ],
+ "stile": [
+  {
+   "slug": "pole",
+   "name": "Pole",
+   "classes": 37,
+   "claim": "Kraft, Technik, Kontrolle.",
+   "fuer": "Alle, die Kraft aufbauen wollen, ohne ins Fitnessstudio zu gehen. Vorkenntnisse brauchst du keine, Level 1 Neubeginner ist genau dafür da.",
+   "anziehen": "Kurze Hose und Top. Deine Haut braucht Kontakt zur Stange, in langer Kleidung rutschst du ab. Creme und Öl am Trainingstag bitte weglassen.",
+   "url": "https://www.deesworld.de/dance-school/kurse/pole-dance/"
+  },
+  {
+   "slug": "commercial",
+   "name": "Commercial",
+   "classes": 17,
+   "claim": "Der Stil aus dem Musikvideo.",
+   "fuer": "Der beste Einstieg, wenn du noch nie getanzt hast. Beginner heißt hier wirklich Beginner. Die Ü25-Classes laufen im selben Stil, nur im eigenen Tempo.",
+   "anziehen": "Bequeme Trainingskleidung und saubere Hallenschuhe.",
+   "url": "https://www.deesworld.de/dance-school/kurse/commercial/"
+  },
+  {
+   "slug": "hip-hop",
+   "name": "Hip Hop",
+   "classes": 16,
+   "claim": "Groove kommt vor Choreografie.",
+   "fuer": "Alle Level. Basics für den Einstieg, Fusion und New Style, wenn du schon Erfahrung mitbringst.",
+   "anziehen": "Trainingskleidung und Sneaker mit sauberer Sohle.",
+   "url": "https://www.deesworld.de/dance-school/kurse/hip-hop/"
+  },
+  {
+   "slug": "heels",
+   "name": "Heels",
+   "classes": 15,
+   "claim": "Haltung, Ausdruck, Sicherheit.",
+   "fuer": "Alle, unabhängig von Erfahrung mit Absätzen. Beginner-Classes bauen den Stand von Grund auf.",
+   "anziehen": "Absatzschuhe mit festem Riemen, fünf bis neun Zentimeter. Beim ersten Mal reichen auch Sneaker. Erst ausprobieren, dann kaufen.",
+   "url": "https://www.deesworld.de/dance-school/kurse/heels/"
+  },
+  {
+   "slug": "choreography",
+   "name": "Choreography",
+   "classes": 13,
+   "claim": "Eine Nummer, von vorn bis hinten.",
+   "fuer": "Alle, die über das Ausprobieren hinaus sind und etwas fertig bekommen wollen.",
+   "anziehen": "Trainingskleidung und Hallenschuhe.",
+   "url": "https://www.deesworld.de/dance-school/kurse/choreography/"
+  },
+  {
+   "slug": "contemporary",
+   "name": "Contemporary & Jazz",
+   "classes": 9,
+   "claim": "Linie, Fluss, Technik.",
+   "fuer": "Alle, die an Technik arbeiten wollen. Auch als Ergänzung, wenn dein Hauptstil woanders liegt.",
+   "anziehen": "Enganliegende Kleidung, barfuß oder Socken.",
+   "url": "https://www.deesworld.de/dance-school/kurse/contemporary-jazz/"
+  },
+  {
+   "slug": "fitness",
+   "name": "Fitness",
+   "classes": 7,
+   "claim": "Das Training, das den Tanz trägt.",
+   "fuer": "Alle, auch ohne Tanzerfahrung. Vormittags und abends im Programm.",
+   "anziehen": "Trainingskleidung, Matte ist da.",
+   "url": "https://www.deesworld.de/dance-school/kurse/fitness/"
+  },
+  {
+   "slug": "latin",
+   "name": "Latin & Afro",
+   "classes": 7,
+   "claim": "Bewegung, die aus der Hüfte kommt.",
+   "fuer": "Alle Level. Die meisten Classes sind Beginner oder Intermediate.",
+   "anziehen": "Bequeme Kleidung und Sneaker.",
+   "url": "https://www.deesworld.de/dance-school/kurse/latin-afro/"
+  },
+  {
+   "slug": "aerial",
+   "name": "Aerial Hoop",
+   "classes": 5,
+   "claim": "Akrobatik im Reifen.",
+   "fuer": "Alle ab Neubeginner. Kraft brauchst du nicht mitzubringen, die baust du hier auf.",
+   "anziehen": "Enganliegende Kleidung, die die Kniekehlen bedeckt. Kein Schmuck.",
+   "url": "https://www.deesworld.de/dance-school/kurse/aerial-hoop/"
+  },
+  {
+   "slug": "kids",
+   "name": "Kids & Teens",
+   "classes": 4,
+   "claim": "Hip Hop ab sechs Jahren.",
+   "fuer": "Kinder ab sechs Jahren und Jugendliche. Vorkenntnisse braucht niemand.",
+   "anziehen": "Bequeme Kleidung und Hallenschuhe. Trinkflasche nicht vergessen.",
+   "url": "https://www.deesworld.de/dance-school/kurse/kids-teens/"
+  },
+  {
+   "slug": "house",
+   "name": "House",
+   "classes": 2,
+   "claim": "Schnelle Füße, lockerer Oberkörper.",
+   "fuer": "Basics für den Einstieg, Beginner/Intermediate für alle, die schon Groove haben.",
+   "anziehen": "Leichte Sneaker, in denen du gleiten kannst.",
+   "url": "https://www.deesworld.de/dance-school/kurse/house/"
+  },
+  {
+   "slug": "kpop",
+   "name": "K-Pop",
+   "classes": 1,
+   "claim": "Choreografie wie im Original.",
+   "fuer": "All Level. Wenn du die Songs kennst, kennst du schon die Hälfte.",
+   "anziehen": "Bequeme Kleidung und Hallenschuhe.",
+   "url": "https://www.deesworld.de/dance-school/kurse/k-pop/"
+  }
+ ],
+ "coaches": [
+  {
+   "name": "Ada",
+   "key": "c-0",
+   "rolle": "Choreography Coach",
+   "motto": "Safe Space. Strong Performance. Honest Growth.",
+   "stile": [
+    "Choreography",
+    "Commercial",
+    "Hip Hop"
+   ],
+   "classes": 5,
+   "tage": [
+    "Di",
+    "Mi",
+    "Fr"
+   ]
+  },
+  {
+   "name": "Aino",
+   "key": "c-1",
+   "rolle": "Head of Pole",
+   "motto": "Power. Flow. Self-Confidence.",
+   "stile": [
+    "Aerial Hoop",
+    "Pole"
+   ],
+   "classes": 11,
+   "tage": [
+    "Di",
+    "Mi",
+    "Do",
+    "Sa"
+   ]
+  },
+  {
+   "name": "Alisa",
+   "key": "c-2",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Contemporary & Jazz"
+   ],
+   "classes": 1,
+   "tage": [
+    "Do"
+   ]
+  },
+  {
+   "name": "Amy",
+   "key": "c-3",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Commercial"
+   ],
+   "classes": 1,
+   "tage": [
+    "Do"
+   ]
+  },
+  {
+   "name": "Carlotta",
+   "key": "c-4",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Pole"
+   ],
+   "classes": 4,
+   "tage": [
+    "Di",
+    "Mi"
+   ]
+  },
+  {
+   "name": "Chantel",
+   "key": "c-5",
+   "rolle": "Heels Coach",
+   "motto": "Feminine Energy & Empowerment",
+   "stile": [
+    "Heels"
+   ],
+   "classes": 2,
+   "tage": [
+    "Mi"
+   ]
+  },
+  {
+   "name": "Daria",
+   "key": "c-6",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Heels"
+   ],
+   "classes": 2,
+   "tage": [
+    "Mo"
+   ]
+  },
+  {
+   "name": "Detlef",
+   "key": "c-7",
+   "rolle": "Detlef Soost bewegt Deutschland.",
+   "motto": "",
+   "stile": [
+    "Commercial"
+   ],
+   "classes": 2,
+   "tage": [
+    "Di",
+    "Do"
+   ]
+  },
+  {
+   "name": "Dioni",
+   "key": "c-8",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Contemporary & Jazz"
+   ],
+   "classes": 1,
+   "tage": [
+    "Mi"
+   ]
+  },
+  {
+   "name": "Dominik",
+   "key": "c-9",
+   "rolle": "Commercial & Hip Hop Coach",
+   "motto": "Dynamic Textures & Advanced Musicality",
+   "stile": [
+    "Choreography"
+   ],
+   "classes": 1,
+   "tage": [
+    "Mo"
+   ]
+  },
+  {
+   "name": "Elisa",
+   "key": "c-10",
+   "rolle": "Hip Hop Coach & Choreographer",
+   "motto": "Performance, Groove & Presence",
+   "stile": [
+    "Choreography",
+    "Hip Hop"
+   ],
+   "classes": 3,
+   "tage": [
+    "Fr",
+    "Sa"
+   ]
+  },
+  {
+   "name": "Emma Kant",
+   "key": "c-11",
+   "rolle": "Hip Hop & Ladystyle Coach",
+   "motto": "Emma bringt Bühnenpower ins Studio, pusht dich mit Energie und schafft einen Safe Space.",
+   "stile": [
+    "Hip Hop"
+   ],
+   "classes": 4,
+   "tage": [
+    "Di",
+    "Do"
+   ]
+  },
+  {
+   "name": "Emma Schorb",
+   "key": "c-12",
+   "rolle": "Choreography Coach",
+   "motto": "Mit Emma lernst du Choreos, fühlst dich wohl und gehst mit einem guten Gefühl nach Hause.",
+   "stile": [
+    "Choreography"
+   ],
+   "classes": 2,
+   "tage": [
+    "Mo",
+    "Fr"
+   ]
+  },
+  {
+   "name": "Felix W.",
+   "key": "c-13",
+   "rolle": "Jazz Coaches",
+   "motto": "Zwei Handschriften. Ein Fundament. Unendliche Facetten.",
+   "stile": [
+    "Contemporary & Jazz"
+   ],
+   "classes": 2,
+   "tage": [
+    "Mi",
+    "Do"
+   ]
+  },
+  {
+   "name": "Gülcan",
+   "key": "c-14",
+   "rolle": "PowerDance Coach",
+   "motto": "Gemeinsam schwitzen. Gemeinsam wachsen. Gemeinsam strahlen.",
+   "stile": [
+    "Fitness"
+   ],
+   "classes": 1,
+   "tage": [
+    "Sa"
+   ]
+  },
+  {
+   "name": "Hannah Castrup",
+   "key": "c-15",
+   "rolle": "Hip Hop Coach",
+   "motto": "Gemeinsam wachsen. Stark auftreten. Echt bleiben.",
+   "stile": [
+    "Hip Hop"
+   ],
+   "classes": 1,
+   "tage": [
+    "Fr"
+   ]
+  },
+  {
+   "name": "Jenny",
+   "key": "c-16",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Hip Hop"
+   ],
+   "classes": 1,
+   "tage": [
+    "Mi"
+   ]
+  },
+  {
+   "name": "Jessica",
+   "key": "c-17",
+   "rolle": "Hip Hop Coach",
+   "motto": "Culture, Community & Confidence",
+   "stile": [
+    "Hip Hop"
+   ],
+   "classes": 2,
+   "tage": [
+    "Mo"
+   ]
+  },
+  {
+   "name": "Joanna",
+   "key": "c-18",
+   "rolle": "Hip Hop Kids Coach",
+   "motto": "Mit Spaß zur Stärke, jedes Kind darf glänzen.",
+   "stile": [
+    "Kids & Teens"
+   ],
+   "classes": 1,
+   "tage": [
+    "Sa"
+   ]
+  },
+  {
+   "name": "Julia",
+   "key": "c-19",
+   "rolle": "Commercial Coach",
+   "motto": "Julia holt aus dir Präsenz, Power und Selbstbewusstsein, ohne dabei den Spaß am Tanzen zu verlieren.",
+   "stile": [
+    "Choreography",
+    "Commercial"
+   ],
+   "classes": 3,
+   "tage": [
+    "Mi",
+    "Do"
+   ]
+  },
+  {
+   "name": "Karo",
+   "key": "c-20",
+   "rolle": "Jazz Coaches",
+   "motto": "Zwei Handschriften. Ein Fundament. Unendliche Facetten.",
+   "stile": [
+    "Contemporary & Jazz"
+   ],
+   "classes": 2,
+   "tage": [
+    "Mo"
+   ]
+  },
+  {
+   "name": "Kate",
+   "key": "c-21",
+   "rolle": "House Dance Coach",
+   "motto": "Kate verbindet solide Basics mit echtem Freiheitsgefühl, du gehst empowered und stolz nach Hause.",
+   "stile": [
+    "House"
+   ],
+   "classes": 2,
+   "tage": [
+    "Sa"
+   ]
+  },
+  {
+   "name": "Laura",
+   "key": "c-22",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Pole"
+   ],
+   "classes": 3,
+   "tage": [
+    "Fr"
+   ]
+  },
+  {
+   "name": "Laura Klein",
+   "key": "c-23",
+   "rolle": "Commercial Coach",
+   "motto": "Power. Presence. Performance.",
+   "stile": [
+    "Choreography",
+    "Commercial"
+   ],
+   "classes": 2,
+   "tage": [
+    "Mo"
+   ]
+  },
+  {
+   "name": "Laura Lareeva",
+   "key": "c-24",
+   "rolle": "Heels Coach",
+   "motto": "Heels ist mehr als Technik, es ist Selbstbewusstsein.",
+   "stile": [
+    "Heels"
+   ],
+   "classes": 2,
+   "tage": [
+    "Di"
+   ]
+  },
+  {
+   "name": "Laura&Romy",
+   "key": "c-25",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Contemporary & Jazz"
+   ],
+   "classes": 1,
+   "tage": [
+    "Di"
+   ]
+  },
+  {
+   "name": "Levin & Sophie",
+   "key": "c-26",
+   "rolle": "Hip Hop Fusion Coaches",
+   "motto": "Flow trifft Präzision, moderne Movement Quality mit Ausdruck und Power.",
+   "stile": [
+    "Hip Hop"
+   ],
+   "classes": 1,
+   "tage": [
+    "Di"
+   ]
+  },
+  {
+   "name": "Lili",
+   "key": "c-27",
+   "rolle": "Commercial Coach",
+   "motto": "Performance, Joy & Confidence",
+   "stile": [
+    "Commercial",
+    "Kids & Teens"
+   ],
+   "classes": 3,
+   "tage": [
+    "Di",
+    "Mi"
+   ]
+  },
+  {
+   "name": "Maria",
+   "key": "c-28",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Commercial"
+   ],
+   "classes": 2,
+   "tage": [
+    "Fr"
+   ]
+  },
+  {
+   "name": "Maxine",
+   "key": "c-29",
+   "rolle": "Dance Athletics Coach",
+   "motto": "Strength, Power & Performance Science",
+   "stile": [
+    "Fitness"
+   ],
+   "classes": 3,
+   "tage": [
+    "Mo",
+    "Mi"
+   ]
+  },
+  {
+   "name": "Mehak",
+   "key": "c-30",
+   "rolle": "Bollywood Fusion Coach",
+   "motto": "Main character energy meets Bollywood fire.",
+   "stile": [
+    "Latin & Afro"
+   ],
+   "classes": 1,
+   "tage": [
+    "Sa"
+   ]
+  },
+  {
+   "name": "Melis",
+   "key": "c-31",
+   "rolle": "K-Pop Coach",
+   "motto": "Energy, Performance & Stage Presence",
+   "stile": [
+    "K-Pop"
+   ],
+   "classes": 1,
+   "tage": [
+    "Sa"
+   ]
+  },
+  {
+   "name": "Michelle (Schelle) Dzida",
+   "key": "c-32",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Fitness",
+    "Heels",
+    "Pole"
+   ],
+   "classes": 5,
+   "tage": [
+    "Mo",
+    "Do"
+   ]
+  },
+  {
+   "name": "Michelle Dischleit",
+   "key": "c-33",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Hip Hop"
+   ],
+   "classes": 3,
+   "tage": [
+    "Di",
+    "Do"
+   ]
+  },
+  {
+   "name": "Moritz",
+   "key": "c-34",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Choreography",
+    "Commercial"
+   ],
+   "classes": 2,
+   "tage": [
+    "Mi"
+   ]
+  },
+  {
+   "name": "Nate",
+   "key": "c-35",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Commercial",
+    "Heels",
+    "Latin & Afro"
+   ],
+   "classes": 8,
+   "tage": [
+    "Mi",
+    "Do",
+    "Fr",
+    "Sa"
+   ]
+  },
+  {
+   "name": "Neha",
+   "key": "c-36",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Heels",
+    "Pole"
+   ],
+   "classes": 2,
+   "tage": [
+    "So"
+   ]
+  },
+  {
+   "name": "Parmida",
+   "key": "c-37",
+   "rolle": "Choreography Coach",
+   "motto": "Show up. Be real. Find your own character in movement.",
+   "stile": [
+    "Choreography"
+   ],
+   "classes": 1,
+   "tage": [
+    "Fr"
+   ]
+  },
+  {
+   "name": "Rafael",
+   "key": "c-38",
+   "rolle": "Latin & Pop Coach",
+   "motto": "Feel the rhythm. Move together. Share the energy.",
+   "stile": [
+    "Commercial",
+    "Latin & Afro"
+   ],
+   "classes": 3,
+   "tage": [
+    "Di",
+    "Do"
+   ]
+  },
+  {
+   "name": "Ricco",
+   "key": "c-39",
+   "rolle": "Afrobeats & Commercial Coach",
+   "motto": "Strong vibes. Real culture. Confident performance.",
+   "stile": [
+    "Commercial",
+    "Latin & Afro"
+   ],
+   "classes": 2,
+   "tage": [
+    "Sa"
+   ]
+  },
+  {
+   "name": "Roman",
+   "key": "c-40",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Commercial"
+   ],
+   "classes": 1,
+   "tage": [
+    "Mo"
+   ]
+  },
+  {
+   "name": "Sara",
+   "key": "c-41",
+   "rolle": "Level up mit Technik, Flow und Selbstvertrauen.",
+   "motto": "Pole Dance Coach, Technique, Flow & Empowerment",
+   "stile": [
+    "Pole"
+   ],
+   "classes": 4,
+   "tage": [
+    "Mo",
+    "Mi"
+   ]
+  },
+  {
+   "name": "Sasha",
+   "key": "c-42",
+   "rolle": "Pole Dance & Heels Coach",
+   "motto": "Kraft trifft Sinnlichkeit, Technik, Ausdruck und individueller Flow in perfekter Balance.",
+   "stile": [
+    "Heels",
+    "Pole"
+   ],
+   "classes": 3,
+   "tage": [
+    "Sa"
+   ]
+  },
+  {
+   "name": "Sofia",
+   "key": "c-43",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Latin & Afro"
+   ],
+   "classes": 1,
+   "tage": [
+    "Fr"
+   ]
+  },
+  {
+   "name": "Sofian",
+   "key": "c-44",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Choreography"
+   ],
+   "classes": 1,
+   "tage": [
+    "Di"
+   ]
+  },
+  {
+   "name": "Sophie Kolter",
+   "key": "c-45",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Contemporary & Jazz",
+    "Pole"
+   ],
+   "classes": 7,
+   "tage": [
+    "Mo",
+    "Di",
+    "Fr"
+   ]
+  },
+  {
+   "name": "Tania",
+   "key": "c-46",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Aerial Hoop"
+   ],
+   "classes": 1,
+   "tage": [
+    "Di"
+   ]
+  },
+  {
+   "name": "Ulie Gross",
+   "key": "c-47",
+   "rolle": "Contemporary Coach & Dance Science Specialist",
+   "motto": "Performance trifft Wissenschaft",
+   "stile": [
+    "Contemporary & Jazz"
+   ],
+   "classes": 1,
+   "tage": [
+    "Fr"
+   ]
+  },
+  {
+   "name": "Wiktoria",
+   "key": "c-48",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Commercial",
+    "Hip Hop"
+   ],
+   "classes": 2,
+   "tage": [
+    "Mo"
+   ]
+  },
+  {
+   "name": "Yves",
+   "key": "c-49",
+   "rolle": "Senior Coach Kids, Teens & Adults",
+   "motto": "Mit der Anmeldung erhältst du unseren Newsletter. Abmeldung jederzeit möglich. Mehr Infos in unserer",
+   "stile": [
+    "Fitness",
+    "Kids & Teens"
+   ],
+   "classes": 4,
+   "tage": [
+    "Mo",
+    "Mi"
+   ]
+  },
+  {
+   "name": "Zandra Zoe",
+   "key": "c-50",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Heels"
+   ],
+   "classes": 1,
+   "tage": [
+    "Fr"
+   ]
+  }
+ ],
+ "plan": [
+  {
+   "id": "15c9134e-5bca-437c-9272-05b8a9acc6d9",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "10:00",
+   "dauer": 60,
+   "titel": "Dance Athletics",
+   "coach": "Maxine",
+   "studio": "Studio 6 - Dark Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "fitness"
+   ],
+   "url": "https://www.eversports.de/org/activity/15c9134e-5bca-437c-9272-05b8a9acc6d9"
+  },
+  {
+   "id": "c0f11e91-1837-40df-ad93-663a95ef4448",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "10:00",
+   "dauer": 60,
+   "titel": "Stretching Open Level",
+   "coach": "Michelle (Schelle) Dzida",
+   "studio": "Studio 5 - Bright Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "fitness"
+   ],
+   "url": "https://www.eversports.de/org/activity/c0f11e91-1837-40df-ad93-663a95ef4448"
+  },
+  {
+   "id": "fdd6029f-1b04-4955-b8c4-46649687331e",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Pole Level 1 (Neubeginner)",
+   "coach": "Michelle (Schelle) Dzida",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/fdd6029f-1b04-4955-b8c4-46649687331e"
+  },
+  {
+   "id": "91239bb7-ab11-4c00-aefc-991b9fe38ecc",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "12:00",
+   "dauer": 60,
+   "titel": "Pole Choreo Level 1 (Neubeginner)",
+   "coach": "Michelle (Schelle) Dzida",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/91239bb7-ab11-4c00-aefc-991b9fe38ecc"
+  },
+  {
+   "id": "143cb959-1480-4405-b35d-f9d485bd82d6",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "16:30",
+   "dauer": 60,
+   "titel": "Pole Dance Level 2",
+   "coach": "Sophie Kolter",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Level 2",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/143cb959-1480-4405-b35d-f9d485bd82d6"
+  },
+  {
+   "id": "d22dd62a-a807-4a56-8174-26b7365b5f66",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "Commercial Beginner",
+   "coach": "Laura Klein",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/d22dd62a-a807-4a56-8174-26b7365b5f66"
+  },
+  {
+   "id": "ae26dd77-2f96-48a7-945c-705e7f850615",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "HipHop Intermediate",
+   "coach": "Wiktoria",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/ae26dd77-2f96-48a7-945c-705e7f850615"
+  },
+  {
+   "id": "653d6d91-7674-4a01-ba01-0492a9f71532",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "HipHop Basics",
+   "coach": "Jessica",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/653d6d91-7674-4a01-ba01-0492a9f71532"
+  },
+  {
+   "id": "820e7fcc-af0f-4990-869c-413c0b8ccf9d",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "17:30",
+   "dauer": 60,
+   "titel": "Pole Dance Level 1",
+   "coach": "Sophie Kolter",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Level 1",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/820e7fcc-af0f-4990-869c-413c0b8ccf9d"
+  },
+  {
+   "id": "57df7221-7c3f-43fc-9984-826f1dbd7cdd",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "Choreography Beginner/Intermediate",
+   "coach": "Emma Schorb",
+   "studio": "Studio 2 - White Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/57df7221-7c3f-43fc-9984-826f1dbd7cdd"
+  },
+  {
+   "id": "0d662b97-c428-4968-ae6f-5f7b481ac3ce",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "Choreography Intermediate",
+   "coach": "Laura Klein",
+   "studio": "Studio 1 - Large Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/0d662b97-c428-4968-ae6f-5f7b481ac3ce"
+  },
+  {
+   "id": "2f0259ac-2139-48e4-b1c1-7d48cd40e86d",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "18:00",
+   "dauer": 90,
+   "titel": "Commercial Intermediate",
+   "coach": "Wiktoria",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/2f0259ac-2139-48e4-b1c1-7d48cd40e86d"
+  },
+  {
+   "id": "6d09471e-3df6-45c8-b1c8-6e1abe5647f9",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "HipHop Beginner/Intermediate",
+   "coach": "Jessica",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/6d09471e-3df6-45c8-b1c8-6e1abe5647f9"
+  },
+  {
+   "id": "f8e2218a-7c8e-4caa-a291-15ac625acb7d",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "18:30",
+   "dauer": 60,
+   "titel": "Pole Dance Flow Level 2 (Beginner)",
+   "coach": "Sara",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/f8e2218a-7c8e-4caa-a291-15ac625acb7d"
+  },
+  {
+   "id": "f4aafec0-b87e-4ff5-bef3-7b8a5048d314",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Tanz dich fit All Level",
+   "coach": "Yves",
+   "studio": "Studio 3 - Grey Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "fitness"
+   ],
+   "url": "https://www.eversports.de/org/activity/f4aafec0-b87e-4ff5-bef3-7b8a5048d314"
+  },
+  {
+   "id": "c75eed90-0a3a-4805-93c7-1704019e39ae",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Contemporary Fusion Beginner",
+   "coach": "Karo",
+   "studio": "Studio 2 - White Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "contemporary"
+   ],
+   "url": "https://www.eversports.de/org/activity/c75eed90-0a3a-4805-93c7-1704019e39ae"
+  },
+  {
+   "id": "6a5166ed-6452-4bc8-bdb6-e87bc7c14ea8",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "High Heels Beginner",
+   "coach": "Daria",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/6a5166ed-6452-4bc8-bdb6-e87bc7c14ea8"
+  },
+  {
+   "id": "3d6d1d4e-3bdf-49d5-beb0-15cfcedb6822",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "19:30",
+   "dauer": 60,
+   "titel": "Pole Dance Level 3 (Beginner/Intermediate)",
+   "coach": "Sara",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/3d6d1d4e-3bdf-49d5-beb0-15cfcedb6822"
+  },
+  {
+   "id": "aaffeb0c-efdd-43b6-ae0a-c1c61712adb3",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "19:30",
+   "dauer": 90,
+   "titel": "Commercial Beginner/Intermediate",
+   "coach": "Roman",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/aaffeb0c-efdd-43b6-ae0a-c1c61712adb3"
+  },
+  {
+   "id": "2aec4cd3-e7bd-480b-8f8d-98ba8e7cc5ca",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "Choreography Intermediate/Advanced",
+   "coach": "Dominik",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Intermediate / Advanced",
+   "stufen": "mf",
+   "kids": false,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/2aec4cd3-e7bd-480b-8f8d-98ba8e7cc5ca"
+  },
+  {
+   "id": "c234e7c2-5985-434d-9eee-361e37b3a162",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "Contemporary Fusion Intermediate",
+   "coach": "Karo",
+   "studio": "Studio 2 - White Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "contemporary"
+   ],
+   "url": "https://www.eversports.de/org/activity/c234e7c2-5985-434d-9eee-361e37b3a162"
+  },
+  {
+   "id": "92d33152-f022-4b9b-b762-bf8df4e4d44b",
+   "tag": "Mo",
+   "datum": "2026-08-31",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "High Heels Intermediate/Advanced",
+   "coach": "Daria",
+   "studio": "Studio 1 - Large Space",
+   "level": "Intermediate / Advanced",
+   "stufen": "mf",
+   "kids": false,
+   "stile": [
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/92d33152-f022-4b9b-b762-bf8df4e4d44b"
+  },
+  {
+   "id": "b2d893b0-52f7-4865-b6e8-d5a3d8ff7bf7",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "10:00",
+   "dauer": 60,
+   "titel": "Pole Level 1 (Neubeginner)",
+   "coach": "Aino",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/b2d893b0-52f7-4865-b6e8-d5a3d8ff7bf7"
+  },
+  {
+   "id": "5a1fb506-f5ac-4189-a935-ad5cd2a9e567",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "11:00",
+   "dauer": 90,
+   "titel": "Jazz Technique All Level/Intermediate",
+   "coach": "Laura&Romy",
+   "studio": "Studio 1 - Large Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "contemporary"
+   ],
+   "url": "https://www.eversports.de/org/activity/5a1fb506-f5ac-4189-a935-ad5cd2a9e567"
+  },
+  {
+   "id": "9bc2567e-bb64-44a6-b4b6-015da2421229",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Pole Dance L2 Beginner",
+   "coach": "Aino",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/9bc2567e-bb64-44a6-b4b6-015da2421229"
+  },
+  {
+   "id": "5fc3e7b7-2ffb-411a-8118-e1ee9bcdf58f",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Aerial Hoop Level 3 (Beginner/Intermediate)",
+   "coach": "Tania",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "aerial"
+   ],
+   "url": "https://www.eversports.de/org/activity/5fc3e7b7-2ffb-411a-8118-e1ee9bcdf58f"
+  },
+  {
+   "id": "2b3f98c7-5e24-46b2-accb-39ecd1b377fb",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "HipHop Teens",
+   "coach": "Lili",
+   "studio": "Studio 2 - White Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": true,
+   "stile": [
+    "kids"
+   ],
+   "url": "https://www.eversports.de/org/activity/2b3f98c7-5e24-46b2-accb-39ecd1b377fb"
+  },
+  {
+   "id": "e68fe71c-6473-4a5c-9609-440dc48f92bb",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "Dance Ü25",
+   "coach": "Detlef",
+   "studio": "Studio 1 - Large Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/e68fe71c-6473-4a5c-9609-440dc48f92bb"
+  },
+  {
+   "id": "1b49080d-0b1a-4ec8-a545-495313d1f7a7",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "17:00",
+   "dauer": 90,
+   "titel": "High Heels Beginner",
+   "coach": "Laura Lareeva",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/1b49080d-0b1a-4ec8-a545-495313d1f7a7"
+  },
+  {
+   "id": "c8a35f00-e3f0-4218-85c2-e031d118f2e7",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "Pole Dance Level 2 (Beginner)",
+   "coach": "Carlotta",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/c8a35f00-e3f0-4218-85c2-e031d118f2e7"
+  },
+  {
+   "id": "72549cfa-09f7-4a57-9177-e98d4bf142ad",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "17:30",
+   "dauer": 90,
+   "titel": "Choreography Beginner/Intermediate",
+   "coach": "Sofian",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/72549cfa-09f7-4a57-9177-e98d4bf142ad"
+  },
+  {
+   "id": "f7d8ecc3-998f-42c0-9993-b884ed396e44",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "Commercial Beginner",
+   "coach": "Lili",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/f7d8ecc3-998f-42c0-9993-b884ed396e44"
+  },
+  {
+   "id": "a3b9882b-72d2-4d0e-b300-9b04d4304300",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "Move Latin",
+   "coach": "Rafael",
+   "studio": "Studio 2 - White Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "latin"
+   ],
+   "url": "https://www.eversports.de/org/activity/a3b9882b-72d2-4d0e-b300-9b04d4304300"
+  },
+  {
+   "id": "f4a64ee1-bdf7-459b-995a-bc7723ee0651",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "Pole Dance Level 3 (Beginner/Intermediate)",
+   "coach": "Carlotta",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/f4a64ee1-bdf7-459b-995a-bc7723ee0651"
+  },
+  {
+   "id": "0b473e0d-86b4-4e50-bfe2-26b9420f20d2",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "18:30",
+   "dauer": 90,
+   "titel": "High Heels Intermediate",
+   "coach": "Laura Lareeva",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/0b473e0d-86b4-4e50-bfe2-26b9420f20d2"
+  },
+  {
+   "id": "0a357ee9-447a-4086-bfcb-33eadf8fa63c",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Pop Ü25",
+   "coach": "Rafael",
+   "studio": "Studio 2 - White Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/0a357ee9-447a-4086-bfcb-33eadf8fa63c"
+  },
+  {
+   "id": "2f141fb8-7a5f-4f92-a4d5-92d51f2e2903",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "HipHop Intermediate",
+   "coach": "Emma Kant",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/2f141fb8-7a5f-4f92-a4d5-92d51f2e2903"
+  },
+  {
+   "id": "8a8cc825-d741-46db-8ed9-0381ff25d5d8",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Choreography Beginner",
+   "coach": "Ada",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/8a8cc825-d741-46db-8ed9-0381ff25d5d8"
+  },
+  {
+   "id": "f9cb2d26-bc4b-460d-95da-609036723384",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Pole Dance Level 3",
+   "coach": "Sophie Kolter",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Level 3",
+   "stufen": "f",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/f9cb2d26-bc4b-460d-95da-609036723384"
+  },
+  {
+   "id": "a0b0313d-810c-485c-a3fd-ed627cf1d068",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "20:00",
+   "dauer": 60,
+   "titel": "HipHop Beginner",
+   "coach": "Michelle Dischleit",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/a0b0313d-810c-485c-a3fd-ed627cf1d068"
+  },
+  {
+   "id": "88f3a07f-cf27-4c40-9591-61eddc05186f",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "Choreography Intermediate",
+   "coach": "Ada",
+   "studio": "Studio 2 - White Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/88f3a07f-cf27-4c40-9591-61eddc05186f"
+  },
+  {
+   "id": "3dc1eaf9-e2ea-4ef5-9ada-7f5596821506",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "HipHop Fusion Intermediate",
+   "coach": "Levin & Sophie",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/3dc1eaf9-e2ea-4ef5-9ada-7f5596821506"
+  },
+  {
+   "id": "5e9324fd-0c74-4928-9765-1d922c03f548",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "HipHop Lady Style Beginner/Intermediate",
+   "coach": "Emma Kant",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/5e9324fd-0c74-4928-9765-1d922c03f548"
+  },
+  {
+   "id": "8fed95c9-9d52-4196-b18b-a23cd8384dc0",
+   "tag": "Di",
+   "datum": "2026-09-01",
+   "zeit": "20:00",
+   "dauer": 60,
+   "titel": "Pole Dance Contemporary All Level",
+   "coach": "Sophie Kolter",
+   "studio": "Studio 4 - Pole Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "pole",
+    "contemporary"
+   ],
+   "url": "https://www.eversports.de/org/activity/8fed95c9-9d52-4196-b18b-a23cd8384dc0"
+  },
+  {
+   "id": "ad0432aa-c08c-450e-b3a8-5bea05a990a3",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "10:00",
+   "dauer": 60,
+   "titel": "Pole Dance Level 2 (Beginner)",
+   "coach": "Aino",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/ad0432aa-c08c-450e-b3a8-5bea05a990a3"
+  },
+  {
+   "id": "32237081-f267-443e-8763-e463478eb8b3",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "10:30",
+   "dauer": 60,
+   "titel": "Commercial Beginner/Intermediate",
+   "coach": "Nate",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/32237081-f267-443e-8763-e463478eb8b3"
+  },
+  {
+   "id": "cc8c69d8-afeb-473e-a6e1-c1ce9628c5a8",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "11:00",
+   "dauer": 90,
+   "titel": "Contemporary Fusion Intermediate",
+   "coach": "Dioni",
+   "studio": "Studio 1 - Large Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "contemporary"
+   ],
+   "url": "https://www.eversports.de/org/activity/cc8c69d8-afeb-473e-a6e1-c1ce9628c5a8"
+  },
+  {
+   "id": "e2b8065d-9651-48ab-abf9-3cb08f61801f",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Pole Dance Level 3 (Beginner/Intermediate)",
+   "coach": "Aino",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/e2b8065d-9651-48ab-abf9-3cb08f61801f"
+  },
+  {
+   "id": "10e0d02c-1fa8-40d1-85e3-ba9c41059583",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "11:30",
+   "dauer": 60,
+   "titel": "High Heels Beginner/Intermediate",
+   "coach": "Nate",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/10e0d02c-1fa8-40d1-85e3-ba9c41059583"
+  },
+  {
+   "id": "e89739dc-1cd3-4371-97d4-5b2700ba1707",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "12:00",
+   "dauer": 60,
+   "titel": "Pole Level 1 (Neubeginner)",
+   "coach": "Aino",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/e89739dc-1cd3-4371-97d4-5b2700ba1707"
+  },
+  {
+   "id": "e17f6195-8205-4cd1-8dbc-f3fd6ab77d1e",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "Hip Hop Kids",
+   "coach": "Yves",
+   "studio": "Studio 3 - Grey Space",
+   "level": "All Level",
+   "stufen": "a",
+   "kids": true,
+   "stile": [
+    "kids"
+   ],
+   "url": "https://www.eversports.de/org/activity/e17f6195-8205-4cd1-8dbc-f3fd6ab77d1e"
+  },
+  {
+   "id": "295704af-7c3c-49a9-9d7f-a5e192bfc29d",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "HipHop Beginner",
+   "coach": "Ada",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/295704af-7c3c-49a9-9d7f-a5e192bfc29d"
+  },
+  {
+   "id": "9a8c94b8-e6e7-4182-a381-4bca67316869",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "Pole Dance Spinning Level 2 (Beginner)",
+   "coach": "Carlotta",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/9a8c94b8-e6e7-4182-a381-4bca67316869"
+  },
+  {
+   "id": "44d4a330-58d6-4456-b5c4-8bbc8272fda6",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "17:30",
+   "dauer": 90,
+   "titel": "Jazz Fusion Intermediate",
+   "coach": "Felix W.",
+   "studio": "Studio 2 - White Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "contemporary"
+   ],
+   "url": "https://www.eversports.de/org/activity/44d4a330-58d6-4456-b5c4-8bbc8272fda6"
+  },
+  {
+   "id": "01eb0652-d1b5-408f-8819-70963aec836a",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "17:30",
+   "dauer": 60,
+   "titel": "Choreography Beginner",
+   "coach": "Moritz",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/01eb0652-d1b5-408f-8819-70963aec836a"
+  },
+  {
+   "id": "3c3629b5-250f-42f3-98eb-404d72d81ffe",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "Commercial Beginner",
+   "coach": "Ada",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/3c3629b5-250f-42f3-98eb-404d72d81ffe"
+  },
+  {
+   "id": "f8a05736-eb6d-41fd-ab0d-b8364ff69e50",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "Hip Hop Juniors",
+   "coach": "Yves",
+   "studio": "Studio 3 - Grey Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": true,
+   "stile": [
+    "kids"
+   ],
+   "url": "https://www.eversports.de/org/activity/f8a05736-eb6d-41fd-ab0d-b8364ff69e50"
+  },
+  {
+   "id": "dc29027b-7109-44e9-9f79-e349553ab687",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "Pole Dance Spinning Level 3 (Beginner/Intermediate)",
+   "coach": "Carlotta",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/dc29027b-7109-44e9-9f79-e349553ab687"
+  },
+  {
+   "id": "135c0e00-2043-4ac1-b4b9-fc5fd8e7b7c7",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "18:30",
+   "dauer": 90,
+   "titel": "Commercial Intermediate/Advanced",
+   "coach": "Moritz",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Intermediate / Advanced",
+   "stufen": "mf",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/135c0e00-2043-4ac1-b4b9-fc5fd8e7b7c7"
+  },
+  {
+   "id": "8a9fad60-6b69-4fcc-a6ce-06adc11af823",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Choreography Intermediate",
+   "coach": "Julia",
+   "studio": "Studio 1 - Large Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/8a9fad60-6b69-4fcc-a6ce-06adc11af823"
+  },
+  {
+   "id": "ba3e0af9-26e5-4f95-a23b-d49b70807c2d",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Tanz dich fit",
+   "coach": "Yves",
+   "studio": "Studio 2 - White Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "fitness"
+   ],
+   "url": "https://www.eversports.de/org/activity/ba3e0af9-26e5-4f95-a23b-d49b70807c2d"
+  },
+  {
+   "id": "565c5843-e4b8-4320-805d-a045de51af13",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Pole Dance Level 2 Beginner",
+   "coach": "Sara",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/565c5843-e4b8-4320-805d-a045de51af13"
+  },
+  {
+   "id": "4ed1559a-ed46-4a59-9b88-0472d32fc080",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Dance Athletics",
+   "coach": "Maxine",
+   "studio": "Studio 6 - Dark Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "fitness"
+   ],
+   "url": "https://www.eversports.de/org/activity/4ed1559a-ed46-4a59-9b88-0472d32fc080"
+  },
+  {
+   "id": "2ec95094-32b7-4a34-9fef-b3c8de10454c",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Female Style Beginner",
+   "coach": "Chantel",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/2ec95094-32b7-4a34-9fef-b3c8de10454c"
+  },
+  {
+   "id": "2c55b25e-396b-4ba2-bf1c-09cea4612cb0",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "20:00",
+   "dauer": 60,
+   "titel": "Dance Athletics - Strength",
+   "coach": "Maxine",
+   "studio": "Studio 6 - Dark Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "fitness"
+   ],
+   "url": "https://www.eversports.de/org/activity/2c55b25e-396b-4ba2-bf1c-09cea4612cb0"
+  },
+  {
+   "id": "f42c6989-ee4d-4a42-877f-2b5152c17857",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "20:00",
+   "dauer": 60,
+   "titel": "Pole Level 1 (Neubeginner)",
+   "coach": "Sara",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/f42c6989-ee4d-4a42-877f-2b5152c17857"
+  },
+  {
+   "id": "5960c0e6-9d42-4170-b1d7-f0e15611dc43",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "Choreography Advanced",
+   "coach": "Julia",
+   "studio": "Studio 2 - White Space",
+   "level": "Advanced",
+   "stufen": "f",
+   "kids": false,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/5960c0e6-9d42-4170-b1d7-f0e15611dc43"
+  },
+  {
+   "id": "e78bf430-f36e-45f5-b945-c38e0529d1b7",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "HipHop Intermediate",
+   "coach": "Jenny",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/e78bf430-f36e-45f5-b945-c38e0529d1b7"
+  },
+  {
+   "id": "a33813c0-5c1f-4b2b-86ba-785c06652f2b",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "Commercial Beginner/Intermediate",
+   "coach": "Lili",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/a33813c0-5c1f-4b2b-86ba-785c06652f2b"
+  },
+  {
+   "id": "1b9f090b-b6e1-4cd1-a32b-f808e5a49700",
+   "tag": "Mi",
+   "datum": "2026-09-02",
+   "zeit": "20:00",
+   "dauer": 60,
+   "titel": "Heels Style Beginner/Intermediate",
+   "coach": "Chantel",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/1b9f090b-b6e1-4cd1-a32b-f808e5a49700"
+  },
+  {
+   "id": "c580fb67-1b4b-4406-94c2-4df2edae1afa",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "10:00",
+   "dauer": 60,
+   "titel": "Aerial Hoop Neubeginner",
+   "coach": "Aino",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "aerial"
+   ],
+   "url": "https://www.eversports.de/org/activity/c580fb67-1b4b-4406-94c2-4df2edae1afa"
+  },
+  {
+   "id": "b61d770f-8ff7-45e3-be70-a767f036febb",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Aerial Hoop Beginner",
+   "coach": "Aino",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "aerial"
+   ],
+   "url": "https://www.eversports.de/org/activity/b61d770f-8ff7-45e3-be70-a767f036febb"
+  },
+  {
+   "id": "c7d9af88-030f-4ca9-95b9-b8ebbe49343c",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Pole Open Training",
+   "coach": "",
+   "studio": "Studio 4 - Pole Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/c7d9af88-030f-4ca9-95b9-b8ebbe49343c"
+  },
+  {
+   "id": "c372b8ab-db09-4c47-b4a2-b54d5978729d",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "Commercial Beginner/Intermediate",
+   "coach": "Amy",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/c372b8ab-db09-4c47-b4a2-b54d5978729d"
+  },
+  {
+   "id": "ac0e84ee-7abf-490b-bd54-587e60067c4d",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "17:15",
+   "dauer": 60,
+   "titel": "Pole Dance Level 2 (Beginner)",
+   "coach": "Aino",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/ac0e84ee-7abf-490b-bd54-587e60067c4d"
+  },
+  {
+   "id": "b2e1aad3-2c74-4752-bb35-5a4d70e0e127",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "17:30",
+   "dauer": 60,
+   "titel": "HipHop Beginner",
+   "coach": "Emma Kant",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/b2e1aad3-2c74-4752-bb35-5a4d70e0e127"
+  },
+  {
+   "id": "e90ae635-e4e7-4c94-9a5b-23058a6fb1b0",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "17:30",
+   "dauer": 60,
+   "titel": "Dance Ü25",
+   "coach": "Detlef",
+   "studio": "Studio 2 - White Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/e90ae635-e4e7-4c94-9a5b-23058a6fb1b0"
+  },
+  {
+   "id": "3679a671-ad6f-4034-8f83-2fc8e08d602c",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "Jazz Styles Beginner",
+   "coach": "Alisa",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "contemporary"
+   ],
+   "url": "https://www.eversports.de/org/activity/3679a671-ad6f-4034-8f83-2fc8e08d602c"
+  },
+  {
+   "id": "e13675f3-f94b-4aa1-899f-a3a8c4ed3483",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "18:15",
+   "dauer": 60,
+   "titel": "Pole Dance Level 3 (Beginner/Intermediate)",
+   "coach": "Aino",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/e13675f3-f94b-4aa1-899f-a3a8c4ed3483"
+  },
+  {
+   "id": "480f4a77-426c-4db0-bcc4-840dc07eff11",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "18:30",
+   "dauer": 60,
+   "titel": "Move Latin",
+   "coach": "Rafael",
+   "studio": "Studio 1 - Large Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "latin"
+   ],
+   "url": "https://www.eversports.de/org/activity/480f4a77-426c-4db0-bcc4-840dc07eff11"
+  },
+  {
+   "id": "12de72aa-dd1b-44bd-95a9-a0957b61f2a8",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "18:30",
+   "dauer": 90,
+   "titel": "Commercial Intermediate/Advanced",
+   "coach": "Julia",
+   "studio": "Studio 2 - White Space",
+   "level": "Intermediate / Advanced",
+   "stufen": "mf",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/12de72aa-dd1b-44bd-95a9-a0957b61f2a8"
+  },
+  {
+   "id": "f39ddafa-b8e5-4cf9-89eb-7da44a3feec3",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "HipHop Basics",
+   "coach": "Michelle Dischleit",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/f39ddafa-b8e5-4cf9-89eb-7da44a3feec3"
+  },
+  {
+   "id": "d7564258-c42a-499f-922f-d5c94263d38d",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "19:15",
+   "dauer": 60,
+   "titel": "Pole Dance Flying Heels Level 3",
+   "coach": "Michelle (Schelle) Dzida",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Level 3",
+   "stufen": "f",
+   "kids": false,
+   "stile": [
+    "pole",
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/d7564258-c42a-499f-922f-d5c94263d38d"
+  },
+  {
+   "id": "40b2ae1a-a680-4f74-9748-254a8df61553",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "19:30",
+   "dauer": 60,
+   "titel": "High Heels Beginner/Intermediate",
+   "coach": "Nate",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/40b2ae1a-a680-4f74-9748-254a8df61553"
+  },
+  {
+   "id": "4ec182ad-6bf7-443b-8b45-da11f75866d7",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "Jazz Styles Intermediate",
+   "coach": "Felix W.",
+   "studio": "Studio 2 - White Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "contemporary"
+   ],
+   "url": "https://www.eversports.de/org/activity/4ec182ad-6bf7-443b-8b45-da11f75866d7"
+  },
+  {
+   "id": "678f2d03-049d-4e1a-ab6f-1897215a5baa",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "HipHop Beginner/Intermediate",
+   "coach": "Michelle Dischleit",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/678f2d03-049d-4e1a-ab6f-1897215a5baa"
+  },
+  {
+   "id": "b1763884-5847-4c00-afe2-f90064082d94",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "HipHop Lady Style Beginner/Intermediate",
+   "coach": "Emma Kant",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/b1763884-5847-4c00-afe2-f90064082d94"
+  },
+  {
+   "id": "cb6c75c8-33b9-484c-8d2b-54f57d8dca68",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "20:15",
+   "dauer": 60,
+   "titel": "Pole & Heels Open Level",
+   "coach": "Michelle (Schelle) Dzida",
+   "studio": "Studio 4 - Pole Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "pole",
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/cb6c75c8-33b9-484c-8d2b-54f57d8dca68"
+  },
+  {
+   "id": "510d2ea3-22c7-4a8d-bcc4-7d5c0c173b0f",
+   "tag": "Do",
+   "datum": "2026-09-03",
+   "zeit": "20:30",
+   "dauer": 60,
+   "titel": "Commercial Beginner/Intermediate",
+   "coach": "Nate",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/510d2ea3-22c7-4a8d-bcc4-7d5c0c173b0f"
+  },
+  {
+   "id": "d4c5ce84-49c0-4d88-809f-3ce4981cf994",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "10:00",
+   "dauer": 60,
+   "titel": "Pole Dance Level 1",
+   "coach": "Sophie Kolter",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Level 1",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/d4c5ce84-49c0-4d88-809f-3ce4981cf994"
+  },
+  {
+   "id": "0df30c04-9b24-458b-95b3-122a196bf6ce",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "10:30",
+   "dauer": 90,
+   "titel": "Jazz Technique Intermediate",
+   "coach": "Ulie Gross",
+   "studio": "Studio 1 - Large Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "contemporary"
+   ],
+   "url": "https://www.eversports.de/org/activity/0df30c04-9b24-458b-95b3-122a196bf6ce"
+  },
+  {
+   "id": "6f7de39d-5495-4747-8a46-e3a213afa9d5",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Pole Dance Level 2 (Beginner)",
+   "coach": "Sophie Kolter",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/6f7de39d-5495-4747-8a46-e3a213afa9d5"
+  },
+  {
+   "id": "38efc710-e700-4e12-98c1-c712cb617fa9",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "12:00",
+   "dauer": 60,
+   "titel": "Pole Dance Level 1 Neubeginner",
+   "coach": "Sophie Kolter",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/38efc710-e700-4e12-98c1-c712cb617fa9"
+  },
+  {
+   "id": "f46e8aad-170e-478a-970b-034af449e390",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "Choreography Beginner",
+   "coach": "Emma Schorb",
+   "studio": "Studio 2 - White Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/f46e8aad-170e-478a-970b-034af449e390"
+  },
+  {
+   "id": "464419f9-7cb7-48e0-bb0d-fd6051ff5561",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "HipHop Fusion Beginner/Intermediate",
+   "coach": "Hannah Castrup",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/464419f9-7cb7-48e0-bb0d-fd6051ff5561"
+  },
+  {
+   "id": "310b0026-bc43-4a9b-88b4-215b8e507aec",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "Commercial Beginner",
+   "coach": "Maria",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/310b0026-bc43-4a9b-88b4-215b8e507aec"
+  },
+  {
+   "id": "16a61889-b115-499b-ba42-d2957c39f858",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "High Heels Intermediate",
+   "coach": "Nate",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/16a61889-b115-499b-ba42-d2957c39f858"
+  },
+  {
+   "id": "9e5d0d09-c861-4f9a-91cb-560953de79dd",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "First Tricks Upside Down",
+   "coach": "Laura",
+   "studio": "Studio 4 - Pole Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/9e5d0d09-c861-4f9a-91cb-560953de79dd"
+  },
+  {
+   "id": "d7cc7211-3871-4aba-b32c-14f8f43d1e57",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "HipHop New Style Beginner/Intermediate",
+   "coach": "Elisa",
+   "studio": "Studio 2 - White Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/d7cc7211-3871-4aba-b32c-14f8f43d1e57"
+  },
+  {
+   "id": "66fecdb0-b11e-4175-8bd4-6175a4aa5728",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "18:00",
+   "dauer": 90,
+   "titel": "Commercial Intermediate",
+   "coach": "Maria",
+   "studio": "Studio 1 - Large Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/66fecdb0-b11e-4175-8bd4-6175a4aa5728"
+  },
+  {
+   "id": "ce544832-059d-477a-842b-d99ce66c3f31",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "Latin Twerk Intermediate",
+   "coach": "Nate",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "latin"
+   ],
+   "url": "https://www.eversports.de/org/activity/ce544832-059d-477a-842b-d99ce66c3f31"
+  },
+  {
+   "id": "977626f6-b746-484b-851e-c43266b9df78",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "Pole Level 1 (Neubeginner)",
+   "coach": "Laura",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/977626f6-b746-484b-851e-c43266b9df78"
+  },
+  {
+   "id": "32c77044-41f9-406c-872d-eedd8b4dc338",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Pole Dance Level 2 (Beginner)",
+   "coach": "Laura",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/32c77044-41f9-406c-872d-eedd8b4dc338"
+  },
+  {
+   "id": "47ef68de-f360-43da-ab9f-b8b85783706e",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Choreography Beginner",
+   "coach": "Ada",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/47ef68de-f360-43da-ab9f-b8b85783706e"
+  },
+  {
+   "id": "187455ec-abf1-45e2-a96f-5ca68dd31e05",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "19:00",
+   "dauer": 90,
+   "titel": "Reggaeton Beginner/Intermediate",
+   "coach": "Sofia",
+   "studio": "Studio 2 - White Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "latin"
+   ],
+   "url": "https://www.eversports.de/org/activity/187455ec-abf1-45e2-a96f-5ca68dd31e05"
+  },
+  {
+   "id": "d6e50291-d8b5-4426-8661-325ee45b0bc6",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "High Heels Beginner",
+   "coach": "Zandra Zoe",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/d6e50291-d8b5-4426-8661-325ee45b0bc6"
+  },
+  {
+   "id": "7dbfd31a-15c0-46f0-af35-0c0c4a5ab823",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "19:30",
+   "dauer": 90,
+   "titel": "Choreography Intermediate",
+   "coach": "Parmida",
+   "studio": "Studio 1 - Large Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/7dbfd31a-15c0-46f0-af35-0c0c4a5ab823"
+  },
+  {
+   "id": "afd07ca8-5949-4fec-ad29-e3d08c486d48",
+   "tag": "Fr",
+   "datum": "2026-09-04",
+   "zeit": "20:00",
+   "dauer": 60,
+   "titel": "Pole Open Training",
+   "coach": "",
+   "studio": "Studio 4 - Pole Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/afd07ca8-5949-4fec-ad29-e3d08c486d48"
+  },
+  {
+   "id": "eedabb14-d9cc-4238-96e8-931bd5b87828",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Pole Level 1 (Neubeginner)",
+   "coach": "Sasha",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/eedabb14-d9cc-4238-96e8-931bd5b87828"
+  },
+  {
+   "id": "93c167f4-0e09-4f38-84ed-70f224c71cdf",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Flavour Power Dance",
+   "coach": "Gülcan",
+   "studio": "Studio 3 - Grey Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "fitness"
+   ],
+   "url": "https://www.eversports.de/org/activity/93c167f4-0e09-4f38-84ed-70f224c71cdf"
+  },
+  {
+   "id": "ebc46340-d19b-4762-beb0-a5f0bfb01944",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Hip Hop Kids 6 - 10 Jahre",
+   "coach": "Joanna",
+   "studio": "Studio 2 - White Space",
+   "level": "All Level",
+   "stufen": "a",
+   "kids": true,
+   "stile": [
+    "kids"
+   ],
+   "url": "https://www.eversports.de/org/activity/ebc46340-d19b-4762-beb0-a5f0bfb01944"
+  },
+  {
+   "id": "20d79604-dbd0-455e-9399-0c553341ff29",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "High Heels Beginner/Intermediate",
+   "coach": "Nate",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/20d79604-dbd0-455e-9399-0c553341ff29"
+  },
+  {
+   "id": "d175525e-ae86-47c1-93ce-57f2abb28442",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "11:30",
+   "dauer": 90,
+   "titel": "K-Pop All Level",
+   "coach": "Melis",
+   "studio": "Studio 5 - Bright Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "kpop"
+   ],
+   "url": "https://www.eversports.de/org/activity/d175525e-ae86-47c1-93ce-57f2abb28442"
+  },
+  {
+   "id": "a4b18b77-f55b-4b8c-8819-a8997ed7ae1a",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "12:00",
+   "dauer": 60,
+   "titel": "Pole Dance Spinning Level 2",
+   "coach": "Sasha",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Level 2",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/a4b18b77-f55b-4b8c-8819-a8997ed7ae1a"
+  },
+  {
+   "id": "dada3934-d742-4238-8007-7343d6fa7cdd",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "12:00",
+   "dauer": 60,
+   "titel": "Latin Twerk Intermediate",
+   "coach": "Nate",
+   "studio": "Studio 1 - Large Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "latin"
+   ],
+   "url": "https://www.eversports.de/org/activity/dada3934-d742-4238-8007-7343d6fa7cdd"
+  },
+  {
+   "id": "9808a270-b5b5-4198-b810-0917ee853b4b",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "12:00",
+   "dauer": 60,
+   "titel": "Bollywood All Level",
+   "coach": "Mehak",
+   "studio": "Studio 3 - Grey Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "latin"
+   ],
+   "url": "https://www.eversports.de/org/activity/9808a270-b5b5-4198-b810-0917ee853b4b"
+  },
+  {
+   "id": "120c5d43-221f-4251-b3dd-085e1b00ff0d",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "12:00",
+   "dauer": 60,
+   "titel": "House Basics Beginner",
+   "coach": "Kate",
+   "studio": "Studio 2 - White Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "house"
+   ],
+   "url": "https://www.eversports.de/org/activity/120c5d43-221f-4251-b3dd-085e1b00ff0d"
+  },
+  {
+   "id": "56a2052f-4cd5-45e1-9472-26b665044d5c",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "13:00",
+   "dauer": 90,
+   "titel": "Pole & Heels Open Level",
+   "coach": "Sasha",
+   "studio": "Studio 4 - Pole Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "pole",
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/56a2052f-4cd5-45e1-9472-26b665044d5c"
+  },
+  {
+   "id": "0d39cc1d-e0ae-47c7-a583-ef2a986ce1cc",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "13:00",
+   "dauer": 60,
+   "titel": "House Beginner/Intermediate",
+   "coach": "Kate",
+   "studio": "Studio 2 - White Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "stile": [
+    "house"
+   ],
+   "url": "https://www.eversports.de/org/activity/0d39cc1d-e0ae-47c7-a583-ef2a986ce1cc"
+  },
+  {
+   "id": "fb5d71c7-0885-4bc8-a000-c2a1be326dcd",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "13:00",
+   "dauer": 60,
+   "titel": "HipHop Beginner",
+   "coach": "Elisa",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/fb5d71c7-0885-4bc8-a000-c2a1be326dcd"
+  },
+  {
+   "id": "934c976a-0ad1-4393-bb1b-48c114e75176",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "13:00",
+   "dauer": 60,
+   "titel": "Afro Beats Beginner",
+   "coach": "Ricco",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "latin"
+   ],
+   "url": "https://www.eversports.de/org/activity/934c976a-0ad1-4393-bb1b-48c114e75176"
+  },
+  {
+   "id": "4cf0abf6-f4cb-420d-b43c-c6fbd15768ac",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "13:30",
+   "dauer": 60,
+   "titel": "Aerial Hoop Neubeginner",
+   "coach": "Aino",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "aerial"
+   ],
+   "url": "https://www.eversports.de/org/activity/4cf0abf6-f4cb-420d-b43c-c6fbd15768ac"
+  },
+  {
+   "id": "47b2c78c-4048-47c2-8e1c-9727c69401ac",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "14:00",
+   "dauer": 60,
+   "titel": "Choreography Intermediate",
+   "coach": "Elisa",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/47b2c78c-4048-47c2-8e1c-9727c69401ac"
+  },
+  {
+   "id": "377ff9f1-c30d-4fca-8b69-f7df8e78818d",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "14:00",
+   "dauer": 60,
+   "titel": "Commercial Beginner",
+   "coach": "Ricco",
+   "studio": "Studio 2 - White Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/377ff9f1-c30d-4fca-8b69-f7df8e78818d"
+  },
+  {
+   "id": "4ef0b77a-6361-4b5f-8146-0c828613261f",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "14:30",
+   "dauer": 60,
+   "titel": "Aerial Hoop Beginner",
+   "coach": "Aino",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "aerial"
+   ],
+   "url": "https://www.eversports.de/org/activity/4ef0b77a-6361-4b5f-8146-0c828613261f"
+  },
+  {
+   "id": "0a3cb666-2f88-466c-b941-4d736bc6e536",
+   "tag": "Sa",
+   "datum": "2026-09-05",
+   "zeit": "14:30",
+   "dauer": 60,
+   "titel": "Pole Open Training",
+   "coach": "",
+   "studio": "Studio 4 - Pole Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/0a3cb666-2f88-466c-b941-4d736bc6e536"
+  },
+  {
+   "id": "9e9333b5-3124-4689-9fa0-616c3005e122",
+   "tag": "So",
+   "datum": "2026-09-06",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Pole Level 1",
+   "coach": "Neha",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Level 1",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/9e9333b5-3124-4689-9fa0-616c3005e122"
+  },
+  {
+   "id": "03e3ca0d-26a3-4d38-8386-d5a4b4d2e420",
+   "tag": "So",
+   "datum": "2026-09-06",
+   "zeit": "12:00",
+   "dauer": 60,
+   "titel": "Pole & Heels Level 1",
+   "coach": "Neha",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Level 1",
+   "stufen": "a",
+   "kids": false,
+   "stile": [
+    "pole",
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/03e3ca0d-26a3-4d38-8386-d5a4b4d2e420"
+  }
+ ]
+}
