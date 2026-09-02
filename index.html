@@ -8692,10 +8692,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
         var frei = null, fb = t.querySelector('.termin__frei'); if(fb){ var m = fb.textContent.match(/(\d+)/); if(/ausgebucht/.test(fb.textContent)) frei = 0; else if(m) frei = parseInt(m[1], 10); }
         var dauer = parseInt(((t.querySelector('.termin__zeit small') || {}).textContent || '60'), 10) || 60;
         var meta = t.querySelector('.termin__meta'), spans = meta ? [].slice.call(meta.querySelectorAll('span')) : [];
-        var coachEl = meta ? (meta.querySelector('[data-coach]') || meta.querySelector('.coach-text')) : null;
-        var studio = ''; spans.forEach(function(sp){ if(!sp.classList.contains('stufe') && !sp.classList.contains('termin__frei') && !sp.closest('.termin__frei') && !sp.hasAttribute('data-coach') && /studio|zone|space/i.test(sp.textContent)) studio = sp.textContent.trim(); });
+        var coach = '', studio = '';
+        spans.forEach(function(sp){
+          if(sp.classList.contains('stufe') || sp.classList.contains('termin__frei') || sp.closest('.termin__frei')) return;
+          var tx = sp.textContent.trim(); if(!tx) return;
+          if(/studio|zone|space|saal/i.test(tx)) { if(!studio) studio = tx; } else if(!coach) coach = tx;
+        });
         classes.push({id: t.dataset.id, tag: gruppe.dataset.tag, datum: gruppe.dataset.datum, zeit: t.dataset.zeit, dauer: dauer,
-          titel: (t.querySelector('.termin__name') || {}).textContent.trim(), coach: coachEl ? coachEl.textContent.trim() : '',
+          titel: ((t.querySelector('.termin__name') || {}).textContent || '').replace(/\u00a0/g, ' ').trim(), coach: coach,
           studio: studio, level: ((t.querySelector('.stufe') || {}).textContent || '').trim(), frei: frei,
           url: (t.querySelector('a.buchen') || {}).href || ('https://www.eversports.de/org/activity/' + t.dataset.id)});
       });
