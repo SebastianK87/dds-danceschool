@@ -8015,6 +8015,12 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       })
       .catch(function(){
         tipp.remove();
+        if(/claude\.ai|claudeusercontent|anthropic/.test(location.hostname)){
+          var m = nachricht('d', 'In dieser Vorschau bin ich stumm, weil sie keine Verbindung nach draussen erlaubt. Live kannst du mich hier testen:');
+          var a = el('a', 'knopf knopf--rand', 'Live-Vorschau öffnen'); a.href = 'https://sebastiank87.github.io/dds-danceschool/'; a.target = '_blank'; a.rel = 'noopener';
+          var box = el('div', 'frag__aktion'); box.appendChild(a); lauf.appendChild(box); lauf.scrollTop = lauf.scrollHeight;
+          return;
+        }
         nachricht('d', 'Ich bin gerade nicht erreichbar. Schreib uns bei WhatsApp, da antwortet ein Mensch.');
         aktion({typ:'whatsapp'});
       })
