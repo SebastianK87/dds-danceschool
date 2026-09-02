@@ -25,7 +25,7 @@
   "welcome_pass": {
    "preis": 29,
    "text": "2 Classes, 2 Styles, 10 Tage gültig, ohne Bindung. Für alle, die neu sind.",
-   "url": "https://www.eversports.de/sp/ds-dance-school"
+   "url": "https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654"
   },
   "einzelticket": {
    "preis": 17,
@@ -40,19 +40,21 @@
   "10er_karte": {
    "preis": 149,
    "text": "10 Check-ins, 6 Monate gültig",
-   "url": "https://www.eversports.de/sp/ds-dance-school"
+   "url": "https://www.eversports.de/o/ds-dance-school/c6fb85d3-8304-4bb5-a6af-0ec471218532"
   },
   "basic": {
    "preis_12_monate": 59,
    "preis_flex": 69,
    "text": "6 Check-ins im Monat. 12 Monate Laufzeit oder Flex monatlich kündbar.",
-   "url": "https://www.eversports.de/sp/ds-dance-school"
+   "url_12_monate": "https://www.eversports.de/mt/ds-dance-school/57077",
+   "url_flex": "https://www.eversports.de/mt/ds-dance-school/57080"
   },
   "unlimited": {
    "preis_12_monate": 74,
    "preis_flex": 84,
    "text": "Unbegrenzt tanzen. 12 Monate Laufzeit oder Flex monatlich kündbar. Beliebteste Wahl.",
-   "url": "https://www.eversports.de/sp/ds-dance-school"
+   "url_12_monate": "https://www.eversports.de/mt/ds-dance-school/57081",
+   "url_flex": "https://www.eversports.de/mt/ds-dance-school/57082"
   },
   "membership_drin": [
    "Alle zwölf Styles, jede Class",
