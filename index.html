@@ -911,6 +911,12 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 }
 @media (prefers-reduced-motion:reduce){.coach[open]{animation:none}}
 
+/* ---------- Aktionspreise ---------- */
+.plan__alt{font-size:.42em;opacity:.5;text-decoration:line-through;margin-right:8px;
+  vertical-align:.45em;letter-spacing:0}
+.plan__aktion{display:block;font:600 13px/1.4 var(--grot);color:var(--gold);margin:-6px 0 6px}
+.welcome__gut{display:block;font-size:13.5px;line-height:1.45;margin:6px 0 2px;opacity:.85;text-wrap:pretty}
+
 /* ---------- Frag D! ---------- */
 .frag-knopf{position:fixed;right:22px;bottom:88px;z-index:30;display:inline-flex;align-items:center;
   gap:10px;padding:8px 18px 8px 8px;border-radius:999px;background:var(--pink);color:var(--ink);
@@ -1327,6 +1333,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     </div>
     <div class="welcome__preis">
       <b>29 &euro;</b><span>2 Classes &middot; 10 Tage Zeit &middot; statt 34 &euro; f&uuml;r zwei Einzeltickets</span>
+      <span class="welcome__gut">Und wenn du bleibst: Die 29 &euro; werden voll auf deinen ersten Membership-Monat angerechnet.</span>
       <a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
       <ol class="schritte3">
         <li><b>1</b> Pass bei Eversports kaufen, unter &bdquo;Passes&ldquo;, dauert zwei Minuten</li>
@@ -1344,8 +1351,9 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
   <div class="plaene" id="memberships"><div class="plan">
     
     <b>Basic</b>
-    <span class="plan__preis"><span class="je-jahr">59</span><span
-      class="je-flex" hidden>69</span><small>&euro; / Monat</small></span>
+    <span class="plan__preis"><s class="plan__alt je-jahr">59</s><s class="plan__alt je-flex" hidden>69</s><span class="je-jahr">49</span><span
+      class="je-flex" hidden>59</span><small>&euro; / Monat</small></span>
+    <span class="plan__aktion je-jahr">Aktionspreis f&uuml;r die ersten 3 Monate, danach 59 &euro;</span><span class="plan__aktion je-flex" hidden>Aktionspreis im ersten Monat, danach 69 &euro;</span>
     <span class="plan__merk">6 Check-ins im Monat</span>
     <span class="plan__wer">F&uuml;r ein- bis zweimal die Woche.</span>
     <span class="plan__spar je-jahr">Du sparst 120 &euro; im Jahr</span>
@@ -1360,8 +1368,9 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
   </div><div class="plan plan--top">
     <span class="plan__tag">Beliebteste Wahl</span>
     <b>Unlimited</b>
-    <span class="plan__preis"><span class="je-jahr">74</span><span
-      class="je-flex" hidden>84</span><small>&euro; / Monat</small></span>
+    <span class="plan__preis"><s class="plan__alt je-jahr">74</s><s class="plan__alt je-flex" hidden>84</s><span class="je-jahr">64</span><span
+      class="je-flex" hidden>74</span><small>&euro; / Monat</small></span>
+    <span class="plan__aktion je-jahr">Aktionspreis f&uuml;r die ersten 3 Monate, danach 74 &euro;</span><span class="plan__aktion je-flex" hidden>Aktionspreis im ersten Monat, danach 84 &euro;</span>
     <span class="plan__merk">Unbegrenzt tanzen</span>
     <span class="plan__wer">Jeden Tag. Jede Class. Jeder Style.</span>
     <span class="plan__spar je-jahr">Du sparst 120 &euro; im Jahr</span>

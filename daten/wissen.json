@@ -24,7 +24,7 @@
  "preise": {
   "welcome_pass": {
    "preis": 29,
-   "text": "2 Classes, 2 Styles, 10 Tage gültig, ohne Bindung. Für alle, die neu sind.",
+   "text": "2 Classes, 2 Styles, 10 Tage gültig, ohne Bindung. Für alle, die neu sind. Wer danach eine Membership abschließt, bekommt die 29 Euro voll auf den ersten Monat angerechnet.",
    "url": "https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654"
   },
   "einzelticket": {
@@ -42,6 +42,7 @@
    "text": "10 Check-ins, 6 Monate gültig",
    "url": "https://www.eversports.de/o/ds-dance-school/c6fb85d3-8304-4bb5-a6af-0ec471218532"
   },
+  "aktion": "Aktionspreise bis auf Weiteres: Basic 12 Monate 49 Euro in den ersten 3 Monaten (danach 59), Basic Flex 59 Euro im ersten Monat (danach 69), Unlimited 12 Monate 64 Euro in den ersten 3 Monaten (danach 74), Unlimited Flex 74 Euro im ersten Monat (danach 84).",
   "basic": {
    "preis_12_monate": 59,
    "preis_flex": 69,
