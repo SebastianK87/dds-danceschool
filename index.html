@@ -911,6 +911,82 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 }
 @media (prefers-reduced-motion:reduce){.coach[open]{animation:none}}
 
+/* ---------- Welcome-Pass-Planer ---------- */
+.planer{grid-column:1/-1;position:relative;z-index:1;margin-top:var(--s2);padding-top:var(--s2);
+  border-top:1px solid var(--linie-d)}
+.planer__start{gap:12px}
+.planer__start svg{width:16px;height:16px}
+.planer__start[aria-expanded="true"]{display:none}
+.planer__unter{margin:10px 0 0;font-size:13.5px;color:var(--auf-ink-leis)}
+.planer__start[aria-expanded="true"]+.planer__unter{display:none}
+.planer__inhalt{display:grid;gap:18px;animation:fragAuf .5s var(--e)}
+.planer__label{font:700 13px/1 var(--grot);letter-spacing:.14em;text-transform:uppercase;color:var(--auf-ink-leis);
+  display:flex;align-items:center;gap:10px;margin:0 0 10px}
+.planer__label b{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--gold);
+  color:var(--ink);font:800 12px/1 var(--disp);letter-spacing:0}
+.planer__chips{display:flex;flex-wrap:wrap;gap:8px}
+.planer__chips button{font:700 14px/1 var(--grot);padding:12px 16px;border-radius:999px;background:transparent;
+  color:var(--hell);border:1.5px solid rgba(225,226,220,.35);cursor:pointer;min-height:44px;
+  transition:background .25s,border-color .25s,color .25s,transform .35s var(--e)}
+.planer__chips button:hover{border-color:var(--pink)}
+.planer__chips button[aria-pressed="true"]{background:var(--pink);color:var(--ink);border-color:var(--pink)}
+.planer__frage[hidden]{display:none}
+.planer__ergebnis{display:grid;gap:14px;margin-top:6px}
+.planer__d{display:flex;gap:12px;align-items:flex-start;margin:0;font-size:16px;line-height:1.5;
+  font-family:var(--serif, var(--grot))}
+.planer__ava{display:grid;place-items:center;flex:0 0 auto;width:34px;height:34px;border-radius:50%;
+  background:var(--pink);color:var(--ink);font:800 14px/1 var(--disp)}
+.planer__ava i{font-style:normal}
+.planer__karten{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.pk{display:grid;grid-template-columns:auto 1fr;gap:12px 14px;align-items:center;padding:14px;
+  border-radius:16px;background:var(--tief);border:1px solid var(--linie-d);position:relative;
+  animation:fragAuf .5s var(--e) both}
+.pk:nth-child(2){animation-delay:.12s}
+.pk__nr{position:absolute;top:-10px;left:14px;font:800 11px/1 var(--disp);letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink);background:var(--gold);padding:5px 9px;border-radius:999px}
+.pk__ava{width:52px;height:52px;border-radius:50%;background:var(--ink) center/cover no-repeat;
+  display:grid;place-items:center;font:800 15px/1 var(--disp);color:var(--hell);
+  box-shadow:inset 0 0 0 1.5px rgba(225,226,220,.25)}
+.pk__ava.hat-foto{color:transparent;filter:grayscale(.15)}
+.pk__wann{font-family:var(--disp);font-weight:800;font-size:17px;text-transform:uppercase;letter-spacing:.02em}
+.pk__wann small{font:600 12.5px/1 var(--grot);letter-spacing:.06em;color:var(--auf-ink-leis);margin-left:8px;
+  text-transform:none}
+.pk__titel{font-size:15.5px;font-weight:700;margin:2px 0 0}
+.pk__meta{font-size:13px;color:var(--auf-ink-leis);margin:2px 0 0}
+.pk__meta .knapp{margin-left:6px}
+.pk__tasten{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap}
+.pk__tasten .buchen{padding:9px 16px;font-size:13px;color:var(--hell);box-shadow:inset 0 0 0 1.5px rgba(225,226,220,.4)}
+.pk__tasten .buchen:hover{background:var(--pink);color:var(--ink);box-shadow:none}
+.pk__tausch{font:700 13px/1 var(--grot);padding:9px 14px;border-radius:999px;background:transparent;
+  color:var(--auf-ink-leis);border:1px solid transparent;cursor:pointer;min-height:38px}
+.pk__tausch:hover{color:var(--hell);border-color:rgba(225,226,220,.35)}
+.planer__aktionen{display:flex;flex-wrap:wrap;gap:10px}
+.planer__aktionen .knopf{padding:13px 20px;font-size:14px}
+.planer__ehrlich{margin:0;font-size:13.5px;line-height:1.5;color:var(--auf-ink-leis);max-width:64ch;text-wrap:pretty}
+.planer__leer{margin:0;font-size:14.5px;line-height:1.5}
+.termin.plan-wahl{outline:2px solid var(--gold);outline-offset:-2px;border-radius:14px;background:color-mix(in srgb,var(--gold) 10%,transparent)}
+@media (max-width:700px){
+  .planer__aktionen{display:grid;grid-template-columns:1fr 1fr}
+  .planer__aktionen .knopf:first-child{grid-column:1/-1}
+}
+
+/* ---------- Retter-Leiste ---------- */
+.retter{position:fixed;inset:auto 12px 12px;z-index:46;max-width:520px;margin:0 auto;padding:14px 46px 14px 14px;
+  background:var(--ink);color:var(--hell);border:1px solid var(--linie-d);border-radius:18px;
+  box-shadow:0 24px 60px -24px rgba(0,0,0,.7);animation:fragAuf .45s var(--e)}
+@media (min-width:700px){.retter{inset:auto 22px 22px auto;width:420px}}
+.retter__zu{position:absolute;top:10px;right:10px;width:34px;height:34px;display:grid;place-items:center;
+  border-radius:50%;background:transparent;border:1px solid var(--linie-d);color:var(--hell);cursor:pointer}
+.retter__zu svg{width:16px;height:16px}
+.retter__kopf{display:flex;gap:10px;align-items:flex-start}
+.retter__text{margin:0;font-size:15.5px;line-height:1.45;font-weight:600}
+.retter__knoepfe{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.retter__knoepfe .knopf{padding:11px 16px;font-size:13.5px;color:var(--hell)}
+.retter__knoepfe .knopf:not(.knopf--rand){color:var(--ink)}
+.retter__knoepfe .knopf--rand{box-shadow:inset 0 0 0 1.5px rgba(225,226,220,.4)}
+.retter__hilfe{margin:10px 0 0;font-size:13.5px;line-height:1.5;color:var(--auf-ink-leis)}
+body[data-retter="1"] .leiste,body[data-retter="1"] .frag-knopf{display:none}
+
 /* ---------- Live-Plaetze im Kalender ---------- */
 .voll{color:var(--auf-ink-leis);font-weight:700;text-decoration:line-through}
 .termin.voll-class .buchen{opacity:.45;pointer-events:none}
@@ -1353,6 +1429,52 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
         <li><b>3</b> Kommen. Ohne Bindung, nach zehn Tagen ist Schluss.</li>
       </ol>
     </div>
+    <div class="planer" id="planer">
+  <button type="button" class="knopf planer__start" aria-expanded="false" aria-controls="planer-inhalt">
+    Plan mich ein<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <p class="planer__unter">Drei Antworten, zwei Classes, fertig. Dauert 20 Sekunden.</p>
+  <div class="planer__inhalt" id="planer-inhalt" hidden>
+    <div class="planer__frage" data-frage="erfahrung">
+      <p class="planer__label"><b>1</b> Wie viel hast du schon getanzt?</p>
+      <div class="planer__chips" role="group" aria-label="Erfahrung">
+        <button type="button" data-wert="neu" aria-pressed="false">Noch nie</button>
+        <button type="button" data-wert="mal" aria-pressed="false">Schon mal</button>
+        <button type="button" data-wert="oft" aria-pressed="false">Ich tanze regelm&auml;&szlig;ig</button>
+      </div>
+    </div>
+    <div class="planer__frage" data-frage="zeit" hidden>
+      <p class="planer__label"><b>2</b> Wann passt es dir?</p>
+      <div class="planer__chips" role="group" aria-label="Zeit">
+        <button type="button" data-wert="abend" aria-pressed="false">Abends unter der Woche</button>
+        <button type="button" data-wert="tag" aria-pressed="false">Tags&uuml;ber</button>
+        <button type="button" data-wert="we" aria-pressed="false">Wochenende</button>
+        <button type="button" data-wert="egal" aria-pressed="false">Egal</button>
+      </div>
+    </div>
+    <div class="planer__frage" data-frage="stil" hidden>
+      <p class="planer__label"><b>3</b> Worauf hast du Lust?</p>
+      <div class="planer__chips" role="group" aria-label="Style">
+        <button type="button" data-wert="egal" aria-pressed="false">&Uuml;berrasch mich</button>
+      </div>
+    </div>
+    <div class="planer__ergebnis" hidden aria-live="polite">
+      <p class="planer__d"><span class="planer__ava" aria-hidden="true">D<i>!</i></span><span class="planer__satz"></span></p>
+      <div class="planer__karten"></div>
+      <p class="planer__leer" hidden>F&uuml;r diese Kombination finde ich in den n&auml;chsten zehn Tagen keine zwei Classes.
+        Nimm einen anderen Tag oder lass den Style offen.</p>
+      <div class="planer__aktionen">
+        <a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener" data-retter="Welcome Pass">Welcome Pass holen, 29 &euro;<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+        <a class="knopf knopf--rand planer__ics" href="#" download="dds-welcome-pass.ics">Beide in meinen Kalender</a>
+        <a class="knopf knopf--rand planer__wa" href="#" target="_blank" rel="noopener">Jemanden mitnehmen</a>
+        <button type="button" class="knopf knopf--rand planer__zeig">Im Kursplan zeigen</button>
+      </div>
+      <p class="planer__ehrlich">So l&auml;uft es: Pass bei Eversports kaufen (Konto in zwei Minuten, geht auch mit Google),
+        dann beide Classes dort reservieren. Absagen bis sechs Stunden vorher ist kostenlos. Und wenn du bleibst,
+        werden die 29 &euro; auf deinen ersten Monat angerechnet.</p>
+    </div>
+  </div>
+  <script type="application/json" id="coach-keys">{"Ada": "c-0", "Aino": "c-1", "Chantel": "c-7", "Dominik": "c-9", "Elisa": "c-10", "Emma Kant": "c-11", "Emma Schorb": "c-12", "Felix W.": "c-14", "Gülcan": "c-15", "Hannah Castrup": "c-16", "Jessica": "c-19", "Joanna": "c-20", "Julia": "c-21", "Karo": "c-22", "Kate": "c-23", "Laura Klein": "c-26", "Laura Lareeva": "c-27", "Levin & Sophie": "c-30", "Lili": "c-31", "Maxine": "c-34", "Mehak": "c-35", "Melis": "c-36", "Parmida": "c-43", "Ricco": "c-44", "Sara": "c-47", "Sasha": "c-48", "Ulie Gross": "c-53", "Yves": "c-54"}</script>
+</div>
   </div>
   <p class="p-frage">Und wenn du bleibst:</p>
   <div class="p-schalter" role="group" aria-label="Laufzeit w&auml;hlen">
@@ -7165,6 +7287,15 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
   <p class="frag__fuss">Keine Speicherung. Keine Namen oder Nummern eintippen, daf&uuml;r gibt es
     <a href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank" rel="noopener">WhatsApp<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>.</p>
 </section>
+<div class="retter" id="retter" hidden role="region" aria-label="Nach der Buchung" aria-live="polite">
+  <button type="button" class="retter__zu" aria-label="Schlie&szlig;en"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="retter__kopf"><span class="planer__ava" aria-hidden="true">D<i>!</i></span>
+    <p class="retter__text">Hat die Buchung geklappt?</p></div>
+  <div class="retter__knoepfe" data-schritt="frage">
+    <button type="button" class="knopf" data-antwort="ja">Ja</button>
+    <button type="button" class="knopf knopf--rand" data-antwort="nein">Noch nicht</button>
+  </div>
+</div>
 <div class="leiste" data-zeig="0">
   <a class="leiste__wa" href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank" rel="noopener"
      aria-label="WhatsApp schreiben"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.4 11.4 0 0 0 4.4 3.9 14.8 14.8 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg></a>
@@ -8410,6 +8541,225 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
         else box.innerHTML = '';
       });
     }).catch(function(){});
+  })();
+
+  /* -------- Welcome-Pass-Planer, Deeplink ?class=, Retter-Leiste -------- */
+  (function(){
+    var panel = document.getElementById('frag'); var url = panel && panel.dataset.url ? panel.dataset.url.replace('/frag', '/plan') : '';
+    var planer = document.getElementById('planer'); if(!planer) return;
+    var keys = {}; try { keys = JSON.parse(document.getElementById('coach-keys').textContent) || {}; } catch(e){}
+    var SAETZE = {"neu": ["Zwei Abende, zwei Styles. Danach wei\u00dft du, was dein Ding ist.", "Beginner hei\u00dft hier wirklich Anfang. Die H\u00e4lfte im Raum ist zum ersten Mal da.", "Niemand guckt. Alle z\u00e4hlen mit. Und nach 20 Minuten lachst du \u00fcber den dritten Achter.", "Komm in bequemen Sachen, saubere Sneaker, Wasser gibt es gratis. Mehr brauchst du nicht."], "mal": ["Du kennst das Gef\u00fchl schon. Zwei Classes, und du bist wieder drin.", "Zwei Abende, zwei Coaches. Such dir danach aus, wo du bleibst.", "Beginner/Intermediate ist f\u00fcr genau dich: Grundlagen sitzen, Tempo darf kommen."], "oft": ["Du tanzt schon. Dann nimm zwei Classes, die dich fordern, und schau, wer hier unterrichtet.", "Zwei Coaches, zwei Handschriften. Danach wei\u00dft du, wo dein Level liegt.", "Intermediate bei uns ist ehrlich Intermediate. Zwei Abende reichen, um das zu merken."]};
+    var STIL_NAMEN = {"pole":"Pole Dance","heels":"Heels","hip-hop":"Hip Hop","commercial":"Commercial","choreo":"Choreography",
+      "contemporary":"Contemporary & Jazz","fitness":"Fitness","latin":"Latin & Afro","aerial":"Aerial Hoop","house":"House","kpop":"K-Pop"};
+    var ADRESSE = "D!'s Dance School, Holzmarktstraße 66, 10179 Berlin";
+    function stile(t){
+      var n = t.toLowerCase().replace('hiphop', 'hip hop'), s = [];
+      if(/kids|junior|teens/.test(n)) return ['kids'];
+      if(/pole|first tricks/.test(n)) s.push('pole');
+      if(/heels/.test(n)) s.push('heels');
+      if(/hip hop/.test(n)) s.push('hip-hop');
+      if(/commercial|ü25|u25|25\+/.test(n)) s.push('commercial');
+      if(/choreo/.test(n)) s.push('choreo');
+      if(/contemporary|jazz|ballett/.test(n)) s.push('contemporary');
+      if(/athletic|stretch|fit|flavour|power|cardio|core|legs|yoga|female fitness/.test(n)) s.push('fitness');
+      if(/latin|afro|reggaeton|twerk|bollywood|dancehall|salsa|bachata/.test(n)) s.push('latin');
+      if(/hoop|aerial/.test(n)) s.push('aerial');
+      if(/house|shuffle/.test(n)) s.push('house');
+      if(/k-pop|kpop/.test(n)) s.push('kpop');
+      return s;
+    }
+    function stufe(t, level){
+      var n = t.toLowerCase();
+      if(/neubeginner|basics|einsteiger|level 1\b|open level|all level/.test(n)) return 'a';
+      if(/beginner\/intermediate|beginner\/inter/.test(n)) return 'ab';
+      if(/advanced|level 3|professional|intermediate\/advanced/.test(n)) return 'f';
+      if(/intermediate|level 2/.test(n)) return 'm';
+      if(/beginner/.test(n)) return 'a';
+      if(level === 'Beginner') return 'a'; if(level === 'Intermediate') return 'm'; if(level === 'Advanced') return 'f';
+      return 'x';
+    }
+    var wahl = {erfahrung: null, zeit: null, stil: null}, plan = null, kandidaten = [], zeiger = [0, 0], gewaehlt = [];
+    function pad(x){ return (x < 10 ? '0' : '') + x; }
+    function heutePlus(tage){ var d = new Date(JETZT.iso + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + tage); return d.toISOString().slice(0, 10); }
+    function passt(c){
+      if(!c || c.frei === 0 || (typeof c.frei === 'number' && c.frei < 2)) return false;
+      if(/open training|privat|workshop/i.test(c.titel)) return false;
+      var st = stile(c.titel); if(st.indexOf('kids') >= 0) return false;
+      var mins = parseInt(c.zeit.slice(0, 2), 10) * 60 + parseInt(c.zeit.slice(3, 5), 10);
+      if(c.datum < JETZT.iso || c.datum > heutePlus(10)) return false;
+      if(c.datum === JETZT.iso && mins - JETZT.min < 360) return false;
+      var lv = stufe(c.titel, c.level);
+      if(wahl.erfahrung === 'neu' && !(lv === 'a' || lv === 'ab')) return false;
+      if(wahl.erfahrung === 'mal' && !(lv === 'a' || lv === 'ab' || lv === 'x')) return false;
+      if(wahl.erfahrung === 'oft' && !(lv === 'm' || lv === 'f' || lv === 'ab' || lv === 'x')) return false;
+      var we = c.tag === 'Sa' || c.tag === 'So';
+      if(wahl.zeit === 'abend' && (we || mins < 17 * 60)) return false;
+      if(wahl.zeit === 'tag' && (we || mins >= 17 * 60)) return false;
+      if(wahl.zeit === 'we' && !we) return false;
+      if(wahl.stil && wahl.stil !== 'egal' && st.indexOf(wahl.stil) < 0) return false;
+      return true;
+    }
+    function rang(c){ // frueher ist besser, reine Beginner-Classes fuer Neue zuerst
+      var lv = stufe(c.titel, c.level);
+      return (wahl.erfahrung === 'neu' && lv === 'ab' ? 1 : 0) * 1000 + (c.datum.replace(/-/g, '') % 100000) + parseInt(c.zeit.slice(0, 2), 10) / 100;
+    }
+    function bauen(){
+      var erg = planer.querySelector('.planer__ergebnis'); erg.hidden = false;
+      kandidaten = (plan ? plan.classes : []).filter(passt).sort(function(a, b){ return rang(a) - rang(b) || a.datum.localeCompare(b.datum) || a.zeit.localeCompare(b.zeit); });
+      zeiger = [0, 0]; zeigen();
+    }
+    function zweiteWahl(erste, start){
+      var i;
+      for(i = start; i < kandidaten.length; i++){ var c = kandidaten[i]; if(c.datum !== erste.datum && (wahl.stil !== 'egal' || stile(c.titel)[0] !== stile(erste.titel)[0])) return i; }
+      for(i = start; i < kandidaten.length; i++){ if(kandidaten[i].datum !== erste.datum) return i; }
+      for(i = start; i < kandidaten.length; i++){ if(kandidaten[i].id !== erste.id) return i; }
+      return -1;
+    }
+    function karte(c, nr){
+      var key = keys[c.coach] || null, initialen = (c.coach || 'D!').split(/\s+/).map(function(w){ return w[0]; }).join('').slice(0, 2).toUpperCase();
+      var st = stile(c.titel)[0], frei = typeof c.frei === 'number' && c.frei <= 5 ? '<span class="knapp">nur noch ' + c.frei + (c.frei === 1 ? ' Platz' : ' Plätze') + '</span>' : '';
+      var el = document.createElement('div'); el.className = 'pk'; el.dataset.id = c.id;
+      el.innerHTML = '<span class="pk__nr">Class ' + nr + '</span>' +
+        '<div class="pk__ava' + (key ? ' hat-foto cf-' + key : '') + '">' + initialen + '</div>' +
+        '<div><div class="pk__wann">' + c.tag + ' ' + c.datum.slice(8, 10) + '.' + c.datum.slice(5, 7) + '. ' + c.zeit + '<small>' + c.dauer + ' min</small></div>' +
+        '<p class="pk__titel"></p><p class="pk__meta"></p></div>' +
+        '<div class="pk__tasten"><a class="buchen" target="_blank" rel="noopener">Buchen</a>' +
+        '<button type="button" class="pk__tausch">Andere Class</button></div>';
+      el.querySelector('.pk__titel').textContent = c.titel;
+      el.querySelector('.pk__meta').innerHTML = [c.coach ? 'mit ' + c.coach : '', c.studio, STIL_NAMEN[st] || ''].filter(Boolean).map(function(x){ return x.replace(/</g, '&lt;'); }).join(' · ') + frei;
+      var a = el.querySelector('.buchen'); a.href = c.url; a.dataset.retter = c.titel + '|' + c.tag + '|' + c.zeit + '|' + c.datum + '|' + c.id;
+      if(key){ el.querySelector('.pk__ava').addEventListener('click', function(){ var b = document.createElement('button'); b.dataset.coach = key; b.hidden = true; document.body.appendChild(b); b.click(); b.remove(); }); el.querySelector('.pk__ava').style.cursor = 'pointer'; }
+      el.querySelector('.pk__tausch').addEventListener('click', function(){ tausch(nr - 1); });
+      return el;
+    }
+    function zeigen(){
+      var box = planer.querySelector('.planer__karten'), leer = planer.querySelector('.planer__leer');
+      box.innerHTML = ''; gewaehlt = [];
+      if(!kandidaten.length){ leer.hidden = false; planer.querySelector('.planer__aktionen').hidden = true; planer.querySelector('.planer__satz').textContent = 'Hm.'; return; }
+      leer.hidden = true; planer.querySelector('.planer__aktionen').hidden = false;
+      var erste = kandidaten[zeiger[0] % kandidaten.length];
+      var zi = zweiteWahl(erste, 0); var liste = []; if(zi >= 0){ for(var k = 0; k <= zeiger[1]; k++){ var z = zweiteWahl(erste, k === 0 ? 0 : liste[liste.length - 1] + 1); if(z < 0) break; liste.push(z); } zi = liste[liste.length - 1]; }
+      gewaehlt = zi >= 0 ? [erste, kandidaten[zi]] : [erste];
+      gewaehlt.forEach(function(c, i){ box.appendChild(karte(c, i + 1)); });
+      var pool = SAETZE[wahl.erfahrung] || SAETZE.neu; planer.querySelector('.planer__satz').textContent = pool[Math.floor(Math.random() * pool.length)];
+      try { sessionStorage.setItem('dds-plan', JSON.stringify(gewaehlt)); } catch(e){}
+      aktionen();
+    }
+    function tausch(slot){ if(slot === 0){ zeiger[0]++; zeiger[1] = 0; } else { zeiger[1]++; } zeigen(); }
+    function utcVon(datum, zeit){ // Berliner Wanduhr -> UTC-Zeitstempel fuer .ics
+      var y = +datum.slice(0, 4), m = +datum.slice(5, 7) - 1, d = +datum.slice(8, 10), h = +zeit.slice(0, 2), mi = +zeit.slice(3, 5);
+      var offs = [2, 1], i, t;
+      for(i = 0; i < offs.length; i++){ t = Date.UTC(y, m, d, h - offs[i], mi); var f = new Intl.DateTimeFormat('en-CA', {timeZone: 'Europe/Berlin', hour: '2-digit', hour12: false}).formatToParts(new Date(t)); var hh = +(f.find(function(x){ return x.type === 'hour'; }) || {}).value; if((hh % 24) === h) return t; }
+      return Date.UTC(y, m, d, h - 1, mi);
+    }
+    function icsZeit(t){ return new Date(t).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); }
+    function ics(liste){
+      var jetzt = icsZeit(Date.now());
+      var ev = liste.map(function(c){ var s0 = utcVon(c.datum, c.zeit); return ['BEGIN:VEVENT', 'UID:' + c.id + '@deesworld.de', 'DTSTAMP:' + jetzt, 'DTSTART:' + icsZeit(s0), 'DTEND:' + icsZeit(s0 + (c.dauer || 60) * 60000),
+        'SUMMARY:' + c.titel + (c.coach ? ' mit ' + c.coach : '') + ' (D!\'s Dance School)', 'LOCATION:' + ADRESSE + (c.studio ? ', ' + c.studio : ''), 'URL:' + c.url,
+        'DESCRIPTION:Welcome Pass Class. Absagen bis 6 Stunden vorher kostenlos: ' + c.url, 'BEGIN:VALARM', 'TRIGGER:-PT3H', 'ACTION:DISPLAY', 'DESCRIPTION:Heute Abend: ' + c.titel, 'END:VALARM', 'END:VEVENT'].join('\r\n'); });
+      return 'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//D!s Dance School//Welcome Pass//DE\r\nCALSCALE:GREGORIAN\r\n' + ev.join('\r\n') + '\r\nEND:VCALENDAR\r\n';
+    }
+    function aktionen(){
+      var a = planer.querySelector('.planer__ics'); a.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics(gewaehlt));
+      var c = gewaehlt[0]; var link = location.origin + location.pathname + '?class=' + c.id;
+      var text = 'Kommst du ' + c.tag + ' ' + c.zeit + ' mit zu ' + c.titel + ' bei D!\'s Dance School? Welcome Pass, 2 Classes für 29 €. ' + link;
+      planer.querySelector('.planer__wa').href = 'https://wa.me/?text=' + encodeURIComponent(text);
+    }
+    function markiere(ids, scrollen){
+      document.querySelectorAll('.termin.plan-wahl').forEach(function(t){ t.classList.remove('plan-wahl'); });
+      var erstes = null;
+      ids.forEach(function(id){ var t = document.querySelector('.termin[data-id="' + id + '"]'); if(t){ t.classList.add('plan-wahl'); t.classList.remove('vorbei'); if(!erstes) erstes = t; } });
+      if(!erstes) return false;
+      var klappe = document.getElementById('klappe-kalender'), knopf = document.querySelector('.klappe__knopf');
+      if(klappe && knopf && knopf.getAttribute('aria-expanded') === 'false') knopf.click();
+      var alle = document.querySelector('.tagchips[data-fuer="liste-kalender"] [data-chip="alle"]'); if(alle && alle.getAttribute('aria-pressed') !== 'true') alle.click();
+      if(scrollen) setTimeout(function(){ erstes.scrollIntoView({behavior: 'smooth', block: 'center'}); }, 150);
+      return true;
+    }
+    planer.querySelector('.planer__zeig').addEventListener('click', function(){ markiere(gewaehlt.map(function(c){ return c.id; }), true); });
+    // Ablauf
+    var start = planer.querySelector('.planer__start'), inhalt = document.getElementById('planer-inhalt');
+    function laden(){ if(plan || !url) return Promise.resolve(plan); return fetch(url).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){ plan = d; return d; }).catch(function(){ return null; }); }
+    start.addEventListener('click', function(){ start.setAttribute('aria-expanded', 'true'); inhalt.hidden = false; laden().then(stilChips); });
+    function stilChips(){
+      var box = planer.querySelector('[data-frage="stil"] .planer__chips'); if(box.dataset.fertig || !plan) return; box.dataset.fertig = '1';
+      var zaehl = {}; plan.classes.forEach(function(c){ var st = stile(c.titel)[0]; if(st && st !== 'kids') zaehl[st] = (zaehl[st] || 0) + 1; });
+      Object.keys(STIL_NAMEN).filter(function(k){ return zaehl[k]; }).sort(function(a, b){ return zaehl[b] - zaehl[a]; }).forEach(function(k){ var b = document.createElement('button'); b.type = 'button'; b.dataset.wert = k; b.setAttribute('aria-pressed', 'false'); b.textContent = STIL_NAMEN[k]; box.appendChild(b); });
+    }
+    planer.addEventListener('click', function(e){
+      var b = e.target.closest('.planer__chips button'); if(!b) return;
+      var frage = b.closest('.planer__frage'), name = frage.dataset.frage;
+      frage.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      wahl[name] = b.dataset.wert;
+      var naechste = frage.nextElementSibling; if(naechste && naechste.classList.contains('planer__frage')) naechste.hidden = false;
+      if(wahl.erfahrung && wahl.zeit && wahl.stil) laden().then(bauen);
+    });
+    // Deeplink ?class=<id>: Kalender aufklappen, Class markieren, hinscrollen
+    var q = new URLSearchParams(location.search).get('class');
+    if(q && /^[0-9a-f-]{36}$/.test(q)){ setTimeout(function(){ markiere([q], true); }, 600); }
+
+    // Retter-Leiste
+    var retter = document.getElementById('retter'); if(!retter) return;
+    var WA = (panel && panel.querySelector('.frag__fuss a')) ? panel.querySelector('.frag__fuss a').getAttribute('href').split('?')[0] : 'https://wa.me/4915173048373';
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[href*="eversports.de"]'); if(!a) return;
+      var info = a.dataset.retter || '';
+      if(!info){ var t = a.closest('.termin'); if(t){ info = (t.querySelector('.termin__name') || {}).textContent + '|' + ((t.closest('[data-tag]') || {}).dataset || {}).tag + '|' + (t.dataset.zeit || '') + '|' + ((t.closest('[data-datum]') || {}).dataset || {}).datum + '|' + (t.dataset.id || ''); }
+        else if(/welcome|\/o\/ds-dance-school\/0d983c91/.test(a.href)) info = 'Welcome Pass'; else if(/\/mt\/|\/o\//.test(a.href)) info = 'Membership'; else info = 'Class'; }
+      try { sessionStorage.setItem('dds-retter', JSON.stringify({t: Date.now(), info: info, href: a.href})); } catch(x){}
+    }, true);
+    function pruefen(){
+      var d; try { d = JSON.parse(sessionStorage.getItem('dds-retter') || 'null'); } catch(x){ d = null; }
+      if(!d || sessionStorage.getItem('dds-retter-gezeigt')) return;
+      var weg = Date.now() - d.t; if(weg < 30000 || weg > 45 * 60000) return;
+      sessionStorage.setItem('dds-retter-gezeigt', '1');
+      zeigeRetter(d);
+    }
+    function zeigeRetter(d){
+      var teile = String(d.info).split('|'), titel = teile[0], tag = teile[1] || '', zeit = teile[2] || '', datum = teile[3] || '', id = teile[4] || '';
+      var istPass = titel === 'Welcome Pass', istMember = titel === 'Membership';
+      var text = retter.querySelector('.retter__text'), kn = retter.querySelector('.retter__knoepfe');
+      text.textContent = istPass ? 'Welcome Pass geholt?' : istMember ? 'Membership abgeschlossen?' : 'Hat die Buchung geklappt?';
+      retter.hidden = false; document.body.dataset.retter = '1';
+      retter.querySelector('.retter__zu').onclick = zu;
+      function zu(){ retter.hidden = true; document.body.dataset.retter = '0'; }
+      kn.onclick = function(e){
+        var b = e.target.closest('[data-antwort]'); if(!b) return;
+        var antwort = b.dataset.antwort; kn.innerHTML = ''; var hilfe = retter.querySelector('.retter__hilfe'); if(hilfe) hilfe.remove();
+        function knopf(t, href, extern, rand){ var a = document.createElement(href ? 'a' : 'button'); a.className = 'knopf' + (rand ? ' knopf--rand' : ''); a.textContent = t; if(href){ a.href = href; if(extern){ a.target = '_blank'; a.rel = 'noopener'; } } return a; }
+        function hinweis(t){ var p = document.createElement('p'); p.className = 'retter__hilfe'; p.textContent = t; kn.after(p); }
+        if(antwort === 'ja'){
+          var gespeichert = []; try { gespeichert = JSON.parse(sessionStorage.getItem('dds-plan') || '[]'); } catch(x){}
+          if(istPass){
+            text.textContent = 'Stark. Jetzt noch deine zwei Classes reservieren, dann ist es fix.';
+            if(gespeichert.length){ gespeichert.forEach(function(c){ kn.appendChild(knopf(c.tag + ' ' + c.zeit + ' ' + c.titel + ' buchen', c.url, true, false)); }); }
+            else { var k = knopf('Zum Kursplan', '#kalender', false, true); k.setAttribute('data-heim', ''); k.addEventListener('click', zu); kn.appendChild(k); }
+          } else if(istMember){
+            text.textContent = 'Willkommen in der School. Deine erste Class als Mitglied wartet im Kursplan.';
+            var k2 = knopf('Zum Kursplan', '#kalender', false, true); k2.setAttribute('data-heim', ''); k2.addEventListener('click', zu); kn.appendChild(k2);
+          } else {
+            text.textContent = 'Stark, wir sehen uns ' + (tag ? tag + ' ' + zeit : 'bald') + '. Komm zehn Minuten früher, Umziehen und Ankommen.';
+            if(datum && zeit && id){ var c = {id: id, titel: titel, coach: '', tag: tag, zeit: zeit, datum: datum, dauer: 60, studio: '', url: d.href}; kn.appendChild(knopf('In meinen Kalender', 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics([c])), false, false)).setAttribute('download', 'dds-class.ics');
+              kn.appendChild(knopf('Jemanden mitnehmen', 'https://wa.me/?text=' + encodeURIComponent('Kommst du ' + tag + ' ' + zeit + ' mit zu ' + titel + ' bei D!\'s Dance School? ' + location.origin + location.pathname + '?class=' + id), true, true)); }
+          }
+          var w = knopf('Alles klar', null, false, true); w.addEventListener('click', zu); kn.appendChild(w);
+        } else {
+          text.textContent = 'Woran hängt es?';
+          [['konto', 'Kein Konto'], ['login', 'Login klappt nicht'], ['schauen', 'Wollte erst mal schauen']].forEach(function(x){ var b2 = document.createElement('button'); b2.type = 'button'; b2.className = 'knopf knopf--rand'; b2.dataset.grund = x[0]; b2.textContent = x[1]; kn.appendChild(b2); });
+          kn.onclick = function(e2){
+            var g = e2.target.closest('[data-grund]'); if(!g) return; var grund = g.dataset.grund; kn.innerHTML = '';
+            if(grund === 'konto'){ text.textContent = 'Eversports will ein Konto, das dauert zwei Minuten: E-Mail oder Google, bestätigen, fertig. Dann liegt deine Class dort bereit.'; kn.appendChild(knopf('Nochmal versuchen', d.href, true, false)); }
+            else if(grund === 'login'){ text.textContent = 'Kein Stress. Schreib uns kurz, wir buchen dich ein.'; kn.appendChild(knopf('Bei WhatsApp schreiben', WA + '?text=' + encodeURIComponent('Hi, ich wollte ' + (tag ? tag + ' ' + zeit + ' ' : '') + titel + ' buchen und komme im Eversports-Login nicht weiter.'), true, false)); }
+            else { text.textContent = 'Alles gut. Absagen ist bis sechs Stunden vorher kostenlos, du gehst also kein Risiko ein. Der Welcome Pass wartet, wann immer du willst.'; var k3 = knopf('Zum Welcome Pass', '#welcome', false, true); k3.setAttribute('data-heim', ''); k3.addEventListener('click', zu); kn.appendChild(k3); }
+            var w2 = knopf('Alles klar', null, false, true); w2.addEventListener('click', zu); kn.appendChild(w2);
+          };
+        }
+      };
+    }
+    window.addEventListener('pageshow', function(){ setTimeout(pruefen, 400); });
+    document.addEventListener('visibilitychange', function(){ if(document.visibilityState === 'visible') setTimeout(pruefen, 400); });
+    setTimeout(pruefen, 800);
   })();
 
   /* -------- Frag D!: der Assistent -------- */
