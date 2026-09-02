@@ -8551,14 +8551,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     var SAETZE = {"neu": ["Zwei Abende, zwei Styles. Danach wei\u00dft du, was dein Ding ist.", "Beginner hei\u00dft hier wirklich Anfang. Die H\u00e4lfte im Raum ist zum ersten Mal da.", "Niemand guckt. Alle z\u00e4hlen mit. Und nach 20 Minuten lachst du \u00fcber den dritten Achter.", "Komm in bequemen Sachen, saubere Sneaker, Wasser gibt es gratis. Mehr brauchst du nicht."], "mal": ["Du kennst das Gef\u00fchl schon. Zwei Classes, und du bist wieder drin.", "Zwei Abende, zwei Coaches. Such dir danach aus, wo du bleibst.", "Beginner/Intermediate ist f\u00fcr genau dich: Grundlagen sitzen, Tempo darf kommen."], "oft": ["Du tanzt schon. Dann nimm zwei Classes, die dich fordern, und schau, wer hier unterrichtet.", "Zwei Coaches, zwei Handschriften. Danach wei\u00dft du, wo dein Level liegt.", "Intermediate bei uns ist ehrlich Intermediate. Zwei Abende reichen, um das zu merken."]};
     var STIL_NAMEN = {"pole":"Pole Dance","heels":"Heels","hip-hop":"Hip Hop","commercial":"Commercial","choreo":"Choreography",
       "contemporary":"Contemporary & Jazz","fitness":"Fitness","latin":"Latin & Afro","aerial":"Aerial Hoop","house":"House","kpop":"K-Pop"};
-    var ADRESSE = "D!'s Dance School, Holzmarktstraße 66, 10179 Berlin";
+    var ADRESSE = "D!'s Dance School, Holzmarktstra\u00dfe 66, 10179 Berlin";
     function stile(t){
       var n = t.toLowerCase().replace('hiphop', 'hip hop'), s = [];
       if(/kids|junior|teens/.test(n)) return ['kids'];
       if(/pole|first tricks/.test(n)) s.push('pole');
       if(/heels/.test(n)) s.push('heels');
       if(/hip hop/.test(n)) s.push('hip-hop');
-      if(/commercial|ü25|u25|25\+/.test(n)) s.push('commercial');
+      if(/commercial|\u00fc25|u25|25\+/.test(n)) s.push('commercial');
       if(/choreo/.test(n)) s.push('choreo');
       if(/contemporary|jazz|ballett/.test(n)) s.push('contemporary');
       if(/athletic|stretch|fit|flavour|power|cardio|core|legs|yoga|female fitness/.test(n)) s.push('fitness');
@@ -8617,7 +8617,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     }
     function karte(c, nr){
       var key = keys[c.coach] || null, initialen = (c.coach || 'D!').split(/\s+/).map(function(w){ return w[0]; }).join('').slice(0, 2).toUpperCase();
-      var st = stile(c.titel)[0], frei = typeof c.frei === 'number' && c.frei <= 5 ? '<span class="knapp">nur noch ' + c.frei + (c.frei === 1 ? ' Platz' : ' Plätze') + '</span>' : '';
+      var st = stile(c.titel)[0], frei = typeof c.frei === 'number' && c.frei <= 5 ? '<span class="knapp">nur noch ' + c.frei + (c.frei === 1 ? ' Platz' : ' Pl\u00e4tze') + '</span>' : '';
       var el = document.createElement('div'); el.className = 'pk'; el.dataset.id = c.id;
       el.innerHTML = '<span class="pk__nr">Class ' + nr + '</span>' +
         '<div class="pk__ava' + (key ? ' hat-foto cf-' + key : '') + '">' + initialen + '</div>' +
@@ -8626,7 +8626,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
         '<div class="pk__tasten"><a class="buchen" target="_blank" rel="noopener">Buchen</a>' +
         '<button type="button" class="pk__tausch">Andere Class</button></div>';
       el.querySelector('.pk__titel').textContent = c.titel;
-      el.querySelector('.pk__meta').innerHTML = [c.coach ? 'mit ' + c.coach : '', c.studio, STIL_NAMEN[st] || ''].filter(Boolean).map(function(x){ return x.replace(/</g, '&lt;'); }).join(' · ') + frei;
+      el.querySelector('.pk__meta').innerHTML = [c.coach ? 'mit ' + c.coach : '', c.studio, STIL_NAMEN[st] || ''].filter(Boolean).map(function(x){ return x.replace(/</g, '&lt;'); }).join(' \u00b7 ') + frei;
       var a = el.querySelector('.buchen'); a.href = c.url; a.dataset.retter = c.titel + '|' + c.tag + '|' + c.zeit + '|' + c.datum + '|' + c.id;
       if(key){ el.querySelector('.pk__ava').addEventListener('click', function(){ var b = document.createElement('button'); b.dataset.coach = key; b.hidden = true; document.body.appendChild(b); b.click(); b.remove(); }); el.querySelector('.pk__ava').style.cursor = 'pointer'; }
       el.querySelector('.pk__tausch').addEventListener('click', function(){ tausch(nr - 1); });
@@ -8663,7 +8663,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     function aktionen(){
       var a = planer.querySelector('.planer__ics'); a.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics(gewaehlt));
       var c = gewaehlt[0]; var link = location.origin + location.pathname + '?class=' + c.id;
-      var text = 'Kommst du ' + c.tag + ' ' + c.zeit + ' mit zu ' + c.titel + ' bei D!\'s Dance School? Welcome Pass, 2 Classes für 29 €. ' + link;
+      var text = 'Kommst du ' + c.tag + ' ' + c.zeit + ' mit zu ' + c.titel + ' bei D!\'s Dance School? Welcome Pass, 2 Classes f\u00fcr 29 \u20ac. ' + link;
       planer.querySelector('.planer__wa').href = 'https://wa.me/?text=' + encodeURIComponent(text);
     }
     function markiere(ids, scrollen){
@@ -8739,17 +8739,17 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
             text.textContent = 'Willkommen in der School. Deine erste Class als Mitglied wartet im Kursplan.';
             var k2 = knopf('Zum Kursplan', '#kalender', false, true); k2.setAttribute('data-heim', ''); k2.addEventListener('click', zu); kn.appendChild(k2);
           } else {
-            text.textContent = 'Stark, wir sehen uns ' + (tag ? tag + ' ' + zeit : 'bald') + '. Komm zehn Minuten früher, Umziehen und Ankommen.';
+            text.textContent = 'Stark, wir sehen uns ' + (tag ? tag + ' ' + zeit : 'bald') + '. Komm zehn Minuten fr\u00fcher, Umziehen und Ankommen.';
             if(datum && zeit && id){ var c = {id: id, titel: titel, coach: '', tag: tag, zeit: zeit, datum: datum, dauer: 60, studio: '', url: d.href}; kn.appendChild(knopf('In meinen Kalender', 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics([c])), false, false)).setAttribute('download', 'dds-class.ics');
               kn.appendChild(knopf('Jemanden mitnehmen', 'https://wa.me/?text=' + encodeURIComponent('Kommst du ' + tag + ' ' + zeit + ' mit zu ' + titel + ' bei D!\'s Dance School? ' + location.origin + location.pathname + '?class=' + id), true, true)); }
           }
           var w = knopf('Alles klar', null, false, true); w.addEventListener('click', zu); kn.appendChild(w);
         } else {
-          text.textContent = 'Woran hängt es?';
+          text.textContent = 'Woran h\u00e4ngt es?';
           [['konto', 'Kein Konto'], ['login', 'Login klappt nicht'], ['schauen', 'Wollte erst mal schauen']].forEach(function(x){ var b2 = document.createElement('button'); b2.type = 'button'; b2.className = 'knopf knopf--rand'; b2.dataset.grund = x[0]; b2.textContent = x[1]; kn.appendChild(b2); });
           kn.onclick = function(e2){
             var g = e2.target.closest('[data-grund]'); if(!g) return; var grund = g.dataset.grund; kn.innerHTML = '';
-            if(grund === 'konto'){ text.textContent = 'Eversports will ein Konto, das dauert zwei Minuten: E-Mail oder Google, bestätigen, fertig. Dann liegt deine Class dort bereit.'; kn.appendChild(knopf('Nochmal versuchen', d.href, true, false)); }
+            if(grund === 'konto'){ text.textContent = 'Eversports will ein Konto, das dauert zwei Minuten: E-Mail oder Google, best\u00e4tigen, fertig. Dann liegt deine Class dort bereit.'; kn.appendChild(knopf('Nochmal versuchen', d.href, true, false)); }
             else if(grund === 'login'){ text.textContent = 'Kein Stress. Schreib uns kurz, wir buchen dich ein.'; kn.appendChild(knopf('Bei WhatsApp schreiben', WA + '?text=' + encodeURIComponent('Hi, ich wollte ' + (tag ? tag + ' ' + zeit + ' ' : '') + titel + ' buchen und komme im Eversports-Login nicht weiter.'), true, false)); }
             else { text.textContent = 'Alles gut. Absagen ist bis sechs Stunden vorher kostenlos, du gehst also kein Risiko ein. Der Welcome Pass wartet, wann immer du willst.'; var k3 = knopf('Zum Welcome Pass', '#welcome', false, true); k3.setAttribute('data-heim', ''); k3.addEventListener('click', zu); kn.appendChild(k3); }
             var w2 = knopf('Alles klar', null, false, true); w2.addEventListener('click', zu); kn.appendChild(w2);
