@@ -3075,7 +3075,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     <p class="termin__name">Aerial Hoop Neubeginner</p>
     <div class="termin__meta"><span class="stufe">Beginner</span>
       <span>Aino</span><span>Studio 5 &middot; Bright Space</span>
-      <span class="termin__frei"><span class="knapp">nur noch 1 Pl&auml;tze</span></span></div>
+      <span class="termin__frei"><span class="knapp">nur noch 1 Platz</span></span></div>
   </div>
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/4cf0abf6-f4cb-420d-b43c-c6fbd15768ac"
@@ -6385,7 +6385,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     <p class="termin__name">Aerial Hoop Neubeginner</p>
     <div class="termin__meta"><span class="stufe">Beginner</span>
       <span>Aino</span><span>Studio 5 &middot; Bright Space</span>
-      <span class="termin__frei"><span class="knapp">nur noch 1 Pl&auml;tze</span></span></div>
+      <span class="termin__frei"><span class="knapp">nur noch 1 Platz</span></span></div>
   </div>
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/4cf0abf6-f4cb-420d-b43c-c6fbd15768ac"
@@ -8406,7 +8406,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
         if(!c || !box || c.frei === null || c.frei === undefined) return;
         z.classList.toggle('voll-class', c.frei === 0);
         if(c.frei === 0) box.innerHTML = '<span class="voll">ausgebucht</span>';
-        else if(c.frei <= 5) box.innerHTML = '<span class="knapp">nur noch ' + c.frei + ' Pl\u00e4tze</span>';
+        else if(c.frei <= 5) box.innerHTML = '<span class="knapp">nur noch ' + c.frei + (c.frei === 1 ? ' Platz' : ' Pl\u00e4tze') + '</span>';
         else box.innerHTML = '';
       });
     }).catch(function(){});
