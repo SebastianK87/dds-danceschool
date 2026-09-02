@@ -7953,7 +7953,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
         z.appendChild(el('b', '', (k.tag || '') + ' ' + (k.zeit || '')));
         var mitte = el('div', '');
         mitte.appendChild(el('span', '', k.titel || ''));
-        var meta = [k.coach, k.level, k.studio].filter(Boolean).join(' · ');
+        var meta = [k.coach, k.level, k.studio].filter(Boolean).join(' \u00b7 ');
         if(meta) mitte.appendChild(el('small', '', meta));
         z.appendChild(mitte);
         var a = el('a', 'buchen', 'Buchen');
@@ -7972,7 +7972,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
         return b;
       }
       if(a.typ === 'welcome'){
-        var w = knopfchen('Welcome Pass, 29 €', '#welcome'); w.setAttribute('data-heim', ''); w.addEventListener('click', zu); box.appendChild(w);
+        var w = knopfchen('Welcome Pass, 29 \u20ac', '#welcome'); w.setAttribute('data-heim', ''); w.addEventListener('click', zu); box.appendChild(w);
       } else if(a.typ === 'whatsapp'){
         box.appendChild(knopfchen('Bei WhatsApp schreiben', waLink, true));
       } else if(a.typ === 'kalender'){
@@ -8016,8 +8016,8 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       .catch(function(){
         tipp.remove();
         if(/claude\.ai|claudeusercontent|anthropic/.test(location.hostname)){
-          var m = nachricht('d', 'In dieser Vorschau bin ich stumm, weil sie keine Verbindung nach draussen erlaubt. Live kannst du mich hier testen:');
-          var a = el('a', 'knopf knopf--rand', 'Live-Vorschau öffnen'); a.href = 'https://sebastiank87.github.io/dds-danceschool/'; a.target = '_blank'; a.rel = 'noopener';
+          var m = nachricht('d', 'In dieser Vorschau bin ich stumm, weil sie keine Verbindung nach drau\u00dfen erlaubt. Live kannst du mich hier testen:');
+          var a = el('a', 'knopf knopf--rand', 'Live-Vorschau \u00f6ffnen'); a.href = 'https://sebastiank87.github.io/dds-danceschool/'; a.target = '_blank'; a.rel = 'noopener';
           var box = el('div', 'frag__aktion'); box.appendChild(a); lauf.appendChild(box); lauf.scrollTop = lauf.scrollHeight;
           return;
         }
