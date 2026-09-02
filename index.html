@@ -1348,11 +1348,11 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       <em>&middot; 120 &euro; sparen</em></button>
     <button type="button" data-lauf="flex" aria-pressed="false">Monatlich k&uuml;ndbar</button>
   </div>
-  <div class="plaene" id="memberships"><div class="plan">
+  <div class="plaene" id="memberships"><div class="plan" data-id-jahr="57077" data-id-flex="57080" data-aktion-jahr="1" data-aktion-flex="1">
     
     <b>Basic</b>
-    <span class="plan__preis"><s class="plan__alt je-jahr">59</s><s class="plan__alt je-flex" hidden>69</s><span class="je-jahr">49</span><span
-      class="je-flex" hidden>59</span><small>&euro; / Monat</small></span>
+    <span class="plan__preis"><s class="plan__alt je-jahr">59</s><s class="plan__alt je-flex" hidden>69</s><span class="je-jahr plan__zahl">49</span><span
+      class="je-flex plan__zahl" hidden>59</span><small>&euro; / Monat</small></span>
     <span class="plan__aktion je-jahr">Aktionspreis f&uuml;r die ersten 3 Monate, danach 59 &euro;</span><span class="plan__aktion je-flex" hidden>Aktionspreis im ersten Monat, danach 69 &euro;</span>
     <span class="plan__merk">6 Check-ins im Monat</span>
     <span class="plan__wer">F&uuml;r ein- bis zweimal die Woche.</span>
@@ -1365,11 +1365,11 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
        rel="noopener">Basic <span class="je-jahr">&middot; 12 Monate</span><span
        class="je-flex" hidden>&middot; Flex</span> starten<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <span class="plan__weg">&Ouml;ffnet direkt die Basic-Seite bei Eversports.</span>
-  </div><div class="plan plan--top">
+  </div><div class="plan plan--top" data-id-jahr="57081" data-id-flex="57082" data-aktion-jahr="1" data-aktion-flex="1">
     <span class="plan__tag">Beliebteste Wahl</span>
     <b>Unlimited</b>
-    <span class="plan__preis"><s class="plan__alt je-jahr">74</s><s class="plan__alt je-flex" hidden>84</s><span class="je-jahr">64</span><span
-      class="je-flex" hidden>74</span><small>&euro; / Monat</small></span>
+    <span class="plan__preis"><s class="plan__alt je-jahr">74</s><s class="plan__alt je-flex" hidden>84</s><span class="je-jahr plan__zahl">64</span><span
+      class="je-flex plan__zahl" hidden>74</span><small>&euro; / Monat</small></span>
     <span class="plan__aktion je-jahr">Aktionspreis f&uuml;r die ersten 3 Monate, danach 74 &euro;</span><span class="plan__aktion je-flex" hidden>Aktionspreis im ersten Monat, danach 84 &euro;</span>
     <span class="plan__merk">Unbegrenzt tanzen</span>
     <span class="plan__wer">Jeden Tag. Jede Class. Jeder Style.</span>
@@ -7802,6 +7802,10 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
         b.setAttribute('aria-pressed','true');
         var flex = b.dataset.lauf === 'flex';
         document.querySelectorAll('#memberships a[data-jahr]').forEach(function(a){ a.href = flex ? a.dataset.flex : a.dataset.jahr; });
+        document.querySelectorAll('#memberships .plan').forEach(function(pl){
+          var hat = pl.dataset[flex ? 'aktionFlex' : 'aktionJahr'] === '1';
+          pl.querySelectorAll('.plan__alt, .plan__aktion').forEach(function(e){ e.hidden = !(hat && e.classList.contains(flex ? 'je-flex' : 'je-jahr')); });
+        });
         ziel.querySelectorAll('.je-jahr').forEach(function(e){ e.hidden = flex; });
         ziel.querySelectorAll('.je-flex').forEach(function(e){ e.hidden = !flex; });
       });
@@ -7920,6 +7924,35 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     new MutationObserver(function(){
       document.body.classList.toggle('coach-offen', dlg.open);
     }).observe(dlg, {attributes:true, attributeFilter:['open']});
+  })();
+
+  /* -------- Live-Preise: Aktion automatisch an/aus (aus dem Eversports-Shop, 30 Min gecacht) -------- */
+  (function(){
+    var panel = document.getElementById('frag'); if(!panel || !panel.dataset.url) return;
+    var url = panel.dataset.url.replace('/frag', '/preise');
+    function zahl(x){ return (x === null || x === undefined) ? null : (Number.isInteger(x) ? String(x) : String(x).replace('.', ',')); }
+    fetch(url).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
+      if(!d || !d.memberships) return;
+      document.querySelectorAll('#memberships .plan').forEach(function(pl){
+        ['jahr', 'flex'].forEach(function(lauf){
+          var e = d.memberships[pl.dataset['id' + (lauf === 'jahr' ? 'Jahr' : 'Flex')]]; if(!e) return;
+          var hat = e.aktion !== null && e.aktion !== undefined;
+          var kl = lauf === 'jahr' ? 'je-jahr' : 'je-flex';
+          pl.dataset[lauf === 'jahr' ? 'aktionJahr' : 'aktionFlex'] = hat ? '1' : '0';
+          var big = pl.querySelector('.plan__zahl.' + kl); if(big) big.textContent = zahl(hat ? e.aktion : e.regulaer);
+          var alt = pl.querySelector('.plan__alt.' + kl); if(alt) alt.textContent = zahl(e.regulaer);
+          var ak = pl.querySelector('.plan__aktion.' + kl);
+          if(ak && hat){ ak.textContent = (e.aktion_monate === 1 ? 'Aktionspreis im ersten Monat' : 'Aktionspreis f\u00fcr die ersten ' + e.aktion_monate + ' Monate') + ', danach ' + zahl(e.regulaer) + ' \u20ac'; }
+          var hin = pl.querySelector('.plan__hin.' + kl);
+          if(hin){ var andere = d.memberships[pl.dataset['id' + (lauf === 'jahr' ? 'Flex' : 'Jahr')]]; if(andere) hin.textContent = lauf === 'jahr' ? ('12 Monate Laufzeit. Oder ' + zahl(andere.regulaer) + ' \u20ac monatlich k\u00fcndbar.') : ('Monatlich k\u00fcndbar. Oder ' + zahl(andere.regulaer) + ' \u20ac bei 12 Monaten.'); }
+        });
+        var flex = document.querySelector('.p-schalter [data-lauf="flex"][aria-pressed="true"]') !== null;
+        var hat = pl.dataset[flex ? 'aktionFlex' : 'aktionJahr'] === '1';
+        pl.querySelectorAll('.plan__alt, .plan__aktion').forEach(function(x){ x.hidden = !(hat && x.classList.contains(flex ? 'je-flex' : 'je-jahr')); });
+      });
+      var w = (d.produkte || []).filter(function(x){ return /welcome/i.test(x.name); })[0];
+      if(w && w.preis){ document.querySelectorAll('.welcome__preis > b').forEach(function(b){ b.textContent = zahl(w.preis) + ' \u20ac'; }); }
+    }).catch(function(){});
   })();
 
   /* -------- Frag D!: der Assistent -------- */
