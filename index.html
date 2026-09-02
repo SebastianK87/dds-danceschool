@@ -8407,7 +8407,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
         z.classList.toggle('voll-class', c.frei === 0);
         if(c.frei === 0) box.innerHTML = '<span class="voll">ausgebucht</span>';
         else if(c.frei <= 5) box.innerHTML = '<span class="knapp">nur noch ' + c.frei + ' Pl\u00e4tze</span>';
-        else box.innerHTML = '<span class="frei">Pl\u00e4tze frei</span>';
+        else box.innerHTML = '';
       });
     }).catch(function(){});
   })();
