@@ -8685,7 +8685,27 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     planer.querySelector('.planer__zeig').addEventListener('click', function(){ markiere(gewaehlt.map(function(c){ return c.id; }), true); });
     // Ablauf
     var start = planer.querySelector('.planer__start'), inhalt = document.getElementById('planer-inhalt');
-    function laden(){ if(plan || !url) return Promise.resolve(plan); return fetch(url).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){ plan = d; return d; }).catch(function(){ return null; }); }
+    function ausDom(){ // Fallback ohne Worker (Artifact, Netz weg): Classes aus dem Kursplan auf der Seite
+      var classes = [];
+      document.querySelectorAll('#liste-kalender .termin[data-id]').forEach(function(t){
+        var gruppe = t.closest('[data-tag]'); if(!gruppe) return;
+        var frei = null, fb = t.querySelector('.termin__frei'); if(fb){ var m = fb.textContent.match(/(\d+)/); if(/ausgebucht/.test(fb.textContent)) frei = 0; else if(m) frei = parseInt(m[1], 10); }
+        var dauer = parseInt(((t.querySelector('.termin__zeit small') || {}).textContent || '60'), 10) || 60;
+        var meta = t.querySelector('.termin__meta'), spans = meta ? [].slice.call(meta.querySelectorAll('span')) : [];
+        var coachEl = meta ? (meta.querySelector('[data-coach]') || meta.querySelector('.coach-text')) : null;
+        var studio = ''; spans.forEach(function(sp){ if(!sp.classList.contains('stufe') && !sp.classList.contains('termin__frei') && !sp.closest('.termin__frei') && !sp.hasAttribute('data-coach') && /studio|zone|space/i.test(sp.textContent)) studio = sp.textContent.trim(); });
+        classes.push({id: t.dataset.id, tag: gruppe.dataset.tag, datum: gruppe.dataset.datum, zeit: t.dataset.zeit, dauer: dauer,
+          titel: (t.querySelector('.termin__name') || {}).textContent.trim(), coach: coachEl ? coachEl.textContent.trim() : '',
+          studio: studio, level: ((t.querySelector('.stufe') || {}).textContent || '').trim(), frei: frei,
+          url: (t.querySelector('a.buchen') || {}).href || ('https://www.eversports.de/org/activity/' + t.dataset.id)});
+      });
+      return {classes: classes, abgesagt: [], quelle: 'seite'};
+    }
+    function laden(){
+      if(plan) return Promise.resolve(plan);
+      if(!url) { plan = ausDom(); return Promise.resolve(plan); }
+      return fetch(url).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){ plan = (d && d.classes && d.classes.length) ? d : ausDom(); return plan; }).catch(function(){ plan = ausDom(); return plan; });
+    }
     start.addEventListener('click', function(){ start.setAttribute('aria-expanded', 'true'); inhalt.hidden = false; laden().then(stilChips); });
     function stilChips(){
       var box = planer.querySelector('[data-frage="stil"] .planer__chips'); if(box.dataset.fertig || !plan) return; box.dataset.fertig = '1';
