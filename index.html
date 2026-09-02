@@ -911,6 +911,84 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 }
 @media (prefers-reduced-motion:reduce){.coach[open]{animation:none}}
 
+/* ---------- Frag D! ---------- */
+.frag-knopf{position:fixed;right:22px;bottom:88px;z-index:30;display:inline-flex;align-items:center;
+  gap:10px;padding:8px 18px 8px 8px;border-radius:999px;background:var(--pink);color:var(--ink);
+  border:0;cursor:pointer;font:700 15px/1 var(--grot);box-shadow:0 14px 34px -10px rgba(0,0,0,.5);
+  transition:transform .35s var(--e)}
+.frag-knopf:hover{transform:translateY(-3px)}
+.frag-knopf__d{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);
+  color:var(--hell);font:800 15px/1 var(--disp)}
+.frag-knopf__d i,.frag__ava i{font-style:normal;color:var(--pink)}
+.frag{position:fixed;right:22px;bottom:22px;z-index:45;width:min(420px,calc(100vw - 24px));
+  max-height:min(78vh,720px);display:flex;flex-direction:column;background:var(--ink);
+  border:1px solid var(--linie-d);border-radius:var(--rund);box-shadow:0 30px 80px -30px rgba(0,0,0,.7);
+  overflow:hidden;animation:fragAuf .45s var(--e)}
+@keyframes fragAuf{from{opacity:0;transform:translateY(20px)}}
+body[data-frag="1"] .frag-knopf{display:none}
+.frag__kopf{display:flex;align-items:center;gap:12px;padding:14px 14px 14px 16px;
+  border-bottom:1px solid var(--linie-d);background:var(--tief)}
+.frag__ava{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--pink);
+  color:var(--ink);font:800 16px/1 var(--disp);flex:0 0 auto}
+.frag__ava i{color:var(--ink)}
+.frag__titel{display:grid;gap:2px;min-width:0}
+.frag__titel b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:16px}
+.frag__titel span{font-size:12.5px;color:var(--auf-ink-leis)}
+.frag__zu{margin-left:auto;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;
+  background:transparent;border:1px solid var(--linie-d);color:var(--hell);cursor:pointer}
+.frag__zu svg{width:18px;height:18px}
+.frag__zu:hover{background:var(--pink);color:var(--ink)}
+.frag__lauf{flex:1;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:12px;
+  scroll-behavior:smooth}
+.frag__m{max-width:88%;padding:12px 14px;border-radius:16px;font-size:14.5px;line-height:1.55}
+.frag__m--d{align-self:flex-start;background:var(--tief);border:1px solid var(--linie-d);
+  border-bottom-left-radius:6px}
+.frag__m--du{align-self:flex-end;background:var(--pink);color:var(--ink);border-bottom-right-radius:6px}
+.frag__m p+p{margin-top:8px}
+.frag__chips{display:flex;flex-wrap:wrap;gap:8px}
+.frag__chip{font:700 13px/1 var(--grot);padding:10px 14px;border-radius:999px;background:transparent;
+  border:1px solid rgba(225,226,220,.35);color:var(--hell);cursor:pointer;
+  transition:background .25s,border-color .25s,color .25s}
+.frag__chip:hover{background:var(--pink);color:var(--ink);border-color:var(--pink)}
+.frag__karten{display:grid;gap:8px;align-self:stretch}
+.frag__karte{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;
+  padding:10px 12px;border-radius:14px;background:var(--tief);border:1px solid var(--linie-d)}
+.frag__karte b{font-family:var(--disp);font-weight:800;font-size:14px;white-space:nowrap}
+.frag__karte span{display:block;font-size:13.5px;line-height:1.3}
+.frag__karte small{display:block;font-size:12px;color:var(--auf-ink-leis);margin-top:2px}
+.frag__karte .buchen{padding:8px 14px;font-size:12.5px;color:var(--hell);
+  box-shadow:inset 0 0 0 1.5px rgba(225,226,220,.4)}
+.frag__karte .buchen:hover{background:var(--pink);color:var(--ink);box-shadow:none}
+.frag__aktion{align-self:flex-start;display:flex;flex-wrap:wrap;gap:8px}
+.frag__aktion .knopf{padding:11px 18px;font-size:13.5px}
+.frag__tipp{align-self:flex-start;display:inline-flex;gap:5px;padding:12px 16px;border-radius:16px;
+  background:var(--tief);border:1px solid var(--linie-d)}
+.frag__tipp i{width:7px;height:7px;border-radius:50%;background:var(--auf-ink-leis);
+  animation:fragPunkt 1.1s infinite}
+.frag__tipp i:nth-child(2){animation-delay:.18s}
+.frag__tipp i:nth-child(3){animation-delay:.36s}
+@keyframes fragPunkt{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+.frag__eingabe{display:flex;gap:8px;padding:12px;border-top:1px solid var(--linie-d);background:var(--tief)}
+.frag__eingabe input{flex:1;min-width:0;font:500 15px/1.3 var(--grot);padding:13px 14px;border-radius:999px;
+  background:var(--ink);border:1px solid var(--linie-d);color:var(--hell)}
+.frag__eingabe input::placeholder{color:var(--auf-ink-leis)}
+.frag__eingabe input:focus{outline:2px solid var(--pink);outline-offset:1px}
+.frag__senden{width:46px;height:46px;flex:0 0 auto;display:grid;place-items:center;border-radius:50%;
+  background:var(--pink);color:var(--ink);border:0;cursor:pointer}
+.frag__senden svg{width:18px;height:18px;transform:rotate(180deg)}
+.frag__senden:disabled{opacity:.5;cursor:default}
+.frag__fuss{padding:8px 16px 12px;font-size:11.5px;color:var(--auf-ink-leis);background:var(--tief);
+  text-wrap:pretty}
+.frag__fuss a{color:inherit}
+@media (max-width:700px){
+  .frag-knopf{right:12px;bottom:76px;padding:7px 14px 7px 7px;font-size:14px}
+  .frag-knopf__d{width:34px;height:34px}
+  .frag{right:0;bottom:0;left:0;width:100vw;max-height:88vh;border-radius:var(--rund) var(--rund) 0 0}
+  .frag__m{max-width:92%}
+  body[data-frag="1"] .leiste{display:none}
+}
+@media (prefers-reduced-motion:reduce){.frag{animation:none}.frag__tipp i{animation:none}}
+
 /* ---------- Typo Runde 2 ---------- */
 .plan--top .plan__spar{color:var(--gold)}
 .event__tag{color:var(--gold)}
@@ -6664,6 +6742,31 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </footer>
 <a class="wa-frei" href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank" rel="noopener"
    aria-label="WhatsApp schreiben"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.4 11.4 0 0 0 4.4 3.9 14.8 14.8 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg></a>
+<button type="button" class="frag-knopf" aria-controls="frag" aria-expanded="false">
+  <span class="frag-knopf__d" aria-hidden="true">D<i>!</i></span>
+  <span class="frag-knopf__t">Frag D!</span>
+</button>
+<section class="frag" id="frag" role="dialog" aria-label="Frag D!, dein digitaler Welcomer" hidden data-url="https://dds-frag.s-kellerberlin.workers.dev/frag">
+  <header class="frag__kopf">
+    <span class="frag__ava" aria-hidden="true">D<i>!</i></span>
+    <div class="frag__titel"><b>Frag D!</b><span>Dein Welcomer. Findet deine Class, antwortet in Sekunden.</span></div>
+    <button type="button" class="frag__zu" aria-label="Schlie&szlig;en"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </header>
+  <div class="frag__lauf" aria-live="polite">
+    <div class="frag__m frag__m--d">
+      <p>Hi, ich bin D!. Sag mir, was du suchst: Style, Level, Tag oder einfach
+      &bdquo;ich bin neu&ldquo;. Ich finde deine Class und du buchst mit einem Tipp.</p>
+    </div>
+    <div class="frag__chips" data-start><button type="button" class="frag__chip">Ich bin neu hier</button><button type="button" class="frag__chip">Was kostet das?</button><button type="button" class="frag__chip">Heute noch eine Class</button><button type="button" class="frag__chip">Events</button><button type="button" class="frag__chip">F&uuml;r mein Kind</button></div>
+  </div>
+  <form class="frag__eingabe" autocomplete="off">
+    <label class="nurSR" for="frag-text">Deine Frage</label>
+    <input id="frag-text" name="frag" type="text" maxlength="500" placeholder="Schreib D! eine Frage" required>
+    <button type="submit" class="frag__senden" aria-label="Senden"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+  </form>
+  <p class="frag__fuss">Keine Speicherung. Keine Namen oder Nummern eintippen, daf&uuml;r gibt es
+    <a href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank" rel="noopener">WhatsApp<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>.</p>
+</section>
 <div class="leiste" data-zeig="0">
   <a class="leiste__wa" href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank" rel="noopener"
      aria-label="WhatsApp schreiben"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.4 11.4 0 0 0 4.4 3.9 14.8 14.8 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg></a>
@@ -7805,6 +7908,122 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     new MutationObserver(function(){
       document.body.classList.toggle('coach-offen', dlg.open);
     }).observe(dlg, {attributes:true, attributeFilter:['open']});
+  })();
+
+  /* -------- Frag D!: der Assistent -------- */
+  (function(){
+    var panel = document.getElementById('frag');
+    var knopf = document.querySelector('.frag-knopf');
+    if(!panel || !knopf) return;
+    var lauf = panel.querySelector('.frag__lauf');
+    var form = panel.querySelector('.frag__eingabe');
+    var feld = document.getElementById('frag-text');
+    var senden = panel.querySelector('.frag__senden');
+    var url = panel.dataset.url;
+    var verlauf = [], laeuft = false;
+    var waLink = panel.querySelector('.frag__fuss a') ? panel.querySelector('.frag__fuss a').getAttribute('href') : '#';
+
+    function auf(){
+      panel.hidden = false; document.body.dataset.frag = '1';
+      knopf.setAttribute('aria-expanded', 'true');
+      setTimeout(function(){ feld.focus({preventScroll:true}); }, 60);
+    }
+    function zu(){
+      panel.hidden = true; document.body.dataset.frag = '0';
+      knopf.setAttribute('aria-expanded', 'false'); knopf.focus({preventScroll:true});
+    }
+    knopf.addEventListener('click', auf);
+    panel.querySelector('.frag__zu').addEventListener('click', zu);
+    addEventListener('keydown', function(e){ if(e.key === 'Escape' && !panel.hidden) zu(); });
+
+    function el(tag, klasse, text){
+      var x = document.createElement(tag); if(klasse) x.className = klasse;
+      if(text != null) x.textContent = text; return x;
+    }
+    function nachricht(wer, text){
+      var m = el('div', 'frag__m ' + (wer === 'du' ? 'frag__m--du' : 'frag__m--d'));
+      String(text).split(/\n{2,}/).forEach(function(a){ m.appendChild(el('p', '', a)); });
+      lauf.appendChild(m); lauf.scrollTop = lauf.scrollHeight; return m;
+    }
+    function karten(liste){
+      if(!liste || !liste.length) return;
+      var box = el('div', 'frag__karten');
+      liste.forEach(function(k){
+        var z = el('div', 'frag__karte');
+        z.appendChild(el('b', '', (k.tag || '') + ' ' + (k.zeit || '')));
+        var mitte = el('div', '');
+        mitte.appendChild(el('span', '', k.titel || ''));
+        var meta = [k.coach, k.level, k.studio].filter(Boolean).join(' · ');
+        if(meta) mitte.appendChild(el('small', '', meta));
+        z.appendChild(mitte);
+        var a = el('a', 'buchen', 'Buchen');
+        a.href = k.url || '#'; a.target = '_blank'; a.rel = 'noopener';
+        z.appendChild(a);
+        box.appendChild(z);
+      });
+      lauf.appendChild(box); lauf.scrollTop = lauf.scrollHeight;
+    }
+    function aktion(a){
+      if(!a || !a.typ) return;
+      var box = el('div', 'frag__aktion');
+      function knopfchen(text, href, extern, klasse){
+        var b = el('a', 'knopf' + (klasse ? ' ' + klasse : ''), text);
+        b.href = href; if(extern){ b.target = '_blank'; b.rel = 'noopener'; }
+        return b;
+      }
+      if(a.typ === 'welcome'){
+        var w = knopfchen('Welcome Pass, 29 €', '#welcome'); w.setAttribute('data-heim', ''); w.addEventListener('click', zu); box.appendChild(w);
+      } else if(a.typ === 'whatsapp'){
+        box.appendChild(knopfchen('Bei WhatsApp schreiben', waLink, true));
+      } else if(a.typ === 'kalender'){
+        var k = knopfchen('Zum Kursplan', '#kalender', false, 'knopf--rand'); k.setAttribute('data-heim', ''); k.addEventListener('click', zu); box.appendChild(k);
+      } else if(a.typ === 'preise'){
+        var p = knopfchen('Alle Preise', '#preise', false, 'knopf--rand'); p.setAttribute('data-heim', ''); p.addEventListener('click', zu); box.appendChild(p);
+      } else if(a.typ === 'events'){
+        var ev = knopfchen('Zu den Events', '#events', false, 'knopf--rand'); ev.setAttribute('data-heim', ''); ev.addEventListener('click', zu); box.appendChild(ev);
+      } else if(a.typ === 'coach' && a.key && document.getElementById(a.key)){
+        var c = el('button', 'knopf knopf--rand', 'Coach-Karte ansehen'); c.type = 'button';
+        c.setAttribute('data-coach', a.key); box.appendChild(c);
+      }
+      if(box.children.length){ lauf.appendChild(box); lauf.scrollTop = lauf.scrollHeight; }
+    }
+    function chips(liste){
+      if(!liste || !liste.length) return;
+      var box = el('div', 'frag__chips');
+      liste.slice(0, 3).forEach(function(t){ var b = el('button', 'frag__chip', t); b.type = 'button'; box.appendChild(b); });
+      lauf.appendChild(box); lauf.scrollTop = lauf.scrollHeight;
+    }
+    function fragen(text){
+      text = String(text || '').trim().slice(0, 500);
+      if(!text || laeuft) return;
+      var start = lauf.querySelector('[data-start]'); if(start) start.remove();
+      lauf.querySelectorAll('.frag__chips').forEach(function(c){ c.remove(); });
+      nachricht('du', text);
+      verlauf.push({rolle:'user', text: text});
+      laeuft = true; senden.disabled = true;
+      var tipp = el('div', 'frag__tipp'); tipp.appendChild(el('i')); tipp.appendChild(el('i')); tipp.appendChild(el('i'));
+      lauf.appendChild(tipp); lauf.scrollTop = lauf.scrollHeight;
+      fetch(url, {method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({nachricht: text, verlauf: verlauf.slice(-8), seite: location.hash || 'uebersicht'})})
+      .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function(d){
+        tipp.remove();
+        var antwort = (d && d.antwort) ? String(d.antwort) : 'Da bin ich gerade nicht sicher. Schreib uns kurz bei WhatsApp.';
+        nachricht('d', antwort);
+        verlauf.push({rolle:'assistant', text: antwort});
+        karten(d.karten); aktion(d.aktion); chips(d.chips);
+      })
+      .catch(function(){
+        tipp.remove();
+        nachricht('d', 'Ich bin gerade nicht erreichbar. Schreib uns bei WhatsApp, da antwortet ein Mensch.');
+        aktion({typ:'whatsapp'});
+      })
+      .finally(function(){ laeuft = false; senden.disabled = false; feld.focus({preventScroll:true}); });
+    }
+    form.addEventListener('submit', function(e){ e.preventDefault(); var t = feld.value; feld.value = ''; fragen(t); });
+    panel.addEventListener('click', function(e){
+      var c = e.target.closest('.frag__chip'); if(c) fragen(c.textContent);
+    });
   })();
 
   /* -------- Anker, die immer zur Startseite gehoeren -------- */
