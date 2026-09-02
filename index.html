@@ -970,6 +970,11 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
   .planer__aktionen .knopf:first-child{grid-column:1/-1}
 }
 
+/* ---------- Hinweis am Buchen-Knopf ---------- */
+.tab-hinweis{display:block;width:100%;font-size:12.5px;line-height:1.4;color:var(--auf-ink-leis);margin-top:6px;
+  animation:fragAuf .4s var(--e)}
+.termin .tab-hinweis,.dropins .tab-hinweis{color:var(--auf-hell-leis)}
+
 /* ---------- Retter-Leiste ---------- */
 .retter{position:fixed;inset:auto 12px 12px;z-index:46;max-width:520px;margin:0 auto;padding:14px 46px 14px 14px;
   background:var(--ink);color:var(--hell);border:1px solid var(--linie-d);border-radius:18px;
@@ -8708,7 +8713,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       if(!info){ var t = a.closest('.termin'); if(t){ info = (t.querySelector('.termin__name') || {}).textContent + '|' + ((t.closest('[data-tag]') || {}).dataset || {}).tag + '|' + (t.dataset.zeit || '') + '|' + ((t.closest('[data-datum]') || {}).dataset || {}).datum + '|' + (t.dataset.id || ''); }
         else if(/welcome|\/o\/ds-dance-school\/0d983c91/.test(a.href)) info = 'Welcome Pass'; else if(/\/mt\/|\/o\//.test(a.href)) info = 'Membership'; else info = 'Class'; }
       try { sessionStorage.setItem('dds-retter', JSON.stringify({t: Date.now(), info: info, href: a.href})); } catch(x){}
+      // Kleiner Hinweis direkt am Knopf: Eversports geht in einem neuen Tab auf, danach hier weiter
+      if(a.target === '_blank' && !a.dataset.hinweis){
+        a.dataset.hinweis = '1';
+        var h = document.createElement('span'); h.className = 'tab-hinweis'; h.textContent = 'Eversports \u00f6ffnet in einem neuen Tab. Komm danach hierher zur\u00fcck.';
+        a.insertAdjacentElement('afterend', h); setTimeout(function(){ h.remove(); }, 6000);
+      }
     }, true);
+    window.addEventListener('focus', function(){ setTimeout(pruefen, 400); });
     function pruefen(){
       var d; try { d = JSON.parse(sessionStorage.getItem('dds-retter') || 'null'); } catch(x){ d = null; }
       if(!d || sessionStorage.getItem('dds-retter-gezeigt')) return;
