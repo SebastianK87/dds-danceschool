@@ -33,7 +33,7 @@
 }
 *{margin:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;scroll-padding-top:86px}
-#welcome,#kalender,#preise,#raster,#events,#faq,#school,#wie{scroll-margin-top:86px}
+#welcome,#kalender,#preise,#raster,#events,#faq,#school,#wie,#saele,#gutschein{scroll-margin-top:86px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{background:var(--ink);color:var(--auf-ink);font:400 16.5px/1.66 var(--grot);
   overflow-x:hidden}
@@ -993,6 +993,15 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 
 .vibe--moment{outline:1px solid rgba(255,167,226,.35);outline-offset:-1px}
 
+/* ---------- Gutscheine ---------- */
+.gutschein{margin-top:var(--s3);border-radius:var(--rund2);overflow:hidden;background:var(--hell);
+  border:1px solid var(--linie-h);min-height:120px}
+.gutschein__platz{display:grid;justify-items:center;gap:14px;padding:clamp(28px,5vw,52px);text-align:center}
+.gutschein__logo{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;
+  background:var(--ink);color:var(--pink)}
+.gutschein__logo .dlogo{width:60%;height:60%}
+.gutschein__platz p{margin:0;max-width:46ch;color:var(--auf-hell-soft)}
+
 /* ---------- Reel-Karte im Kursseiten-Kopf ---------- */
 .kopf--reel{text-align:left}
 .kopf__zwei{position:relative;z-index:1;display:grid;gap:clamp(24px,4vw,52px);
@@ -1281,7 +1290,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
   <div class="wrap top__in">
     <button class="zurueck" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Alle Kurse</button>
     <a class="marke" href="#" data-zu="">D<i>!</i>&#8217;S DANCE SCHOOL</a>
-    <nav class="top__nav" aria-label="Bereiche"><a href="#school" data-heim>Die School</a><a href="#raster" data-heim>Kurse</a><a href="#preise" data-heim>Preise</a><a href="#events" data-heim>Events</a><a href="#saele" data-heim>R&auml;ume mieten</a><a href="#schule" data-heim>Schulprojekte</a><a href="#faq" data-heim>FAQ</a></nav>
+    <nav class="top__nav" aria-label="Bereiche"><a href="#school" data-heim>Die School</a><a href="#raster" data-heim>Kurse</a><a href="#preise" data-heim>Preise</a><a href="#events" data-heim>Events</a><a href="#gutschein" data-heim>Gutscheine</a><a href="#saele" data-heim>R&auml;ume mieten</a><a href="#schule" data-heim>Schulprojekte</a><a href="#faq" data-heim>FAQ</a></nav>
     <div class="top__recht">
       <a class="top__wa" href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank" rel="noopener"
          aria-label="WhatsApp schreiben"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.4 11.4 0 0 0 4.4 3.9 14.8 14.8 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg></a>
@@ -1294,7 +1303,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
   </div>
 </header>
 <nav class="menu" aria-label="Men&uuml;" hidden>
-  <div class="menu__links"><a href="#school" data-heim>Die School</a><a href="#raster" data-heim>Kurse</a><a href="#preise" data-heim>Preise</a><a href="#events" data-heim>Events</a><a href="#saele" data-heim>R&auml;ume mieten</a><a href="#schule" data-heim>Schulprojekte</a><a href="#faq" data-heim>FAQ</a></div>
+  <div class="menu__links"><a href="#school" data-heim>Die School</a><a href="#raster" data-heim>Kurse</a><a href="#preise" data-heim>Preise</a><a href="#events" data-heim>Events</a><a href="#gutschein" data-heim>Gutscheine</a><a href="#saele" data-heim>R&auml;ume mieten</a><a href="#schule" data-heim>Schulprojekte</a><a href="#faq" data-heim>FAQ</a></div>
   <div class="menu__unten">
     <a class="knopf" href="#welcome" data-heim>Neu hier? Welcome Pass</a>
     <a class="knopf knopf--rand" href="#kalender" data-heim>Kursplan</a>
@@ -3672,6 +3681,21 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       <p class="hinweis mitte-h">Nicht dabei? <a href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank"
       rel="noopener">Schreib uns bei WhatsApp<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>, wir antworten schnell.</p>
     </div>
+  </section>
+
+  <section class="block block--hell" id="gutschein">
+    <div class="wrap"><div class="mitte">
+    <p class="kicker">Gutscheine</p>
+    <h2>Verschenk das Tanzen<em>.</em></h2>
+    <p>Betrag frei w&auml;hlen, Gru&szlig; dazuschreiben, sofort als PDF. Einl&ouml;sbar auf
+    alles: Classes, Karten, Memberships.</p>
+  </div>
+  <div class="gutschein"><div class="gutschein__platz">
+      <span class="gutschein__logo" aria-hidden="true"><svg class="dlogo" aria-hidden="true"><use href="#dlogo"/></svg></span>
+      <p>Das Gutschein-Formular von Eversports wird hier eingebettet: Betrag w&auml;hlen,
+      Gru&szlig; schreiben, sofort als PDF bekommen.</p>
+      <a class="knopf knopf--rand" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">Im Shop ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </div></div></div>
   </section>
 
   <section class="block" id="saele">
@@ -7821,8 +7845,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
         <p><a href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">Kursplan &amp; Buchen<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a><br>
         <a href="#preise" data-heim>Preise &amp; Membership</a><br>
         <a href="#events" data-heim>Events</a><br>
-        <a href="https://www.eversports.de/sp/ds-dance-school"
-           target="_blank" rel="noopener">Gutschein verschenken<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a><br>
+        <a href="#gutschein" data-heim>Gutschein verschenken</a><br>
         <a href="#saele" data-heim>Raum mieten</a><br>
         <a href="#school" data-heim>&Uuml;ber die School</a></p>
       </div>
