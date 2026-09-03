@@ -26,8 +26,8 @@
   --ink:#272727; --tief:#1e1e1e; --nacht:#181818;
   --hell:#E1E2DC; --hell2:#EAEBE6;
   --pink:#FFA7E2; --gold:#B29261;--gold-hell:#7A6034;
-  --auf-ink:#E1E2DC; --auf-ink-soft:rgba(225,226,220,.72); --auf-ink-leis:rgba(225,226,220,.6);
-  --auf-hell:#272727; --auf-hell-soft:rgba(39,39,39,.68); --auf-hell-leis:rgba(39,39,39,.71);
+  --auf-ink:#E1E2DC; --auf-ink-soft:rgba(225,226,220,.82); --auf-ink-leis:rgba(225,226,220,.7);
+  --auf-hell:#272727; --auf-hell-soft:rgba(39,39,39,.78); --auf-hell-leis:rgba(39,39,39,.68);
   --linie-d:rgba(225,226,220,.12); --linie-h:rgba(39,39,39,.14);
   --s1:12px; --s2:22px; --s3:38px; --s4:64px; --s5:104px;
   --rund:22px; --rund2:14px;
@@ -40,7 +40,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;scro
 #welcome,#kalender,#preise,#raster,#events,#faq,#school,#wie,#saele,#gutschein,
 #detlef{scroll-margin-top:86px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{background:var(--ink);color:var(--auf-ink);font:400 16.5px/1.66 var(--grot);
+body{background:var(--ink);color:var(--auf-ink);font:400 17px/1.62 var(--grot);
   overflow-x:hidden}
 [hidden]{display:none !important}
 /* height:auto muss hier stehen, sonst wirkt das HTML-height-Attribut als
@@ -65,7 +65,7 @@ h1,h2,h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;
 h2{font-size:clamp(30px,5vw,58px)}
 h2 em,h3 em{font-style:normal;color:var(--pink)}
 .h2--klein{font-size:clamp(24px,3.4vw,38px)}
-.kicker{display:block;font:700 12.5px/1.45 var(--grot);letter-spacing:.24em;
+.kicker{display:block;font:700 12px/1.45 var(--grot);letter-spacing:.12em;
   text-transform:uppercase;color:var(--pink);margin-bottom:14px}
 .block--hell .kicker{color:var(--auf-hell);opacity:.85}
 .block--hell .kicker::before{content:"";display:inline-block;width:9px;height:9px;
@@ -74,7 +74,7 @@ h2 em,h3 em{font-style:normal;color:var(--pink)}
 .mitte>p:not(.kicker){margin-top:var(--s2);color:var(--auf-ink-soft)}
 .block--hell .mitte>p:not(.kicker){color:var(--auf-hell-soft)}
 .mitte-h{text-align:center;margin-inline:auto}
-.hinweis{font-size:15px;color:var(--auf-ink-leis);max-width:640px;margin-top:var(--s3)}
+.hinweis{font-size:14.5px;color:var(--auf-ink-leis);max-width:640px;margin-top:var(--s3)}
 .block--hell .hinweis{color:var(--auf-hell-leis)}
 .hinweis a{color:inherit}
 
@@ -745,7 +745,7 @@ a.trainer span{color:var(--pink)}
 @media (max-width:560px){.zeit{grid-template-columns:1fr}}
 .zeit b{font-family:var(--disp);font-weight:800;text-transform:uppercase;
   font-size:24px;color:var(--gold);display:block;margin-bottom:6px}
-.zeit span{font-size:15px;line-height:1.55;color:var(--auf-ink-soft)}
+.zeit span{font-size:16px;line-height:1.6;color:var(--auf-ink-soft)}
 
 /* ---------- Typo-Runde: Masse, Tracking, Groessen, Umbrueche ---------- */
 @media (max-width:1060px){.top__nav~.top__recht{margin-left:auto}}
@@ -767,7 +767,7 @@ a.trainer span{color:var(--pink)}
 .buehne__tag,.tag .heute,.kachel__tag,.plan__tag,.termin__zeit small,.stufe,
 .trainer span{font-size:12.5px}
 .termin__meta,.kachel__zahl,.stimme footer,.fuss__unten,.leiste__t,
-.plan__hin,.plan__wer,.dropin__z{font-size:15px;line-height:1.45}
+.plan__hin,.plan__wer,.dropin__z{font-size:16px;line-height:1.55}
 .tuer p,.sp p,.gr__args span,.plan__drin li,.stimme q,.event p,.fuss p,
 .fakt span,.zeit span,.frage__a>p{font-size:15px}
 .buehne__satz,.kopf__claim{font-size:18px}
@@ -811,7 +811,7 @@ a.trainer span{color:var(--pink)}
   text-decoration-color:var(--pink);text-decoration-thickness:2px}
 .textlink svg{width:13px;height:13px}
 .dropins{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;
-  gap:14px;margin-top:var(--s3);padding:16px;border-radius:var(--rund2);
+  gap:14px;margin-top:var(--s3);padding:26px;border-radius:var(--rund);
   background:var(--hell2);border:1px solid var(--linie-h);color:var(--auf-hell)}
 .dropins .textlink{grid-column:1/-1;justify-self:end;margin-top:2px}
 @media (max-width:820px){.dropins{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -851,7 +851,7 @@ a.trainer span{color:var(--pink)}
 .plan__weg{font-size:12.5px;color:inherit;opacity:.55;margin-top:8px}
 .plaene{grid-template-columns:repeat(2,1fr);max-width:900px;margin-inline:auto}
 @media (max-width:600px){.plaene{grid-template-columns:1fr}}
-.drin-zeile{max-width:900px;margin:18px auto 0;padding:22px 26px;border-radius:var(--rund2);
+.drin-zeile{max-width:900px;margin:18px auto 0;padding:26px;border-radius:var(--rund);
   background:var(--ink);border:1px solid var(--ink);color:var(--auf-ink);
   display:flex;flex-wrap:wrap;gap:10px 28px;align-items:flex-start}
 .drin-zeile b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:15px;
@@ -1054,7 +1054,7 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 }
 
 /* ---------- Schulprojekte-Teaser und die leisen Verweise ---------- */
-.schulteaser{display:grid;gap:clamp(22px,4vw,52px);grid-template-columns:minmax(0,240px) 1fr;
+.schulteaser{display:grid;gap:clamp(26px,4vw,56px);grid-template-columns:minmax(0,380px) 1fr;
   align-items:center}
 .schulteaser__bild{display:block;width:100%;aspect-ratio:3/4;border-radius:var(--rund2);
   object-fit:cover;background-size:cover;background-position:center;filter:saturate(.92)}
@@ -1063,7 +1063,7 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
   font-size:15.5px;line-height:1.6;color:var(--auf-hell-soft)}
 .schulteaser__cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:var(--s3)}
 .auch-leise{margin-top:var(--s4);padding-top:var(--s2);border-top:1px solid var(--linie-h);
-  font-size:14px;color:var(--auf-hell-leis)}
+  font-size:15px;color:var(--auf-hell-leis)}
 .auch-leise a{color:var(--auf-hell-soft);text-underline-offset:3px}
 .auch-leise a:hover{color:var(--auf-hell)}
 .auch-leise svg{width:11px;height:11px;margin-left:8px;vertical-align:-1px}
@@ -1155,7 +1155,7 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
   background:var(--hell2);border:1px solid var(--linie-h);color:var(--auf-hell)}
 .filterblock .filter,.filterblock .tagchips{margin:0}
 .filterblock .filter--stil{margin-top:0}
-.filter__label{font:700 11px/1 var(--grot);letter-spacing:.2em;text-transform:uppercase;color:var(--auf-hell-soft);
+.filter__label{font:700 12px/1 var(--grot);letter-spacing:.11em;text-transform:uppercase;color:var(--auf-hell-soft);
   text-align:center;margin:10px 0 0}
 .filter__label:first-child{margin-top:0}
 .filter--stil{margin-top:8px}
@@ -1224,7 +1224,8 @@ a.dropin:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(0,0,
 /* ---------- Aktionspreise ---------- */
 .plan__alt{font-size:.42em;opacity:.5;text-decoration:line-through;margin-right:8px;
   vertical-align:.45em;letter-spacing:0}
-.plan__aktion{display:block;font:600 13.5px/1.45 var(--grot);color:var(--gold);margin:-6px 0 6px}
+.plan__aktion{display:block;font:600 14px/1.5 var(--grot);color:var(--gold-hell);margin:-6px 0 6px}
+.plan--top .plan__aktion{color:var(--gold)}
 .dropin__geh{color:var(--gold-hell)}
 .welcome__gut{display:block;font-size:13.5px;line-height:1.45;margin:6px 0 2px;opacity:.85;text-wrap:pretty}
 
@@ -1366,9 +1367,11 @@ body[data-frag="1"] .frag-knopf{display:none}
 .plan__spar{align-self:flex-start;font:700 12.5px/1 var(--grot);letter-spacing:.06em;
   text-transform:uppercase;color:var(--auf-hell);border:1px solid rgba(178,146,97,.55);
   padding:6px 11px;border-radius:999px;margin-block:2px}
-.plan--top{border:1px solid rgba(255,167,226,.4);
-  box-shadow:0 26px 60px -30px rgba(255,167,226,.35)}
-.plan--top:hover{box-shadow:0 30px 64px -28px rgba(255,167,226,.45)}
+/* Der Schein war so stark, dass die Karte neben der ruhigen Basic-Karte
+   unruhig wirkte. Die Auszeichnung traegt schon der Tag oben rechts. */
+.plan--top{border:1px solid rgba(255,167,226,.32);
+  box-shadow:0 20px 44px -32px rgba(255,167,226,.22)}
+.plan--top:hover{box-shadow:0 24px 50px -30px rgba(255,167,226,.3)}
 .vergleich{display:grid;gap:14px;grid-template-columns:1fr 1fr;
   max-width:760px;margin:var(--s3) auto 0}
 @media (max-width:640px){.vergleich{grid-template-columns:1fr}}
@@ -1509,7 +1512,6 @@ body[data-frag="1"] .frag-knopf{display:none}
 </main>
 <footer class="fuss">
   <div class="wrap">
-    <div class="fuss__marke" aria-hidden="true">D<i>!</i>&#8217;S DANCE SCHOOL</div>
     <div class="fuss__spalten">
       <div>
         <b>Hier findest du uns</b>
