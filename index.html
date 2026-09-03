@@ -21,7 +21,7 @@
 :root{
   --ink:#272727; --tief:#1e1e1e; --nacht:#181818;
   --hell:#E1E2DC; --hell2:#EAEBE6;
-  --pink:#FFA7E2; --gold:#B29261;
+  --pink:#FFA7E2; --gold:#B29261;--gold-hell:#7A6034;
   --auf-ink:#E1E2DC; --auf-ink-soft:rgba(225,226,220,.72); --auf-ink-leis:rgba(225,226,220,.6);
   --auf-hell:#272727; --auf-hell-soft:rgba(39,39,39,.68); --auf-hell-leis:rgba(39,39,39,.71);
   --linie-d:rgba(225,226,220,.12); --linie-h:rgba(39,39,39,.14);
@@ -32,7 +32,8 @@
   --grot:'Overused Grotesk', 'Helvetica Neue', Arial, sans-serif;
 }
 *{margin:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;scroll-padding-top:86px}
+#welcome,#kalender,#preise,#raster,#events,#faq,#school,#wie{scroll-margin-top:86px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{background:var(--ink);color:var(--auf-ink);font:400 16.5px/1.66 var(--grot);
   overflow-x:hidden}
@@ -1046,6 +1047,7 @@ a.dropin:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(0,0,
 .plan__alt{font-size:.42em;opacity:.5;text-decoration:line-through;margin-right:8px;
   vertical-align:.45em;letter-spacing:0}
 .plan__aktion{display:block;font:600 13px/1.4 var(--grot);color:var(--gold);margin:-6px 0 6px}
+.dropin__geh{color:var(--gold-hell)}
 .welcome__gut{display:block;font-size:13.5px;line-height:1.45;margin:6px 0 2px;opacity:.85;text-wrap:pretty}
 
 /* ---------- D!-Logo in den Avataren ---------- */
@@ -1068,6 +1070,8 @@ a.dropin:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(0,0,
   overflow:hidden;animation:fragAuf .45s var(--e)}
 @keyframes fragAuf{from{opacity:0;transform:translateY(20px)}}
 body[data-frag="1"] .frag-knopf{display:none}
+@media (max-width:700px){body[data-leiste="1"] .frag-knopf{bottom:88px;padding:7px;gap:0}
+body[data-leiste="1"] .frag-knopf__t{display:none}}
 .frag__kopf{display:flex;align-items:center;gap:12px;padding:14px 14px 14px 16px;
   border-bottom:1px solid var(--linie-d);background:var(--tief)}
 .frag__ava{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--pink);
@@ -1146,7 +1150,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   .tagchips button{padding:10px 0;text-align:center}
   .tagchips button:first-child{grid-column:1/-1}
   .kicker,.buehne__titel .kicker{letter-spacing:.14em}
-  .buehne__titel .kicker .trenn{display:none}
+  .buehne__titel .kicker .trenn{display:block;height:0;overflow:hidden}
   .buehne__titel .kicker{white-space:normal}
 }
 .buehne__titel .kicker .trenn{font-style:normal}
@@ -1225,7 +1229,8 @@ body[data-frag="1"] .frag-knopf{display:none}
 <nav class="menu" aria-label="Men&uuml;" hidden>
   <div class="menu__links"><a href="#school" data-heim>Die School</a><a href="#raster" data-heim>Kurse</a><a href="#preise" data-heim>Preise</a><a href="#events" data-heim>Events</a><a href="#schule" data-heim>Schulprojekte</a><a href="#faq" data-heim>FAQ</a></div>
   <div class="menu__unten">
-    <a class="knopf" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">Kursplan &amp; Buchen<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    <a class="knopf" href="#welcome" data-heim>Neu hier? Welcome Pass</a>
+    <a class="knopf knopf--rand" href="#kalender" data-heim>Kursplan</a>
     <a class="knopf knopf--rand" href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.4 11.4 0 0 0 4.4 3.9 14.8 14.8 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg>WhatsApp<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
   </div>
 </nav>
@@ -1260,7 +1265,7 @@ body[data-frag="1"] .frag-knopf{display:none}
 </header>
 
   <section class="block block--tief" id="einstieg">
-    <div class="wrap"><div class="tueren"><a class="tuer" href="#preise" data-heim>
+    <div class="wrap"><div class="tueren"><a class="tuer" href="#welcome" data-heim>
     <span class="tuer__num" aria-hidden="true">01</span>
     <b>Zum ersten Mal hier</b><p>Du hast noch nie getanzt oder warst lange raus. Der Welcome Pass ist genau daf&uuml;r da.</p>
     <span class="tuer__cta">Welcome Pass, 29 &euro;<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></span></a><a class="tuer" href="#kalender" data-heim>
@@ -1551,7 +1556,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     <b>Basic</b>
     <span class="plan__preis"><s class="plan__alt je-jahr">59</s><s class="plan__alt je-flex" hidden>69</s><span class="je-jahr plan__zahl">49</span><span
       class="je-flex plan__zahl" hidden>59</span><small>&euro; / Monat</small></span>
-    <span class="plan__aktion je-jahr">Aktionspreis f&uuml;r die ersten 3 Monate, danach 59 &euro;</span><span class="plan__aktion je-flex" hidden>Aktionspreis im ersten Monat, danach 69 &euro;</span>
+    <span class="plan__aktion je-jahr">Aktionspreis f&uuml;r die ersten 3 Monate, danach 59&nbsp;&euro;</span><span class="plan__aktion je-flex" hidden>Aktionspreis im ersten Monat, danach 69&nbsp;&euro;</span>
     <span class="plan__merk">6 Check-ins im Monat</span>
     <span class="plan__wer">F&uuml;r ein- bis zweimal die Woche.</span>
     <span class="plan__spar je-jahr">Du sparst 120 &euro; im Jahr</span>
@@ -1560,15 +1565,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     <span class="plan__hin je-flex" hidden>Monatlich k&uuml;ndbar. Oder 59 &euro; bei 12 Monaten.</span>
     <a class="knopf knopf--ink" href="https://www.eversports.de/mt/ds-dance-school/57077" target="_blank"
        data-jahr="https://www.eversports.de/mt/ds-dance-school/57077" data-flex="https://www.eversports.de/mt/ds-dance-school/57080"
-       rel="noopener">Basic <span class="je-jahr">&middot; 12 Monate</span><span
-       class="je-flex" hidden>&middot; Flex</span> starten<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+       rel="noopener">Basic starten<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <span class="plan__weg">&Ouml;ffnet direkt die Basic-Seite bei Eversports.</span>
   </div><div class="plan plan--top" data-id-jahr="57081" data-id-flex="57082" data-aktion-jahr="1" data-aktion-flex="1">
     <span class="plan__tag">Beliebteste Wahl</span>
     <b>Unlimited</b>
     <span class="plan__preis"><s class="plan__alt je-jahr">74</s><s class="plan__alt je-flex" hidden>84</s><span class="je-jahr plan__zahl">64</span><span
       class="je-flex plan__zahl" hidden>74</span><small>&euro; / Monat</small></span>
-    <span class="plan__aktion je-jahr">Aktionspreis f&uuml;r die ersten 3 Monate, danach 74 &euro;</span><span class="plan__aktion je-flex" hidden>Aktionspreis im ersten Monat, danach 84 &euro;</span>
+    <span class="plan__aktion je-jahr">Aktionspreis f&uuml;r die ersten 3 Monate, danach 74&nbsp;&euro;</span><span class="plan__aktion je-flex" hidden>Aktionspreis im ersten Monat, danach 84&nbsp;&euro;</span>
     <span class="plan__merk">Unbegrenzt tanzen</span>
     <span class="plan__wer">Jeden Tag. Jede Class. Jeder Style.</span>
     <span class="plan__spar je-jahr">Du sparst 120 &euro; im Jahr</span>
@@ -1577,8 +1581,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     <span class="plan__hin je-flex" hidden>Monatlich k&uuml;ndbar. Oder 74 &euro; bei 12 Monaten.</span>
     <a class="knopf" href="https://www.eversports.de/mt/ds-dance-school/57081" target="_blank"
        data-jahr="https://www.eversports.de/mt/ds-dance-school/57081" data-flex="https://www.eversports.de/mt/ds-dance-school/57082"
-       rel="noopener">Unlimited <span class="je-jahr">&middot; 12 Monate</span><span
-       class="je-flex" hidden>&middot; Flex</span> starten<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+       rel="noopener">Unlimited starten<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <span class="plan__weg">&Ouml;ffnet direkt die Unlimited-Seite bei Eversports.</span>
   </div>
   </div>
@@ -7608,7 +7611,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
         <b>Schreib uns</b>
         <p><a href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.4 11.4 0 0 0 4.4 3.9 14.8 14.8 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg>WhatsApp: +49 1517 3048373<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a><br>
         <a href="mailto:info@deesworld.de">info@deesworld.de</a><br>
-        <span class="fuss__soft">Telefon +49 30 20605924, Mo bis Fr, 10 bis 15 Uhr</span></p>
+        <span class="fuss__soft">Telefon <a href="tel:+493020605924">+49 30 20605924</a>, Mo bis Fr, 10 bis 15 Uhr</span></p>
         <p><a href="https://www.instagram.com/dsdanceworld/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><rect x="2.4" y="2.4" width="19.2" height="19.2" rx="5.4"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.5" cy="6.5" r="1.15" fill="currentColor" stroke="none"/></svg>@dsdanceworld<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a><br>
         <a href="https://www.deesworld.de/dance-school/kontakt/" target="_blank" rel="noopener">Kontaktformular<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></p>
       </div>
@@ -8911,6 +8914,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
         else box.innerHTML = '';
       });
     }).catch(function(){});
+  })();
+
+  /* -------- Chat-Knopf weicht der Welcome-Leiste (mobil) -------- */
+  (function(){
+    var l = document.querySelector('.leiste'); if(!l) return;
+    document.body.dataset.leiste = l.dataset.zeig || '0';
+    new MutationObserver(function(){ document.body.dataset.leiste = l.dataset.zeig || '0'; })
+      .observe(l, {attributes: true, attributeFilter: ['data-zeig']});
   })();
 
   /* -------- Zaehler (anonym, ohne Cookie, ohne ID) -------- */
