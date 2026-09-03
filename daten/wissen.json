@@ -19,7 +19,18 @@
   "seite": "https://www.deesworld.de/dance-school/",
   "shop": "https://www.eversports.de/sp/ds-dance-school",
   "kursplan": "https://www.deesworld.de/dance-school/#kalender",
-  "schulprojekte": "/dance-school/schulprojekte/"
+  "schulprojekte": "/dance-school/schulprojekte/",
+  "raumvermietung": {
+   "ab_euro_pro_stunde": 49,
+   "ansprechpartnerin": "Emily",
+   "mail": "info@deesworld.de",
+   "raeume": [
+    "Studio 1 · Large Space",
+    "Studio 4 · Pole Space",
+    "Fitness Area"
+   ],
+   "text": "Fünf Säle mitten in Berlin, große Fenster, Spiegelwand, Sound. Vormittags und an Wochenenden frei für Proben, Shootings, Workshops und Castings."
+  }
  },
  "preise": {
   "welcome_pass": {
