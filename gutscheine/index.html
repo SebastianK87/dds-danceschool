@@ -690,12 +690,14 @@ a.trainer span{color:var(--pink)}
   margin-top:18px}
 
 /* Der Kalender zeigt erst einen Ausschnitt */
-.klappe{max-height:640px;overflow:hidden;position:relative}
-.klappe::after{content:"";position:absolute;inset:auto 0 0;height:150px;
-  background:linear-gradient(to top,var(--hell),transparent);pointer-events:none}
+.klappe{max-height:640px;overflow:hidden;position:relative;--klappe-grund:var(--hell)}
+.block--tief .klappe,.block--ink .klappe{--klappe-grund:var(--tief)}
+.klappe::after{content:"";position:absolute;inset:auto 0 0;height:210px;
+  background:linear-gradient(to top,var(--klappe-grund) 34%,transparent);pointer-events:none}
 .klappe--offen{max-height:none}
 .klappe--offen::after{display:none}
-.klappe__mehr{text-align:center;margin-top:20px}
+.klappe__mehr{position:relative;z-index:2;text-align:center;margin-top:-70px}
+.klappe--offen + .klappe__mehr{margin-top:20px}
 
 /* Das Raster: kleiner, versetzt, mit leichtem Kippen beim Anfassen */
 .raster .kachel:nth-child(even){position:relative;top:26px}
@@ -849,11 +851,13 @@ a.trainer span{color:var(--pink)}
 .plan__weg{font-size:12.5px;color:inherit;opacity:.55;margin-top:8px}
 .plaene{grid-template-columns:repeat(2,1fr);max-width:900px;margin-inline:auto}
 @media (max-width:600px){.plaene{grid-template-columns:1fr}}
-.drin-zeile{max-width:900px;margin:16px auto 0;padding:18px 24px;border-radius:var(--rund2);
-  background:var(--hell2);border:1px solid var(--linie-h);display:flex;flex-wrap:wrap;
-  gap:8px 28px;align-items:center}
+.drin-zeile{max-width:900px;margin:18px auto 0;padding:22px 26px;border-radius:var(--rund2);
+  background:var(--ink);border:1px solid var(--ink);color:var(--auf-ink);
+  display:flex;flex-wrap:wrap;gap:10px 28px;align-items:flex-start}
 .drin-zeile b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:15px;
-  letter-spacing:.03em}
+  letter-spacing:.03em;color:var(--hell)}
+.drin-zeile .plan__drin li b{color:var(--hell)}
+.drin-zeile .plan__drin li span{color:var(--auf-ink-soft)}
 .drin-zeile .plan__drin{display:flex;flex-wrap:wrap;gap:6px 22px}
 .drin-zeile .plan__drin li{font-size:15px}
 .buchen{box-shadow:inset 0 0 0 1.5px var(--ink)}
@@ -1049,22 +1053,23 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
   .reel{width:min(74%,260px);margin:0 auto}
 }
 
-/* ---------- Verweise auf die eigenen Seiten ---------- */
-.auch{display:grid;gap:14px;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:var(--s3)}
-.auch__k{display:flex;flex-direction:column;gap:7px;padding:22px 20px 20px;
-  border-radius:var(--rund2);background:var(--hell);border:1px solid var(--linie-h);
-  color:var(--auf-hell);text-decoration:none;transition:transform .35s var(--e),
-  border-color .35s var(--e)}
-.auch__k:hover{transform:translateY(-3px);border-color:var(--auf-hell)}
-.auch__k b{font-family:var(--disp);font-weight:800;text-transform:uppercase;
-  font-size:16px;letter-spacing:.02em}
-.auch__k span{font-size:14px;line-height:1.5;color:var(--auf-hell-soft);flex:1}
-.auch__k em{display:inline-flex;align-items:center;gap:7px;margin-top:6px;font-style:normal;
-  font:700 12.5px/1 var(--grot);letter-spacing:.1em;text-transform:uppercase;color:var(--gold-hell)}
-.auch__k em svg{width:12px;height:12px}
-.auch__k em svg.vor{transform:scaleX(-1)}
-@media (max-width:1000px){.auch{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.auch{grid-template-columns:1fr}}
+/* ---------- Schulprojekte-Teaser und die leisen Verweise ---------- */
+.schulteaser{display:grid;gap:clamp(22px,4vw,52px);grid-template-columns:minmax(0,240px) 1fr;
+  align-items:center}
+.schulteaser__bild{display:block;width:100%;aspect-ratio:3/4;border-radius:var(--rund2);
+  object-fit:cover;background-size:cover;background-position:center;filter:saturate(.92)}
+.schulteaser h2{margin-top:2px}
+.schulteaser p:not(.kicker):not(.schulteaser__cta){margin-top:14px;max-width:52ch;
+  font-size:15.5px;line-height:1.6;color:var(--auf-hell-soft)}
+.schulteaser__cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:var(--s3)}
+.auch-leise{margin-top:var(--s4);padding-top:var(--s2);border-top:1px solid var(--linie-h);
+  font-size:14px;color:var(--auf-hell-leis)}
+.auch-leise a{color:var(--auf-hell-soft);text-underline-offset:3px}
+.auch-leise a:hover{color:var(--auf-hell)}
+.auch-leise svg{width:11px;height:11px;margin-left:8px;vertical-align:-1px}
+.auch-leise svg.vor{transform:scaleX(-1)}
+@media (max-width:760px){.schulteaser{grid-template-columns:1fr}
+  .schulteaser__bild{max-width:200px}}
 
 /* ---------- Kopf der Unterseiten ---------- */
 .kopf--seite{background:var(--nacht);padding:calc(96px + var(--s4)) 0 var(--s4);

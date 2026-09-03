@@ -4,8 +4,8 @@
 ## Seiten
 - [Dance School](https://www.deesworld.de/dance-school/): Übersicht, Preise, Kurskalender, FAQ
 - [Pole](https://www.deesworld.de/dance-school/kurse/pole-dance/): 37 Classes/Woche, Kraft, Technik, Kontrolle.
-- [Commercial](https://www.deesworld.de/dance-school/kurse/commercial/): 20 Classes/Woche, Der Stil aus dem Musikvideo.
 - [Heels](https://www.deesworld.de/dance-school/kurse/heels/): 18 Classes/Woche, Haltung, Ausdruck, Sicherheit.
+- [Commercial](https://www.deesworld.de/dance-school/kurse/commercial/): 17 Classes/Woche, Der Stil aus dem Musikvideo.
 - [Hip Hop](https://www.deesworld.de/dance-school/kurse/hip-hop/): 17 Classes/Woche, Groove kommt vor Choreografie.
 - [Choreography](https://www.deesworld.de/dance-school/kurse/choreography/): 17 Classes/Woche, Eine Nummer, von vorn bis hinten.
 - [Fitness](https://www.deesworld.de/dance-school/kurse/fitness/): 12 Classes/Woche, Das Training, das den Tanz trägt.
