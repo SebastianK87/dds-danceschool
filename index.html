@@ -337,7 +337,10 @@ body[data-menu="1"]{overflow:hidden}
 .plan .knopf{align-self:flex-start;margin-top:16px}
 .plan--liste{gap:12px}
 .plan__drin{list-style:none;padding:0;display:grid;gap:10px}
-.plan__drin li{position:relative;padding-left:24px;font-size:15px}
+.plan__drin li{position:relative;padding-left:26px;font-size:15px;line-height:1.45}
+.plan__drin li b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;
+  font-size:15px;letter-spacing:.02em}
+.plan__drin li span{display:block;color:var(--auf-hell-soft);font-size:13.5px;margin-top:2px}
 .plan__drin li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:6px;
   border-left:2.5px solid var(--pink);border-bottom:2.5px solid var(--pink);
   transform:rotate(-45deg)}
@@ -990,6 +993,41 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 
 .vibe--moment{outline:1px solid rgba(255,167,226,.35);outline-offset:-1px}
 
+/* ---------- Reel-Karte im Kursseiten-Kopf ---------- */
+.kopf--reel{text-align:left}
+.kopf__zwei{position:relative;z-index:1;display:grid;gap:clamp(24px,4vw,52px);
+  grid-template-columns:1.25fr minmax(230px,320px);align-items:center}
+.kopf--reel .kopf__mitte{align-items:flex-start;text-align:left}
+.kopf--reel .kopf__zahlen{justify-content:flex-start}
+.reel{position:relative;margin:0;aspect-ratio:9/16;border-radius:20px;overflow:hidden;
+  background:var(--nacht);border:1px solid rgba(225,226,220,.18);cursor:pointer;
+  box-shadow:0 28px 60px -28px rgba(0,0,0,.8);transition:transform .45s var(--e)}
+.reel:hover{transform:translateY(-4px)}
+.reel:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+.reel__m{position:absolute;inset:0;width:100%;height:100%;display:block;
+  background-size:cover;background-position:center}
+.reel__m .film,.reel__m video{width:100%;height:100%;object-fit:cover}
+.reel__play{position:absolute;inset:0;margin:auto;width:60px;height:60px;display:grid;
+  place-items:center;border-radius:50%;background:rgba(255,167,226,.92);color:var(--ink);
+  pointer-events:none;transition:opacity .3s,transform .3s var(--e)}
+.reel__play svg{width:22px;height:22px;margin-left:3px}
+.reel[data-an="1"] .reel__play{opacity:0;transform:scale(.7)}
+.reel__ton{position:absolute;top:12px;right:12px;width:38px;height:38px;display:grid;
+  place-items:center;border-radius:50%;background:rgba(0,0,0,.5);color:var(--hell);
+  border:1px solid rgba(225,226,220,.25);cursor:pointer;
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.reel__ton svg{width:17px;height:17px}
+.reel__leiste{position:absolute;inset:auto 0 0 0;padding:34px 14px 12px;
+  font:600 12.5px/1.25 var(--grot);color:rgba(225,226,220,.9);
+  background:linear-gradient(to top,rgba(0,0,0,.72),transparent)}
+@media (max-width:860px){
+  .kopf__zwei{grid-template-columns:1fr}
+  .kopf--reel{text-align:center}
+  .kopf--reel .kopf__mitte{align-items:center;text-align:center}
+  .kopf--reel .kopf__zahlen{justify-content:center}
+  .reel{width:min(74%,260px);margin:0 auto}
+}
+
 /* ---------- Raumvermietung ---------- */
 .saal__preis{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:6px 12px;margin-top:14px}
 .saal__preis b{font-family:var(--disp);font-weight:800;font-size:clamp(30px,4.4vw,44px);line-height:1;color:var(--pink)}
@@ -1317,8 +1355,8 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
   <div class="gruender__text">
     <p class="kicker">Warum es uns gibt</p>
     <h2>Why D!&#8217;s Dance School<em>?</em></h2>
-    <p class="gr__story">Ich war neun, als ich ins Heim kam. Getanzt habe ich da schon, erst mit den Kindern aus meiner Gruppe, sp&auml;ter heimlich zu Michael Jackson. Es war das Erste, das mir geh&ouml;rte. Ich bewege mich, also passiert etwas. Dieses Gef&uuml;hl habe ich nie wieder abgegeben.</p>
-    <p class="gr__story">Tanzen ver&auml;ndert, wie du dich h&auml;ltst und wie du in einen Raum gehst. Ich sehe das bei Kindern und bei Leuten, die mit 45 zum ersten Mal in einer Class stehen. 2002 habe ich in Berlin Mitte aufgemacht: zwei R&auml;ume, drei Kurse am Tag. Nicht f&uuml;r die, die schon k&ouml;nnen. F&uuml;r alle, die es wollen. Darum gibt es D!&#8217;s.</p>
+    <p class="gr__story">Tanzen war f&uuml;r mich als Kind das Erste, das wirklich mir geh&ouml;rte. Kein Publikum, keine B&uuml;hne. Nur die Erfahrung: Ich bewege mich, also passiert etwas. Dieses Gef&uuml;hl habe ich nie wieder abgegeben.</p>
+    <p class="gr__story">Genau das sehe ich hier jeden Tag. Tanzen ver&auml;ndert, wie du dich h&auml;ltst und wie du in einen Raum gehst. Bei Kindern, bei Leuten, die mit 45 zum ersten Mal in einer Class stehen. Darum habe ich 2002 aufgemacht. Nicht f&uuml;r die, die schon k&ouml;nnen. F&uuml;r alle, die es wollen.</p>
     <blockquote class="gr__zitat">&bdquo;F&uuml;r mich ist das weniger ein Job als
     eine Mission. Ich m&ouml;chte, dass sich die Leute wieder trauen.&ldquo;
     <cite>Detlef Soost</cite></blockquote>
@@ -1327,10 +1365,9 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
 <div class="zeit">
   <div><b>2002</b><span>Zwei Trainingsr&auml;ume und ein kleines Kosmetikstudio.
     Drei, vier Kurse am Tag: Jazzdance, Hip Hop, Go-Go.</span></div>
-  <div><b>2026</b><span>Der Umzug an die Holzmarktstra&szlig;e 66: f&uuml;nf S&auml;le,
-    eigener Pole-Raum, Fitness Area, direkt an der Jannowitzbr&uuml;cke.</span></div>
-  <div><b>Heute</b><span>F&uuml;nf S&auml;le mit eigenem Pole-Raum,
-    56 Coaches, 143 Classes die Woche.</span></div>
+  <div><b>2026</b><span>Der Umzug an die Holzmarktstra&szlig;e 66, direkt an der
+    Jannowitzbr&uuml;cke: f&uuml;nf S&auml;le, eigener Pole-Raum, Fitness Area,
+    56 Coaches und 143 Classes die Woche.</span></div>
 </div>
 <p class="leidenschaft">Tanzen aus Leidenschaft: Hier kann jede:r tanzen lernen,
 egal welches Level, egal welches Alter. Und als Teil des D!&#8217;s Dance Club
@@ -1616,7 +1653,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
   </div>
   <div class="drin-zeile">
     <b>In jeder Membership drin</b>
-    <ul class="plan__drin"><li>Alle zw&ouml;lf Styles, jede Class</li><li>Vorab buchen mit Vorrang</li><li>Functional Fitness Area inklusive</li><li>Wasser gratis an der Refill-Station</li></ul>
+    <ul class="plan__drin"><li><b>Alle zw&ouml;lf Styles</b><span>Von Hip Hop bis Pole, jede Class, alle Level.</span></li><li><b>Bevorzugte Buchung</b><span>Du buchst vor allen anderen, auch bei vollen Classes.</span></li><li><b>Gym inklusive</b><span>Die Functional Fitness Area mit Racks, Gewichten und Boden.</span></li><li><b>Refill-Station</b><span>Wasser gratis, so oft du willst.</span></li></ul>
   </div>
   <p class="sterne-zeile mitte-h"><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne bei
     Google, 98 Bewertungen</b> von Leuten, die hier tanzen. <a href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Lies
@@ -1657,7 +1694,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     <h3>Wer regelm&auml;&szlig;ig tanzt, wird Mitglied.</h3>
     <a class="textlink" href="#memberships" data-heim>Zu den Memberships</a>
   </div>
-  <p class="hinweis mitte-h">Alle Preise inkl. MwSt. 12 Monate Laufzeit: K&uuml;ndigungsfrist 30 Tage zum Laufzeitende. Flex: monatlich k&uuml;ndbar.</p></div>
+</div>
   </section>
 
   <div class="marquee" aria-hidden="true"><div class="marquee__spur"><span>FIND YOUR STYLE</span><i aria-hidden='true'>&middot;</i><span>143 CLASSES</span><i aria-hidden='true'>&middot;</i><span>12 STYLES</span><i aria-hidden='true'>&middot;</i><span>7 TAGE</span><i aria-hidden='true'>&middot;</i><span>FIND YOUR STYLE</span><i aria-hidden='true'>&middot;</i><span>143 CLASSES</span><i aria-hidden='true'>&middot;</i><span>12 STYLES</span><i aria-hidden='true'>&middot;</i><span>7 TAGE</span><i aria-hidden='true'>&middot;</i><span>FIND YOUR STYLE</span><i aria-hidden='true'>&middot;</i><span>143 CLASSES</span><i aria-hidden='true'>&middot;</i><span>12 STYLES</span><i aria-hidden='true'>&middot;</i><span>7 TAGE</span><i aria-hidden='true'>&middot;</i><span>FIND YOUR STYLE</span><i aria-hidden='true'>&middot;</i><span>143 CLASSES</span><i aria-hidden='true'>&middot;</i><span>12 STYLES</span><i aria-hidden='true'>&middot;</i><span>7 TAGE</span><i aria-hidden='true'>&middot;</i><span>FIND YOUR STYLE</span><i aria-hidden='true'>&middot;</i><span>143 CLASSES</span><i aria-hidden='true'>&middot;</i><span>12 STYLES</span><i aria-hidden='true'>&middot;</i><span>7 TAGE</span><i aria-hidden='true'>&middot;</i><span>FIND YOUR STYLE</span><i aria-hidden='true'>&middot;</i><span>143 CLASSES</span><i aria-hidden='true'>&middot;</i><span>12 STYLES</span><i aria-hidden='true'>&middot;</i><span>7 TAGE</span><i aria-hidden='true'>&middot;</i></div></div>
@@ -3700,11 +3737,12 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </section><section class="ansicht" id="kurs-pole" data-ansicht="kurs" hidden
    data-titel="Pole &middot; D!&#8217;s Dance School"
    data-melde="Pole. 37 Classes pro Woche.">
-  <header class="kopf kopf--voll">
+  <header class="kopf kopf--voll kopf--reel">
     <div class="kopf__bg still-pole"
        aria-hidden="true"></div>
     <div class="kopf__schleier" aria-hidden="true"></div>
-    <div class="wrap kopf__mitte">
+    <div class="wrap kopf__zwei">
+    <div class="kopf__mitte">
       <h1><span class="kicker">Pole Dance Kurse in Berlin Mitte</span> Pole</h1>
       <p class="kopf__claim">Kraft, Technik, Kontrolle. Pole ist Krafttraining, das nach Tanz aussieht. Du lernst Griffe, Spins und Figuren, Schritt f&uuml;r Schritt vom Boden bis in die Luft. Niemand f&auml;ngt oben an.</p>
       <div class="kopf__zahlen">
@@ -3717,6 +3755,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       </div>
       <a class="nebenlink" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">
         Kompletten Wochenplan bei Eversports &ouml;ffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </div>
+    <figure class="reel" data-an="0" aria-label="Clip aus einer Pole-Class abspielen">
+    <span class="reel__m bild still-pole ohnefilm" data-slug="pole" role="img" aria-label="Pole bei D!&#8217;s Dance School"></span>
+    <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+    <button type="button" class="reel__ton" aria-pressed="false" aria-label="Ton an oder aus">
+      <span class="aus"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm18.6 3l-2.1-2.1-1.4 1.4 2.1 2.1-2.1 2.1 1.4 1.4 2.1-2.1 2.1 2.1 1.4-1.4-2.1-2.1 2.1-2.1-1.4-1.4-2.1 2.1z"/></svg></span><span class="an" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg></span></button>
+    <figcaption class="reel__leiste">Pole &middot; echte Class, ungeschnitten</figcaption>
+  </figure>
     </div>
   </header>
 
@@ -4349,11 +4395,12 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </section><section class="ansicht" id="kurs-commercial" data-ansicht="kurs" hidden
    data-titel="Commercial &middot; D!&#8217;s Dance School"
    data-melde="Commercial. 20 Classes pro Woche.">
-  <header class="kopf kopf--voll">
+  <header class="kopf kopf--voll kopf--reel">
     <div class="kopf__bg still-commercial"
        aria-hidden="true"></div>
     <div class="kopf__schleier" aria-hidden="true"></div>
-    <div class="wrap kopf__mitte">
+    <div class="wrap kopf__zwei">
+    <div class="kopf__mitte">
       <h1><span class="kicker">Commercial Dance Kurse in Berlin Mitte</span> Commercial</h1>
       <p class="kopf__claim">Der Stil aus dem Musikvideo. Commercial ist das, was du aus Musikvideos und B&uuml;hnenshows kennst. Gro&szlig;e Bewegungen, klare Akzente, alles sitzt auf der Musik. Und es sieht sofort nach etwas aus.</p>
       <div class="kopf__zahlen">
@@ -4366,6 +4413,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       </div>
       <a class="nebenlink" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">
         Kompletten Wochenplan bei Eversports &ouml;ffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </div>
+    <figure class="reel" data-an="0" aria-label="Clip aus einer Commercial-Class abspielen">
+    <span class="reel__m bild still-commercial" data-slug="commercial" role="img" aria-label="Commercial bei D!&#8217;s Dance School"><video class="film" muted loop playsinline preload="none" aria-label="Commercial bei D!&#8217;s Dance School"></video></span>
+    <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+    <button type="button" class="reel__ton" aria-pressed="false" aria-label="Ton an oder aus">
+      <span class="aus"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm18.6 3l-2.1-2.1-1.4 1.4 2.1 2.1-2.1 2.1 1.4 1.4 2.1-2.1 2.1 2.1 1.4-1.4-2.1-2.1 2.1-2.1-1.4-1.4-2.1 2.1z"/></svg></span><span class="an" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg></span></button>
+    <figcaption class="reel__leiste">Commercial &middot; echte Class, ungeschnitten</figcaption>
+  </figure>
     </div>
   </header>
 
@@ -4777,11 +4832,12 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </section><section class="ansicht" id="kurs-hip-hop" data-ansicht="kurs" hidden
    data-titel="Hip Hop &middot; D!&#8217;s Dance School"
    data-melde="Hip Hop. 17 Classes pro Woche.">
-  <header class="kopf kopf--voll">
+  <header class="kopf kopf--voll kopf--reel">
     <div class="kopf__bg still-hip-hop"
        aria-hidden="true"></div>
     <div class="kopf__schleier" aria-hidden="true"></div>
-    <div class="wrap kopf__mitte">
+    <div class="wrap kopf__zwei">
+    <div class="kopf__mitte">
       <h1><span class="kicker">Hip Hop Kurse in Berlin Mitte</span> Hip Hop</h1>
       <p class="kopf__claim">Groove kommt vor Choreografie. Hip Hop ist das Grundvokabular. Bounce, Rock, Isolation. Wer das hat, lernt jeden anderen Stil schneller. Deshalb steht es bei uns am Anfang und nicht am Rand.</p>
       <div class="kopf__zahlen">
@@ -4794,6 +4850,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       </div>
       <a class="nebenlink" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">
         Kompletten Wochenplan bei Eversports &ouml;ffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </div>
+    <figure class="reel" data-an="0" aria-label="Clip aus einer Hip Hop-Class abspielen">
+    <span class="reel__m bild still-hip-hop" data-slug="hip-hop" role="img" aria-label="Hip Hop bei D!&#8217;s Dance School"><video class="film" muted loop playsinline preload="none" aria-label="Hip Hop bei D!&#8217;s Dance School"></video></span>
+    <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+    <button type="button" class="reel__ton" aria-pressed="false" aria-label="Ton an oder aus">
+      <span class="aus"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm18.6 3l-2.1-2.1-1.4 1.4 2.1 2.1-2.1 2.1 1.4 1.4 2.1-2.1 2.1 2.1 1.4-1.4-2.1-2.1 2.1-2.1-1.4-1.4-2.1 2.1z"/></svg></span><span class="an" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg></span></button>
+    <figcaption class="reel__leiste">Hip Hop &middot; echte Class, ungeschnitten</figcaption>
+  </figure>
     </div>
   </header>
 
@@ -5166,11 +5230,12 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </section><section class="ansicht" id="kurs-heels" data-ansicht="kurs" hidden
    data-titel="Heels &middot; D!&#8217;s Dance School"
    data-melde="Heels. 18 Classes pro Woche.">
-  <header class="kopf kopf--voll">
+  <header class="kopf kopf--voll kopf--reel">
     <div class="kopf__bg still-heels"
        aria-hidden="true"></div>
     <div class="kopf__schleier" aria-hidden="true"></div>
-    <div class="wrap kopf__mitte">
+    <div class="wrap kopf__zwei">
+    <div class="kopf__mitte">
       <h1><span class="kicker">Heels Tanzkurse in Berlin Mitte</span> Heels</h1>
       <p class="kopf__claim">Haltung, Ausdruck, Sicherheit. Heels ist kein Schuh, sondern eine Technik. Du lernst, wie du dich bewegst, ohne dass die Absätze die F&uuml;hrung &uuml;bernehmen. Erst steht der Stand, dann kommt der Stil.</p>
       <div class="kopf__zahlen">
@@ -5183,6 +5248,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       </div>
       <a class="nebenlink" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">
         Kompletten Wochenplan bei Eversports &ouml;ffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </div>
+    <figure class="reel" data-an="0" aria-label="Clip aus einer Heels-Class abspielen">
+    <span class="reel__m bild still-heels" data-slug="heels" role="img" aria-label="Heels bei D!&#8217;s Dance School"><video class="film" muted loop playsinline preload="none" aria-label="Heels bei D!&#8217;s Dance School"></video></span>
+    <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+    <button type="button" class="reel__ton" aria-pressed="false" aria-label="Ton an oder aus">
+      <span class="aus"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm18.6 3l-2.1-2.1-1.4 1.4 2.1 2.1-2.1 2.1 1.4 1.4 2.1-2.1 2.1 2.1 1.4-1.4-2.1-2.1 2.1-2.1-1.4-1.4-2.1 2.1z"/></svg></span><span class="an" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg></span></button>
+    <figcaption class="reel__leiste">Heels &middot; echte Class, ungeschnitten</figcaption>
+  </figure>
     </div>
   </header>
 
@@ -5568,11 +5641,12 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </section><section class="ansicht" id="kurs-choreography" data-ansicht="kurs" hidden
    data-titel="Choreography &middot; D!&#8217;s Dance School"
    data-melde="Choreography. 17 Classes pro Woche.">
-  <header class="kopf kopf--voll">
+  <header class="kopf kopf--voll kopf--reel">
     <div class="kopf__bg still-choreography"
        aria-hidden="true"></div>
     <div class="kopf__schleier" aria-hidden="true"></div>
-    <div class="wrap kopf__mitte">
+    <div class="wrap kopf__zwei">
+    <div class="kopf__mitte">
       <h1><span class="kicker">Choreography Classes in Berlin Mitte</span> Choreography</h1>
       <p class="kopf__claim">Eine Nummer, von vorn bis hinten. In Choreography lernst du ein ganzes St&uuml;ck, nicht acht Z&auml;hlzeiten. Jede Woche kommt ein Teil dazu, am Ende steht ein Set, das du wirklich kannst.</p>
       <div class="kopf__zahlen">
@@ -5585,6 +5659,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       </div>
       <a class="nebenlink" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">
         Kompletten Wochenplan bei Eversports &ouml;ffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </div>
+    <figure class="reel" data-an="0" aria-label="Clip aus einer Choreography-Class abspielen">
+    <span class="reel__m bild still-choreography" data-slug="choreography" role="img" aria-label="Choreography bei D!&#8217;s Dance School"><video class="film" muted loop playsinline preload="none" aria-label="Choreography bei D!&#8217;s Dance School"></video></span>
+    <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+    <button type="button" class="reel__ton" aria-pressed="false" aria-label="Ton an oder aus">
+      <span class="aus"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm18.6 3l-2.1-2.1-1.4 1.4 2.1 2.1-2.1 2.1 1.4 1.4 2.1-2.1 2.1 2.1 1.4-1.4-2.1-2.1 2.1-2.1-1.4-1.4-2.1 2.1z"/></svg></span><span class="an" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg></span></button>
+    <figcaption class="reel__leiste">Choreography &middot; echte Class, ungeschnitten</figcaption>
+  </figure>
     </div>
   </header>
 
@@ -5957,11 +6039,12 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </section><section class="ansicht" id="kurs-contemporary" data-ansicht="kurs" hidden
    data-titel="Contemporary & Jazz &middot; D!&#8217;s Dance School"
    data-melde="Contemporary & Jazz. 8 Classes pro Woche.">
-  <header class="kopf kopf--voll">
+  <header class="kopf kopf--voll kopf--reel">
     <div class="kopf__bg still-contemporary"
        aria-hidden="true"></div>
     <div class="kopf__schleier" aria-hidden="true"></div>
-    <div class="wrap kopf__mitte">
+    <div class="wrap kopf__zwei">
+    <div class="kopf__mitte">
       <h1><span class="kicker">Contemporary und Jazz Dance Kurse in Berlin Mitte</span> Contemporary & Jazz</h1>
       <p class="kopf__claim">Linie, Fluss, Technik. Contemporary und Jazz arbeiten an der Verbindung zwischen den Bewegungen. Du lernst, Schritte zu verbinden statt sie aneinanderzureihen. Das merkt man in jedem anderen Stil.</p>
       <div class="kopf__zahlen">
@@ -5974,6 +6057,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       </div>
       <a class="nebenlink" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">
         Kompletten Wochenplan bei Eversports &ouml;ffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </div>
+    <figure class="reel" data-an="0" aria-label="Clip aus einer Contemporary & Jazz-Class abspielen">
+    <span class="reel__m bild still-contemporary" data-slug="contemporary" role="img" aria-label="Contemporary & Jazz bei D!&#8217;s Dance School"><video class="film" muted loop playsinline preload="none" aria-label="Contemporary & Jazz bei D!&#8217;s Dance School"></video></span>
+    <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+    <button type="button" class="reel__ton" aria-pressed="false" aria-label="Ton an oder aus">
+      <span class="aus"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm18.6 3l-2.1-2.1-1.4 1.4 2.1 2.1-2.1 2.1 1.4 1.4 2.1-2.1 2.1 2.1 1.4-1.4-2.1-2.1 2.1-2.1-1.4-1.4-2.1 2.1z"/></svg></span><span class="an" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg></span></button>
+    <figcaption class="reel__leiste">Contemporary & Jazz &middot; echte Class, ungeschnitten</figcaption>
+  </figure>
     </div>
   </header>
 
@@ -6229,11 +6320,12 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </section><section class="ansicht" id="kurs-fitness" data-ansicht="kurs" hidden
    data-titel="Fitness &middot; D!&#8217;s Dance School"
    data-melde="Fitness. 12 Classes pro Woche.">
-  <header class="kopf kopf--voll">
+  <header class="kopf kopf--voll kopf--reel">
     <div class="kopf__bg still-fitness"
        aria-hidden="true"></div>
     <div class="kopf__schleier" aria-hidden="true"></div>
-    <div class="wrap kopf__mitte">
+    <div class="wrap kopf__zwei">
+    <div class="kopf__mitte">
       <h1><span class="kicker">Dance Fitness und Stretching in Berlin Mitte</span> Fitness</h1>
       <p class="kopf__claim">Das Training, das den Tanz tr&auml;gt. Dance Athletics, Strength und Stretching. Kein Tanz, sondern die Grundlage daf&uuml;r. Kraft, Beweglichkeit, Ausdauer. Wer das macht, lernt Schritte schneller und h&auml;lt l&auml;nger durch.</p>
       <div class="kopf__zahlen">
@@ -6246,6 +6338,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       </div>
       <a class="nebenlink" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">
         Kompletten Wochenplan bei Eversports &ouml;ffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </div>
+    <figure class="reel" data-an="0" aria-label="Clip aus einer Fitness-Class abspielen">
+    <span class="reel__m bild still-fitness" data-slug="fitness" role="img" aria-label="Fitness bei D!&#8217;s Dance School"><video class="film" muted loop playsinline preload="none" aria-label="Fitness bei D!&#8217;s Dance School"></video></span>
+    <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+    <button type="button" class="reel__ton" aria-pressed="false" aria-label="Ton an oder aus">
+      <span class="aus"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm18.6 3l-2.1-2.1-1.4 1.4 2.1 2.1-2.1 2.1 1.4 1.4 2.1-2.1 2.1 2.1 1.4-1.4-2.1-2.1 2.1-2.1-1.4-1.4-2.1 2.1z"/></svg></span><span class="an" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg></span></button>
+    <figcaption class="reel__leiste">Fitness &middot; echte Class, ungeschnitten</figcaption>
+  </figure>
     </div>
   </header>
 
@@ -6553,11 +6653,12 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </section><section class="ansicht" id="kurs-latin" data-ansicht="kurs" hidden
    data-titel="Latin & Afro &middot; D!&#8217;s Dance School"
    data-melde="Latin & Afro. 9 Classes pro Woche.">
-  <header class="kopf kopf--voll">
+  <header class="kopf kopf--voll kopf--reel">
     <div class="kopf__bg still-latin"
        aria-hidden="true"></div>
     <div class="kopf__schleier" aria-hidden="true"></div>
-    <div class="wrap kopf__mitte">
+    <div class="wrap kopf__zwei">
+    <div class="kopf__mitte">
       <h1><span class="kicker">Latin, Afro und Reggaeton Kurse in Berlin Mitte</span> Latin & Afro</h1>
       <p class="kopf__claim">Bewegung, die aus der H&uuml;fte kommt. Move Latin, Afro Beats, Reggaeton und Twerk. Musik mit Druck von unten und Bewegung, die von dort startet. Laut, direkt, gut gelaunt.</p>
       <div class="kopf__zahlen">
@@ -6570,6 +6671,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       </div>
       <a class="nebenlink" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">
         Kompletten Wochenplan bei Eversports &ouml;ffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </div>
+    <figure class="reel" data-an="0" aria-label="Clip aus einer Latin & Afro-Class abspielen">
+    <span class="reel__m bild still-latin" data-slug="latin" role="img" aria-label="Latin & Afro bei D!&#8217;s Dance School"><video class="film" muted loop playsinline preload="none" aria-label="Latin & Afro bei D!&#8217;s Dance School"></video></span>
+    <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+    <button type="button" class="reel__ton" aria-pressed="false" aria-label="Ton an oder aus">
+      <span class="aus"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm18.6 3l-2.1-2.1-1.4 1.4 2.1 2.1-2.1 2.1 1.4 1.4 2.1-2.1 2.1 2.1 1.4-1.4-2.1-2.1 2.1-2.1-1.4-1.4-2.1 2.1z"/></svg></span><span class="an" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg></span></button>
+    <figcaption class="reel__leiste">Latin & Afro &middot; echte Class, ungeschnitten</figcaption>
+  </figure>
     </div>
   </header>
 
@@ -6838,11 +6947,12 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </section><section class="ansicht" id="kurs-aerial" data-ansicht="kurs" hidden
    data-titel="Aerial Hoop &middot; D!&#8217;s Dance School"
    data-melde="Aerial Hoop. 5 Classes pro Woche.">
-  <header class="kopf kopf--voll">
+  <header class="kopf kopf--voll kopf--reel">
     <div class="kopf__bg still-aerial"
        aria-hidden="true"></div>
     <div class="kopf__schleier" aria-hidden="true"></div>
-    <div class="wrap kopf__mitte">
+    <div class="wrap kopf__zwei">
+    <div class="kopf__mitte">
       <h1><span class="kicker">Aerial Hoop Kurse in Berlin Mitte</span> Aerial Hoop</h1>
       <p class="kopf__claim">Akrobatik im Reifen. Aerial Hoop ist Kraft und Mut in kleinen Gruppen. Du lernst Einstiege, Posen und &Uuml;berg&auml;nge, gesichert und in dem Tempo, das zu dir passt.</p>
       <div class="kopf__zahlen">
@@ -6855,6 +6965,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       </div>
       <a class="nebenlink" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">
         Kompletten Wochenplan bei Eversports &ouml;ffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </div>
+    <figure class="reel" data-an="0" aria-label="Clip aus einer Aerial Hoop-Class abspielen">
+    <span class="reel__m bild still-aerial" data-slug="aerial" role="img" aria-label="Aerial Hoop bei D!&#8217;s Dance School"><video class="film" muted loop playsinline preload="none" aria-label="Aerial Hoop bei D!&#8217;s Dance School"></video></span>
+    <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+    <button type="button" class="reel__ton" aria-pressed="false" aria-label="Ton an oder aus">
+      <span class="aus"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm18.6 3l-2.1-2.1-1.4 1.4 2.1 2.1-2.1 2.1 1.4 1.4 2.1-2.1 2.1 2.1 1.4-1.4-2.1-2.1 2.1-2.1-1.4-1.4-2.1 2.1z"/></svg></span><span class="an" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg></span></button>
+    <figcaption class="reel__leiste">Aerial Hoop &middot; echte Class, ungeschnitten</figcaption>
+  </figure>
     </div>
   </header>
 
@@ -7071,11 +7189,12 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </section><section class="ansicht" id="kurs-kids" data-ansicht="kurs" hidden
    data-titel="Kids & Teens &middot; D!&#8217;s Dance School"
    data-melde="Kids & Teens. 3 Classes pro Woche.">
-  <header class="kopf kopf--voll">
+  <header class="kopf kopf--voll kopf--reel">
     <div class="kopf__bg still-kids"
        aria-hidden="true"></div>
     <div class="kopf__schleier" aria-hidden="true"></div>
-    <div class="wrap kopf__mitte">
+    <div class="wrap kopf__zwei">
+    <div class="kopf__mitte">
       <h1><span class="kicker">Kindertanz und Hip Hop f&uuml;r Teens in Berlin Mitte</span> Kids & Teens</h1>
       <p class="kopf__claim">Hip Hop ab sechs Jahren. Gleiche Musik, gleicher Spa&szlig;, altersgerecht unterrichtet. Die Kleinen lernen Groove &uuml;ber Spiele, die Teens arbeiten schon an ganzen Nummern.</p>
       <div class="kopf__zahlen">
@@ -7088,6 +7207,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       </div>
       <a class="nebenlink" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">
         Kompletten Wochenplan bei Eversports &ouml;ffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </div>
+    <figure class="reel" data-an="0" aria-label="Clip aus einer Kids & Teens-Class abspielen">
+    <span class="reel__m bild still-kids ohnefilm" data-slug="kids" role="img" aria-label="Kids & Teens bei D!&#8217;s Dance School"></span>
+    <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+    <button type="button" class="reel__ton" aria-pressed="false" aria-label="Ton an oder aus">
+      <span class="aus"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm18.6 3l-2.1-2.1-1.4 1.4 2.1 2.1-2.1 2.1 1.4 1.4 2.1-2.1 2.1 2.1 1.4-1.4-2.1-2.1 2.1-2.1-1.4-1.4-2.1 2.1z"/></svg></span><span class="an" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg></span></button>
+    <figcaption class="reel__leiste">Kids & Teens &middot; echte Class, ungeschnitten</figcaption>
+  </figure>
     </div>
   </header>
 
@@ -7278,11 +7405,12 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </section><section class="ansicht" id="kurs-house" data-ansicht="kurs" hidden
    data-titel="House &middot; D!&#8217;s Dance School"
    data-melde="House. 2 Classes pro Woche.">
-  <header class="kopf kopf--voll">
+  <header class="kopf kopf--voll kopf--reel">
     <div class="kopf__bg still-house"
        aria-hidden="true"></div>
     <div class="kopf__schleier" aria-hidden="true"></div>
-    <div class="wrap kopf__mitte">
+    <div class="wrap kopf__zwei">
+    <div class="kopf__mitte">
       <h1><span class="kicker">House Dance Kurse in Berlin Mitte</span> House</h1>
       <p class="kopf__claim">Schnelle F&uuml;&szlig;e, lockerer Oberk&ouml;rper. House ist Footwork und Jacking auf schneller Musik. Es sieht leicht aus und ist es nicht. Genau deshalb macht es s&uuml;chtig.</p>
       <div class="kopf__zahlen">
@@ -7295,6 +7423,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       </div>
       <a class="nebenlink" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">
         Kompletten Wochenplan bei Eversports &ouml;ffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </div>
+    <figure class="reel" data-an="0" aria-label="Clip aus einer House-Class abspielen">
+    <span class="reel__m bild still-house ohnefilm" data-slug="house" role="img" aria-label="House bei D!&#8217;s Dance School"></span>
+    <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+    <button type="button" class="reel__ton" aria-pressed="false" aria-label="Ton an oder aus">
+      <span class="aus"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm18.6 3l-2.1-2.1-1.4 1.4 2.1 2.1-2.1 2.1 1.4 1.4 2.1-2.1 2.1 2.1 1.4-1.4-2.1-2.1 2.1-2.1-1.4-1.4-2.1 2.1z"/></svg></span><span class="an" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg></span></button>
+    <figcaption class="reel__leiste">House &middot; echte Class, ungeschnitten</figcaption>
+  </figure>
     </div>
   </header>
 
@@ -7472,11 +7608,12 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </section><section class="ansicht" id="kurs-kpop" data-ansicht="kurs" hidden
    data-titel="K-Pop &middot; D!&#8217;s Dance School"
    data-melde="K-Pop. 1 Classes pro Woche.">
-  <header class="kopf kopf--voll">
+  <header class="kopf kopf--voll kopf--reel">
     <div class="kopf__bg still-kpop"
        aria-hidden="true"></div>
     <div class="kopf__schleier" aria-hidden="true"></div>
-    <div class="wrap kopf__mitte">
+    <div class="wrap kopf__zwei">
+    <div class="kopf__mitte">
       <h1><span class="kicker">K-Pop Tanzkurse in Berlin Mitte</span> K-Pop</h1>
       <p class="kopf__claim">Choreografie wie im Original. K-Pop hei&szlig;t: die Nummer aus dem Musikvideo, so genau wie m&ouml;glich. Formation, Timing, jedes Detail. Am Ende k&ouml;nnt ihr sie gemeinsam.</p>
       <div class="kopf__zahlen">
@@ -7489,6 +7626,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       </div>
       <a class="nebenlink" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">
         Kompletten Wochenplan bei Eversports &ouml;ffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </div>
+    <figure class="reel" data-an="0" aria-label="Clip aus einer K-Pop-Class abspielen">
+    <span class="reel__m bild still-kpop ohnefilm" data-slug="kpop" role="img" aria-label="K-Pop bei D!&#8217;s Dance School"></span>
+    <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+    <button type="button" class="reel__ton" aria-pressed="false" aria-label="Ton an oder aus">
+      <span class="aus"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm18.6 3l-2.1-2.1-1.4 1.4 2.1 2.1-2.1 2.1 1.4 1.4 2.1-2.1 2.1 2.1 1.4-1.4-2.1-2.1 2.1-2.1-1.4-1.4-2.1 2.1z"/></svg></span><span class="an" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg></span></button>
+    <figcaption class="reel__leiste">K-Pop &middot; echte Class, ungeschnitten</figcaption>
+  </figure>
     </div>
   </header>
 
@@ -8332,6 +8477,8 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     return _blobs[slug];
   }
 
+  window.__filmAdresse = filmAdresse;   /* das Handy-Skript in neubau.py nutzt sie */
+
   function an(el){
     if(!el) return;
     var v = el.querySelector ? el.querySelector('.film') : null;
@@ -8969,6 +9116,52 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
         else box.innerHTML = '';
       });
     }).catch(function(){});
+  })();
+
+  /* -------- Mobil: Clips laufen im Blickfeld und wenn der Finger darueber zieht -------- */
+  (function(){
+    if(matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var spar = navigator.connection && (navigator.connection.saveData || /2g/.test(navigator.connection.effectiveType || ''));
+    if(spar) return;
+    var kacheln = [].slice.call(document.querySelectorAll('.kachel__m'));
+    if(!kacheln.length) return;
+    function film(el){ return el.querySelector ? el.querySelector('.film') : null; }
+    function an(el){
+      var v = film(el); if(!v) return;
+      if(!v.src){
+        var quelle = window.__filmAdresse && window.__filmAdresse(el.dataset.slug);
+        if(quelle) v.src = quelle; else return;
+      }
+      var pr = v.play(); if(pr && pr.catch) pr.catch(function(){});
+      var k = el.closest('[data-an]'); if(k) k.dataset.an = '1';
+    }
+    function aus(el){
+      var v = film(el); if(!v) return;
+      v.pause();
+      var k = el.closest('[data-an]'); if(k) k.dataset.an = '0';
+    }
+    if('IntersectionObserver' in window){
+      var beob = new IntersectionObserver(function(eintraege){
+        eintraege.forEach(function(e){
+          if(e.target.closest('[hidden]')) return;
+          e.isIntersecting ? an(e.target) : aus(e.target);
+        });
+      }, {threshold: .6, rootMargin: '-12% 0px -12% 0px'});
+      kacheln.forEach(function(k){ beob.observe(k); });
+    }
+    var zuletzt = null;
+    function beiZug(e){
+      var t = e.touches ? e.touches[0] : e;
+      if(!t) return;
+      var unten = document.elementFromPoint(t.clientX, t.clientY);
+      var kachel = unten && unten.closest ? unten.closest('.kachel__m') : null;
+      if(kachel === zuletzt) return;
+      zuletzt = kachel;
+      if(kachel) an(kachel);
+    }
+    document.addEventListener('touchmove', beiZug, {passive: true});
+    document.addEventListener('touchstart', beiZug, {passive: true});
   })();
 
   /* -------- Chat-Knopf weicht der Welcome-Leiste (mobil) -------- */
