@@ -1047,12 +1047,14 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .schulteaser p:not(.kicker):not(.schulteaser__cta){margin-top:14px;max-width:52ch;
   font-size:16px;line-height:1.6;color:var(--auf-hell-soft)}
 .schulteaser__cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:var(--s3)}
-.auch-leise{margin-top:var(--s4);padding-top:var(--s2);border-top:1px solid var(--linie-h);
-  font-size:16px;color:var(--auf-hell-leis)}
-.auch-leise a{color:var(--auf-hell-soft);text-underline-offset:3px}
-.auch-leise a:hover{color:var(--auf-hell)}
-.auch-leise svg{width:11px;height:11px;margin-left:8px;vertical-align:-1px}
-.auch-leise svg.vor{transform:scaleX(-1)}
+.auch-leise{margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--linie-h);
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 30px;font-size:16px}
+.auch-leise>span{font:700 12px/1 var(--grot);letter-spacing:.1em;text-transform:uppercase;
+  color:var(--auf-hell-leis);margin-right:4px}
+.auch-leise a{color:var(--auf-hell);text-decoration:none;padding-bottom:3px;
+  border-bottom:1px solid transparent;transition:border-color .25s var(--e)}
+.auch-leise a:hover,.auch-leise a:focus-visible{border-bottom-color:var(--auf-hell)}
+.auch-leise svg{width:11px;height:11px;margin-left:7px;vertical-align:-1px;opacity:.6}
 @media (max-width:760px){.schulteaser{grid-template-columns:1fr}
   .schulteaser__bild{max-width:200px}}
 

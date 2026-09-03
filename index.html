@@ -1046,12 +1046,14 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .schulteaser p:not(.kicker):not(.schulteaser__cta){margin-top:14px;max-width:52ch;
   font-size:16px;line-height:1.6;color:var(--auf-hell-soft)}
 .schulteaser__cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:var(--s3)}
-.auch-leise{margin-top:var(--s4);padding-top:var(--s2);border-top:1px solid var(--linie-h);
-  font-size:16px;color:var(--auf-hell-leis)}
-.auch-leise a{color:var(--auf-hell-soft);text-underline-offset:3px}
-.auch-leise a:hover{color:var(--auf-hell)}
-.auch-leise svg{width:11px;height:11px;margin-left:8px;vertical-align:-1px}
-.auch-leise svg.vor{transform:scaleX(-1)}
+.auch-leise{margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--linie-h);
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 30px;font-size:16px}
+.auch-leise>span{font:700 12px/1 var(--grot);letter-spacing:.1em;text-transform:uppercase;
+  color:var(--auf-hell-leis);margin-right:4px}
+.auch-leise a{color:var(--auf-hell);text-decoration:none;padding-bottom:3px;
+  border-bottom:1px solid transparent;transition:border-color .25s var(--e)}
+.auch-leise a:hover,.auch-leise a:focus-visible{border-bottom-color:var(--auf-hell)}
+.auch-leise svg{width:11px;height:11px;margin-left:7px;vertical-align:-1px;opacity:.6}
 @media (max-width:760px){.schulteaser{grid-template-columns:1fr}
   .schulteaser__bild{max-width:200px}}
 
@@ -1582,8 +1584,6 @@ body[data-frag="1"] .frag-knopf{display:none}
     <span class="kachel__zahl">Sa</span>
   </span>
 </a></div>
-      <p class="hinweis mitte-h">Classes mit zwei Stilen, etwa Pole &amp; Heels, stehen
-      in beiden Kacheln.</p>
     </div>
   </section>
 
@@ -1723,8 +1723,6 @@ body[data-frag="1"] .frag-knopf{display:none}
   <p class="filter__label">Tag</p>
   <div class="tagchips" role="group" aria-label="Nach Tag filtern" data-fuer="liste-kalender" data-start="heute"><button type="button" data-chip="alle" aria-pressed="true">Alle Tage</button><button type="button" data-chip="Mo" aria-pressed="false">Mo</button><button type="button" data-chip="Di" aria-pressed="false">Di</button><button type="button" data-chip="Mi" aria-pressed="false">Mi</button><button type="button" data-chip="Do" aria-pressed="false">Do</button><button type="button" data-chip="Fr" aria-pressed="false">Fr</button><button type="button" data-chip="Sa" aria-pressed="false">Sa</button><button type="button" data-chip="So" aria-pressed="false">So</button></div>
   </div>
-  <p class="vertrauen mitte-h">Kostenlos absagen bis 6 Stunden vor Beginn. Der Knopf
-  &ouml;ffnet Eversports.</p>
   <div class="klappe" id="klappe-kalender"><div id="liste-kalender"><div class="tag"><span>Montag <small>31.08.</small></span></div><div data-tag="Mo" data-datum="2026-08-31"><div class="termin" data-stufe="amf" data-zeit="10:00" data-id="15c9134e-5bca-437c-9272-05b8a9acc6d9" data-stile="fitness">
   <div class="termin__zeit">10:00<small>60 min</small></div>
   <div class="termin__was">
@@ -3588,9 +3586,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <p class="klappe__mehr"><button type="button" class="knopf knopf--ink klappe__knopf"
     aria-expanded="false" aria-controls="klappe-kalender">Mehr anzeigen</button>
     <button type="button" class="knopf knopf--rand woche-knopf" hidden>N&auml;chste Woche laden</button></p>
-  <p class="hinweis mitte-h">Buchen bis sechs Stunden vor Beginn, der Knopf f&uuml;hrt
-  zu Eversports. Den kompletten Plan gibt es auch
-  <a href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">direkt bei Eversports<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>.</p></div>
+</div>
   </section>
 
   <section class="block" id="wie">
@@ -3741,7 +3737,7 @@ body[data-frag="1"] .frag-knopf{display:none}
       </p>
     </div>
   </div>
-  <p class="auch-leise">Au&szlig;erdem bei uns: <a href="gutscheine/">Gutscheine</a> <span aria-hidden="true">&middot;</span> <a href="raumvermietung/">R&auml;ume mieten</a> <span aria-hidden="true">&middot;</span> <a href="https://www.deesworld.de/coaching/" target="_blank" rel="noopener">Detlef buchen<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></p></div>
+  <p class="auch-leise"><span>Au&szlig;erdem bei uns</span><a href="gutscheine/">Gutscheine</a><a href="raumvermietung/">R&auml;ume mieten</a><a href="https://www.deesworld.de/coaching/" target="_blank" rel="noopener">Detlef buchen<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></p></div>
   </section>
 
 </section><section class="ansicht" id="kurs-pole" data-ansicht="kurs" hidden
