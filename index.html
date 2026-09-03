@@ -115,7 +115,7 @@ h2 em,h3 em{font-style:normal;color:var(--pink)}
 .burger{display:grid;width:42px;height:42px;place-items:center;border-radius:50%}
 .burger:hover{background:rgba(225,226,220,.1)}
 .menu__trenn{display:block;height:1px;width:64px;background:rgba(225,226,220,.2);margin:14px 0}
-.menu__leise{opacity:.72;font-size:.78em}
+.menu__links a.menu__leise{opacity:.7;font-size:clamp(19px,4vw,30px)}
 .burger svg{width:22px;height:22px}
 .zurueck{display:none;align-items:center;gap:8px;font-weight:700;font-size:15px;
   padding:9px 16px 9px 10px;border-radius:999px;background:rgba(225,226,220,.08)}
@@ -135,6 +135,7 @@ body[data-view="kurs"] .top__nav{display:none}
 /* Vollbild-Menue */
 .menu{position:fixed;inset:0;z-index:39;background:var(--nacht);
   display:flex;flex-direction:column;justify-content:center;gap:var(--s3);
+  overflow-y:auto;overscroll-behavior:contain;
   padding:96px clamp(22px,7vw,72px) 44px;
   opacity:0;pointer-events:none;transition:opacity .4s var(--e)}
 body[data-menu="1"] .menu{opacity:1;pointer-events:auto}
@@ -545,7 +546,9 @@ a.trainer span{color:var(--pink)}
   color:transparent;-webkit-text-stroke:1px rgba(225,226,220,.14);
   white-space:nowrap;margin-bottom:var(--s4)}
 .fuss__marke i{font-style:normal;-webkit-text-stroke-color:rgba(255,167,226,.5)}
-.fuss__spalten{display:grid;gap:var(--s3);grid-template-columns:repeat(3,1fr)}
+.fuss__spalten{display:grid;gap:var(--s3);grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1000px){.fuss__spalten{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.fuss__spalten{grid-template-columns:1fr}}
 @media (max-width:820px){.fuss__spalten{gap:var(--s2)}}
 @media (max-width:700px){.fuss__spalten{grid-template-columns:1fr}}
 .fuss b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:15px;
@@ -1052,6 +1055,21 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
   .reel{width:min(74%,260px);margin:0 auto}
 }
 
+/* ---------- Abschluss unter der FAQ ---------- */
+.abschluss{margin-top:var(--s4);padding:clamp(26px,4vw,44px);border-radius:var(--rund);
+  background:var(--nacht);border:1px solid var(--linie-d);display:grid;gap:var(--s3);
+  grid-template-columns:1.2fr auto;align-items:center}
+.abschluss h3{font-size:clamp(24px,3.4vw,38px)}
+.abschluss h3 em{font-style:normal;color:var(--pink)}
+.abschluss p:not(.kicker):not(.abschluss__cta){margin-top:12px;color:var(--auf-ink-soft);
+  max-width:46ch;font-size:15.5px;line-height:1.6}
+.abschluss__cta{display:flex;flex-direction:column;gap:10px;align-items:stretch}
+.abschluss__cta .knopf{justify-content:center;white-space:nowrap}
+@media (max-width:820px){
+  .abschluss{grid-template-columns:1fr}
+  .abschluss__cta{align-items:flex-start}
+}
+
 /* ---------- Detlef buchen ---------- */
 .dbuch{position:relative;z-index:1;display:grid;gap:clamp(28px,5vw,72px);
   grid-template-columns:1.08fr .92fr;align-items:center}
@@ -1459,7 +1477,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
   <div class="band">
     <p><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne, 98 Bewertungen
     bei Google</b><br>von Menschen, die hier tanzen. Lies selbst.</p>
-    <span class="band__cta"><a class="knopf" href="#welcome" data-heim>Welcome Pass holen</a>
+    <span class="band__cta"><a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Alle bei
     Google lesen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
   </div>
@@ -3757,6 +3775,20 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
 </div></div>
       <p class="hinweis mitte-h">Nicht dabei? <a href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank"
       rel="noopener">Schreib uns bei WhatsApp<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>, wir antworten schnell.</p>
+      <div class="abschluss">
+    <div>
+      <p class="kicker">Alles gekl&auml;rt?</p>
+      <h3>Dann probier es aus<em>.</em></h3>
+      <p>Zwei Classes, zwei Styles, zehn Tage Zeit. Kein Vertrag, keine Verl&auml;ngerung.
+      Wenn du danach bleibst, rechnen wir die 29&nbsp;&euro; auf den ersten Monat an.</p>
+    </div>
+    <p class="abschluss__cta">
+      <a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener"
+        >Welcome Pass holen &middot; 29 &euro;<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+      <a class="knopf knopf--rand" href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank" rel="noopener"
+        ><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.4 11.4 0 0 0 4.4 3.9 14.8 14.8 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg>Erst noch fragen<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+    </p>
+  </div>
     </div>
   </section>
 
@@ -4511,7 +4543,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
       <div class="band">
     <p><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne, 98 Bewertungen
     bei Google</b><br>von Menschen, die hier tanzen. Lies selbst.</p>
-    <span class="band__cta"><a class="knopf" href="#welcome" data-heim>Welcome Pass holen</a>
+    <span class="band__cta"><a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Alle bei
     Google lesen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
   </div>
@@ -4948,7 +4980,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
       <div class="band">
     <p><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne, 98 Bewertungen
     bei Google</b><br>von Menschen, die hier tanzen. Lies selbst.</p>
-    <span class="band__cta"><a class="knopf" href="#welcome" data-heim>Welcome Pass holen</a>
+    <span class="band__cta"><a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Alle bei
     Google lesen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
   </div>
@@ -5346,7 +5378,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
       <div class="band">
     <p><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne, 98 Bewertungen
     bei Google</b><br>von Menschen, die hier tanzen. Lies selbst.</p>
-    <span class="band__cta"><a class="knopf" href="#welcome" data-heim>Welcome Pass holen</a>
+    <span class="band__cta"><a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Alle bei
     Google lesen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
   </div>
@@ -5757,7 +5789,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
       <div class="band">
     <p><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne, 98 Bewertungen
     bei Google</b><br>von Menschen, die hier tanzen. Lies selbst.</p>
-    <span class="band__cta"><a class="knopf" href="#welcome" data-heim>Welcome Pass holen</a>
+    <span class="band__cta"><a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Alle bei
     Google lesen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
   </div>
@@ -6155,7 +6187,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
       <div class="band">
     <p><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne, 98 Bewertungen
     bei Google</b><br>von Menschen, die hier tanzen. Lies selbst.</p>
-    <span class="band__cta"><a class="knopf" href="#welcome" data-heim>Welcome Pass holen</a>
+    <span class="band__cta"><a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Alle bei
     Google lesen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
   </div>
@@ -6436,7 +6468,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
       <div class="band">
     <p><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne, 98 Bewertungen
     bei Google</b><br>von Menschen, die hier tanzen. Lies selbst.</p>
-    <span class="band__cta"><a class="knopf" href="#welcome" data-heim>Welcome Pass holen</a>
+    <span class="band__cta"><a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Alle bei
     Google lesen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
   </div>
@@ -6769,7 +6801,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
       <div class="band">
     <p><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne, 98 Bewertungen
     bei Google</b><br>von Menschen, die hier tanzen. Lies selbst.</p>
-    <span class="band__cta"><a class="knopf" href="#welcome" data-heim>Welcome Pass holen</a>
+    <span class="band__cta"><a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Alle bei
     Google lesen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
   </div>
@@ -7063,7 +7095,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
       <div class="band">
     <p><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne, 98 Bewertungen
     bei Google</b><br>von Menschen, die hier tanzen. Lies selbst.</p>
-    <span class="band__cta"><a class="knopf" href="#welcome" data-heim>Welcome Pass holen</a>
+    <span class="band__cta"><a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Alle bei
     Google lesen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
   </div>
@@ -7305,7 +7337,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
       <div class="band">
     <p><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne, 98 Bewertungen
     bei Google</b><br>von Menschen, die hier tanzen. Lies selbst.</p>
-    <span class="band__cta"><a class="knopf" href="#welcome" data-heim>Welcome Pass holen</a>
+    <span class="band__cta"><a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Alle bei
     Google lesen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
   </div>
@@ -7521,7 +7553,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
       <div class="band">
     <p><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne, 98 Bewertungen
     bei Google</b><br>von Menschen, die hier tanzen. Lies selbst.</p>
-    <span class="band__cta"><a class="knopf" href="#welcome" data-heim>Welcome Pass holen</a>
+    <span class="band__cta"><a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Alle bei
     Google lesen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
   </div>
@@ -7724,7 +7756,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
       <div class="band">
     <p><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne, 98 Bewertungen
     bei Google</b><br>von Menschen, die hier tanzen. Lies selbst.</p>
-    <span class="band__cta"><a class="knopf" href="#welcome" data-heim>Welcome Pass holen</a>
+    <span class="band__cta"><a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Alle bei
     Google lesen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
   </div>
@@ -7914,7 +7946,7 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
       <div class="band">
     <p><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span> <b>4,7 Sterne, 98 Bewertungen
     bei Google</b><br>von Menschen, die hier tanzen. Lies selbst.</p>
-    <span class="band__cta"><a class="knopf" href="#welcome" data-heim>Welcome Pass holen</a>
+    <span class="band__cta"><a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJq6q6YTtOqEcRJSN0aZHNWfY" target="_blank" rel="noopener">Alle bei
     Google lesen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
   </div>
@@ -7943,13 +7975,20 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
       </div>
       <div>
         <b>Schnell hin</b>
-        <p><a href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">Kursplan &amp; Buchen<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a><br>
+        <p><a href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass, 29 &euro;<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a><br>
+        <a href="#kalender" data-heim>Kursplan</a><br>
         <a href="#preise" data-heim>Preise &amp; Membership</a><br>
+        <a href="#faq" data-heim>H&auml;ufige Fragen</a><br>
         <a href="#events" data-heim>Events</a><br>
         <a href="#gutschein" data-heim>Gutschein verschenken</a><br>
         <a href="#detlef" data-heim>Detlef buchen</a><br>
         <a href="#saele" data-heim>Raum mieten</a><br>
-        <a href="#school" data-heim>&Uuml;ber die School</a></p>
+        <a href="#school" data-heim>&Uuml;ber die School</a><br>
+        <a href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">Alles bei Eversports<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></p>
+      </div>
+      <div>
+        <b>Alle Styles</b>
+        <p><a href="#/pole" data-zu="pole">Pole</a><br><a href="#/commercial" data-zu="commercial">Commercial</a><br><a href="#/hip-hop" data-zu="hip-hop">Hip Hop</a><br><a href="#/heels" data-zu="heels">Heels</a><br><a href="#/choreography" data-zu="choreography">Choreography</a><br><a href="#/contemporary" data-zu="contemporary">Contemporary & Jazz</a><br><a href="#/fitness" data-zu="fitness">Fitness</a><br><a href="#/latin" data-zu="latin">Latin & Afro</a><br><a href="#/aerial" data-zu="aerial">Aerial Hoop</a><br><a href="#/kids" data-zu="kids">Kids & Teens</a><br><a href="#/house" data-zu="house">House</a><br><a href="#/kpop" data-zu="kpop">K-Pop</a></p>
       </div>
     </div>
     <div class="fuss__unten">
@@ -8745,7 +8784,12 @@ body[data-leiste="1"] .frag-knopf__t{display:none}}
   document.querySelectorAll('.zurueck').forEach(function(b){
     b.addEventListener('click', function(){
       if(location.hash) location.hash = '';   /* hashchange kommt erst spaeter */
-      zeigen('uebersicht', true);             /* deshalb hier schon umschalten */
+      zeigen('uebersicht', false);            /* deshalb hier schon umschalten */
+      /* Nicht an den Seitenanfang, sondern dorthin zurueck, wo die Kacheln
+         stehen. Sonst landet man tausende Pixel ueber dem Ausgangspunkt. */
+      var raster = document.getElementById('raster');
+      if(raster) raster.scrollIntoView({behavior: ruhig ? 'auto' : 'smooth', block: 'start'});
+      else window.scrollTo(0, 0);
     });
   });
   var sage = document.getElementById('sage');
