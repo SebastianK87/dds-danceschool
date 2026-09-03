@@ -389,10 +389,10 @@ body[data-menu="1"]{overflow:hidden}
 .band-laeuft{overflow:hidden;margin-top:var(--s4);
   -webkit-mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);
   mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent)}
-.spur{display:flex;gap:14px;width:max-content;animation:lauf 70s linear infinite}
+.spur{display:flex;gap:16px;width:max-content;animation:lauf 80s linear infinite}
 .band-laeuft:hover .spur,body.coach-offen .spur{animation-play-state:paused}
 @media (prefers-reduced-motion:reduce){.spur{animation:none;flex-wrap:wrap;width:auto}}
-.trainer{flex:0 0 auto;width:168px;display:flex;flex-direction:column;gap:9px;
+.trainer{flex:0 0 auto;width:212px;display:flex;flex-direction:column;gap:10px;
   text-decoration:none;background:var(--ink);border:1px solid var(--linie-d);
   border-radius:var(--rund2);padding:12px;transition:border-color .3s,transform .45s var(--e)}
 a.trainer:hover{border-color:rgba(255,167,226,.55);transform:translateY(-4px)}
@@ -401,8 +401,8 @@ a.trainer:hover{border-color:rgba(255,167,226,.55);transform:translateY(-4px)}
   background-color:var(--nacht);filter:saturate(.9)}
 .trainer i.ohnefoto{display:grid;place-items:center;font:800 34px/1 var(--disp);
   color:rgba(225,226,220,.28)}
-.trainer b{font-size:14px;line-height:1.2}
-.trainer span{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+.trainer b{font-size:16.5px;line-height:1.2}
+.trainer span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;
   color:var(--auf-ink-leis);font-weight:600}
 a.trainer span{color:var(--pink)}
 
@@ -750,7 +750,7 @@ a.trainer span{color:var(--pink)}
 .buehne__tag,.tag .heute,.kachel__tag,.plan__tag,.termin__zeit small,.stufe,
 .trainer span{font-size:12px}
 .termin__meta,.kachel__zahl,.stimme footer,.fuss__unten,.leiste__t,
-.plan__hin,.plan__wer,.dropin__z{font-size:13.5px}
+.plan__hin,.plan__wer,.dropin__z{font-size:14.5px;line-height:1.45}
 .tuer p,.sp p,.gr__args span,.plan__drin li,.stimme q,.event p,.fuss p,
 .fakt span,.zeit span,.frage__a>p{font-size:15px}
 .buehne__satz,.kopf__claim{font-size:18px}
@@ -793,13 +793,15 @@ a.trainer span{color:var(--pink)}
   color:inherit;text-decoration:underline;text-underline-offset:5px;
   text-decoration-color:var(--pink);text-decoration-thickness:2px}
 .textlink svg{width:13px;height:13px}
-.dropins{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
-  gap:12px 28px;margin-top:var(--s3);padding:20px 24px;border-radius:var(--rund2);
+.dropins{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));align-items:stretch;
+  gap:14px;margin-top:var(--s3);padding:16px;border-radius:var(--rund2);
   background:var(--hell2);border:1px solid var(--linie-h)}
-.dropin{display:flex;flex-direction:column;gap:2px;min-width:150px}
-.dropin b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:14px;
+.dropins .textlink{grid-column:1/-1;justify-self:center;margin-top:4px}
+.dropin{display:flex;flex-direction:column;gap:6px;min-width:0;padding:20px 20px 18px;border-radius:14px;
+  background:var(--hell);border:1px solid var(--linie-h)}
+.dropin b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:15px;
   letter-spacing:.03em}
-.dropin__preis{font-family:var(--disp);font-weight:800;font-size:26px;line-height:1}
+.dropin__preis{font-family:var(--disp);font-weight:800;font-size:36px;line-height:1;margin-top:2px}
 .dropin__z{color:var(--auf-hell-soft)}
 .dropins .textlink{margin-left:auto}
 @media (max-width:640px){.dropins .textlink{margin-left:0;width:100%;justify-content:center}}
@@ -976,6 +978,13 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .termin .tab-hinweis,.dropins .tab-hinweis{color:var(--auf-hell-leis)}
 
 /* ---------- Style-Filter, Teilen, Naechste Woche, Hero-Live ---------- */
+.filterblock{display:grid;gap:10px;margin-block:var(--s3);padding:18px 16px 20px;border-radius:var(--rund2);
+  background:var(--hell2);border:1px solid var(--linie-h)}
+.filterblock .filter,.filterblock .tagchips{margin:0}
+.filterblock .filter--stil{margin-top:0}
+.filter__label{font:700 11px/1 var(--grot);letter-spacing:.2em;text-transform:uppercase;color:var(--auf-hell-soft);
+  text-align:center;margin:10px 0 0}
+.filter__label:first-child{margin-top:0}
 .filter--stil{margin-top:8px}
 .filter--stil button{font-size:12.5px;padding:9px 13px}
 .termin.stil-zu{display:none !important}
@@ -1038,6 +1047,11 @@ a.dropin:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(0,0,
   vertical-align:.45em;letter-spacing:0}
 .plan__aktion{display:block;font:600 13px/1.4 var(--grot);color:var(--gold);margin:-6px 0 6px}
 .welcome__gut{display:block;font-size:13.5px;line-height:1.45;margin:6px 0 2px;opacity:.85;text-wrap:pretty}
+
+/* ---------- D!-Logo in den Avataren ---------- */
+.dlogo{width:58%;height:58%;display:block}
+.frag-knopf__d .dlogo{width:56%;height:56%}
+.frag__ava .dlogo,.planer__ava .dlogo{width:60%;height:60%}
 
 /* ---------- Frag D! ---------- */
 .frag-knopf{position:fixed;right:22px;bottom:88px;z-index:30;display:inline-flex;align-items:center;
@@ -1279,8 +1293,8 @@ body[data-frag="1"] .frag-knopf{display:none}
 <div class="zeit">
   <div><b>2002</b><span>Zwei Trainingsr&auml;ume und ein kleines Kosmetikstudio.
     Drei, vier Kurse am Tag: Jazzdance, Hip Hop, Go-Go.</span></div>
-  <div><b>2016</b><span>Der gro&szlig;e Umbau: unten die Fitness Area, oben die
-    Dance-Area im heutigen Glanz.</span></div>
+  <div><b>2026</b><span>Der Umzug an die Holzmarktstra&szlig;e 66: f&uuml;nf S&auml;le,
+    eigener Pole-Raum, Fitness Area, direkt an der Jannowitzbr&uuml;cke.</span></div>
   <div><b>Heute</b><span>F&uuml;nf S&auml;le mit eigenem Pole-Raum,
     56 Coaches, 143 Classes die Woche.</span></div>
 </div>
@@ -1493,7 +1507,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
       </div>
     </div>
     <div class="planer__ergebnis" hidden aria-live="polite">
-      <p class="planer__d"><span class="planer__ava" aria-hidden="true">D<i>!</i></span><span class="planer__satz"></span></p>
+      <p class="planer__d"><span class="planer__ava" aria-hidden="true"><svg class="dlogo" aria-hidden="true"><use href="#dlogo"/></svg></span><span class="planer__satz"></span></p>
       <div class="planer__karten"></div>
       <p class="planer__leer" hidden>F&uuml;r diese Kombination finde ich in den n&auml;chsten zehn Tagen keine zwei Classes.
         Nimm einen anderen Tag oder lass den Style offen.</p>
@@ -1623,6 +1637,8 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     <p>Alle 143 Classes der Woche in Berlin Mitte auf einen Blick, Anf&auml;nger:innen
     willkommen. W&auml;hl deinen Tag, jede Class ist direkt buchbar.</p>
   </div>
+  <div class="filterblock">
+  <p class="filter__label">Level</p>
   <div class="filter" data-filter="liste-kalender" role="group" aria-label="Nach Level filtern">
     <button type="button" data-stufe="alle" aria-pressed="true">Alle Level</button>
     <button type="button" data-stufe="a" aria-pressed="false">Beginner</button>
@@ -1630,11 +1646,14 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
     <button type="button" data-stufe="f" aria-pressed="false">Advanced</button>
     <button type="button" data-stufe="k" aria-pressed="false">Kids &amp; Teens</button>
   </div>
+  <p class="filter__label">Style</p>
   <div class="filter filter--stil" data-stilfilter="liste-kalender" role="group" aria-label="Nach Style filtern">
     <button type="button" data-stil="alle" aria-pressed="true">Alle Styles</button>
     <button type="button" data-stil="pole" aria-pressed="false">Pole</button><button type="button" data-stil="commercial" aria-pressed="false">Commercial</button><button type="button" data-stil="hip-hop" aria-pressed="false">Hip Hop</button><button type="button" data-stil="heels" aria-pressed="false">Heels</button><button type="button" data-stil="choreography" aria-pressed="false">Choreo</button><button type="button" data-stil="contemporary" aria-pressed="false">Contemporary</button><button type="button" data-stil="fitness" aria-pressed="false">Fitness</button><button type="button" data-stil="latin" aria-pressed="false">Latin</button><button type="button" data-stil="aerial" aria-pressed="false">Aerial</button><button type="button" data-stil="house" aria-pressed="false">House</button><button type="button" data-stil="kpop" aria-pressed="false">K-Pop</button>
   </div>
+  <p class="filter__label">Tag</p>
   <div class="tagchips" role="group" aria-label="Nach Tag filtern" data-fuer="liste-kalender" data-start="heute"><button type="button" data-chip="alle" aria-pressed="true">Alle Tage</button><button type="button" data-chip="Mo" aria-pressed="false">Mo</button><button type="button" data-chip="Di" aria-pressed="false">Di</button><button type="button" data-chip="Mi" aria-pressed="false">Mi</button><button type="button" data-chip="Do" aria-pressed="false">Do</button><button type="button" data-chip="Fr" aria-pressed="false">Fr</button><button type="button" data-chip="Sa" aria-pressed="false">Sa</button><button type="button" data-chip="So" aria-pressed="false">So</button></div>
+  </div>
   <p class="vertrauen mitte-h">Kostenlos absagen bis 6 Stunden vor Beginn. Der Knopf
   &ouml;ffnet Eversports.</p>
   <div class="klappe" id="klappe-kalender"><div id="liste-kalender"><div class="tag"><span>Montag <small>31.08.</small></span></div><div data-tag="Mo" data-datum="2026-08-31"><div class="termin" data-stufe="amf" data-zeit="10:00" data-id="15c9134e-5bca-437c-9272-05b8a9acc6d9" data-stile="fitness">
@@ -7613,13 +7632,13 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </footer>
 <a class="wa-frei" href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank" rel="noopener"
    aria-label="WhatsApp schreiben"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.4 11.4 0 0 0 4.4 3.9 14.8 14.8 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg></a>
-<button type="button" class="frag-knopf" aria-controls="frag" aria-expanded="false">
-  <span class="frag-knopf__d" aria-hidden="true">D<i>!</i></span>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="dlogo" viewBox="-6 -6 200 169"><path fill="currentColor" fill-rule="evenodd" d="M0.00149021 1.10184H74.5934C88.1288 1.10184 98.4274 2.20527 105.489 4.41213C112.551 6.61899 117.48 10.3707 120.275 15.6671C123.071 20.9636 124.468 28.614 124.468 38.6185V118.065C124.468 128.07 123.071 135.72 120.275 141.017C117.48 146.313 112.551 150.065 105.489 152.272C98.4274 154.479 88.1288 155.582 74.5934 155.582H0.00149021V1.10184ZM68.1935 120.052V36.6323H56.2764V120.052H68.1935ZM129.391 48.3286V1.10184H185.666V48.3286L177.5 108.576H137.777L129.391 48.3286ZM129.17 122.258H185.445V155.582H129.17V122.258Z"/></symbol></svg><button type="button" class="frag-knopf" aria-controls="frag" aria-expanded="false">
+  <span class="frag-knopf__d" aria-hidden="true"><svg class="dlogo" aria-hidden="true"><use href="#dlogo"/></svg></span>
   <span class="frag-knopf__t">Frag D!</span>
 </button>
 <section class="frag" id="frag" role="dialog" aria-label="Frag D!, dein digitaler Welcomer" hidden data-url="https://dds-frag.s-kellerberlin.workers.dev/frag">
   <header class="frag__kopf">
-    <span class="frag__ava" aria-hidden="true">D<i>!</i></span>
+    <span class="frag__ava" aria-hidden="true"><svg class="dlogo" aria-hidden="true"><use href="#dlogo"/></svg></span>
     <div class="frag__titel"><b>Frag D!</b><span>Dein Welcomer. Findet deine Class, antwortet in Sekunden.</span></div>
     <button type="button" class="frag__zu" aria-label="Schlie&szlig;en"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
   </header>
@@ -7640,7 +7659,7 @@ Netzwerks tanzen wir mit Partnerclubs in ganz Deutschland.</p></div>
 </section>
 <div class="retter" id="retter" hidden role="region" aria-label="Nach der Buchung" aria-live="polite">
   <button type="button" class="retter__zu" aria-label="Schlie&szlig;en"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-  <div class="retter__kopf"><span class="planer__ava" aria-hidden="true">D<i>!</i></span>
+  <div class="retter__kopf"><span class="planer__ava" aria-hidden="true"><svg class="dlogo" aria-hidden="true"><use href="#dlogo"/></svg></span>
     <p class="retter__text">Hat die Buchung geklappt?</p></div>
   <div class="retter__knoepfe" data-schritt="frage">
     <button type="button" class="knopf" data-antwort="ja">Ja</button>
