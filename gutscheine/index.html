@@ -65,7 +65,7 @@ h1,h2,h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;
 h2{font-size:clamp(30px,5vw,58px)}
 h2 em,h3 em{font-style:normal;color:var(--pink)}
 .h2--klein{font-size:clamp(24px,3.4vw,38px)}
-.kicker{display:block;font:700 12px/1.45 var(--grot);letter-spacing:.12em;
+.kicker{display:block;font:700 12px/1.45 var(--grot);letter-spacing:.1em;
   text-transform:uppercase;color:var(--pink);margin-bottom:14px}
 .block--hell .kicker{color:var(--auf-hell);opacity:.85}
 .block--hell .kicker::before{content:"";display:inline-block;width:9px;height:9px;
@@ -74,13 +74,13 @@ h2 em,h3 em{font-style:normal;color:var(--pink)}
 .mitte>p:not(.kicker){margin-top:var(--s2);color:var(--auf-ink-soft)}
 .block--hell .mitte>p:not(.kicker){color:var(--auf-hell-soft)}
 .mitte-h{text-align:center;margin-inline:auto}
-.hinweis{font-size:14.5px;color:var(--auf-ink-leis);max-width:640px;margin-top:var(--s3)}
+.hinweis{font-size:14px;color:var(--auf-ink-leis);max-width:640px;margin-top:var(--s3)}
 .block--hell .hinweis{color:var(--auf-hell-leis)}
 .hinweis a{color:inherit}
 
 /* ---------- Knoepfe ---------- */
 .knopf{display:inline-flex;align-items:center;gap:9px;background:var(--pink);
-  color:var(--ink);font:700 15px/1 var(--grot);padding:16px 28px;border-radius:999px;
+  color:var(--ink);font:700 16px/1 var(--grot);padding:16px 28px;border-radius:999px;
   text-decoration:none;transition:transform .35s var(--e),box-shadow .35s var(--e),
   background .35s var(--e),color .35s var(--e);cursor:pointer}
 .knopf:hover{transform:translateY(-2px);box-shadow:0 14px 34px -12px rgba(255,167,226,.55)}
@@ -100,11 +100,11 @@ h2 em,h3 em{font-style:normal;color:var(--pink)}
 .fortschritt{position:absolute;top:0;left:0;height:2px;width:0;background:var(--pink);
   z-index:41}
 .top__in{display:flex;align-items:center;gap:18px;height:64px}
-.marke{font-family:var(--disp);font-weight:800;font-size:16.5px;letter-spacing:.02em;
+.marke{font-family:var(--disp);font-weight:800;font-size:17px;letter-spacing:.02em;
   text-decoration:none;white-space:nowrap}
 .marke i{font-style:normal;color:var(--pink)}
 .top__nav{display:flex;gap:4px;margin-left:auto}
-.top__nav a{font:500 15px/1 var(--grot);text-decoration:none;color:var(--auf-ink-soft);
+.top__nav a{font:500 16px/1 var(--grot);text-decoration:none;color:var(--auf-ink-soft);
   padding:10px 12px;border-radius:999px;transition:color .25s,background .25s}
 .top__nav a:hover{color:var(--hell);background:rgba(225,226,220,.08)}
 .top__recht{display:flex;align-items:center;gap:10px}
@@ -114,13 +114,13 @@ h2 em,h3 em{font-style:normal;color:var(--pink)}
   color:var(--auf-ink-soft);transition:color .25s,background .25s}
 .top__wa:hover{color:var(--pink);background:rgba(225,226,220,.08)}
 .top__wa svg{width:20px;height:20px}
-.top__cta{padding:11px 20px;font-size:15px}
+.top__cta{padding:11px 20px;font-size:16px}
 .burger{display:grid;width:42px;height:42px;place-items:center;border-radius:50%}
 .burger:hover{background:rgba(225,226,220,.1)}
 .menu__trenn{display:block;height:1px;width:64px;background:rgba(225,226,220,.2);margin:14px 0}
 .menu__links a.menu__leise{opacity:.7;font-size:clamp(19px,4vw,30px)}
 .burger svg{width:22px;height:22px}
-.zurueck{display:none;align-items:center;gap:8px;font-weight:700;font-size:15px;
+.zurueck{display:none;align-items:center;gap:8px;font-weight:700;font-size:16px;
   padding:9px 16px 9px 10px;border-radius:999px;background:rgba(225,226,220,.08)}
 .zurueck svg{width:16px;height:16px}
 .zurueck:hover{background:rgba(225,226,220,.16)}
@@ -131,8 +131,8 @@ body[data-view="kurs"] .top__nav{display:none}
 }
 @media (max-width:560px){
   .top__wa{display:none}
-  .top__cta{padding:9px 14px;font-size:13.5px}
-  .marke{font-size:15px}
+  .top__cta{padding:9px 14px;font-size:14px}
+  .marke{font-size:16px}
 }
 
 /* Vollbild-Menue */
@@ -159,8 +159,8 @@ body[data-menu="1"]{overflow:hidden}
 .buehne__schleier{position:absolute;inset:0;background:
   linear-gradient(to top,rgba(24,24,24,.96) 0,rgba(24,24,24,.55) 34%,rgba(24,24,24,.18) 62%,rgba(24,24,24,.42) 100%)}
 .buehne__tag{position:absolute;top:84px;right:clamp(18px,4vw,36px);z-index:3;
-  display:inline-flex;align-items:center;gap:9px;font:700 12.5px/1 var(--grot);
-  letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
+  display:inline-flex;align-items:center;gap:9px;font:700 12px/1 var(--grot);
+  letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
   color:var(--auf-ink-soft);background:rgba(24,24,24,.5);border:1px solid var(--linie-d);
   padding:10px 16px;border-radius:999px;
   -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:color .25s,border-color .25s}
@@ -180,7 +180,7 @@ body[data-menu="1"]{overflow:hidden}
   -webkit-text-stroke:1.5px var(--hell);paint-order:stroke}
 .buehne__titel .kontur em{color:var(--pink);-webkit-text-stroke:0}
 .buehne__satz{max-width:46ch;margin-top:var(--s2);color:var(--auf-ink-soft);
-  font-size:16.5px}
+  font-size:17px}
 .buehne .kopf__tasten{margin-top:var(--s3)}
 .kopf__tasten{display:flex;flex-wrap:wrap;gap:12px}
 .buehne__fakten{position:relative;z-index:2;width:100%;display:flex;gap:clamp(22px,5vw,64px);
@@ -188,7 +188,7 @@ body[data-menu="1"]{overflow:hidden}
   border-top:1px solid var(--linie-d)}
 .kopf__zahl b{font-family:var(--disp);font-weight:800;
   font-size:clamp(26px,3.6vw,44px);line-height:1;display:block}
-.kopf__zahl span{font-size:13.5px;color:var(--auf-ink-leis);letter-spacing:.06em;
+.kopf__zahl span{font-size:14px;color:var(--auf-ink-leis);letter-spacing:.06em;
   text-transform:uppercase;font-weight:500}
 .buehne__cue{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:2;
   width:22px;height:34px;border:1.5px solid var(--auf-ink-leis);border-radius:12px}
@@ -245,13 +245,12 @@ body[data-menu="1"]{overflow:hidden}
   padding:26px 24px;text-decoration:none;
   transition:transform .45s var(--e),border-color .45s var(--e)}
 .tuer:hover{transform:translateY(-5px);border-color:rgba(255,167,226,.55)}
-.tuer__num{font-family:var(--disp);font-weight:800;font-size:15px;color:var(--pink)}
+.tuer__num{font-family:var(--disp);font-weight:800;font-size:16px;color:var(--pink)}
 .tuer b{font-family:var(--disp);font-weight:800;text-transform:uppercase;
   font-size:clamp(19px,2vw,24px);line-height:1.05}
-.tuer p{font-size:15px;color:var(--auf-ink-soft)}
+.tuer p{font-size:16px;color:var(--auf-ink-soft)}
 .tuer__cta{display:inline-flex;align-items:center;gap:7px;margin-top:auto;
-  font:700 13.5px/1 var(--grot);letter-spacing:.04em;text-transform:uppercase;
-  color:var(--pink);padding-top:6px}
+  font:700 14px/1 var(--grot);color:var(--pink);padding-top:6px}
 .tuer__cta svg{width:14px;height:14px;transform:rotate(180deg);
   transition:transform .35s var(--e)}
 .tuer:hover .tuer__cta svg{transform:rotate(180deg) translateX(-4px)}
@@ -272,7 +271,7 @@ body[data-menu="1"]{overflow:hidden}
 .kachel::after{content:"";position:absolute;inset:0;
   background:linear-gradient(to top,rgba(24,24,24,.92) 0,rgba(24,24,24,.25) 46%,rgba(24,24,24,.12) 100%);
   pointer-events:none}
-.kachel__tag{position:absolute;top:10px;left:10px;z-index:2;font:700 11px/1 var(--grot);
+.kachel__tag{position:absolute;top:10px;left:10px;z-index:2;font:700 12px/1 var(--grot);
   letter-spacing:.08em;text-transform:uppercase;background:rgba(24,24,24,.6);
   border:1px solid var(--linie-d);color:var(--auf-ink);
   padding:7px 11px;border-radius:999px;
@@ -284,7 +283,7 @@ body[data-menu="1"]{overflow:hidden}
   padding:16px 14px;display:flex;flex-direction:column;gap:3px}
 .kachel__name{font-family:var(--disp);font-weight:800;text-transform:uppercase;
   font-size:clamp(18px,2vw,26px);line-height:1;color:var(--hell)}
-.kachel__zahl{font:500 12.5px/1.45 var(--grot);color:var(--auf-ink-soft);
+.kachel__zahl{font:500 12px/1.45 var(--grot);color:var(--auf-ink-soft);
   letter-spacing:.05em;text-transform:uppercase}
 
 /* ---------- Gruender ---------- */
@@ -294,8 +293,8 @@ body[data-menu="1"]{overflow:hidden}
 .gruender__foto img{width:100%;height:auto;border-radius:var(--rund);position:relative;z-index:1;filter:saturate(.92)}
 .gruender__foto::before{content:"";position:absolute;inset:-14px 14px 14px -14px;
   border:1.5px solid var(--gold);border-radius:var(--rund);z-index:0}
-.gruender__foto figcaption{margin-top:16px;font:700 12.5px/1 var(--grot);
-  letter-spacing:.2em;text-transform:uppercase;color:var(--auf-ink-leis)}
+.gruender__foto figcaption{margin-top:16px;font:700 12px/1 var(--grot);
+  color:var(--auf-ink-leis)}
 .gr__story{margin-top:var(--s2);max-width:56ch;color:var(--auf-ink-soft)}
 .gr__zitat{margin-top:var(--s3);font-family:var(--disp);font-weight:800;
   text-transform:uppercase;font-size:clamp(19px,2.4vw,28px);line-height:1.25;
@@ -303,8 +302,8 @@ body[data-menu="1"]{overflow:hidden}
 .gr__args{list-style:none;padding:0;margin-top:var(--s3);display:grid;gap:14px}
 .gr__args li{display:grid;gap:2px;padding-left:18px;border-left:2px solid var(--gold)}
 .gr__args b{font-family:var(--disp);font-weight:800;text-transform:uppercase;
-  font-size:16.5px;letter-spacing:.02em}
-.gr__args span{font-size:15px;color:var(--auf-ink-soft)}
+  font-size:17px;letter-spacing:.02em}
+.gr__args span{font-size:16px;color:var(--auf-ink-soft)}
 @media (max-width:880px){
   .gruender{grid-template-columns:1fr}
   .gruender__foto{width:min(300px,80%)}
@@ -316,15 +315,14 @@ body[data-menu="1"]{overflow:hidden}
   padding:clamp(26px,4vw,46px);margin-top:var(--s4);position:relative;overflow:hidden}
 .welcome::before{content:"";position:absolute;inset:auto -60px -80px auto;width:260px;
   height:260px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,167,226,.28),transparent)}
-.welcome em{font:700 12.5px/1 var(--grot);font-style:normal;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--pink)}
+.welcome em{font:700 12px/1 var(--grot);font-style:normal;color:var(--pink)}
 .welcome h3{font-size:clamp(26px,3.6vw,40px);margin-top:10px}
 .welcome p{margin-top:12px;color:var(--auf-ink-soft);max-width:44ch}
 .welcome__preis{display:flex;flex-direction:column;gap:6px;align-items:flex-start;
   position:relative;z-index:1}
 .welcome__preis b{font-family:var(--disp);font-weight:800;font-size:clamp(40px,5vw,62px);
   line-height:1}
-.welcome__preis span{font-size:15px;color:var(--auf-ink-soft)}
+.welcome__preis span{font-size:16px;color:var(--auf-ink-soft)}
 .welcome__preis .knopf{margin-top:14px}
 @media (max-width:760px){.welcome{grid-template-columns:1fr}
   .welcome__preis{order:-1;border-bottom:1px solid var(--linie-d);padding-bottom:var(--s2)}}
@@ -336,22 +334,22 @@ body[data-menu="1"]{overflow:hidden}
 .plan:hover{transform:translateY(-4px);box-shadow:0 22px 40px -22px rgba(39,39,39,.35)}
 .plan--top{background:var(--ink);color:var(--auf-ink);border-color:transparent}
 .plan__tag{position:absolute;top:-12px;right:20px;background:var(--pink);color:var(--ink);
-  font:700 11px/1 var(--grot);letter-spacing:.1em;text-transform:uppercase;
+  font:700 12px/1 var(--grot);letter-spacing:.1em;text-transform:uppercase;
   padding:7px 12px;border-radius:999px}
-.plan>b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:18px}
+.plan>b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:20px}
 .plan__preis{font-family:var(--disp);font-weight:800;font-size:clamp(38px,4.4vw,54px);
   line-height:1}
-.plan__preis small{font:700 13.5px/1 var(--grot);margin-left:8px;opacity:.6;
+.plan__preis small{font:700 14px/1 var(--grot);margin-left:8px;opacity:.6;
   letter-spacing:.04em;text-transform:uppercase}
-.plan__merk{font-weight:700;font-size:15px}
-.plan__hin{font-size:13.5px;opacity:.62}
+.plan__merk{font-weight:700;font-size:16px}
+.plan__hin{font-size:14px;opacity:.62}
 .plan .knopf{align-self:flex-start;margin-top:16px}
 .plan--liste{gap:12px}
 .plan__drin{list-style:none;padding:0;display:grid;gap:10px}
-.plan__drin li{position:relative;padding-left:26px;font-size:15px;line-height:1.45}
+.plan__drin li{position:relative;padding-left:26px;font-size:16px;line-height:1.45}
 .plan__drin li b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;
-  font-size:15px;letter-spacing:.02em}
-.plan__drin li span{display:block;color:var(--auf-hell-soft);font-size:13.5px;margin-top:2px}
+  font-size:16px;letter-spacing:.02em}
+.plan__drin li span{display:block;color:var(--auf-hell-soft);font-size:14px;margin-top:2px}
 .plan__drin li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:6px;
   border-left:2.5px solid var(--pink);border-bottom:2.5px solid var(--pink);
   transform:rotate(-45deg)}
@@ -359,10 +357,10 @@ body[data-menu="1"]{overflow:hidden}
 @media (max-width:760px){.kleine{grid-template-columns:1fr}}
 .klein{display:flex;flex-direction:column;gap:6px;background:var(--hell2);
   border:1px solid var(--linie-h);border-radius:var(--rund2);padding:22px}
-.klein b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:16.5px}
+.klein b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:17px}
 .klein__preis{font-family:var(--disp);font-weight:800;font-size:32px;line-height:1}
-.klein>span:not(.klein__preis){font-size:13.5px;color:var(--auf-hell-soft)}
-.klein .knopf{margin-top:12px;align-self:flex-start;padding:12px 20px;font-size:13.5px}
+.klein>span:not(.klein__preis){font-size:14px;color:var(--auf-hell-soft)}
+.klein .knopf{margin-top:12px;align-self:flex-start;padding:12px 20px;font-size:14px}
 
 /* ---------- Events ---------- */
 .events{display:grid;gap:16px;grid-template-columns:repeat(2,1fr);
@@ -372,14 +370,14 @@ body[data-menu="1"]{overflow:hidden}
   border:1px solid var(--linie-d);border-radius:var(--rund);padding:30px 26px;
   transition:transform .45s var(--e),border-color .45s var(--e)}
 .event:hover{transform:translateY(-4px);border-color:rgba(178,146,97,.6)}
-.event__tag{align-self:flex-start;font:700 12.5px/1 var(--grot);letter-spacing:.14em;
+.event__tag{align-self:flex-start;font:700 12px/1 var(--grot);letter-spacing:.1em;
   text-transform:uppercase;color:var(--gold);border:1px solid rgba(178,146,97,.5);
   padding:8px 13px;border-radius:999px}
 .event h3{font-size:clamp(24px,2.6vw,34px)}
-.event p{font-size:15px;color:var(--auf-ink-soft)}
+.event p{font-size:16px;color:var(--auf-ink-soft)}
 .event__cta{margin-top:auto;padding-top:10px;display:flex;flex-wrap:wrap;gap:10px}
 .event__bald{font-family:var(--disp);font-weight:800;text-transform:uppercase;
-  color:var(--pink);font-size:15px;letter-spacing:.04em}
+  color:var(--pink);font-size:16px;letter-spacing:.04em}
 
 /* ---------- Schule ---------- */
 .sps{display:grid;gap:14px;grid-template-columns:repeat(4,1fr);margin-top:var(--s4)}
@@ -389,13 +387,12 @@ body[data-menu="1"]{overflow:hidden}
   border:1px solid var(--linie-h);border-radius:var(--rund2);padding:24px 22px;
   transition:transform .45s var(--e)}
 .sp:hover{transform:translateY(-4px)}
-.sp__num{font-family:var(--disp);font-weight:800;font-size:13.5px;color:var(--gold)}
-.sp b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:16.5px;
+.sp__num{font-family:var(--disp);font-weight:800;font-size:14px;color:var(--gold)}
+.sp b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:17px;
   line-height:1.25}
-.sp p{font-size:15px;color:var(--auf-hell-soft)}
+.sp p{font-size:16px;color:var(--auf-hell-soft)}
 .sp__cta{display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding-top:8px;
-  font:700 13.5px/1 var(--grot);letter-spacing:.06em;text-transform:uppercase;
-  color:var(--auf-hell);text-decoration:none}
+  font:700 14px/1 var(--grot);color:var(--auf-hell);text-decoration:none}
 .sp__cta svg{width:14px;height:14px}
 .sp__cta[href$="#anfrage"] svg,.sp__cta[href^="mailto"] svg{transform:rotate(180deg)}
 .sp__cta:hover{text-decoration:underline;text-decoration-color:var(--pink);
@@ -417,9 +414,8 @@ a.trainer:hover{border-color:rgba(255,167,226,.55);transform:translateY(-4px)}
   background-color:var(--nacht);filter:saturate(.9)}
 .trainer i.ohnefoto{display:grid;place-items:center;font:800 34px/1 var(--disp);
   color:rgba(225,226,220,.28)}
-.trainer b{font-size:16.5px;line-height:1.25}
-.trainer span{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--auf-ink-leis);font-weight:600}
+.trainer b{font-size:17px;line-height:1.25}
+.trainer span{font-size:12px;color:var(--auf-ink-leis);font-weight:600}
 a.trainer span{color:var(--pink)}
 
 /* ---------- Stimmen ---------- */
@@ -427,7 +423,7 @@ a.trainer span{color:var(--pink)}
   flex-wrap:wrap;margin-top:var(--s4);padding:22px 26px;border-radius:var(--rund2);
   background:var(--hell2);border:1px solid var(--linie-h)}
 .block:not(.block--hell) .band{background:var(--ink);border-color:var(--linie-d)}
-.band p{font-size:15px}
+.band p{font-size:16px}
 .sterne svg{width:15px;height:15px;display:inline-block;color:var(--gold);
   vertical-align:-2px}
 .stimmen{display:grid;gap:14px;grid-template-columns:repeat(3,1fr);margin-top:16px}
@@ -436,22 +432,21 @@ a.trainer span{color:var(--pink)}
 .stimme{background:var(--hell2);border:1px solid var(--linie-h);
   border-radius:var(--rund2);padding:22px;display:flex;flex-direction:column;gap:10px}
 .block:not(.block--hell) .stimme{background:var(--tief);border-color:var(--linie-d)}
-.stimme q{quotes:"\201E" "\201C";font-size:15px;line-height:1.65}
-.stimme footer{margin-top:auto;font:600 12.5px/1 var(--grot);letter-spacing:.05em;
-  text-transform:uppercase;opacity:.55}
+.stimme q{quotes:"\201E" "\201C";font-size:16px;line-height:1.65}
+.stimme footer{margin-top:auto;font:600 12px/1 var(--grot);opacity:.55}
 
 /* ---------- Fragen ---------- */
 .fragen-box{max-width:820px;margin:var(--s3) auto 0}
 .frage{border-bottom:1px solid var(--linie-d)}
 .block--hell .frage{border-color:var(--linie-h)}
 .frage button{width:100%;display:flex;align-items:center;justify-content:space-between;
-  gap:18px;text-align:left;padding:20px 4px;font-weight:700;font-size:16.5px}
+  gap:18px;text-align:left;padding:20px 4px;font-weight:700;font-size:17px}
 .frage button svg{flex:0 0 auto;width:18px;height:18px;color:var(--pink);
   transition:transform .4s var(--e)}
 .frage button[aria-expanded="true"] svg{transform:rotate(45deg)}
 .frage__a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--e)}
 .frage button[aria-expanded="true"]+.frage__a{grid-template-rows:1fr}
-.frage__a>p{overflow:hidden;padding:0 4px;color:var(--auf-ink-soft);font-size:15px}
+.frage__a>p{overflow:hidden;padding:0 4px;color:var(--auf-ink-soft);font-size:16px}
 .block--hell .frage__a>p{color:var(--auf-hell-soft)}
 .frage button[aria-expanded="true"]+.frage__a>p{padding-bottom:20px}
 
@@ -478,18 +473,18 @@ a.trainer span{color:var(--pink)}
 .karte{background:var(--tief);border:1px solid var(--linie-d);border-radius:var(--rund);
   padding:26px;display:grid;gap:16px;align-content:start}
 .fakt{display:grid;gap:2px;padding-left:16px;border-left:2px solid var(--pink)}
-.fakt b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:15px}
-.fakt span{font-size:15px;color:var(--auf-ink-soft)}
+.fakt b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:16px}
+.fakt span{font-size:16px;color:var(--auf-ink-soft)}
 
 /* Termine */
 .filter{display:flex;flex-wrap:wrap;gap:8px;margin-block:var(--s3);justify-content:center}
-.filter button{font:700 13.5px/1 var(--grot);padding:11px 18px;border-radius:999px;
+.filter button{font:700 14px/1 var(--grot);padding:11px 18px;border-radius:999px;
   color:var(--auf-hell);background:var(--hell);box-shadow:inset 0 0 0 1.5px rgba(39,39,39,.22);
   transition:background .3s,box-shadow .3s,color .3s}
 .filter button:hover{box-shadow:inset 0 0 0 1.5px var(--auf-hell)}
 .filter button[aria-pressed="true"]{background:var(--ink);color:var(--hell);
   box-shadow:inset 0 0 0 1.5px var(--ink)}
-.tag{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:18px;
+.tag{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:20px;
   margin:var(--s3) 0 10px;display:flex;align-items:center;gap:12px}
 .tag::after{content:"";height:1px;flex:1;background:var(--linie-h)}
 .termin{display:grid;grid-template-columns:86px 1fr auto;gap:16px;align-items:center;
@@ -497,19 +492,19 @@ a.trainer span{color:var(--pink)}
   border:1px solid var(--linie-h);margin-bottom:8px;
   transition:transform .3s var(--e),border-color .3s}
 .termin:hover{transform:translateX(4px);border-color:rgba(39,39,39,.3)}
-.termin__zeit{font-family:var(--disp);font-weight:800;font-size:18px;line-height:1.25;
+.termin__zeit{font-family:var(--disp);font-weight:800;font-size:20px;line-height:1.25;
   display:grid}
-.termin__zeit small{font:600 11px/1.45 var(--grot);letter-spacing:.06em;opacity:.55}
-.termin__was h3,.termin__name{font-size:15px;font-family:var(--grot);font-weight:700;
+.termin__zeit small{font:600 12px/1.45 var(--grot);letter-spacing:.06em;opacity:.55}
+.termin__was h3,.termin__name{font-size:16px;font-family:var(--grot);font-weight:700;
   text-transform:none;letter-spacing:0;line-height:1.45;text-wrap:balance}
-.termin__meta{display:flex;flex-wrap:wrap;gap:5px 14px;margin-top:4px;font-size:12.5px;
+.termin__meta{display:flex;flex-wrap:wrap;gap:5px 14px;margin-top:4px;font-size:12px;
   color:var(--auf-hell-soft)}
 .stufe{font-weight:700;color:var(--auf-hell);background:rgba(39,39,39,.08);
-  padding:2px 9px;border-radius:999px;font-size:12.5px;letter-spacing:.04em;
+  padding:2px 9px;border-radius:999px;font-size:12px;letter-spacing:.04em;
   text-transform:uppercase}
 .knapp{color:#a04b00;font-weight:700}
 .frei{color:#2c6e31;font-weight:600}
-.buchen{display:inline-flex;align-items:center;gap:7px;font:700 13.5px/1 var(--grot);
+.buchen{display:inline-flex;align-items:center;gap:7px;font:700 14px/1 var(--grot);
   background:var(--ink);color:var(--hell);padding:12px 20px;border-radius:999px;
   text-decoration:none;transition:background .3s,color .3s,transform .3s var(--e)}
 .buchen:hover{background:var(--pink);color:var(--ink);transform:translateY(-2px)}
@@ -527,8 +522,8 @@ a.trainer span{color:var(--pink)}
 .schritte{display:grid;gap:14px;margin-top:var(--s3)}
 .schritt{display:grid;gap:3px;padding:16px 18px;border-radius:var(--rund2);
   background:var(--ink);border:1px solid var(--linie-d)}
-.schritt b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:15px}
-.schritt span{font-size:15px;color:var(--auf-ink-soft)}
+.schritt b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:16px}
+.schritt span{font-size:16px;color:var(--auf-ink-soft)}
 
 /* Weiter-Karten */
 .weiter{display:grid;gap:12px;grid-template-columns:repeat(3,1fr);margin-top:var(--s3)}
@@ -539,8 +534,8 @@ a.trainer span{color:var(--pink)}
 .wkarte:hover{transform:translateY(-3px);border-color:rgba(255,167,226,.5)}
 .wkarte .wbild,.wkarte img{width:56px;height:70px;border-radius:8px;object-fit:cover;
   flex:0 0 auto;background-size:cover;background-position:center}
-.wkarte b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:15px}
-.wkarte .grund{display:block;font-size:12.5px;color:var(--auf-ink-soft);margin-top:2px}
+.wkarte b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:16px}
+.wkarte .grund{display:block;font-size:12px;color:var(--auf-ink-soft);margin-top:2px}
 
 /* ---------- Fuss ---------- */
 .fuss{background:var(--nacht);border-top:1px solid var(--linie-d);
@@ -550,9 +545,9 @@ a.trainer span{color:var(--pink)}
 @media (max-width:520px){.fuss__spalten{grid-template-columns:1fr}}
 @media (max-width:820px){.fuss__spalten{gap:var(--s2)}}
 @media (max-width:700px){.fuss__spalten{grid-template-columns:1fr}}
-.fuss b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:15px;
+.fuss b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:16px;
   display:block;margin-bottom:12px;color:var(--pink)}
-.fuss p{font-size:15px;line-height:1.9;margin-bottom:10px}
+.fuss p{font-size:16px;line-height:1.9;margin-bottom:10px}
 .fuss a{text-decoration:none;color:var(--auf-ink);display:inline-flex;
   align-items:center;gap:8px}
 .fuss a:hover{color:var(--pink)}
@@ -562,7 +557,7 @@ a.trainer span{color:var(--pink)}
 .fuss__unten{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
   padding-right:72px;
   margin-top:var(--s4);padding-top:var(--s2);border-top:1px solid var(--linie-d);
-  font-size:12.5px;color:var(--auf-ink-leis)}
+  font-size:12px;color:var(--auf-ink-leis)}
 .fuss__unten a{color:inherit}
 
 /* ---------- WhatsApp frei + Leiste ---------- */
@@ -572,9 +567,9 @@ a.trainer span{color:var(--pink)}
   -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
   transform:translateY(120%);transition:transform .45s var(--e)}
 .leiste[data-zeig="1"]{transform:none}
-.leiste__t{flex:1;min-width:0;display:grid;font-size:12.5px;color:var(--auf-ink-leis)}
-.leiste__t b{font:700 15px/1.45 var(--grot);color:var(--hell)}
-.leiste .knopf{padding:12px 20px;font-size:15px}
+.leiste__t{flex:1;min-width:0;display:grid;font-size:12px;color:var(--auf-ink-leis)}
+.leiste__t b{font:700 16px/1.45 var(--grot);color:var(--hell)}
+.leiste .knopf{padding:12px 20px;font-size:16px}
 @media (max-width:700px){
   .leiste{display:flex}
   .fuss{padding-bottom:96px}
@@ -618,14 +613,14 @@ a.trainer span{color:var(--pink)}
 .knapp{background:var(--pink);color:var(--ink);font-weight:700;
   padding:2px 9px;border-radius:999px}
 .tag>span{display:inline-flex;align-items:baseline;gap:8px}
-.tag small{font:600 12.5px/1 var(--grot);letter-spacing:.08em;opacity:.5}
-.tag .heute{background:var(--pink);color:var(--ink);font:700 11px/1 var(--grot);
+.tag small{font:600 12px/1 var(--grot);letter-spacing:.08em;opacity:.5}
+.tag .heute{background:var(--pink);color:var(--ink);font:700 12px/1 var(--grot);
   letter-spacing:.1em;text-transform:uppercase;font-style:normal;
   padding:5px 10px;border-radius:999px}
 .tag-zu{display:none !important}
 .tagchips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;
   margin-top:calc(var(--s2)*-1);margin-bottom:var(--s3)}
-.tagchips button{font:700 13.5px/1 var(--grot);padding:10px 15px;border-radius:999px;
+.tagchips button{font:700 14px/1 var(--grot);padding:10px 15px;border-radius:999px;
   background:transparent;box-shadow:inset 0 0 0 1.5px var(--linie-h);
   transition:background .3s,box-shadow .3s,color .3s}
 .tagchips button:hover{box-shadow:inset 0 0 0 1.5px var(--auf-hell)}
@@ -635,7 +630,7 @@ a.trainer span{color:var(--pink)}
 
 /* Kursseiten-Kopf: ein primaerer Weg, der Plan als Nebenlink */
 .nebenlink{display:inline-flex;align-items:center;gap:7px;margin-top:16px;
-  font:600 13.5px/1 var(--grot);color:var(--auf-ink-soft);text-decoration:underline;
+  font:600 14px/1 var(--grot);color:var(--auf-ink-soft);text-decoration:underline;
   text-underline-offset:4px;text-decoration-color:rgba(225,226,220,.35)}
 .nebenlink:hover{color:var(--hell)}
 .nebenlink svg{width:13px;height:13px}
@@ -644,15 +639,14 @@ a.trainer span{color:var(--pink)}
 .block--hell .welcome{margin-top:var(--s4)}
 
 /* Coming soon als Tape */
-.event__bald{background:var(--pink);color:var(--ink);font-size:15px;
+.event__bald{background:var(--pink);color:var(--ink);font-size:16px;
   padding:10px 18px;transform:rotate(-4deg);letter-spacing:.05em;
   align-self:flex-start}
 
 /* Bruecke von Drop-in zur Membership */
 .bruecke{text-align:center;margin-top:var(--s4);display:grid;gap:10px;
   justify-items:center}
-.bruecke>p{font:700 13.5px/1 var(--grot);letter-spacing:.18em;text-transform:uppercase;
-  color:var(--auf-hell-soft)}
+.bruecke>p{font:700 14px/1 var(--grot);color:var(--auf-hell-soft)}
 .bruecke h3{font-size:clamp(22px,3.4vw,36px)}
 .bruecke .knopf{margin-top:6px}
 
@@ -662,7 +656,7 @@ a.trainer span{color:var(--pink)}
 .trainer--mehr b{color:var(--hell)}
 .namensband{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;
   margin-top:var(--s4)}
-.nurname{font:600 13.5px/1 var(--grot);border:1px solid var(--linie-d);
+.nurname{font:600 14px/1 var(--grot);border:1px solid var(--linie-d);
   padding:9px 14px;border-radius:999px;color:var(--auf-ink-soft)}
 
 /* ---------- Runde 2: Statements, Vibes, Kalender, Preise ---------- */
@@ -718,13 +712,11 @@ a.trainer span{color:var(--pink)}
 .vibes__spur .vibe:nth-child(even){transform:rotate(-1.2deg)}
 @media (prefers-reduced-motion:reduce){.vibes__spur{animation:none}}
 
-.preise__zahl{font:700 13.5px/1.65 var(--grot);letter-spacing:.14em;
-  text-transform:uppercase;margin-top:var(--s2);color:var(--auf-hell-soft)}
-.plan__wer{font-size:13.5px;opacity:.62;margin-top:-4px}
-.p-frage{text-align:center;font:700 13.5px/1 var(--grot);letter-spacing:.2em;
-  text-transform:uppercase;color:var(--auf-hell-soft);margin-top:var(--s4)}
+.preise__zahl{font:700 14px/1.65 var(--grot);margin-top:var(--s2);color:var(--auf-hell-soft)}
+.plan__wer{font-size:14px;opacity:.62;margin-top:-4px}
+.p-frage{text-align:center;font:700 14px/1 var(--grot);color:var(--auf-hell-soft);margin-top:var(--s4)}
 .p-schalter{display:flex;justify-content:center;gap:8px;margin-top:14px}
-.p-schalter button{font:700 13.5px/1 var(--grot);padding:12px 18px;border-radius:999px;
+.p-schalter button{font:700 14px/1 var(--grot);padding:12px 18px;border-radius:999px;
   background:transparent;box-shadow:inset 0 0 0 1.5px var(--linie-h);
   transition:background .3s,box-shadow .3s,color .3s}
 .p-schalter button:hover{box-shadow:inset 0 0 0 1.5px var(--auf-hell)}
@@ -760,15 +752,15 @@ a.trainer span{color:var(--pink)}
 .tuer__cta,.sp__cta,.kachel__zahl,.stimme footer,.trainer span,.kopf__zahl span,
 .plan__preis small,.termin__zeit small{letter-spacing:.07em}
 .buehne__tag,.tag .heute,.kachel__tag,.plan__tag,.termin__zeit small,.stufe,
-.trainer span{font-size:12.5px}
+.trainer span{font-size:12px}
 .termin__meta,.kachel__zahl,.stimme footer,.fuss__unten,.leiste__t,
 .plan__hin,.plan__wer,.dropin__z{font-size:16px;line-height:1.55}
 .tuer p,.sp p,.gr__args span,.plan__drin li,.stimme q,.event p,.fuss p,
-.fakt span,.zeit span,.frage__a>p{font-size:15px}
-.buehne__satz,.kopf__claim{font-size:18px}
-.fuss b,.fakt b,.schritt b,.wkarte b,.vergleich b{font-size:16.5px;letter-spacing:.03em}
+.fakt span,.zeit span,.frage__a>p{font-size:16px}
+.buehne__satz,.kopf__claim{font-size:20px}
+.fuss b,.fakt b,.schritt b,.wkarte b,.vergleich b{font-size:17px;letter-spacing:.03em}
 .klein b,.gr__args b,.sp b,.plan>b{letter-spacing:.03em}
-.sp__num,.tuer__num{font:700 12.5px/1 var(--grot);letter-spacing:.12em}
+.sp__num,.tuer__num{font:700 12px/1 var(--grot);letter-spacing:.12em}
 .event h3{text-wrap:balance}
 .buehne__satz,.kopf__claim,.welcome p,.tuer p,.sp p,.event p,.gr__story,
 .stimme q,.frage__a>p{text-wrap:pretty}
@@ -787,20 +779,20 @@ a.trainer span{color:var(--pink)}
 .buehne__cue{display:none}
 
 /* ---------- Lead-to-Sale: Vertrauen an den Knoepfen ---------- */
-.vertrauen{font-size:13.5px;line-height:1.65;color:var(--auf-ink-leis);max-width:34ch;
+.vertrauen{font-size:14px;line-height:1.65;color:var(--auf-ink-leis);max-width:34ch;
   margin-top:12px}
 .block--hell .vertrauen{color:var(--auf-hell-leis)}
 .vertrauen.mitte-h{max-width:52ch;margin-inline:auto;margin-bottom:var(--s2)}
 .einwand{list-style:none;padding:0;margin-top:16px;display:grid;gap:7px}
-.einwand li{position:relative;padding-left:20px;font-size:15px;color:var(--auf-ink-soft)}
+.einwand li{position:relative;padding-left:20px;font-size:16px;color:var(--auf-ink-soft)}
 .einwand li::before{content:"";position:absolute;left:0;top:7px;width:10px;height:5px;
   border-left:2px solid var(--pink);border-bottom:2px solid var(--pink);transform:rotate(-45deg)}
-.sterne-zeile{margin-top:var(--s3);font-size:15px;color:var(--auf-hell-soft)}
+.sterne-zeile{margin-top:var(--s3);font-size:16px;color:var(--auf-hell-soft)}
 .sterne-zeile b{color:var(--auf-hell)}
 .sterne-zeile a{color:var(--auf-hell);text-decoration:underline;text-underline-offset:4px;
   text-decoration-color:var(--pink);text-decoration-thickness:2px}
 .sterne-zeile svg{width:14px;height:14px}
-.textlink{display:inline-flex;align-items:center;gap:6px;font:700 15px/1 var(--grot);
+.textlink{display:inline-flex;align-items:center;gap:6px;font:700 16px/1 var(--grot);
   padding:6px 0;min-height:24px;
   color:inherit;text-decoration:underline;text-underline-offset:5px;
   text-decoration-color:var(--pink);text-decoration-thickness:2px}
@@ -813,7 +805,7 @@ a.trainer span{color:var(--pink)}
 @media (max-width:520px){.dropins{grid-template-columns:1fr}}
 .dropin{display:flex;flex-direction:column;gap:6px;min-width:0;padding:20px 20px 18px;border-radius:14px;
   background:var(--hell);border:1px solid var(--linie-h)}
-.dropin b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:15px;
+.dropin b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:16px;
   letter-spacing:.03em}
 .dropin__preis{font-family:var(--disp);font-weight:800;font-size:36px;line-height:1;margin-top:2px}
 .dropin__z{color:var(--auf-hell-soft)}
@@ -822,39 +814,39 @@ a.trainer span{color:var(--pink)}
 .termin.vorbei{display:none}
 
 /* ---------- CRO Runde 2 ---------- */
-.top__pass{padding:11px 18px;font-size:15px}
-.top__cta.knopf--rand{padding:10px 18px;font-size:15px;color:var(--auf-ink)}
+.top__pass{padding:11px 18px;font-size:16px}
+.top__cta.knopf--rand{padding:10px 18px;font-size:16px;color:var(--auf-ink)}
 @media (max-width:560px){.top__pass{display:none}}
 .band__cta{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
 .welcome .vertrauen,.welcome .schritte3{color:var(--auf-ink-soft)}
-.schritte3{list-style:none;padding:0;margin-top:16px;display:grid;gap:8px;font-size:13.5px;
+.schritte3{list-style:none;padding:0;margin-top:16px;display:grid;gap:8px;font-size:14px;
   line-height:1.45;max-width:36ch;position:relative;z-index:1}
 .schritte3 li{display:flex;gap:10px;align-items:flex-start}
 .schritte3 b{flex:0 0 22px;height:22px;display:grid;place-items:center;border-radius:50%;
-  background:var(--pink);color:var(--ink);font:800 12.5px/1 var(--grot)}
+  background:var(--pink);color:var(--ink);font:800 12px/1 var(--grot)}
 .welcome__preis>span{max-width:26ch;line-height:1.45}
-.welcome__nachsatz{margin-top:12px;font-size:13.5px;line-height:1.5;
+.welcome__nachsatz{margin-top:12px;font-size:14px;line-height:1.5;
   color:var(--auf-ink-leis);max-width:34ch}
-.welcome__naechste{margin-top:16px;font-size:15px;line-height:1.65;color:var(--auf-ink-soft)}
+.welcome__naechste{margin-top:16px;font-size:16px;line-height:1.65;color:var(--auf-ink-soft)}
 .welcome__naechste b{color:var(--auf-ink)}
 .welcome__naechste a{display:inline-block;margin-top:4px;color:var(--pink);font-weight:700;
   text-decoration:underline;text-underline-offset:4px}
 .welcome__stimme{margin-top:18px;padding-left:14px;border-left:2px solid var(--gold);
-  font-size:15px;line-height:1.65;color:var(--auf-ink-soft);max-width:44ch}
-.welcome__stimme cite{display:block;margin-top:4px;font:600 12.5px/1 var(--grot);
-  letter-spacing:.08em;text-transform:uppercase;font-style:normal;color:var(--auf-ink-leis)}
-.plan__weg{font-size:12.5px;color:inherit;opacity:.55;margin-top:8px}
+  font-size:16px;line-height:1.65;color:var(--auf-ink-soft);max-width:44ch}
+.welcome__stimme cite{display:block;margin-top:4px;font:600 12px/1 var(--grot);
+  font-style:normal;color:var(--auf-ink-leis)}
+.plan__weg{font-size:12px;color:inherit;opacity:.55;margin-top:8px}
 .plaene{grid-template-columns:repeat(2,1fr);max-width:900px;margin-inline:auto}
 @media (max-width:600px){.plaene{grid-template-columns:1fr}}
 .drin-zeile{max-width:900px;margin:18px auto 0;padding:26px;border-radius:var(--rund);
   background:var(--ink);border:1px solid var(--ink);color:var(--auf-ink);
   display:flex;flex-wrap:wrap;gap:10px 28px;align-items:flex-start}
-.drin-zeile b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:15px;
+.drin-zeile b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:16px;
   letter-spacing:.03em;color:var(--hell)}
 .drin-zeile .plan__drin li b{color:var(--hell)}
 .drin-zeile .plan__drin li span{color:var(--auf-ink-soft)}
 .drin-zeile .plan__drin{display:flex;flex-wrap:wrap;gap:6px 22px}
-.drin-zeile .plan__drin li{font-size:15px}
+.drin-zeile .plan__drin li{font-size:16px}
 .buchen{box-shadow:inset 0 0 0 1.5px var(--ink)}
 [data-tag]{display:flex;flex-direction:column}
 .termin--kids{order:9}
@@ -883,31 +875,29 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .coach__text{padding:clamp(24px,4vw,40px);overflow:auto}
 .coach__text--voll{grid-column:1/-1}
 .coach__name{font-size:clamp(30px,4.2vw,48px)}
-.coach__rolle{margin-top:8px;font:700 13.5px/1.45 var(--grot);letter-spacing:.1em;text-transform:uppercase;
-  color:var(--auf-ink-soft)}
+.coach__rolle{margin-top:8px;font:700 14px/1.45 var(--grot);color:var(--auf-ink-soft)}
 .coach__motto{margin-top:14px;font-family:var(--disp);font-weight:800;text-transform:uppercase;
   font-size:clamp(17px,2vw,22px);line-height:1.25;color:var(--pink);text-wrap:balance}
-.coach__bio{margin-top:14px;font-size:15px;color:var(--auf-ink-soft);text-wrap:pretty}
+.coach__bio{margin-top:14px;font-size:16px;color:var(--auf-ink-soft);text-wrap:pretty}
 .coach__fakten{list-style:none;padding:0;margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
-.coach__fakten li{font:600 12.5px/1 var(--grot);letter-spacing:.04em;padding:9px 12px;
+.coach__fakten li{font:600 12px/1 var(--grot);letter-spacing:.04em;padding:9px 12px;
   border-radius:999px;border:1px solid var(--linie-d);color:var(--auf-ink)}
 .coach__fakten li:first-child{background:var(--pink);color:var(--ink);border-color:transparent;font-weight:700}
-.coach__woche{margin-top:22px;font:700 12.5px/1 var(--grot);letter-spacing:.18em;text-transform:uppercase;
-  color:var(--auf-ink-leis)}
+.coach__woche{margin-top:22px;font:700 12px/1 var(--grot);color:var(--auf-ink-leis)}
 .coach__liste{list-style:none;padding:0;margin-top:10px;display:grid;gap:6px}
 .coach__liste li{display:grid;grid-template-columns:78px 1fr auto;gap:10px;align-items:center;
   padding:9px 12px;border-radius:12px;background:var(--tief);border:1px solid var(--linie-d)}
-.coach__wann{font-family:var(--disp);font-weight:800;font-size:15px}
-.coach__was{font-size:15px;line-height:1.45}
-.coach__liste .buchen{padding:8px 14px;font-size:12.5px;color:var(--hell);
+.coach__wann{font-family:var(--disp);font-weight:800;font-size:16px}
+.coach__was{font-size:16px;line-height:1.45}
+.coach__liste .buchen{padding:8px 14px;font-size:12px;color:var(--hell);
   box-shadow:inset 0 0 0 1.5px rgba(225,226,220,.4)}
 .coach__liste .buchen:hover{background:var(--pink);color:var(--ink);box-shadow:none}
-.coach__mehr{margin-top:8px;font-size:13.5px}
+.coach__mehr{margin-top:8px;font-size:14px}
 .coach__mehr a{color:var(--pink);font-weight:700;text-decoration:underline;text-underline-offset:4px}
-.coach__hallo{margin-top:18px;padding-top:14px;border-top:1px solid var(--linie-d);font-size:13.5px;
+.coach__hallo{margin-top:18px;padding-top:14px;border-top:1px solid var(--linie-d);font-size:14px;
   color:var(--auf-ink-leis);text-wrap:pretty}
 .coach__chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.coach__chip{font:600 15px/1 var(--grot);padding:10px 14px;border-radius:999px;
+.coach__chip{font:600 16px/1 var(--grot);padding:10px 14px;border-radius:999px;
   border:1px solid var(--linie-d);color:var(--auf-ink);background:var(--tief);cursor:pointer;
   transition:border-color .25s,background .25s}
 .coach__chip:hover{border-color:var(--pink);background:var(--ink)}
@@ -935,53 +925,53 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .planer__start{gap:12px}
 .planer__start svg{width:16px;height:16px}
 .planer__start[aria-expanded="true"]{display:none}
-.planer__unter{margin:10px 0 0;font-size:13.5px;color:var(--auf-ink-leis)}
+.planer__unter{margin:10px 0 0;font-size:14px;color:var(--auf-ink-leis)}
 .planer__start[aria-expanded="true"]+.planer__unter{display:none}
 .planer__inhalt{display:grid;gap:18px;animation:fragAuf .5s var(--e)}
-.planer__label{font:700 13.5px/1 var(--grot);letter-spacing:.14em;text-transform:uppercase;color:var(--auf-ink-leis);
+.planer__label{font:700 14px/1 var(--grot);color:var(--auf-ink-leis);
   display:flex;align-items:center;gap:10px;margin:0 0 10px}
 .planer__label b{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--gold);
-  color:var(--ink);font:800 12.5px/1 var(--disp);letter-spacing:0}
+  color:var(--ink);font:800 12px/1 var(--disp);letter-spacing:0}
 .planer__chips{display:flex;flex-wrap:wrap;gap:8px}
-.planer__chips button{font:700 15px/1 var(--grot);padding:12px 16px;border-radius:999px;background:transparent;
+.planer__chips button{font:700 16px/1 var(--grot);padding:12px 16px;border-radius:999px;background:transparent;
   color:var(--hell);border:1.5px solid rgba(225,226,220,.35);cursor:pointer;min-height:44px;
   transition:background .25s,border-color .25s,color .25s,transform .35s var(--e)}
 .planer__chips button:hover{border-color:var(--pink)}
 .planer__chips button[aria-pressed="true"]{background:var(--pink);color:var(--ink);border-color:var(--pink)}
 .planer__frage[hidden]{display:none}
 .planer__ergebnis{display:grid;gap:14px;margin-top:6px}
-.planer__d{display:flex;gap:12px;align-items:flex-start;margin:0;font-size:16.5px;line-height:1.45;
+.planer__d{display:flex;gap:12px;align-items:flex-start;margin:0;font-size:17px;line-height:1.45;
   font-family:var(--serif, var(--grot))}
 .planer__ava{display:grid;place-items:center;flex:0 0 auto;width:34px;height:34px;border-radius:50%;
-  background:var(--pink);color:var(--ink);font:800 12.5px/1 var(--disp);letter-spacing:-.02em;white-space:nowrap}
+  background:var(--pink);color:var(--ink);font:800 12px/1 var(--disp);letter-spacing:-.02em;white-space:nowrap}
 .planer__ava i{font-style:normal}
 .planer__karten{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .pk{display:grid;grid-template-columns:auto 1fr;gap:12px 14px;align-items:center;padding:14px;
   border-radius:16px;background:var(--tief);border:1px solid var(--linie-d);position:relative;
   animation:fragAuf .5s var(--e) both}
 .pk:nth-child(2){animation-delay:.12s}
-.pk__nr{position:absolute;top:-10px;left:14px;font:800 11px/1 var(--disp);letter-spacing:.18em;
+.pk__nr{position:absolute;top:-10px;left:14px;font:800 12px/1 var(--disp);letter-spacing:.18em;
   text-transform:uppercase;color:var(--ink);background:var(--gold);padding:5px 9px;border-radius:999px}
 .pk__ava{width:52px;height:52px;border-radius:50%;background:var(--ink) center/cover no-repeat;
-  display:grid;place-items:center;font:800 15px/1 var(--disp);color:var(--hell);
+  display:grid;place-items:center;font:800 16px/1 var(--disp);color:var(--hell);
   box-shadow:inset 0 0 0 1.5px rgba(225,226,220,.25)}
 .pk__ava.hat-foto{color:transparent;filter:grayscale(.15)}
-.pk__wann{font-family:var(--disp);font-weight:800;font-size:16.5px;text-transform:uppercase;letter-spacing:.02em}
-.pk__wann small{font:600 12.5px/1 var(--grot);letter-spacing:.06em;color:var(--auf-ink-leis);margin-left:8px;
+.pk__wann{font-family:var(--disp);font-weight:800;font-size:17px;text-transform:uppercase;letter-spacing:.02em}
+.pk__wann small{font:600 12px/1 var(--grot);letter-spacing:.06em;color:var(--auf-ink-leis);margin-left:8px;
   text-transform:none}
-.pk__titel{font-size:15px;font-weight:700;margin:2px 0 0}
-.pk__meta{font-size:13.5px;color:var(--auf-ink-leis);margin:2px 0 0}
+.pk__titel{font-size:16px;font-weight:700;margin:2px 0 0}
+.pk__meta{font-size:14px;color:var(--auf-ink-leis);margin:2px 0 0}
 .pk__meta .knapp{margin-left:6px}
 .pk__tasten{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap}
-.pk__tasten .buchen{padding:9px 16px;font-size:13.5px;color:var(--hell);box-shadow:inset 0 0 0 1.5px rgba(225,226,220,.4)}
+.pk__tasten .buchen{padding:9px 16px;font-size:14px;color:var(--hell);box-shadow:inset 0 0 0 1.5px rgba(225,226,220,.4)}
 .pk__tasten .buchen:hover{background:var(--pink);color:var(--ink);box-shadow:none}
-.pk__tausch{font:700 13.5px/1 var(--grot);padding:9px 14px;border-radius:999px;background:transparent;
+.pk__tausch{font:700 14px/1 var(--grot);padding:9px 14px;border-radius:999px;background:transparent;
   color:var(--auf-ink-leis);border:1px solid transparent;cursor:pointer;min-height:38px}
 .pk__tausch:hover{color:var(--hell);border-color:rgba(225,226,220,.35)}
 .planer__aktionen{display:flex;flex-wrap:wrap;gap:10px}
-.planer__aktionen .knopf{padding:13px 20px;font-size:15px}
-.planer__ehrlich{margin:0;font-size:13.5px;line-height:1.45;color:var(--auf-ink-leis);max-width:64ch;text-wrap:pretty}
-.planer__leer{margin:0;font-size:15px;line-height:1.45}
+.planer__aktionen .knopf{padding:13px 20px;font-size:16px}
+.planer__ehrlich{margin:0;font-size:14px;line-height:1.45;color:var(--auf-ink-leis);max-width:64ch;text-wrap:pretty}
+.planer__leer{margin:0;font-size:16px;line-height:1.45}
 .termin.plan-wahl{outline:2px solid var(--gold);outline-offset:-2px;border-radius:14px;background:color-mix(in srgb,var(--gold) 10%,transparent)}
 @media (max-width:700px){
   .planer__aktionen{display:grid;grid-template-columns:1fr 1fr}
@@ -989,7 +979,7 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 }
 
 /* ---------- Hinweis am Buchen-Knopf ---------- */
-.tab-hinweis{display:block;width:100%;font-size:12.5px;line-height:1.45;color:var(--auf-ink-leis);margin-top:6px;
+.tab-hinweis{display:block;width:100%;font-size:12px;line-height:1.45;color:var(--auf-ink-leis);margin-top:6px;
   animation:fragAuf .4s var(--e)}
 .termin .tab-hinweis,.dropins .tab-hinweis{color:var(--auf-hell-leis)}
 
@@ -1038,7 +1028,7 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
   -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 .reel__ton svg{width:17px;height:17px}
 .reel__leiste{position:absolute;inset:auto 0 0 0;padding:34px 14px 12px;
-  font:600 12.5px/1.25 var(--grot);color:rgba(225,226,220,.9);
+  font:600 12px/1.25 var(--grot);color:rgba(225,226,220,.9);
   background:linear-gradient(to top,rgba(0,0,0,.72),transparent)}
 @media (max-width:860px){
   .kopf__zwei{grid-template-columns:1fr}
@@ -1055,10 +1045,10 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
   object-fit:cover;background-size:cover;background-position:center;filter:saturate(.92)}
 .schulteaser h2{margin-top:2px}
 .schulteaser p:not(.kicker):not(.schulteaser__cta){margin-top:14px;max-width:52ch;
-  font-size:15.5px;line-height:1.6;color:var(--auf-hell-soft)}
+  font-size:16px;line-height:1.6;color:var(--auf-hell-soft)}
 .schulteaser__cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:var(--s3)}
 .auch-leise{margin-top:var(--s4);padding-top:var(--s2);border-top:1px solid var(--linie-h);
-  font-size:15px;color:var(--auf-hell-leis)}
+  font-size:16px;color:var(--auf-hell-leis)}
 .auch-leise a{color:var(--auf-hell-soft);text-underline-offset:3px}
 .auch-leise a:hover{color:var(--auf-hell)}
 .auch-leise svg{width:11px;height:11px;margin-left:8px;vertical-align:-1px}
@@ -1070,7 +1060,7 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .kopf--seite{background:var(--nacht);padding:calc(96px + var(--s4)) 0 var(--s4);
   border-bottom:1px solid var(--linie-d)}
 .kopf--seite h1{font-size:clamp(38px,6.4vw,78px);margin-top:4px}
-.kopf--seite .kopf__claim{margin-top:var(--s2);max-width:52ch;font-size:16.5px;
+.kopf--seite .kopf__claim{margin-top:var(--s2);max-width:52ch;font-size:17px;
   line-height:1.6;color:var(--auf-ink-soft)}
 .kopf--seite .kopf__tasten{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--s3)}
 
@@ -1081,7 +1071,7 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .abschluss h3{font-size:clamp(24px,3.4vw,38px)}
 .abschluss h3 em{font-style:normal;color:var(--pink)}
 .abschluss p:not(.kicker):not(.abschluss__cta){margin-top:12px;color:var(--auf-ink-soft);
-  max-width:46ch;font-size:15.5px;line-height:1.6}
+  max-width:46ch;font-size:16px;line-height:1.6}
 .abschluss__cta{display:flex;flex-direction:column;gap:10px;align-items:stretch}
 .abschluss__cta .knopf{justify-content:center;white-space:nowrap}
 @media (max-width:820px){
@@ -1093,20 +1083,20 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .dbuch{position:relative;z-index:1;display:grid;gap:clamp(28px,5vw,72px);
   grid-template-columns:1.08fr .92fr;align-items:center}
 .dbuch__lead{margin-top:var(--s2);color:var(--auf-ink-soft);max-width:52ch;
-  font-size:16.5px;line-height:1.65}
+  font-size:17px;line-height:1.65}
 .dbuch__formate{list-style:none;margin:var(--s3) 0 0;padding:0;display:grid;gap:2px}
 .dbuch__formate li{position:relative;padding:16px 0 16px 46px;
   border-top:1px solid var(--linie-d);counter-increment:dbz}
 .dbuch__formate li:last-child{border-bottom:1px solid var(--linie-d)}
 .dbuch__formate li::before{content:"/ 0" counter(dbz);position:absolute;left:0;top:18px;
-  font:700 11px/1 var(--grot);letter-spacing:.14em;color:var(--pink)}
+  font:700 12px/1 var(--grot);letter-spacing:.14em;color:var(--pink)}
 .dbuch__formate{counter-reset:dbz}
 .dbuch__formate b{display:block;font-family:var(--disp);font-weight:800;
-  text-transform:uppercase;font-size:18px;letter-spacing:.01em}
-.dbuch__formate span{display:block;margin-top:5px;font-size:15px;line-height:1.45;
+  text-transform:uppercase;font-size:20px;letter-spacing:.01em}
+.dbuch__formate span{display:block;margin-top:5px;font-size:16px;line-height:1.45;
   color:var(--auf-ink-soft);max-width:46ch}
 .dbuch__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--s3)}
-.dbuch__hinweis{margin-top:var(--s2);font-size:13.5px;line-height:1.45;
+.dbuch__hinweis{margin-top:var(--s2);font-size:14px;line-height:1.45;
   color:var(--auf-ink-leis);max-width:52ch}
 .dbuch__hinweis a{color:var(--pink)}
 .dbuch__bild{position:relative;margin:0;align-self:end;text-align:center}
@@ -1120,8 +1110,8 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
   border-top:1px solid var(--linie-d);display:inline-block}
 .dbuch__bild figcaption b{display:block;font-family:var(--disp);font-weight:800;
   text-transform:uppercase;font-size:16px;letter-spacing:.02em}
-.dbuch__bild figcaption span{display:block;margin-top:3px;font-size:12.5px;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--auf-ink-leis)}
+.dbuch__bild figcaption span{display:block;margin-top:3px;font-size:12px;
+  color:var(--auf-ink-leis)}
 @media (max-width:900px){
   .dbuch{grid-template-columns:1fr}
   .dbuch__bild{order:-1;margin-inline:auto}
@@ -1131,30 +1121,30 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 /* ---------- Raumvermietung ---------- */
 .saal__preis{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:6px 12px;margin-top:14px}
 .saal__preis b{font-family:var(--disp);font-weight:800;font-size:clamp(30px,4.4vw,44px);line-height:1;color:var(--pink)}
-.saal__preis span{font-size:15px;color:var(--auf-ink-soft)}
+.saal__preis span{font-size:16px;color:var(--auf-ink-soft)}
 .saele{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:var(--s3)}
 .saal{background:var(--tief);border:1px solid var(--linie-d);border-radius:var(--rund2);overflow:hidden;
   display:flex;flex-direction:column}
 .saal__bild{margin:0;aspect-ratio:4/3;background-color:var(--nacht)}
 .saal__bild img{width:100%;height:100%;object-fit:cover;display:block}
 .saal__text{padding:16px 18px 20px}
-.saal__text b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:16.5px;
+.saal__text b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:17px;
   letter-spacing:.02em}
-.saal__text p{margin:6px 0 0;font-size:15px;line-height:1.45;color:var(--auf-ink-soft)}
+.saal__text p{margin:6px 0 0;font-size:16px;line-height:1.45;color:var(--auf-ink-soft)}
 .saal__cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;margin-top:var(--s3)}
 .saal__cta .knopf svg{width:17px;height:17px}
-.saal__hinweis{flex-basis:100%;text-align:center;font-size:13.5px;color:var(--auf-ink-leis)}
+.saal__hinweis{flex-basis:100%;text-align:center;font-size:14px;color:var(--auf-ink-leis)}
 
 /* ---------- Style-Filter, Teilen, Naechste Woche, Hero-Live ---------- */
 .filterblock{display:grid;gap:10px;margin-block:var(--s3);padding:18px 16px 20px;border-radius:var(--rund2);
   background:var(--hell2);border:1px solid var(--linie-h);color:var(--auf-hell)}
 .filterblock .filter,.filterblock .tagchips{margin:0}
 .filterblock .filter--stil{margin-top:0}
-.filter__label{font:700 12px/1 var(--grot);letter-spacing:.11em;text-transform:uppercase;color:var(--auf-hell-soft);
+.filter__label{font:700 12px/1 var(--grot);letter-spacing:.1em;text-transform:uppercase;color:var(--auf-hell-soft);
   text-align:center;margin:10px 0 0}
 .filter__label:first-child{margin-top:0}
 .filter--stil{margin-top:8px}
-.filter--stil button{font-size:12.5px;padding:9px 13px}
+.filter--stil button{font-size:12px;padding:9px 13px}
 .termin.stil-zu{display:none !important}
 .stil-leer{display:none !important}
 .termin__cta{display:flex;align-items:center;gap:8px}
@@ -1170,22 +1160,22 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 }
 .termin.voll-class .buchen{opacity:.8}
 .klappe__mehr{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
-.tag--naechste span::after{content:"nächste Woche";font:700 11px/1 var(--grot);letter-spacing:.14em;
+.tag--naechste span::after{content:"nächste Woche";font:700 12px/1 var(--grot);letter-spacing:.1em;
   text-transform:uppercase;color:var(--gold);margin-left:10px}
 .buehne__live{position:relative;z-index:2;display:flex;align-items:center;gap:10px;margin:14px auto 0;
-  font:600 13.5px/1.45 var(--grot);color:rgba(225,226,220,.85);animation:fragAuf .6s var(--e)}
+  font:600 14px/1.45 var(--grot);color:rgba(225,226,220,.85);animation:fragAuf .6s var(--e)}
 .buehne__live i{width:9px;height:9px;border-radius:50%;background:var(--pink);flex:0 0 auto;
   box-shadow:0 0 0 0 rgba(255,167,226,.6);animation:puls 2s infinite}
 @keyframes puls{0%{box-shadow:0 0 0 0 rgba(255,167,226,.6)}70%{box-shadow:0 0 0 9px rgba(255,167,226,0)}100%{box-shadow:0 0 0 0 rgba(255,167,226,0)}}
 @media (prefers-reduced-motion:reduce){.buehne__live i{animation:none}}
-.planer__ankommen{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0;font-size:13.5px;line-height:1.45;
+.planer__ankommen{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0;font-size:14px;line-height:1.45;
   color:var(--auf-ink-leis)}
 .planer__ankommen svg{width:16px;height:16px;color:var(--gold)}
 .planer__ankommen a{color:var(--hell);font-weight:700}
 .planer__ehrlich a{color:var(--hell)}
 .planer__herkunft{margin-top:6px;padding-top:14px;border-top:1px solid var(--linie-d)}
-.planer__herkunft .planer__chips button{font-size:13.5px;padding:10px 14px;min-height:40px}
-.planer__herkunft .danke{font-size:13.5px;color:var(--auf-ink-leis);margin:0}
+.planer__herkunft .planer__chips button{font-size:14px;padding:10px 14px;min-height:40px}
+.planer__herkunft .danke{font-size:14px;color:var(--auf-ink-leis);margin:0}
 
 /* ---------- Retter-Leiste ---------- */
 .retter{position:fixed;inset:auto 12px 12px;z-index:46;max-width:520px;margin:0 auto;padding:14px 46px 14px 14px;
@@ -1196,12 +1186,12 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
   border-radius:50%;background:transparent;border:1px solid var(--linie-d);color:var(--hell);cursor:pointer}
 .retter__zu svg{width:16px;height:16px}
 .retter__kopf{display:flex;gap:10px;align-items:flex-start}
-.retter__text{margin:0;font-size:15px;line-height:1.45;font-weight:600}
+.retter__text{margin:0;font-size:16px;line-height:1.45;font-weight:600}
 .retter__knoepfe{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.retter__knoepfe .knopf{padding:11px 16px;font-size:13.5px;color:var(--hell)}
+.retter__knoepfe .knopf{padding:11px 16px;font-size:14px;color:var(--hell)}
 .retter__knoepfe .knopf:not(.knopf--rand){color:var(--ink)}
 .retter__knoepfe .knopf--rand{box-shadow:inset 0 0 0 1.5px rgba(225,226,220,.4)}
-.retter__hilfe{margin:10px 0 0;font-size:13.5px;line-height:1.45;color:var(--auf-ink-leis)}
+.retter__hilfe{margin:10px 0 0;font-size:14px;line-height:1.45;color:var(--auf-ink-leis)}
 body[data-retter="1"] .leiste,body[data-retter="1"] .frag-knopf{display:none}
 
 /* ---------- Live-Plaetze im Kalender ---------- */
@@ -1212,8 +1202,8 @@ body[data-retter="1"] .leiste,body[data-retter="1"] .frag-knopf{display:none}
 /* ---------- Drop-in-Karten als Links ---------- */
 a.dropin{color:inherit;text-decoration:none;transition:transform .35s var(--e),box-shadow .35s}
 a.dropin:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(0,0,0,.35)}
-.dropin__geh{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font:700 12.5px/1 var(--grot);
-  letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.dropin__geh{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font:700 12px/1 var(--grot);
+  color:var(--gold)}
 .dropin__geh svg{width:12px;height:12px}
 
 /* ---------- Aktionspreise ---------- */
@@ -1222,7 +1212,7 @@ a.dropin:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(0,0,
 .plan__aktion{display:block;font:600 14px/1.5 var(--grot);color:var(--gold-hell);margin:-6px 0 6px}
 .plan--top .plan__aktion{color:var(--gold)}
 .dropin__geh{color:var(--gold-hell)}
-.welcome__gut{display:block;font-size:13.5px;line-height:1.45;margin:6px 0 2px;opacity:.85;text-wrap:pretty}
+.welcome__gut{display:block;font-size:14px;line-height:1.45;margin:6px 0 2px;opacity:.85;text-wrap:pretty}
 
 /* ---------- D!-Logo in den Avataren ---------- */
 .dlogo{width:58%;height:58%;display:block}
@@ -1232,11 +1222,11 @@ a.dropin:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(0,0,
 /* ---------- Frag D! ---------- */
 .frag-knopf{position:fixed;right:22px;bottom:22px;z-index:30;display:inline-flex;align-items:center;
   gap:10px;padding:8px 18px 8px 8px;border-radius:999px;background:var(--pink);color:var(--ink);
-  border:0;cursor:pointer;font:700 15px/1 var(--grot);box-shadow:0 14px 34px -10px rgba(0,0,0,.5);
+  border:0;cursor:pointer;font:700 16px/1 var(--grot);box-shadow:0 14px 34px -10px rgba(0,0,0,.5);
   transition:transform .35s var(--e)}
 .frag-knopf:hover{transform:translateY(-3px)}
 .frag-knopf__d{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);
-  color:var(--hell);font:800 15px/1 var(--disp)}
+  color:var(--hell);font:800 16px/1 var(--disp)}
 .frag-knopf__d i,.frag__ava i{font-style:normal;color:var(--pink)}
 .frag{position:fixed;right:22px;bottom:22px;z-index:45;width:min(420px,calc(100vw - 24px));
   max-height:min(78vh,720px);display:flex;flex-direction:column;background:var(--ink);
@@ -1251,38 +1241,38 @@ body[data-frag="1"] .frag-knopf{display:none}
 .frag__kopf{display:flex;align-items:center;gap:12px;padding:14px 14px 14px 16px;
   border-bottom:1px solid var(--linie-d);background:var(--tief)}
 .frag__ava{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--pink);
-  color:var(--ink);font:800 16.5px/1 var(--disp);flex:0 0 auto}
+  color:var(--ink);font:800 17px/1 var(--disp);flex:0 0 auto}
 .frag__ava i{color:var(--ink)}
 .frag__titel{display:grid;gap:2px;min-width:0}
-.frag__titel b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:16.5px}
-.frag__titel span{font-size:12.5px;color:var(--auf-ink-leis)}
+.frag__titel b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:17px}
+.frag__titel span{font-size:12px;color:var(--auf-ink-leis)}
 .frag__zu{margin-left:auto;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;
   background:transparent;border:1px solid var(--linie-d);color:var(--hell);cursor:pointer}
 .frag__zu svg{width:18px;height:18px}
 .frag__zu:hover{background:var(--pink);color:var(--ink)}
 .frag__lauf{flex:1;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:12px;
   scroll-behavior:smooth}
-.frag__m{max-width:88%;padding:12px 14px;border-radius:16px;font-size:15px;line-height:1.65}
+.frag__m{max-width:88%;padding:12px 14px;border-radius:16px;font-size:16px;line-height:1.65}
 .frag__m--d{align-self:flex-start;background:var(--tief);border:1px solid var(--linie-d);
   border-bottom-left-radius:6px}
 .frag__m--du{align-self:flex-end;background:var(--pink);color:var(--ink);border-bottom-right-radius:6px}
 .frag__m p+p{margin-top:8px}
 .frag__chips{display:flex;flex-wrap:wrap;gap:8px}
-.frag__chip{font:700 13.5px/1 var(--grot);padding:10px 14px;border-radius:999px;background:transparent;
+.frag__chip{font:700 14px/1 var(--grot);padding:10px 14px;border-radius:999px;background:transparent;
   border:1px solid rgba(225,226,220,.35);color:var(--hell);cursor:pointer;
   transition:background .25s,border-color .25s,color .25s}
 .frag__chip:hover{background:var(--pink);color:var(--ink);border-color:var(--pink)}
 .frag__karten{display:grid;gap:8px;align-self:stretch}
 .frag__karte{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;
   padding:10px 12px;border-radius:14px;background:var(--tief);border:1px solid var(--linie-d)}
-.frag__karte b{font-family:var(--disp);font-weight:800;font-size:15px;white-space:nowrap}
-.frag__karte span{display:block;font-size:13.5px;line-height:1.45}
-.frag__karte small{display:block;font-size:12.5px;color:var(--auf-ink-leis);margin-top:2px}
-.frag__karte .buchen{padding:8px 14px;font-size:12.5px;color:var(--hell);
+.frag__karte b{font-family:var(--disp);font-weight:800;font-size:16px;white-space:nowrap}
+.frag__karte span{display:block;font-size:14px;line-height:1.45}
+.frag__karte small{display:block;font-size:12px;color:var(--auf-ink-leis);margin-top:2px}
+.frag__karte .buchen{padding:8px 14px;font-size:12px;color:var(--hell);
   box-shadow:inset 0 0 0 1.5px rgba(225,226,220,.4)}
 .frag__karte .buchen:hover{background:var(--pink);color:var(--ink);box-shadow:none}
 .frag__aktion{align-self:flex-start;display:flex;flex-wrap:wrap;gap:8px}
-.frag__aktion .knopf{padding:11px 18px;font-size:13.5px}
+.frag__aktion .knopf{padding:11px 18px;font-size:14px}
 .frag__tipp{align-self:flex-start;display:inline-flex;gap:5px;padding:12px 16px;border-radius:16px;
   background:var(--tief);border:1px solid var(--linie-d)}
 .frag__tipp i{width:7px;height:7px;border-radius:50%;background:var(--auf-ink-leis);
@@ -1291,7 +1281,7 @@ body[data-frag="1"] .frag-knopf{display:none}
 .frag__tipp i:nth-child(3){animation-delay:.36s}
 @keyframes fragPunkt{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
 .frag__eingabe{display:flex;gap:8px;padding:12px;border-top:1px solid var(--linie-d);background:var(--tief)}
-.frag__eingabe input{flex:1;min-width:0;font:500 15px/1.45 var(--grot);padding:13px 14px;border-radius:999px;
+.frag__eingabe input{flex:1;min-width:0;font:500 16px/1.45 var(--grot);padding:13px 14px;border-radius:999px;
   background:var(--ink);border:1px solid var(--linie-d);color:var(--hell)}
 .frag__eingabe input::placeholder{color:var(--auf-ink-leis)}
 .frag__eingabe input:focus{outline:2px solid var(--pink);outline-offset:1px}
@@ -1299,11 +1289,11 @@ body[data-frag="1"] .frag-knopf{display:none}
   background:var(--pink);color:var(--ink);border:0;cursor:pointer}
 .frag__senden svg{width:18px;height:18px;transform:rotate(180deg)}
 .frag__senden:disabled{opacity:.5;cursor:default}
-.frag__fuss{padding:8px 16px 12px;font-size:12.5px;color:var(--auf-ink-leis);background:var(--tief);
+.frag__fuss{padding:8px 16px 12px;font-size:12px;color:var(--auf-ink-leis);background:var(--tief);
   text-wrap:pretty}
 .frag__fuss a{color:inherit}
 @media (max-width:700px){
-  .frag-knopf{right:12px;bottom:76px;padding:7px 14px 7px 7px;font-size:15px}
+  .frag-knopf{right:12px;bottom:76px;padding:7px 14px 7px 7px;font-size:16px}
   .frag-knopf__d{width:34px;height:34px}
   .frag{right:0;bottom:0;left:0;width:100vw;max-height:88vh;border-radius:var(--rund) var(--rund) 0 0}
   .frag__m{max-width:92%}
@@ -1318,7 +1308,7 @@ body[data-frag="1"] .frag-knopf{display:none}
 .block--hell .welcome .vertrauen,.block--hell .welcome .schritte3{color:var(--auf-ink-soft)}
 .preise__zahl{max-width:none;letter-spacing:.14em;text-wrap:balance}
 .kurz{max-width:580px;padding:26px 28px}
-.kk__text{font-size:15px;line-height:1.65}
+.kk__text{font-size:16px;line-height:1.65}
 @media (max-width:480px){
   .filter{display:grid;grid-template-columns:1fr 1fr;gap:8px}
   .filter button{padding:11px 8px;text-align:center}
@@ -1349,18 +1339,17 @@ body[data-frag="1"] .frag-knopf{display:none}
 .saeule{background:var(--ink);border:1px solid var(--linie-d);border-radius:var(--rund2);
   padding:22px 22px 24px}
 .saeule b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;
-  font-size:16.5px;letter-spacing:.03em;margin-bottom:8px}
-.saeule p{font-size:15px;color:var(--auf-ink-soft)}
+  font-size:17px;letter-spacing:.03em;margin-bottom:8px}
+.saeule p{font-size:16px;color:var(--auf-ink-soft)}
 #wie .band-laeuft,#wie .band{margin-top:var(--s4)}
-.gr__zitat cite{display:block;margin-top:12px;font:700 12.5px/1 var(--grot);
-  letter-spacing:.18em;text-transform:uppercase;color:var(--auf-ink-leis);font-style:normal}
+.gr__zitat cite{display:block;margin-top:12px;font:700 12px/1 var(--grot);
+  color:var(--auf-ink-leis);font-style:normal}
 .kurz{max-width:760px;margin-inline:auto;padding:28px 30px;border:1px solid var(--linie-d);
   border-radius:var(--rund)}
-.kk__text{font-size:15px;line-height:1.65;color:var(--auf-ink-soft)}
-.kurz .hinweis{margin-top:12px;font-size:12.5px;margin-inline:0}
+.kk__text{font-size:16px;line-height:1.65;color:var(--auf-ink-soft)}
+.kurz .hinweis{margin-top:12px;font-size:12px;margin-inline:0}
 #fakten{padding-block:clamp(40px,5vw,64px)}
-.plan__spar{align-self:flex-start;font:700 12.5px/1 var(--grot);letter-spacing:.06em;
-  text-transform:uppercase;color:var(--auf-hell);border:1px solid rgba(178,146,97,.55);
+.plan__spar{align-self:flex-start;font:700 12px/1 var(--grot);color:var(--auf-hell);border:1px solid rgba(178,146,97,.55);
   padding:6px 11px;border-radius:999px;margin-block:2px}
 /* Der Schein war so stark, dass die Karte neben der ruhigen Basic-Karte
    unruhig wirkte. Die Auszeichnung traegt schon der Tag oben rechts. */
@@ -1373,9 +1362,9 @@ body[data-frag="1"] .frag-knopf{display:none}
 .vergleich>div{background:var(--hell2);border:1px solid var(--linie-h);
   border-radius:var(--rund2);padding:20px 22px}
 .vergleich b{font-family:var(--disp);font-weight:800;text-transform:uppercase;
-  font-size:15px;display:block;margin-bottom:10px}
+  font-size:16px;display:block;margin-bottom:10px}
 .vergleich ul{list-style:none;padding:0;display:grid;gap:8px}
-.vergleich li{position:relative;padding-left:22px;font-size:15px;
+.vergleich li{position:relative;padding-left:22px;font-size:16px;
   color:var(--auf-hell-soft)}
 .vergleich li::before{content:"";position:absolute;left:0;top:6px;width:11px;height:5px;
   border-left:2.5px solid var(--auf-hell-leis);border-bottom:2.5px solid var(--auf-hell-leis);
