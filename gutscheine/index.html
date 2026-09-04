@@ -422,7 +422,7 @@ a.trainer span{color:var(--pink)}
 .band{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);
   flex-wrap:wrap;margin-top:var(--s4);padding:22px 26px;border-radius:var(--rund2);
   background:var(--hell2);color:var(--auf-hell);border:1px solid var(--linie-h)}
-.block:not(.block--hell) .band{background:var(--ink);border-color:var(--linie-d)}
+.block:not(.block--hell) .band{background:var(--ink);color:var(--auf-ink);border-color:var(--linie-d)}
 .band p{font-size:16px}
 .sterne svg{width:15px;height:15px;display:inline-block;color:var(--gold);
   vertical-align:-2px}
@@ -431,7 +431,7 @@ a.trainer span{color:var(--pink)}
 @media (max-width:880px){.stimmen{grid-template-columns:1fr}}
 .stimme{background:var(--hell2);color:var(--auf-hell);border:1px solid var(--linie-h);
   border-radius:var(--rund2);padding:22px;display:flex;flex-direction:column;gap:10px}
-.block:not(.block--hell) .stimme{background:var(--tief);border-color:var(--linie-d)}
+.block:not(.block--hell) .stimme{background:var(--tief);color:var(--auf-ink);border-color:var(--linie-d)}
 .stimme q{quotes:"\201E" "\201C";font-size:16px;line-height:1.65}
 .stimme footer{margin-top:auto;font:600 12px/1 var(--grot);opacity:.55}
 
@@ -997,11 +997,7 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 /* ---------- Gutscheine ---------- */
 .gutschein{margin-top:var(--s3);border-radius:var(--rund2);overflow:hidden;background:var(--hell);color:var(--auf-hell);
   border:1px solid var(--linie-h);min-height:120px}
-.gutschein__platz{display:grid;justify-items:center;gap:14px;padding:clamp(28px,5vw,52px);text-align:center}
-.gutschein__logo{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;
-  background:var(--ink);color:var(--pink)}
 .gutschein__logo .dlogo{width:60%;height:60%}
-.gutschein__platz p{margin:0;max-width:46ch;color:var(--auf-hell-soft)}
 
 /* ---------- Reel-Karte im Kursseiten-Kopf ---------- */
 .kopf--reel{text-align:left}
@@ -1425,12 +1421,8 @@ body[data-frag="1"] .frag-knopf{display:none}
   </header>
   <section class="block">
     <div class="wrap">
-  <div class="gutschein"><div class="gutschein__platz">
-      <span class="gutschein__logo" aria-hidden="true"><svg class="dlogo" aria-hidden="true"><use href="#dlogo"/></svg></span>
-      <p>Das Gutschein-Formular von Eversports wird hier eingebettet: Betrag w&auml;hlen,
-      Gru&szlig; schreiben, sofort als PDF bekommen.</p>
-      <a class="knopf knopf--rand" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">Im Shop ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    </div></div></div>
+  <div class="gutschein"><div data-eversports-widget-id="d76f0b1a-3106-4311-b61e-9fe6e63eb34b"></div>
+<script type="module" src="https://widget-static.eversports.io/loader.js" async defer></script></div></div>
   </section>
   <section class="block block--hell">
     <div class="wrap">
