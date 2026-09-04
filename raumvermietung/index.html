@@ -329,7 +329,7 @@ body[data-menu="1"]{overflow:hidden}
 .plaene{display:grid;gap:16px;grid-template-columns:repeat(3,1fr);margin-top:var(--s2)}
 @media (max-width:880px){.plaene{grid-template-columns:1fr}}
 .plan{position:relative;display:flex;flex-direction:column;gap:8px;
-  background:var(--hell2);border:1px solid var(--linie-h);border-radius:var(--rund);
+  background:var(--hell2);color:var(--auf-hell);border:1px solid var(--linie-h);border-radius:var(--rund);
   padding:28px 26px;transition:transform .45s var(--e),box-shadow .45s var(--e)}
 .plan:hover{transform:translateY(-4px);box-shadow:0 22px 40px -22px rgba(39,39,39,.35)}
 .plan--top{background:var(--ink);color:var(--auf-ink);border-color:transparent}
@@ -355,7 +355,7 @@ body[data-menu="1"]{overflow:hidden}
   transform:rotate(-45deg)}
 .kleine{display:grid;gap:14px;grid-template-columns:repeat(3,1fr);margin-top:var(--s3)}
 @media (max-width:760px){.kleine{grid-template-columns:1fr}}
-.klein{display:flex;flex-direction:column;gap:6px;background:var(--hell2);
+.klein{display:flex;flex-direction:column;gap:6px;background:var(--hell2);color:var(--auf-hell);
   border:1px solid var(--linie-h);border-radius:var(--rund2);padding:22px}
 .klein b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:17px}
 .klein__preis{font-family:var(--disp);font-weight:800;font-size:32px;line-height:1}
@@ -383,7 +383,7 @@ body[data-menu="1"]{overflow:hidden}
 .sps{display:grid;gap:14px;grid-template-columns:repeat(4,1fr);margin-top:var(--s4)}
 @media (max-width:1020px){.sps{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:600px){.sps{grid-template-columns:1fr}}
-.sp{display:flex;flex-direction:column;gap:9px;background:var(--hell2);
+.sp{display:flex;flex-direction:column;gap:9px;background:var(--hell2);color:var(--auf-hell);
   border:1px solid var(--linie-h);border-radius:var(--rund2);padding:24px 22px;
   transition:transform .45s var(--e)}
 .sp:hover{transform:translateY(-4px)}
@@ -421,7 +421,7 @@ a.trainer span{color:var(--pink)}
 /* ---------- Stimmen ---------- */
 .band{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);
   flex-wrap:wrap;margin-top:var(--s4);padding:22px 26px;border-radius:var(--rund2);
-  background:var(--hell2);border:1px solid var(--linie-h)}
+  background:var(--hell2);color:var(--auf-hell);border:1px solid var(--linie-h)}
 .block:not(.block--hell) .band{background:var(--ink);border-color:var(--linie-d)}
 .band p{font-size:16px}
 .sterne svg{width:15px;height:15px;display:inline-block;color:var(--gold);
@@ -429,7 +429,7 @@ a.trainer span{color:var(--pink)}
 .stimmen{display:grid;gap:14px;grid-template-columns:repeat(3,1fr);margin-top:16px}
 @media (max-width:700px){.stimmen>.stimme:nth-child(n+3){display:none}}
 @media (max-width:880px){.stimmen{grid-template-columns:1fr}}
-.stimme{background:var(--hell2);border:1px solid var(--linie-h);
+.stimme{background:var(--hell2);color:var(--auf-hell);border:1px solid var(--linie-h);
   border-radius:var(--rund2);padding:22px;display:flex;flex-direction:column;gap:10px}
 .block:not(.block--hell) .stimme{background:var(--tief);border-color:var(--linie-d)}
 .stimme q{quotes:"\201E" "\201C";font-size:16px;line-height:1.65}
@@ -488,7 +488,7 @@ a.trainer span{color:var(--pink)}
   margin:var(--s3) 0 10px;display:flex;align-items:center;gap:12px}
 .tag::after{content:"";height:1px;flex:1;background:var(--linie-h)}
 .termin{display:grid;grid-template-columns:86px 1fr auto;gap:16px;align-items:center;
-  padding:14px 16px;border-radius:var(--rund2);background:var(--hell2);
+  padding:14px 16px;border-radius:var(--rund2);background:var(--hell2);color:var(--auf-hell);
   border:1px solid var(--linie-h);margin-bottom:8px;
   transition:transform .3s var(--e),border-color .3s}
 .termin:hover{transform:translateX(4px);border-color:rgba(39,39,39,.3)}
@@ -804,7 +804,7 @@ a.trainer span{color:var(--pink)}
 @media (max-width:820px){.dropins{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:520px){.dropins{grid-template-columns:1fr}}
 .dropin{display:flex;flex-direction:column;gap:6px;min-width:0;padding:20px 20px 18px;border-radius:14px;
-  background:var(--hell);border:1px solid var(--linie-h)}
+  background:var(--hell);color:var(--auf-hell);border:1px solid var(--linie-h)}
 .dropin b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:16px;
   letter-spacing:.03em}
 .dropin__preis{font-family:var(--disp);font-weight:800;font-size:36px;line-height:1;margin-top:2px}
@@ -995,7 +995,7 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .vibe--moment{outline:1px solid rgba(255,167,226,.35);outline-offset:-1px}
 
 /* ---------- Gutscheine ---------- */
-.gutschein{margin-top:var(--s3);border-radius:var(--rund2);overflow:hidden;background:var(--hell);
+.gutschein{margin-top:var(--s3);border-radius:var(--rund2);overflow:hidden;background:var(--hell);color:var(--auf-hell);
   border:1px solid var(--linie-h);min-height:120px}
 .gutschein__platz{display:grid;justify-items:center;gap:14px;padding:clamp(28px,5vw,52px);text-align:center}
 .gutschein__logo{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;
@@ -1047,14 +1047,23 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .schulteaser p:not(.kicker):not(.schulteaser__cta){margin-top:14px;max-width:52ch;
   font-size:16px;line-height:1.6;color:var(--auf-hell-soft)}
 .schulteaser__cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:var(--s3)}
-.auch-leise{margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--linie-h);
-  display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 30px;font-size:16px}
-.auch-leise>span{font:700 12px/1 var(--grot);letter-spacing:.1em;text-transform:uppercase;
-  color:var(--auf-hell-leis);margin-right:4px}
-.auch-leise a{color:var(--auf-hell);text-decoration:none;padding-bottom:3px;
-  border-bottom:1px solid transparent;transition:border-color .25s var(--e)}
-.auch-leise a:hover,.auch-leise a:focus-visible{border-bottom-color:var(--auf-hell)}
-.auch-leise svg{width:11px;height:11px;margin-left:7px;vertical-align:-1px;opacity:.6}
+.auch3{margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--linie-h)}
+.auch3__label{font:700 12px/1 var(--grot);letter-spacing:.1em;text-transform:uppercase;
+  color:var(--auf-hell-leis);margin-bottom:16px}
+.auch3__reihe{display:grid;gap:18px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.auch3__k{display:grid;gap:8px;text-decoration:none;color:var(--auf-hell)}
+.auch3__b{display:block;width:100%;aspect-ratio:16/10;border-radius:var(--rund2);
+  object-fit:cover;background-size:cover;background-position:center;filter:saturate(.92);
+  transition:transform .4s var(--e)}
+.auch3__k:hover .auch3__b{transform:scale(1.02)}
+/* Detlef steht im Quadrat weit oben, der 16:10-Ausschnitt wuerde ihm sonst
+   den Kopf anschneiden. */
+.auch3__b.ab-detlef{background-position:center 16%}
+.auch3__k b{font-family:var(--disp);font-weight:800;text-transform:uppercase;
+  font-size:16px;letter-spacing:.02em}
+.auch3__k span{font-size:14px;line-height:1.5;color:var(--auf-hell-soft)}
+@media (max-width:760px){.auch3__reihe{grid-template-columns:1fr;gap:22px}
+  .auch3__b{aspect-ratio:21/9}}
 @media (max-width:760px){.schulteaser{grid-template-columns:1fr}
   .schulteaser__bild{max-width:200px}}
 
@@ -1361,7 +1370,7 @@ body[data-frag="1"] .frag-knopf{display:none}
 .vergleich{display:grid;gap:14px;grid-template-columns:1fr 1fr;
   max-width:760px;margin:var(--s3) auto 0}
 @media (max-width:640px){.vergleich{grid-template-columns:1fr}}
-.vergleich>div{background:var(--hell2);border:1px solid var(--linie-h);
+.vergleich>div{background:var(--hell2);color:var(--auf-hell);border:1px solid var(--linie-h);
   border-radius:var(--rund2);padding:20px 22px}
 .vergleich b{font-family:var(--disp);font-weight:800;text-transform:uppercase;
   font-size:16px;display:block;margin-bottom:10px}
