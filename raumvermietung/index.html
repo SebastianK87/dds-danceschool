@@ -31,7 +31,11 @@
   --linie-d:rgba(225,226,220,.12); --linie-h:rgba(39,39,39,.14);
   --s1:12px; --s2:22px; --s3:38px; --s4:64px; --s5:104px;
   --rund:22px; --rund2:14px;
-  --e:cubic-bezier(.16,1,.3,1);
+  --e:cubic-bezier(.16,1,.3,1); --e-hart:cubic-bezier(.3,0,.7,1);
+  --d1:90ms;   /* Antwort auf den Finger, Weg unter 2 px */
+  --d2:320ms;  /* Detail: Pfeil, Beschriftung, Listenzeile, 2 bis 13 px */
+  --d3:620ms;  /* Eintritt: Karten und Bloecke, 20 px. Der Normalfall. */
+  --d4:900ms;  /* Ankunft: was einen Abschnitt traegt, 30 px und mehr */
   --disp:'Queering Expanded', 'Arial Black', sans-serif;
   --grot:'Overused Grotesk', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -81,10 +85,35 @@ h2 em,h3 em{font-style:normal;color:var(--pink)}
 /* ---------- Knoepfe ---------- */
 .knopf{display:inline-flex;align-items:center;gap:9px;background:var(--pink);
   color:var(--ink);font:700 16px/1 var(--grot);padding:16px 28px;border-radius:999px;
-  text-decoration:none;transition:transform .35s var(--e),box-shadow .35s var(--e),
-  background .35s var(--e),color .35s var(--e);cursor:pointer}
+  text-decoration:none;transition:transform var(--d2) var(--e),box-shadow var(--d2) var(--e),
+  background var(--d2) var(--e),color var(--d2) var(--e);cursor:pointer}
 .knopf:hover{transform:translateY(-2px);box-shadow:0 14px 34px -12px rgba(255,167,226,.55)}
+/* Muss NACH :hover stehen, sonst gewinnt dessen translateY. */
+.knopf:active,.top__pass:active{transform:translateY(0) scale(.96);transition-duration:var(--d1)}
 .knopf svg{width:15px;height:15px}
+/* Der Blitz: ein einziger Lichtstreifen laeuft ueber den Knopf, wenn er zum
+   ersten Mal ins Bild kommt. Einmal, nicht im Kreis. Ein Dauerpuls auf sieben
+   Knoepfen waere Deko und wuerde nach dreissig Sekunden nur noch nerven. */
+.knopf{position:relative;overflow:hidden;isolation:isolate}
+.knopf::after{content:"";position:absolute;top:0;bottom:0;left:-40%;width:34%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.62),transparent);
+  transform:translateX(-160%) skewX(-18deg);pointer-events:none;z-index:-1;opacity:0}
+@media (prefers-reduced-motion:no-preference){
+  @keyframes blitz{from{transform:translateX(-160%) skewX(-18deg);opacity:1}
+    to{transform:translateX(420%) skewX(-18deg);opacity:1}}
+  .knopf--blitz::after{animation:blitz 820ms var(--e) both}
+}
+@media (hover:hover) and (pointer:fine){
+  .knopf:not(.knopf--rand) svg,.buchen svg{transition:transform var(--d2) var(--e)}
+  .knopf:not(.knopf--rand):hover svg,.knopf:not(.knopf--rand):focus-visible svg,
+  .buchen:hover svg,.buchen:focus-visible svg{transform:translate(2px,-2px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .knopf:not(.knopf--rand) svg,.buchen svg{transition:none}
+  .knopf:not(.knopf--rand):hover svg,.buchen:hover svg{transform:none}
+  /* Die Quittung auf den eigenen Druck bleibt, nur ohne Weg. */
+  .knopf:active,.buchen:active,.top__pass:active{transform:none;opacity:.82}
+}
 .knopf--rand{background:transparent;color:currentColor;
   box-shadow:inset 0 0 0 1.5px currentColor}
 .knopf--rand:hover{background:var(--pink);color:var(--ink);
@@ -129,6 +158,81 @@ body[data-view="kurs"] .top__nav{display:none}
 @media (max-width:1060px){
   .top__nav{display:none}
 }
+
+/* ---------- Die Schiene: aus der Kopfzeile wird beim Scrollen eine
+   Leiste am linken Rand ----------
+   Sie lebt nur, wo wirklich Platz ist. Der Inhalt ist auf 1220 px begrenzt,
+   ab 1340 px Fenster bleiben links 60 px Rand plus 36 px Innenabstand. In
+   dieses Feld passt die Schiene, ohne einen Buchstaben zu verdecken.
+   Darunter bleibt alles so, wie es heute ist. */
+.schiene{display:none}
+@media (min-width:1340px){
+  .schiene{position:fixed;left:16px;top:50%;transform:translateY(-50%);z-index:41;
+    display:flex;flex-direction:column;align-items:center;gap:16px;
+    width:46px;padding:14px 0 18px;border-radius:999px;
+    background:color-mix(in srgb,var(--ink) 76%,transparent);
+    border:1px solid var(--linie-d);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    opacity:0;pointer-events:none;visibility:hidden}
+  body[data-schiene="1"] .schiene{opacity:1;pointer-events:auto;visibility:visible}
+  body[data-view="kurs"] .schiene{display:none}
+
+  .schiene__marke{font-family:var(--disp);font-weight:800;font-size:17px;
+    line-height:1;text-decoration:none;color:var(--auf-ink)}
+  .schiene__marke i{font-style:normal;color:var(--pink)}
+  .schiene__linie{position:relative;width:2px;height:34px;border-radius:2px;
+    background:rgba(225,226,220,.16);overflow:hidden}
+  .schiene__linie i{position:absolute;inset:0 0 auto;height:100%;background:var(--pink);
+    transform:scaleY(var(--fort,0));transform-origin:top}
+  .schiene__punkte{list-style:none;margin:0;padding:0;display:flex;
+    flex-direction:column;align-items:center;gap:15px}
+  .schiene__punkte a{position:relative;display:grid;place-items:center;
+    width:26px;height:26px;text-decoration:none}
+  .schiene__punkte i{width:8px;height:8px;border-radius:50%;
+    background:rgba(225,226,220,.3);transition:background .25s,transform .25s}
+  .schiene__punkte a:hover i,.schiene__punkte a:focus-visible i{
+    background:var(--hell);transform:scale(1.25)}
+  .schiene__punkte a[aria-current] i{background:var(--pink);transform:scale(1.35)}
+  /* Die Beschriftung liegt nur waehrend der Beruehrung ueber dem Inhalt. */
+  .schiene__punkte span{position:absolute;left:34px;top:50%;translate:0 -50%;
+    white-space:nowrap;font:700 12px/1 var(--grot);letter-spacing:.1em;
+    text-transform:uppercase;color:var(--auf-ink);
+    background:var(--ink);border:1px solid var(--linie-d);
+    padding:8px 12px;border-radius:999px;
+    opacity:0;pointer-events:none;transition:opacity .2s var(--e)}
+  .schiene__punkte a:hover span,.schiene__punkte a:focus-visible span{opacity:1}
+
+  /* Ist die Schiene da, loest sich das Band oben auf: die Kopfzeile gibt
+     ihre Flaeche ab und laesst nur die Knoepfe rechts stehen. */
+  body[data-schiene="1"] .top{background:transparent;border-bottom-color:transparent;
+    -webkit-backdrop-filter:none;backdrop-filter:none}
+  body[data-schiene="1"] .top__nav,body[data-schiene="1"] .marke{
+    opacity:0;pointer-events:none}
+  body[data-schiene="1"] .top__recht{
+    background:color-mix(in srgb,var(--ink) 76%,transparent);
+    border:1px solid var(--linie-d);border-radius:999px;padding:6px 8px;
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+}
+@media (min-width:1340px) and (prefers-reduced-motion:no-preference){
+  .schiene{transition:opacity var(--d3) var(--e),visibility 0s linear var(--d3),
+    transform var(--d3) var(--e);transform:translateY(-50%) translateX(-14px)}
+  body[data-schiene="1"] .schiene{transform:translateY(-50%);
+    transition:opacity var(--d3) var(--e),visibility 0s,transform var(--d3) var(--e)}
+  /* Sie baut sich von oben nach unten auf, ein Glied nach dem anderen. */
+  .schiene>*,.schiene__punkte li{opacity:0;transform:translateY(-8px);
+    transition:opacity var(--d2) var(--e),transform var(--d2) var(--e)}
+  body[data-schiene="1"] .schiene>*,body[data-schiene="1"] .schiene__punkte li{
+    opacity:1;transform:none}
+  body[data-schiene="1"] .schiene__linie{transition-delay:70ms}
+  body[data-schiene="1"] .schiene__punkte{transition-delay:110ms}
+  body[data-schiene="1"] .schiene__punkte li:nth-child(1){transition-delay:140ms}
+  body[data-schiene="1"] .schiene__punkte li:nth-child(2){transition-delay:190ms}
+  body[data-schiene="1"] .schiene__punkte li:nth-child(3){transition-delay:240ms}
+  body[data-schiene="1"] .schiene__punkte li:nth-child(4){transition-delay:290ms}
+  body[data-schiene="1"] .schiene__punkte li:nth-child(5){transition-delay:340ms}
+  .top,.top__nav,.marke,.top__recht{transition:background var(--d3) var(--e),
+    border-color var(--d3) var(--e),opacity var(--d3) var(--e)}
+}
 @media (max-width:560px){
   .top__wa{display:none}
   .top__cta{padding:9px 14px;font-size:14px}
@@ -157,18 +261,9 @@ body[data-menu="1"]{overflow:hidden}
 .buehne__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   filter:saturate(.92)}
 .buehne__schleier{position:absolute;inset:0;background:
-  linear-gradient(to top,rgba(24,24,24,.96) 0,rgba(24,24,24,.55) 34%,rgba(24,24,24,.18) 62%,rgba(24,24,24,.42) 100%)}
-.buehne__tag{position:absolute;top:84px;right:clamp(18px,4vw,36px);z-index:3;
-  display:inline-flex;align-items:center;gap:9px;font:700 12px/1 var(--grot);
-  letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
-  color:var(--auf-ink-soft);background:rgba(24,24,24,.5);border:1px solid var(--linie-d);
-  padding:10px 16px;border-radius:999px;
-  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:color .25s,border-color .25s}
-.buehne__tag:hover{color:var(--hell);border-color:rgba(225,226,220,.4)}
-.buehne__tag i{width:7px;height:7px;border-radius:50%;background:var(--pink);
-  animation:puls 2.2s infinite}
-@keyframes puls{0%,100%{opacity:1}50%{opacity:.35}}
-.buehne__ton{position:absolute;right:clamp(18px,4vw,36px);top:136px;z-index:4;
+  linear-gradient(to top,rgba(24,24,24,.96) 0,rgba(24,24,24,.68) 34%,rgba(24,24,24,.42) 62%,rgba(24,24,24,.5) 100%)}
+@keyframes pulsBlink{0%,100%{opacity:1}50%{opacity:.35}}
+.buehne__ton{position:absolute;right:clamp(18px,4vw,36px);top:84px;z-index:4;
   width:46px;height:46px;display:grid;place-items:center;border-radius:50%;
   background:rgba(24,24,24,.55);border:1px solid var(--linie-d);
   -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
@@ -176,15 +271,18 @@ body[data-menu="1"]{overflow:hidden}
 .buehne__ton:hover{border-color:var(--pink)}
 .buehne__unten{position:relative;z-index:2;width:100%;padding-top:120px}
 .buehne__titel{font-size:clamp(52px,10.5vw,142px);display:flex;flex-direction:column}
+.buehne__zeile{display:block;overflow:hidden;padding-block:.09em;margin-block:-.09em}
+.buehne__zeile>span{display:block}
 .buehne__titel .kontur{color:transparent;
   -webkit-text-stroke:1.5px var(--hell);paint-order:stroke}
+.buehne__titel em{font-style:normal;color:var(--pink);display:inline-block}
 .buehne__titel .kontur em{color:var(--pink);-webkit-text-stroke:0}
 .buehne__satz{max-width:46ch;margin-top:var(--s2);color:var(--auf-ink-soft);
   font-size:17px}
-.buehne .kopf__tasten{margin-top:var(--s3)}
+.buehne .kopf__tasten{margin-top:var(--s2)}
 .kopf__tasten{display:flex;flex-wrap:wrap;gap:12px}
 .buehne__fakten{position:relative;z-index:2;width:100%;display:flex;gap:clamp(22px,5vw,64px);
-  padding-block:var(--s3) var(--s2);margin-top:var(--s2);
+  padding-block:var(--s2);margin-top:var(--s2);
   border-top:1px solid var(--linie-d)}
 .kopf__zahl b{font-family:var(--disp);font-weight:800;
   font-size:clamp(26px,3.6vw,44px);line-height:1;display:block}
@@ -199,12 +297,49 @@ body[data-menu="1"]{overflow:hidden}
 @media (max-width:700px){
   .buehne{min-height:92svh}
   .buehne__fakten{gap:18px;justify-content:space-between}
-  .buehne__tag{top:76px;right:16px}
-  .buehne__ton{top:124px;right:16px}
+  .buehne__ton{top:76px;right:16px}
   .buehne__cue{display:none}
 }
 @media (prefers-reduced-motion:reduce){
-  .buehne__tag i,.buehne__cue span{animation:none}
+  .buehne__cue span{animation:none}
+}
+
+/* ---------- Auftakt: die Buehne baut sich einmal auf ----------
+   Reine CSS-Animationen mit Verzug. Kein JS, kein Beobachter: der Kopf ist
+   beim Laden immer im Bild, alles andere waere Aufwand ohne Nutzen. Alle
+   Startzustaende stehen NUR in diesem Block, damit bei reduzierter Bewegung
+   nichts unsichtbar haengen bleibt. */
+@media (prefers-reduced-motion:no-preference){
+  @keyframes ein-zeile{from{transform:translateY(104%)}to{transform:none}}
+  @keyframes ein-auf{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes ein-fein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @keyframes ein-film{from{opacity:0;transform:scale(1.055)}to{opacity:1;transform:none}}
+  @keyframes ein-blende{from{opacity:0}to{opacity:1}}
+
+  .buehne__video{animation:ein-film 2.4s var(--e) 380ms both}
+  .buehne__zeile>span{animation:ein-zeile var(--d4) var(--e) both}
+  .buehne__titel .kicker>span{animation-name:ein-auf;animation-duration:var(--d3)}
+  .buehne__zeile:nth-child(2)>span{animation-delay:90ms}
+  .buehne__zeile:nth-child(3)>span{animation-delay:210ms}
+  .buehne__satz{animation:ein-auf var(--d3) var(--e) 520ms both}
+  .buehne .kopf__tasten>*{animation:ein-auf var(--d3) var(--e) both}
+  .buehne .kopf__tasten>:nth-child(1){animation-delay:620ms}
+  .buehne .kopf__tasten>:nth-child(2){animation-delay:700ms}
+  .buehne__live{animation:ein-fein var(--d3) var(--e) 820ms both}
+  .buehne__fakten{animation:ein-blende var(--d4) var(--e) 900ms both}
+  .buehne__fakten .kopf__zahl{animation:ein-auf var(--d3) var(--e) both}
+  .buehne__fakten .kopf__zahl:nth-child(1){animation-delay:900ms}
+  .buehne__fakten .kopf__zahl:nth-child(2){animation-delay:980ms}
+  .buehne__fakten .kopf__zahl:nth-child(3){animation-delay:1060ms}
+  .buehne__ton{animation:ein-fein var(--d3) var(--e) 1040ms both}
+  .buehne__cue{animation:ein-fein var(--d3) var(--e) 1400ms both}
+
+  /* Der Punkt hinter Beat schlaegt zweimal, 96 Schlaege pro Minute. Danach
+     ist Ruhe: ein Dauerpuls waere Deko, dieser hier ist ein Akzent. */
+  @keyframes beat{0%{transform:none}18%{transform:scale(1.5)}
+    46%{transform:scale(.92)}100%{transform:none}}
+  .buehne__titel .beat{animation:beat 625ms var(--e-hart) 1300ms 2 both;
+    transform-origin:50% 78%}
 }
 
 /* ---------- Bloecke & Rhythmus ---------- */
@@ -278,7 +413,8 @@ body[data-menu="1"]{overflow:hidden}
   -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .kachel__laeuft{position:absolute;top:12px;right:12px;z-index:2;width:9px;height:9px;
   border-radius:50%;background:var(--pink);opacity:0;transition:opacity .3s}
-.kachel[data-an="1"] .kachel__laeuft{opacity:1;animation:puls 1.6s infinite}
+.kachel[data-an="1"] .kachel__laeuft{opacity:1;animation:pulsBlink 1.6s infinite}
+@media (prefers-reduced-motion:reduce){.kachel[data-an="1"] .kachel__laeuft{animation:none}}
 .kachel__unten{position:absolute;inset-inline:0;bottom:0;z-index:2;
   padding:16px 14px;display:flex;flex-direction:column;gap:3px}
 .kachel__name{font-family:var(--disp);font-weight:800;text-transform:uppercase;
@@ -287,26 +423,42 @@ body[data-menu="1"]{overflow:hidden}
   letter-spacing:.05em;text-transform:uppercase}
 
 /* ---------- Gruender ---------- */
-.gruender{display:grid;gap:var(--s4);grid-template-columns:.8fr 1.2fr;
-  align-items:center;position:relative}
-.gruender__foto{position:relative;width:min(360px,100%);justify-self:center}
+/* Das Portrait steht in der Mitte, die Erzaehlung links und rechts daneben in
+   zwei Kacheln. Der Satz darunter ist die Pointe und braucht keine Kachel. */
+.gruender{display:grid;position:relative;align-items:stretch;
+  grid-template-columns:1fr minmax(280px,380px) 1fr;
+  gap:var(--s3) clamp(20px,3vw,44px)}
+.gruender__kopf{grid-column:1/-1;text-align:center;margin-inline:auto}
+.gruender__kopf h2{font-size:clamp(34px,4.4vw,62px)}
+.gruender__kopf .kicker{margin-bottom:10px}
+.gr__k{background:var(--ink);border:1px solid var(--linie-d);border-radius:var(--rund);
+  padding:clamp(22px,2.6vw,32px);color:var(--auf-ink-soft);align-self:stretch;
+  display:flex;align-items:center}
+.gr__k p{margin:0;font-size:17px;line-height:1.68}
+.gr__k--a{grid-column:1;grid-row:2}
+.gr__k--b{grid-column:3;grid-row:2}
+.gruender__foto{position:relative;grid-column:2;grid-row:2;align-self:center;width:100%}
 .gruender__foto img{width:100%;height:auto;border-radius:var(--rund);position:relative;z-index:1;filter:saturate(.92)}
 .gruender__foto::before{content:"";position:absolute;inset:-14px 14px 14px -14px;
   border:1.5px solid var(--gold);border-radius:var(--rund);z-index:0}
 .gruender__foto figcaption{margin-top:16px;font:700 12px/1 var(--grot);
-  color:var(--auf-ink-leis)}
+  color:var(--auf-ink-leis);text-align:center}
 .gr__story{margin-top:var(--s2);max-width:56ch;color:var(--auf-ink-soft)}
-.gr__zitat{margin-top:var(--s3);font-family:var(--disp);font-weight:800;
-  text-transform:uppercase;font-size:clamp(19px,2.4vw,28px);line-height:1.25;
-  color:var(--pink);max-width:24ch}
+.gr__zitat{grid-column:1/-1;grid-row:3;margin:var(--s2) auto 0;text-align:center;
+  font-family:var(--disp);font-weight:800;
+  text-transform:uppercase;font-size:clamp(21px,2.8vw,34px);line-height:1.2;
+  color:var(--pink);max-width:26ch}
 .gr__args{list-style:none;padding:0;margin-top:var(--s3);display:grid;gap:14px}
 .gr__args li{display:grid;gap:2px;padding-left:18px;border-left:2px solid var(--gold)}
 .gr__args b{font-family:var(--disp);font-weight:800;text-transform:uppercase;
   font-size:17px;letter-spacing:.02em}
 .gr__args span{font-size:16px;color:var(--auf-ink-soft)}
 @media (max-width:880px){
-  .gruender{grid-template-columns:1fr}
-  .gruender__foto{width:min(300px,80%)}
+  .gruender{grid-template-columns:1fr;gap:var(--s2)}
+  .gruender__kopf,.gr__k--a,.gr__k--b,.gruender__foto,.gr__zitat{
+    grid-column:1;grid-row:auto}
+  .gruender__foto{width:min(300px,80%);justify-self:center;order:-1}
+  .gruender__kopf{order:-2;max-width:none}
 }
 
 /* ---------- Preise ---------- */
@@ -506,8 +658,10 @@ a.trainer span{color:var(--pink)}
 .frei{color:#2c6e31;font-weight:600}
 .buchen{display:inline-flex;align-items:center;gap:7px;font:700 14px/1 var(--grot);
   background:var(--ink);color:var(--hell);padding:12px 20px;border-radius:999px;
-  text-decoration:none;transition:background .3s,color .3s,transform .3s var(--e)}
+  text-decoration:none;transition:background var(--d2) var(--e),color var(--d2) var(--e),
+  transform var(--d2) var(--e)}
 .buchen:hover{background:var(--pink);color:var(--ink);transform:translateY(-2px)}
+.buchen:active{transform:scale(.95);transition-duration:var(--d1)}
 .buchen svg{width:13px;height:13px}
 .leer{padding:var(--s3);text-align:center;color:var(--auf-hell-soft)}
 .wechsel{animation:wech .4s var(--e)}
@@ -578,11 +732,22 @@ a.trainer span{color:var(--pink)}
 
 /* ---------- Auftritt ---------- */
 @media (prefers-reduced-motion:no-preference){
-  .zeigt{opacity:0;transform:translateY(26px);
-    transition:opacity .9s var(--e) var(--verzug,0ms),transform .9s var(--e) var(--verzug,0ms)}
+  /* EINTRITT, der Normalfall: Karten und Bloecke, 20 px in --d3. */
+  .zeigt{opacity:0;transform:translateY(20px);
+    transition:opacity var(--d3) var(--e) var(--verzug,0ms),
+               transform var(--d3) var(--e) var(--verzug,0ms)}
   .zeigt[data-auf]{opacity:1;transform:none}
-  .zeile{transform:translateY(34px)}
-  .kicker.zeigt{transform:translateY(12px)}
+  /* ANKER: was einen ganzen Abschnitt traegt. Mehr Weg, mehr Zeit. */
+  .zeigt--anker{transform:translateY(30px);
+    transition-duration:var(--d4),var(--d4)}
+  /* BEIWERK: Listenzeilen und Beschriftungen. Kurzer Weg, kurze Zeit. */
+  .zeigt--beiwerk{transform:translateY(10px);
+    transition-duration:var(--d2),var(--d2)}
+  .zeile{transform:translateY(34px);transition-duration:var(--d4),var(--d4)}
+  .kicker.zeigt{transform:translateY(12px);transition-duration:var(--d2),var(--d2)}
+  /* Die Buehne bewegt sich nicht selbst, sie sammelt nur data-auf ein und
+     gibt ihren Kindern damit den Startschuss. */
+  .zeigt--stumm{opacity:1;transform:none;transition:none}
 }
 
 /* ---------- Nachtraege aus der Kritikrunde ---------- */
@@ -1169,11 +1334,28 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .klappe__mehr{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .tag--naechste span::after{content:"nächste Woche";font:700 12px/1 var(--grot);letter-spacing:.1em;
   text-transform:uppercase;color:var(--gold);margin-left:10px}
-.buehne__live{position:relative;z-index:2;display:flex;align-items:center;gap:10px;margin:14px auto 0;
-  font:600 14px/1.45 var(--grot);color:rgba(225,226,220,.85);animation:fragAuf .6s var(--e)}
+/* Was heute noch geht. Stand die Zeile klein unter den Zahlen, hat sie
+   niemand gelesen. Jetzt sitzt sie direkt unter den Knoepfen, als Schild. */
+.buehne__live{position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:baseline;
+  gap:4px 12px;width:fit-content;max-width:100%;margin-top:14px;
+  padding:13px 20px;border-radius:999px;background:rgba(24,24,24,.62);
+  border:1px solid var(--linie-d);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  font:500 15px/1.4 var(--grot);color:var(--auf-ink-soft)}
+.buehne__live b{font-weight:700;font-size:17px;color:var(--hell);letter-spacing:-.005em}
 .buehne__live i{width:9px;height:9px;border-radius:50%;background:var(--pink);flex:0 0 auto;
-  box-shadow:0 0 0 0 rgba(255,167,226,.6);animation:puls 2s infinite}
-@keyframes puls{0%{box-shadow:0 0 0 0 rgba(255,167,226,.6)}70%{box-shadow:0 0 0 9px rgba(255,167,226,0)}100%{box-shadow:0 0 0 0 rgba(255,167,226,0)}}
+  align-self:center;
+  box-shadow:0 0 0 0 rgba(255,167,226,.6);animation:pulsRing 2s infinite}
+@media (max-width:700px){
+  /* Auf dem Handy bleibt nur der Satz, der zum Handeln fuehrt. Die Zusatz-
+     zeile haette vier Zeilen gebraucht und waere rechts unten unter dem
+     Frag-D-Knopf verschwunden. */
+  .buehne__live{border-radius:18px;padding:12px 16px;font-size:14px;
+    max-width:calc(100% - 122px)}
+  .buehne__live span{display:none}
+  .buehne__live b{font-size:16px}
+}
+@keyframes pulsRing{0%{box-shadow:0 0 0 0 rgba(255,167,226,.6)}70%{box-shadow:0 0 0 9px rgba(255,167,226,0)}100%{box-shadow:0 0 0 0 rgba(255,167,226,0)}}
 @media (prefers-reduced-motion:reduce){.buehne__live i{animation:none}}
 .planer__ankommen{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0;font-size:14px;line-height:1.45;
   color:var(--auf-ink-leis)}
@@ -1400,6 +1582,11 @@ body[data-frag="1"] .frag-knopf{display:none}
     </div>
   </div>
 </header>
+<nav class="schiene" aria-label="Abschnitte dieser Seite">
+  <a class="schiene__marke" href="#" data-zu="" aria-label="Nach oben">D<i>!</i></a>
+  <span class="schiene__linie" aria-hidden="true"><i></i></span>
+  <ul class="schiene__punkte"><li><a href="#school" data-heim data-abschnitt="school"><i aria-hidden="true"></i><span>Die School</span></a></li><li><a href="#raster" data-heim data-abschnitt="raster"><i aria-hidden="true"></i><span>Kurse</span></a></li><li><a href="#preise" data-heim data-abschnitt="preise"><i aria-hidden="true"></i><span>Preise</span></a></li><li><a href="#kalender" data-heim data-abschnitt="kalender"><i aria-hidden="true"></i><span>Kursplan</span></a></li><li><a href="#events" data-heim data-abschnitt="events"><i aria-hidden="true"></i><span>Events</span></a></li></ul>
+</nav>
 <nav class="menu" aria-label="Men&uuml;" hidden>
   <div class="menu__links"><a href="#raster" data-heim>Kurse</a><a href="#preise" data-heim>Preise</a><a href="#events" data-heim>Events</a><a href="#school" data-heim>Die School</a><span class="menu__trenn" aria-hidden="true"></span><a class="menu__leise" href="#faq" data-heim>H&auml;ufige Fragen</a><a class="menu__leise" href="raumvermietung/" data-heim>R&auml;ume mieten</a><a class="menu__leise" href="https://sebastiank87.github.io/dds-danceschool/schulprojekte/" data-heim>Schulprojekte</a><a class="menu__leise" href="https://www.deesworld.de/coaching/" data-heim>Detlef buchen</a><a class="menu__leise" href="gutscheine/" data-heim>Gutscheine</a></div>
   <div class="menu__unten">
@@ -1794,6 +1981,7 @@ body[data-frag="1"] .frag-knopf{display:none}
         if(!ruhig){ liste.classList.remove('wechsel'); void liste.offsetWidth;
                     liste.classList.add('wechsel'); }
         melden(zahl + ' Termine auf diesem Level.');
+        nachreichen();
       });
     });
   });
@@ -1833,22 +2021,65 @@ body[data-frag="1"] .frag-knopf{display:none}
     var a = document.querySelector('.ansicht:not([hidden])');
     if(!a) return;
     var offen = a.querySelectorAll('.zeigt:not([data-auf])');
-    var grenze = innerHeight * 0.94;
+    var faellig = [];
     for(var i = 0; i < offen.length; i++){
-      var r = offen[i].getBoundingClientRect();
-      if(r.top < grenze && r.bottom > -40) offen[i].dataset.auf = '1';
+      var el = offen[i], r = el.getBoundingClientRect();
+      /* Hohe Bloecke duerfen frueher ausloesen, sonst spielt die halbe Karte
+         unterhalb der Kante ab. parseFloat auf einem fehlenden Attribut ist NaN. */
+      var s = parseFloat(el.dataset.schwelle) || 0.94;
+      /* Nur die Oberkante zaehlt. Fragte man zusaetzlich, ob die Unterkante
+         noch im Bild ist, fiele bei einem schnellen Sprung alles durch, was
+         in einem Rutsch von unterhalb nach oberhalb des Fensters wandert,
+         und bliebe fuer immer unsichtbar. */
+      if(r.top < innerHeight * s) faellig.push(el);
+    }
+    var stand = new Map();
+    for(var j = 0; j < faellig.length; j++){
+      var e = faellig[j], schritt = parseInt(e.dataset.staffel, 10) || 0;
+      if(schritt){
+        var eltern = e.parentElement, k = stand.get(eltern) || 0;
+        e.style.setProperty('--verzug', Math.min(k * schritt, 240) + 'ms');
+        stand.set(eltern, k + 1);
+      }
+      e.dataset.auf = '1';
     }
   }
   /* Der Kopf zieht langsamer mit als die Seite, und oben laeuft eine feine
      Linie mit dem Lesefortschritt. Beides lebt bei jedem Scrollen, nicht nur
      beim ersten Mal. */
   var balken = document.querySelector('.fortschritt');
+
+  /* Die Schiene am linken Rand. Sie kommt, sobald der Kopf durch ist, zeigt
+     den Fortschritt und den Abschnitt, in dem man gerade steht. Die Ziele
+     werden einmal aufgeloest, nicht in jedem Bild. */
+  var schiene = document.querySelector('.schiene');
+  var punkte = schiene ? Array.prototype.slice.call(schiene.querySelectorAll('a[data-abschnitt]')) : [];
+  var ziele = punkte.map(function(a){ return document.getElementById(a.dataset.abschnitt); });
+  var schieneStand = '';
+  function schieneFuehren(y){
+    if(!schiene) return;
+    var soll = y > innerHeight * 0.66 ? '1' : '0';
+    if(soll !== schieneStand){ document.body.dataset.schiene = soll; schieneStand = soll; }
+    if(soll !== '1') return;
+    var ganz = document.documentElement.scrollHeight - innerHeight;
+    schiene.style.setProperty('--fort', ganz > 0 ? Math.min(1, y / ganz) : 0);
+    var hier = -1;
+    for(var i = 0; i < ziele.length; i++){
+      if(ziele[i] && ziele[i].getBoundingClientRect().top <= 160) hier = i;
+    }
+    for(var j = 0; j < punkte.length; j++){
+      if(j === hier) punkte[j].setAttribute('aria-current', 'true');
+      else punkte[j].removeAttribute('aria-current');
+    }
+  }
+
   function mitziehen(){
     var y = scrollY;
     if(balken){
       var ganz = document.documentElement.scrollHeight - innerHeight;
       balken.style.width = (ganz > 0 ? Math.min(100, y / ganz * 100) : 0) + '%';
     }
+    schieneFuehren(y);
     if(ruhig) return;
     var k = document.querySelector('.ansicht:not([hidden]) .kopf__in');
     if(!k) return;
@@ -1870,48 +2101,47 @@ body[data-frag="1"] .frag-knopf{display:none}
     if(ruhig) return;
     /* Auswahl, zusaetzliche Klassen, Verzug je Geschwister in Millisekunden */
     var gruppen = [
-      ['.raster .kachel',  'zeigt',         70],
-      ['.block h2',        'zeigt zeile',    0],
-      ['.kicker',          'zeigt kicker',   0],
-      ['.karte',           'zeigt',          0],
-      ['.weg',             'zeigt',          0],
-      ['.band',            'zeigt',          0],
-      ['.band-laeuft',     'zeigt',          0],
-      ['.einstieg',        'zeigt',          0],
-      ['.fakt',            'zeigt',         60],
-      ['.tag',             'zeigt',          0],
-      ['.termin',          'zeigt linie',   45],
-      ['.schritt',         'zeigt',         90],
-      ['.preis',           'zeigt',        110],
-      ['.stimme',          'zeigt',         70],
-      ['.wkarte',          'zeigt',         90],
-      ['.frage',           'zeigt',         55],
-      ['.filter button',   'zeigt',         45],
-      ['.kopf__tasten',    'zeigt',          0],
-      ['.tuer',            'zeigt',        110],
-      ['.plan',            'zeigt',        110],
-      ['.klein',           'zeigt',         90],
-      ['.event',           'zeigt',        120],
-      ['.sp',              'zeigt',        100],
-      ['.gruender__foto',  'zeigt',          0],
-      ['.tagchips button', 'zeigt',         40],
-      ['.bruecke',         'zeigt',          0],
-      ['.statement__text', 'zeigt zeile',    0],
-      ['.statement__punch','zeigt',          0],
-      ['.statement__mark', 'zeigt',          0],
-      ['.vergleich>div',   'zeigt',        110],
-      ['.zeit>div',        'zeigt',        120],
-      ['.gruender__text',  'zeigt',          0]
+      ['.raster .kachel',  'zeigt',                     70],
+      ['.block h2',        'zeigt zeile',                0],
+      ['.kicker',          'zeigt kicker',               0],
+      ['.karte',           'zeigt',                      0],
+      ['.band',            'zeigt zeigt--anker',         0],
+      ['.band-laeuft',     'zeigt',                      0],
+      ['.fakt',            'zeigt',                     60],
+      ['.tag',             'zeigt zeigt--beiwerk',       0],
+      ['.termin',          'zeigt linie zeigt--beiwerk',45],
+      ['.schritt',         'zeigt',                     90],
+      ['.stimme',          'zeigt',                     70],
+      ['.wkarte',          'zeigt',                     90],
+      ['.frage',           'zeigt zeigt--beiwerk',      55],
+      ['.filterblock',     'zeigt',                      0],
+      [':not(.filterblock) > .filter', 'zeigt',          0],
+      ['.kopf__tasten',    'zeigt',                      0],
+      ['.welcome',         'zeigt zeigt--anker',         0],
+      ['.abschluss',       'zeigt zeigt--anker',         0],
+      ['.event',           'zeigt zeigt--anker',         0],
+      ['.gruender__foto',  'zeigt zeigt--anker',         0],
+      ['.schulteaser__bild','zeigt zeigt--anker',        0],
+      ['.statement__text', 'zeigt zeile',                0],
+      ['.statement__punch','zeigt zeigt--anker',         0],
+      ['.tuer',            'zeigt',                    110],
+      ['.plan',            'zeigt',                    110],
+      ['.klein',           'zeigt',                     90],
+      ['.saeule',          'zeigt',                     90],
+      ['.auch3__k',        'zeigt',                     80],
+      ['.vergleich>div',   'zeigt',                    110],
+      ['.zeit>div',        'zeigt',                    120],
+      ['.gr__k',           'zeigt',                    120],
+      ['.gr__zitat',       'zeigt',                      0],
+      ['.statement__mark', 'zeigt zeigt--beiwerk',       0]
     ];
     gruppen.forEach(function(g){
-      var stand = new Map();
       document.querySelectorAll('.ansicht ' + g[0]).forEach(function(el){
+        /* Der Kopf hat seinen eigenen Auftakt in CSS. Bekaeme er zusaetzlich
+           .zeigt, laege er bei opacity 0 und wartete auf einen Scroll. */
+        if(el.closest('.buehne')) return;
         g[1].split(' ').forEach(function(k){ el.classList.add(k); });
-        if(!g[2]) return;
-        var eltern = el.parentElement;
-        var i = stand.get(eltern) || 0;
-        el.style.setProperty('--verzug', Math.min(i * g[2], 620) + 'ms');
-        stand.set(eltern, i + 1);
+        if(g[2]) el.dataset.staffel = g[2];
       });
     });
     oeffnen();
@@ -1928,15 +2158,40 @@ body[data-frag="1"] .frag-knopf{display:none}
         x.target._lief = true;
         var ziel = parseInt(x.target.textContent, 10);
         if(!ziel || ziel > 400) return;
-        var start = performance.now(), dauer = Math.min(1100, 260 + ziel * 22);
-        (function tick(jetzt){
-          var f = Math.min(1, (jetzt - start) / dauer);
-          x.target.textContent = Math.round(ziel * (1 - Math.pow(1 - f, 3)));
-          if(f < 1) requestAnimationFrame(tick);
-        })(start);
+        var dauer = Math.min(1100, 260 + ziel * 22);
+        /* Im Kopf blendet die Kachel erst nach knapp einer Sekunde ein. Ohne
+           denselben Verzug zaehlt die Zahl hinter der Blende hoch und steht
+           beim Erscheinen schon fest. */
+        var wart = (x.target.closest('.kopf__zahl') || x.target);
+        var vz = parseFloat(getComputedStyle(wart).animationDelay) * 1000 || 0;
+        setTimeout(function(){
+          var start = performance.now();
+          (function tick(jetzt){
+            var f = Math.min(1, (jetzt - start) / dauer);
+            x.target.textContent = Math.round(ziel * (1 - Math.pow(1 - f, 3)));
+            if(f < 1) requestAnimationFrame(tick);
+          })(start);
+        }, vz);
       });
     }, {threshold:.9});
     document.querySelectorAll('.kopf__zahl b').forEach(function(b){ zaehler.observe(b); });
+  }
+
+  /* Ein Lichtstreifen laeuft ueber jeden Kaufknopf, wenn er zum ersten Mal
+     ins Bild kommt. Danach wird er nicht mehr beobachtet: einmal auffallen
+     reicht, alles weitere waere Zappeln. */
+  if(darfLaufen && 'IntersectionObserver' in window){
+    var blitz = new IntersectionObserver(function(e){
+      e.forEach(function(x){
+        if(!x.isIntersecting) return;
+        blitz.unobserve(x.target);
+        var k = x.target;
+        k.classList.add('knopf--blitz');
+        setTimeout(function(){ k.classList.remove('knopf--blitz'); }, 900);
+      });
+    }, {threshold:.85});
+    document.querySelectorAll('.knopf:not(.knopf--rand):not(.knopf--ink)')
+      .forEach(function(k){ blitz.observe(k); });
   }
 
   ausHash();
@@ -2034,6 +2289,7 @@ body[data-frag="1"] .frag-knopf{display:none}
           var k = g.previousElementSibling;
           if(k && k.classList.contains('tag')) k.classList.toggle('tag-zu', !hin);
         });
+        nachreichen();
       });
     });
     if(box.dataset.start === 'heute'){
@@ -2176,6 +2432,7 @@ body[data-frag="1"] .frag-knopf{display:none}
       var offen = ziel.classList.toggle('klappe--offen');
       b.setAttribute('aria-expanded', String(offen));
       b.textContent = offen ? 'Weniger anzeigen' : 'Mehr anzeigen';
+      nachreichen();   /* frisch aufgeklappte Zeilen sonst auf opacity 0 */
       if(!offen){
         var sek = ziel.closest('section');
         if(sek) sek.scrollIntoView({behavior: ruhig ? 'auto' : 'smooth'});
@@ -2381,17 +2638,40 @@ body[data-frag="1"] .frag-knopf{display:none}
     fetch(panel.dataset.url.replace('/frag', '/plan')).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
       if(!d || !d.classes) return;
       var heute = d.classes.filter(function(c){ return c.datum === JETZT.iso; });
-      var offen = heute.filter(function(c){ var m = parseInt(c.zeit.slice(0, 2), 10) * 60 + parseInt(c.zeit.slice(3, 5), 10); return m - JETZT.min >= 360 && c.frei !== 0; });
-      var txt;
+      function minuten(c){ return parseInt(c.zeit.slice(0, 2), 10) * 60 + parseInt(c.zeit.slice(3, 5), 10); }
+      var nachSpalte = function(a, b){ return a.zeit.localeCompare(b.zeit); };
+      /* Was als naechstes ueberhaupt laeuft, unabhaengig vom Buchungsschluss. */
+      var laeuft = heute.filter(function(c){ return minuten(c) >= JETZT.min; }).sort(nachSpalte)[0];
+      /* Und was online noch geht: sechs Stunden vorher ist Schluss. */
+      var offen = heute.filter(function(c){ return minuten(c) - JETZT.min >= 360 && c.frei !== 0; });
+      var stark, leis;
       if(heute.length && offen.length){
-        var naechste = offen.sort(function(a, b){ return a.zeit.localeCompare(b.zeit); })[0];
-        txt = 'Heute ' + heute.length + ' Classes, ' + offen.length + ' davon noch buchbar. N\u00e4chste: ' + naechste.zeit + ' ' + naechste.titel + (naechste.frei !== null && naechste.frei <= 5 ? ' (nur noch ' + naechste.frei + ' Pl\u00e4tze)' : '');
+        var naechste = offen.sort(nachSpalte)[0];
+        var eng = naechste.frei !== null && naechste.frei <= 5 ? ' Nur noch ' + naechste.frei + ' Pl\u00e4tze.' : '';
+        /* Die naechste Class verschweigen, nur weil sie online zu ist, waere
+           irrefuehrend. Vorn steht, was gleich laeuft, dahinter was buchbar ist. */
+        if(laeuft && laeuft.zeit !== naechste.zeit){
+          stark = 'Gleich ' + laeuft.zeit + ': ' + laeuft.titel;
+          leis = 'Heute ' + heute.length + ' Classes, ' + offen.length + ' online buchbar ab '
+               + naechste.zeit + '.' + eng;
+        } else {
+          stark = 'Als N\u00e4chstes ' + naechste.zeit + ': ' + naechste.titel;
+          leis = 'Heute ' + heute.length + ' Classes, ' + offen.length + ' davon buchbar.' + eng;
+        }
       } else {
         var morgen = d.classes.filter(function(c){ return c.datum > JETZT.iso && c.frei !== 0; }).sort(function(a, b){ return a.datum.localeCompare(b.datum) || a.zeit.localeCompare(b.zeit); })[0];
-        txt = heute.length ? 'Heute ' + heute.length + ' Classes, Buchungsschluss ist durch.' : 'Heute ist Ruhetag.';
-        if(morgen) txt += ' Weiter geht es ' + morgen.tag + ' ' + morgen.zeit + ' mit ' + morgen.titel + '.';
+        if(laeuft){
+          stark = 'Gleich ' + laeuft.zeit + ': ' + laeuft.titel;
+          leis = 'Heute ' + heute.length + ' Classes, online ist Buchungsschluss.';
+        } else {
+          stark = heute.length ? 'Heute ' + heute.length + ' Classes' : 'Heute ist Ruhetag';
+          leis = heute.length ? 'Online ist Buchungsschluss.' : '';
+        }
+        if(morgen) leis += (leis ? ' ' : '') + 'Weiter ' + morgen.tag + ' ' + morgen.zeit + ' mit ' + morgen.titel + '.';
       }
-      zeile.querySelector('span').textContent = txt; zeile.hidden = false;
+      zeile.querySelector('b').textContent = stark;
+      zeile.querySelector('span').textContent = leis;
+      zeile.hidden = false;
     }).catch(function(){});
   })();
 
