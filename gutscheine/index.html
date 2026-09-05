@@ -1122,6 +1122,11 @@ a.trainer span{color:var(--pink)}
 .p-schalter button[aria-pressed="true"]{background:var(--ink);color:var(--hell);
   box-shadow:inset 0 0 0 1.5px var(--ink)}
 .p-schalter em{font-style:normal;opacity:.6;font-weight:600}
+/* CTA-Runde 05.09.: der Warum-Block endete in der Zeitleiste und hatte
+   keinen einzigen Weg nach vorn. Jetzt eine Ansage und zwei Wege. */
+.gr__weiter{margin-top:var(--s4);display:flex;flex-wrap:wrap;align-items:center;
+  justify-content:center;gap:14px 16px;text-align:center;
+  font:700 14px/1 var(--grot);letter-spacing:.02em;color:var(--auf-ink-soft)}
 .zeit{display:grid;gap:clamp(22px,3.4vw,48px);grid-template-columns:repeat(3,minmax(0,1fr));
   margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--linie-d)}
 .zeit>div{position:relative;padding-top:18px}
@@ -1228,14 +1233,21 @@ a.trainer span{color:var(--pink)}
 .plan__weg{font-size:12px;color:inherit;opacity:.55;margin-top:8px}
 .plaene{grid-template-columns:repeat(2,1fr);max-width:900px;margin-inline:auto}
 @media (max-width:600px){.plaene{grid-template-columns:1fr}}
+/* CTA-Runde 05.09.: die Zeile war ein Flex-Feld. Vier Punkte mit sehr
+   verschiedenen Textbreiten (283 / 346 / 396 / 205 px gemessen) brachen bei
+   jeder Fensterbreite woanders um, die zweite Reihe fluchtete nie mit der
+   ersten. Jetzt ein Raster: die Ueberschrift steht als eigene Zeile darueber,
+   die vier Punkte stehen in zwei festen Spalten, egal wie lang der Text wird. */
 .drin-zeile{max-width:900px;margin:18px auto 0;padding:26px;border-radius:var(--rund);
   background:var(--ink);border:1px solid var(--ink);color:var(--auf-ink);
-  display:flex;flex-wrap:wrap;gap:10px 28px;align-items:flex-start}
+  display:grid;gap:16px}
 .drin-zeile b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:16px;
   letter-spacing:.03em;color:var(--hell)}
 .drin-zeile .plan__drin li b{color:var(--hell)}
 .drin-zeile .plan__drin li span{color:var(--auf-ink-soft)}
-.drin-zeile .plan__drin{display:flex;flex-wrap:wrap;gap:6px 22px}
+.drin-zeile .plan__drin{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px 32px}
+@media (max-width:640px){.drin-zeile .plan__drin{grid-template-columns:1fr}}
 .drin-zeile .plan__drin li{font-size:16px}
 .buchen{box-shadow:inset 0 0 0 1.5px var(--ink)}
 [data-tag]{display:flex;flex-direction:column}
@@ -1281,7 +1293,7 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .coach__was{font-size:16px;line-height:1.45}
 .coach__liste .buchen{padding:8px 14px;font-size:12px;color:var(--hell);
   box-shadow:inset 0 0 0 1.5px rgba(225,226,220,.4)}
-.coach__liste .buchen:hover{background:var(--pink);color:var(--ink);box-shadow:none}
+.coach__liste .buchen:hover{background:transparent;color:var(--ink);box-shadow:none}
 .coach__mehr{margin-top:8px;font-size:14px}
 .coach__mehr a{color:var(--pink);font-weight:700;text-decoration:underline;text-underline-offset:4px}
 .coach__hallo{margin-top:18px;padding-top:14px;border-top:1px solid var(--linie-d);font-size:14px;
@@ -1354,7 +1366,7 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .pk__meta .knapp{margin-left:6px}
 .pk__tasten{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap}
 .pk__tasten .buchen{padding:9px 16px;font-size:14px;color:var(--hell);box-shadow:inset 0 0 0 1.5px rgba(225,226,220,.4)}
-.pk__tasten .buchen:hover{background:var(--pink);color:var(--ink);box-shadow:none}
+.pk__tasten .buchen:hover{background:transparent;color:var(--ink);box-shadow:none}
 .pk__tausch{font:700 14px/1 var(--grot);padding:9px 14px;border-radius:999px;background:transparent;
   color:var(--auf-ink-leis);border:1px solid transparent;cursor:pointer;min-height:38px}
 .pk__tausch:hover{color:var(--hell);border-color:rgba(225,226,220,.35)}
@@ -2440,6 +2452,74 @@ body[data-frag="1"] .frag-knopf{display:none}
 @media (hover:hover){
   .auch3__k:is(:hover,:focus-visible) .auch3__zwei{clip-path:ellipse(160% 125% at 50% 0%)}
 }
+
+/* CTA-Runde 05.09.: EINE Antwort fuer jeden Knopf der Seite */
+/* Die schraege Fuellung aus v2-16 bekam nur der Rand- und der Ink-Knopf, die
+   Hero-Knoepfe gar nichts. Jetzt fuellt sich jeder Knopf: der pinke in Ink,
+   der dunkle und der Randknopf in Pink. Dazu steht jeder Knopf beim Zeiger auf
+   einer harten Kante, auf die er beim Druecken faellt - eine Mechanik statt
+   eines Leuchtens, dieselbe Sprache wie der Rest der Seite. Die Kante ist ein
+   Versatz ohne Weichzeichner, deshalb liest sie sich als Material.
+   Reihenfolge: dieser Block steht NACH v2-16 und muss dessen
+   .pille-Regeln ueberbieten, daher die Doppelklassen. */
+/* Die Kante traegt IMMER die Farbe, die der Knopf gerade verlaesst: der pinke
+   laesst Pink liegen, der dunkle Ink. So steht die Kante nie in ihrer eigenen
+   Fuellung und ist auf hellem wie auf dunklem Grund zu sehen. */
+.knopf{--kante:var(--pink)}
+.knopf--ink{--kante:var(--ink)}
+.knopf--rand{--kante:currentColor}
+/* Die Fuellung des pinken Knopfs bleibt 2 px von der Kante weg, damit sein
+   eigenes Pink als Rahmen stehen bleibt: sonst verschwaende er beim Hover auf
+   einer dunklen Karte (Unlimited, Hero, Events) in seinem Untergrund. Der
+   Rahmen darf kein outline sein, das gehoert dem Fokusring. */
+.knopf.pille:not(.knopf--rand):not(.knopf--ink)::after{background:var(--ink);
+  inset:2px;border-radius:999px}
+@media (hover:hover){
+  .knopf.pille:not(.knopf--rand):not(.knopf--ink):is(:hover,:focus-visible){color:var(--hell)}
+}
+@media (hover:hover) and (pointer:fine){
+  .knopf:is(:hover,:focus-visible){transform:translateY(-3px);box-shadow:0 3px 0 0 var(--kante)}
+  /* Der Ring des Randknopfs bleibt, und seine alte Sofort-Fuellung bleibt weg:
+     die Flaeche faehrt, sie springt nicht. */
+  .knopf.knopf--rand:is(:hover,:focus-visible){background:transparent;
+    box-shadow:inset 0 0 0 1.5px currentColor,0 3px 0 0 var(--kante)}
+}
+/* Der Buchen-Knopf im Kursplan bekommt dieselbe Geste, und zwar ohne die
+   .pille-Klasse aus dem JS: der Kalender erzeugt seine Zeilen nach, eine
+   einmal vergebene Klasse wuerde die nachgeladene Woche nie erreichen.
+   Er ist mit 143 Stueck der haeufigste Knopf der Seite und antwortete bisher
+   als einziger mit einem Sofort-Farbwechsel. */
+.buchen{position:relative;isolation:isolate;overflow:hidden;--kante:var(--ink)}
+.buchen::after{content:"";position:absolute;inset:0 -1em -2em;background:var(--pink);
+  transform:scaleY(0) skew(0deg,-5deg);transform-origin:bottom center;z-index:-1}
+@media (prefers-reduced-motion:no-preference){
+  .buchen::after{transition:transform var(--ein1) var(--e)}
+}
+@media (hover:hover){
+  .buchen:is(:hover,:focus-visible)::after{transform:none}
+  /* Der Grund bleibt, was er ist: die pinke Flaeche faehrt darueber. Vorher
+     sprang der Grund sofort auf Pink, dann war von der Fahrt nichts zu sehen. */
+  .buchen:is(:hover,:focus-visible){background:transparent;color:var(--ink)}
+}
+@media (hover:hover) and (pointer:fine){
+  .buchen:is(:hover,:focus-visible){transform:translateY(-3px);
+    box-shadow:inset 0 0 0 1.5px var(--kante),0 3px 0 0 var(--kante)}
+}
+.buchen:active::after{transform:none;transition-duration:var(--d1)}
+.buchen:active{transform:translateY(0) scale(.97);box-shadow:none;transition-duration:var(--d1)}
+@media (prefers-reduced-motion:reduce){
+  .buchen:is(:hover,:focus-visible){transform:none}
+  .buchen:active{transform:none;opacity:.82}
+}
+/* Der Druckpunkt: der Knopf faellt auf seine Kante. Auf dem Handy gibt es
+   keine Kante, dort bleibt das leichte Schrumpfen die einzige Quittung. */
+.knopf:active{transform:translateY(0) scale(.97);box-shadow:none;transition-duration:var(--d1)}
+.knopf.knopf--rand:active{box-shadow:inset 0 0 0 1.5px currentColor}
+@media (prefers-reduced-motion:reduce){
+  .knopf:is(:hover,:focus-visible){transform:none}
+  .knopf:active{transform:none;opacity:.82}
+}
+
 
 /* Hero-Runde 05.09.: E1 Schnittbuehne (der Film schneidet sich auf den Takt seines eigenen Reels) */
 /* Drei Einstellungen: Totale, naeher dran, ruhige Totale. 22 Schlaege sind
@@ -4506,8 +4586,11 @@ body[data-frag="1"] .frag-knopf{display:none}
      Wer die schraege Fuellung bekommt, entscheidet sich hier und nicht in
      zwanzig Bausteinen. Die Hero-Knoepfe bleiben aussen vor: dort gehoert
      die Buehne dem Auftakt. Ohne JS bleibt alles wie vorher. */
-  document.querySelectorAll('.knopf--rand,.knopf--ink,.filter button,.tagchips button,.p-schalter button')
-    .forEach(function(k){ if(!k.closest('.buehne')) k.classList.add('pille'); });
+  /* CTA-Runde 05.09.: jetzt jeder Knopf, auch der pinke und der im Hero.
+     Vorher antworteten ausgerechnet die Hauptknoepfe (Welcome Pass,
+     Membership starten, Ticket holen) nur mit einem weichen Leuchten. */
+  document.querySelectorAll('.knopf,.filter button,.tagchips button,.p-schalter button')
+    .forEach(function(k){ k.classList.add('pille'); });
 
   /* -------- Rollende Buchstaben im Menue (Motion-Runde 05.09., v2-16) --------
      Jeder Buchstabe bekommt eine Kopie 1.25em tiefer (text-shadow in Pink).
