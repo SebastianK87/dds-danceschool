@@ -317,8 +317,8 @@ body[data-film="1"] .buehne__video{opacity:1}
    Zeile 2, Satz und Knoepfe. Die Mitte zwischen 38 und 58 % bleibt frei.
    Kein saturate, kein Blur. */
 .buehne__schleier{position:absolute;inset:0;background:
-  linear-gradient(to bottom,rgba(24,24,24,.85) 0,rgba(24,24,24,.7) 16%,rgba(24,24,24,.4) 28%,rgba(24,24,24,0) 38%),
-  linear-gradient(to top,rgba(24,24,24,.94) 0,rgba(24,24,24,.58) 22%,rgba(24,24,24,0) 42%)}
+  linear-gradient(to bottom,rgba(24,24,24,.94) 0,rgba(24,24,24,.88) 16%,rgba(24,24,24,.70) 30%,rgba(24,24,24,.30) 40%,rgba(24,24,24,0) 48%),
+  linear-gradient(to top,rgba(24,24,24,.97) 0,rgba(24,24,24,.90) 20%,rgba(24,24,24,.66) 32%,rgba(24,24,24,.24) 42%,rgba(24,24,24,0) 50%)}
 .buehne__dunkel{position:absolute;inset:0;background:var(--nacht);opacity:0;pointer-events:none}
 /* Der Ton sitzt am rechten Rand der freien Mitte, wie eine Spielertaste auf
    dem Film: dort liegt keine Zeile. Er kommt mit dem laufenden Reel und geht
@@ -361,8 +361,18 @@ body[data-oben="0"] .buehne__ton{opacity:0;pointer-events:none}
    flachen Fenstern. Zeile 2 haengt per margin-top:auto an der Unterkante und
    steht rechts: bei 1440 fuellt sie ohnehin die Breite, auf flachen Fenstern
    entsteht die Diagonale. */
-.buehne__zeile--1{font-size:min(15.6cqw,21svh);align-self:flex-start;
-  text-shadow:0 2px 28px rgba(24,24,24,.55)} /* liegt ueber dem hellsten Bildteil; faellt, wenn der Kontrast auch ohne ueber 3:1 liegt */
+.buehne__zeile--1{font-size:min(15.6cqw,21svh);align-self:flex-start}
+/* Header-Runde 05.09.: Am hellsten Frame des Reels gemessen (Zeile 1 bei
+   t 0,5 s, Zeile 2 bei t 5,25 s) fiel die Headline auf 1,60:1 und 1,96:1.
+   Gefordert sind 3:1. Der eine 28-px-Weichzeichner war fuer 130-px-Versalien
+   zu diffus, um Kanten zu tragen: er verteilte sich, statt zu decken. Jetzt
+   drei Lagen - harte Kante gegen Detailrauschen, mittlerer Hof gegen helle
+   Flaechen, weiter Hof gegen den Lichtverlauf - und er traegt BEIDE Zeilen.
+   Zeile 2 hatte bisher gar keinen, lag aber auf dem hellen Studioboden. */
+.buehne__zeile .buehne__schnitt{text-shadow:
+  0 1px 2px rgba(24,24,24,.5),
+  0 3px 16px rgba(24,24,24,.65),
+  0 8px 54px rgba(24,24,24,.5)}
 .buehne__zeile--2{font-size:min(13cqw,17.5svh);margin-top:auto;align-self:flex-end}
 .buehne__titel em{font-style:normal;color:var(--pink);display:inline-block}
 /* Satz und Knoepfe in einer Reihe: der Satz links, die Knoepfe rechts. Die
@@ -406,8 +416,8 @@ body[data-oben="1"] .frag-knopf{transform:translateY(calc(100% + 40px));pointer-
   .buehne__bild{background-position:50% 28%}
   .buehne__video{object-position:50% 28%}
   .buehne__schleier{background:
-    linear-gradient(to bottom,rgba(24,24,24,.8) 0,rgba(24,24,24,.5) 16%,rgba(24,24,24,0) 34%),
-    linear-gradient(to top,rgba(24,24,24,.95) 0,rgba(24,24,24,.62) 26%,rgba(24,24,24,0) 46%)}
+    linear-gradient(to bottom,rgba(24,24,24,.92) 0,rgba(24,24,24,.82) 16%,rgba(24,24,24,.50) 30%,rgba(24,24,24,0) 42%),
+    linear-gradient(to top,rgba(24,24,24,.97) 0,rgba(24,24,24,.88) 22%,rgba(24,24,24,.60) 34%,rgba(24,24,24,0) 50%)}
   .buehne__ton{right:18px;width:38px;height:38px;margin-top:-19px}
   .buehne__kicker{font-size:11px;letter-spacing:.14em;margin-bottom:12px;gap:8px}
   .buehne__kicker>span{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis}
@@ -417,7 +427,7 @@ body[data-oben="1"] .frag-knopf{transform:translateY(calc(100% + 40px));pointer-
     width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   .buehne__kicker:has(.buehne__live:not([hidden])) .buehne__live .trenn{display:none}
   /* Zwei Zeilen, beide buendig bis zum Punkt: auf 390 px werden das 55 und 46 px. */
-  .buehne__zeile--1{font-size:15.6cqw;text-shadow:none}
+  .buehne__zeile--1{font-size:15.6cqw}
   .buehne__zeile--2{font-size:13cqw}
   .buehne__satz{display:none}
   .buehne__ut{margin-top:14px}
@@ -2262,9 +2272,22 @@ body[data-frag="1"] .frag-knopf{display:none}
    Bild zoomt darin. Genau ein Wort, sonst ist die Geste verbraucht: STYLE,
    MOVE, EVENTS und FAMILIE bleiben Kontur. background-clip:text ist ueberall
    Baseline, nur Drift und Zoom haengen an der Scroll-Zeitleiste. */
-.riese--bild{-webkit-text-stroke:0;color:transparent;background-size:cover;
-  background-position:50% 30%;-webkit-background-clip:text;background-clip:text;
-  opacity:.32;transform-origin:50% 60%}
+/* Header-Runde 05.09.: bei .32 ohne Kante war das Wort ein brauner Schleier,
+   keine Buchstaben. Die Quelle ist scharf genug (1200x675 auf 916x354), es
+   fehlte Deckkraft und Kontur. cover zoomte das Bild so weit, dass in jedem
+   Buchstaben nur ein Farbverlauf stand; auto 190% laesst Struktur drin. */
+.riese--bild{-webkit-text-stroke:2px rgba(225,226,220,.32);color:transparent;
+  background-size:auto 190%;background-position:50% 42%;
+  -webkit-background-clip:text;background-clip:text;
+  opacity:.66;filter:contrast(1.3) saturate(.8) brightness(1.04);
+  transform-origin:50% 60%}
+/* Wird das Wort lesbar, verliert der Text darueber seinen Grund. Der Textblock
+   bekommt darum einen eigenen weichen Grund, das Wort bleibt Hintergrund. */
+.riese--bild+.mitte{position:relative;z-index:1}
+.riese--bild+.mitte::before{content:"";position:absolute;z-index:-1;
+  inset:-40px -8vw -30px -8vw;pointer-events:none;
+  background:radial-gradient(60% 60% at 50% 50%,rgba(24,24,24,.86) 0,
+    rgba(24,24,24,.7) 55%,rgba(24,24,24,0) 100%)}
 @media (prefers-reduced-motion:no-preference){
   @supports ((animation-timeline:view()) and (animation-range:entry)){
     @keyframes riesenZoom{from{scale:1.08}to{scale:1}}
@@ -4264,7 +4287,23 @@ body[data-frag="1"] .frag-knopf{display:none}
   /* -------- Welcome-Pass-Planer, Deeplink ?class=, Retter-Leiste -------- */
   (function(){
     var panel = document.getElementById('frag'); var url = panel && panel.dataset.url ? panel.dataset.url.replace('/frag', '/plan') : '';
-    var planer = document.getElementById('planer'); if(!planer) return;
+    /* Der Planer ist am 04.09. aus der Seite geflogen (Commit d1322f4).
+       Der Kalender-Nachlader, der ?class=-Deeplink und die Retter-Leiste
+       stehen aber im selben Block und starben an seinem Wachposten mit.
+       Statt auszusteigen bekommt der Block eine Attrappe ohne Dokument:
+       die Planer-Zeilen greifen ins Leere, alles danach laeuft weiter.
+       Kommt der Planer zurueck, greift wieder das echte Element. */
+    var planer = document.getElementById('planer');
+    if(!planer){
+      planer = document.createElement('div');
+      planer.innerHTML = '<button class="planer__start"></button><button class="planer__zeig"></button>'
+        + '<div class="planer__aktionen"></div><div class="planer__ergebnis"></div>'
+        + '<div class="planer__herkunft"></div><a class="planer__ics"></a>'
+        + '<div class="planer__karten"></div><div class="planer__leer"></div>'
+        + '<button class="planer__los"></button><p class="planer__satz"></p>'
+        + '<a class="planer__wa"></a>'
+        + '<div data-frage="stil"><div class="planer__chips"></div></div>';
+    }
     var keys = {}; try { keys = JSON.parse(document.getElementById('coach-keys').textContent) || {}; } catch(e){}
     var SAETZE = {"neu": ["Zwei Abende, zwei Styles. Danach wei\u00dft du, was dein Ding ist.", "Beginner hei\u00dft hier wirklich Anfang. Die H\u00e4lfte im Raum ist zum ersten Mal da.", "Niemand guckt. Alle z\u00e4hlen mit. Und nach 20 Minuten lachst du \u00fcber den dritten Achter.", "Komm in bequemen Sachen, saubere Sneaker, Wasser gibt es gratis. Mehr brauchst du nicht."], "mal": ["Du kennst das Gef\u00fchl schon. Zwei Classes, und du bist wieder drin.", "Zwei Abende, zwei Coaches. Such dir danach aus, wo du bleibst.", "Beginner/Intermediate ist f\u00fcr genau dich: Grundlagen sitzen, Tempo darf kommen."], "oft": ["Du tanzt schon. Dann nimm zwei Classes, die dich fordern, und schau, wer hier unterrichtet.", "Zwei Coaches, zwei Handschriften. Danach wei\u00dft du, wo dein Level liegt.", "Intermediate bei uns ist ehrlich Intermediate. Zwei Abende reichen, um das zu merken."]};
     var STIL_NAMEN = {"pole":"Pole Dance","heels":"Heels","hip-hop":"Hip Hop","commercial":"Commercial","choreo":"Choreography",
@@ -4425,7 +4464,7 @@ body[data-frag="1"] .frag-knopf{display:none}
       if(!url) { plan = ausDom(); return Promise.resolve(plan); }
       return fetch(url).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){ plan = (d && d.classes && d.classes.length) ? d : ausDom(); return plan; }).catch(function(){ plan = ausDom(); return plan; });
     }
-    start.addEventListener('click', function(){ start.setAttribute('aria-expanded', 'true'); inhalt.hidden = false; zaehl('planer_start'); laden().then(stilChips); });
+    if(start) start.addEventListener('click', function(){ start.setAttribute('aria-expanded', 'true'); inhalt.hidden = false; zaehl('planer_start'); laden().then(stilChips); });
     planer.addEventListener('click', function(e){
       var h = e.target.closest('[data-herkunft]'); if(!h) return;
       zaehl('herkunft', h.dataset.herkunft);
@@ -4483,7 +4522,8 @@ body[data-frag="1"] .frag-knopf{display:none}
       });
     })();
     function stilChips(){
-      var box = planer.querySelector('[data-frage="stil"] .planer__chips'); if(box.dataset.fertig || !plan) return; box.dataset.fertig = '1';
+      var box = planer.querySelector('[data-frage="stil"] .planer__chips');
+      if(!box || box.dataset.fertig || !plan) return; box.dataset.fertig = '1';
       var zaehl = {}; plan.classes.forEach(function(c){ var st = stile(c.titel)[0]; if(st && st !== 'kids') zaehl[st] = (zaehl[st] || 0) + 1; });
       Object.keys(STIL_NAMEN).filter(function(k){ return zaehl[k]; }).sort(function(a, b){ return zaehl[b] - zaehl[a]; }).forEach(function(k){ var b = document.createElement('button'); b.type = 'button'; b.dataset.wert = k; b.setAttribute('aria-pressed', 'false'); b.textContent = STIL_NAMEN[k]; box.appendChild(b); });
     }
