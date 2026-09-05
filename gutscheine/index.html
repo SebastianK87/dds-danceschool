@@ -1868,8 +1868,19 @@ body[data-frag="1"] .frag-knopf{display:none}
    lang unter den Bloecken, und ein .block ohne Modifier ist durchsichtig. Ohne
    Grund schiene beim Blassen das stehende Videobild des Kinofensters durch die
    Kacheln (gemessen, elementsFromPoint). Nacht = die Farbe, die dort heute
-   ohnehin durch die Buehne zu sehen ist, das Bild der Seite bleibt gleich. */
-#raster{background:var(--nacht)}
+   ohnehin durch die Buehne zu sehen ist, das Bild der Seite bleibt gleich.
+   Nachbesserung 05.09. (Befund 1): #wie und #faq sind ebenfalls .block ohne
+   Modifier und lagen durchsichtig ueber der stehenden Buehne. Gleicher Grund,
+   damit auch ohne JS und in Firefox nichts durchscheint. */
+#raster,#wie,#faq{background:var(--nacht)}
+/* Nachbesserung 05.09. (Befund 1): bei reduzierter Bewegung gibt es keinen
+   Abgang, die Keyframes (buehne-film, buehne-dunkel, Cinemascope) und der
+   Firefox-Zweig in mitziehen() liegen beide hinter no-preference. Klebte die
+   Buehne trotzdem oben, staenden Video, Titel und Knoepfe hinter jedem Block
+   (gemessen 1440x900: elementsFromPoint bei y 8000 und 10600 zeigte
+   buehne__video unter #wie und #faq). Ohne Sticky scrollt die Buehne wie
+   jeder Block weg, das Blatt legt sich trotzdem mit runder Kante darueber. */
+@media (prefers-reduced-motion:reduce){.buehne{position:relative}}
 /* view()-Zeitleisten messen gegen den naechsten Scroll-Container, und
    overflow:hidden macht jeden .block zu einem: darum lief bisher keine
    view()-Animation in einem Block (gemessen: auch riesenDrift und wortAuf
@@ -1879,7 +1890,7 @@ body[data-frag="1"] .frag-knopf{display:none}
 @media (min-width:701px) and (prefers-reduced-motion:no-preference){
   @supports ((animation-timeline:view()) and (animation-range:entry)){
     @keyframes abtreten{from{transform:none;opacity:1}to{transform:scale(.96);opacity:.5}}
-    #raster>.wrap{transform-origin:50% 100%;contain:paint;animation:abtreten linear both;
+    #raster>.wrap{transform-origin:50% 100%;animation:abtreten linear both;
       animation-timeline:view();animation-range:exit 0% exit 70%}
   }
 }
@@ -1941,15 +1952,24 @@ body[data-frag="1"] .frag-knopf{display:none}
   background-position:50% 30%;filter:saturate(.92);pointer-events:none}
 .gruender__foto[data-akt="1"] .ebene:nth-of-type(1),
 .gruender__foto[data-akt="2"] .ebene:nth-of-type(2){opacity:1}
-.gruender__foto figcaption span{display:none}
-.gruender__foto[data-akt="0"] figcaption span[data-fuer="0"],
-.gruender__foto[data-akt="1"] figcaption span[data-fuer="1"],
-.gruender__foto[data-akt="2"] figcaption span[data-fuer="2"]{display:inline}
-/* Die Zeitleiste steuert (Hover) und zeigt (Uhr): der Goldstrich der
-   aktiven Marke waechst auf 3.5x. */
-.zeit>div::before{transform-origin:left;transition:transform var(--d2) var(--e)}
-.zeit>div.akt::before{transform:scaleX(3.5)}
-@media (hover:hover){.zeit>div[data-i]{cursor:pointer}}
+/* Nur die direkten Spans sind Unterschriften: die Marken-Tasten tragen ihren
+   Text als .nurSR-Span, der bleibt fuer Screenreader da. */
+.gruender__foto figcaption>span{display:none}
+.gruender__foto[data-akt="0"] figcaption>span[data-fuer="0"],
+.gruender__foto[data-akt="1"] figcaption>span[data-fuer="1"],
+.gruender__foto[data-akt="2"] figcaption>span[data-fuer="2"]{display:inline}
+/* Nachbesserung 05.09. (Befund 4): drei Marken unter dem Goldrahmen, im
+   Idiom der Zeitleiste (Goldstrich 2 px). Die aktive Marke steht voll, die
+   anderen auf .35; 44 x 24 px Tastflaeche. Sie steuern das Bild direkt
+   darueber, Steuerung und Wirkung sind im selben Blick. Die Zeitleiste
+   (.zeit) ist wieder reiner Text. */
+.gruender__marken{display:flex;justify-content:center;gap:6px;margin-bottom:10px}
+.gruender__marken button{position:relative;display:block;width:44px;height:24px;padding:0;border-radius:4px}
+.gruender__marken button::before{content:"";position:absolute;left:8px;right:8px;top:11px;height:2px;
+  background:var(--gold);opacity:.35;transition:opacity var(--d2) var(--e)}
+.gruender__marken button[aria-pressed="true"]::before{opacity:1}
+@media (hover:hover){.gruender__marken button:hover::before{opacity:.7}}
+.gruender__marken button:focus-visible{outline:2px solid var(--pink);outline-offset:2px}
 @media (prefers-reduced-motion:no-preference){
   .gruender__foto[data-akt="1"] .ebene:nth-of-type(1),
   .gruender__foto[data-akt="2"] .ebene:nth-of-type(2),
@@ -1963,20 +1983,32 @@ body[data-frag="1"] .frag-knopf{display:none}
    (entry 0 bis 65 %), die 70-ms-Staffel bleibt reine Deckkraft (--weg 0).
    Firefox liest --p (0 bis 1) aus mitziehen(). translate und scale sind
    Einzeleigenschaften, der Hover-Lift auf transform bleibt unberuehrt.
-   Reduced-motion und ohne JS: --zx/--zy fehlen, die Kacheln stehen. */
+   Reduced-motion und ohne JS: --zx/--zy fehlen, die Kacheln stehen.
+   Nachbesserung 05.09. (Befund 2): Fahrt und Auftritt sind EINE Keyframe an
+   der Zeitleiste des Rasters, ohne data-auf. Vorher hing die Fahrt an
+   data-auf, und oeffnen() mass die schon nach innen geschobene Kachel:
+   data-auf kam erst nach zwei Dritteln der Fahrt, bis dahin standen unter
+   der Ueberschrift 300 px Leere, danach liefen Rest-Fahrt und 760-ms-Fade
+   gleichzeitig, und im Kern lagen Kacheln uebereinander. Jetzt: Deckkraft
+   0 bis 25 % der Range, dann 1; Range entry 0 bis 45 % (die Range endet,
+   wenn die Raster-Oberkante die Scroll-Polster-Kante erreicht, am Desktop
+   also nach 366 px); Weg waagerecht .22, senkrecht .4 statt .6 (bauen.py),
+   Startscale .86. data-auf aendert an der Kachel nichts mehr: dieselbe Animation
+   auf beiden Zustaenden, also kein Neustart. oeffnen() misst die Kacheln
+   ausserdem an der Raster-Oberkante (data-mess), das traegt den Firefox-Zweig. */
 .raster{position:relative}
 @media (prefers-reduced-motion:no-preference){
   .raster .kachel{--weg:0px}
   @supports ((animation-timeline:view()) and (animation-range:entry)){
     .raster{view-timeline-name:--r}
-    @keyframes sprengen{from{translate:var(--zx,0px) var(--zy,0px);scale:.88}to{translate:0 0;scale:1}}
-    .raster .kachel{translate:var(--zx,0px) var(--zy,0px);scale:.88}
-    .raster .kachel[data-auf]{animation:auftritt var(--ein2) var(--e-ein) var(--verzug,0ms) backwards,sprengen linear both;
-      animation-timeline:auto,--r;animation-range:normal,entry 0% entry 65%}
+    @keyframes sprengen{0%{translate:var(--zx,0px) var(--zy,0px);scale:.86;opacity:0}
+      25%{opacity:1}100%{translate:0 0;scale:1;opacity:1}}
+    .raster .kachel,.raster .kachel[data-auf]{animation:sprengen linear both;
+      animation-timeline:--r;animation-range:entry 0% entry 45%}
   }
   @supports not ((animation-timeline:view()) and (animation-range:entry)){
     .raster .kachel{translate:calc(var(--zx,0px) * (1 - var(--p,1))) calc(var(--zy,0px) * (1 - var(--p,1)));
-      scale:calc(.88 + .12 * var(--p,1))}
+      scale:calc(.86 + .14 * var(--p,1))}
   }
 }
 
@@ -2027,8 +2059,15 @@ body[data-frag="1"] .frag-knopf{display:none}
    Posten des Kopfs auf dem iPhone), Dunkelheit kommt als Flaeche: ::after .3
    statt brightness(.72), der Schleier (links .94, rechts .5) bleibt, so bleibt
    die Helligkeit von vorher und die Bilder sind scharf. Zwei Nacht-Balken
-   rahmen das Bild wie die Letterbox der Buehne (z 0, .kopf__zwei liegt mit
-   z 1 darueber). Ebene 3 (Poster, 720 px hochkant) steht als Detail auf 1.15;
+   rahmen das Bild wie die Letterbox der Buehne. Nachbesserung 05.09.
+   (Befund 3): die Balken liegen mit z 2 UEBER .kopf__zwei (z 1). Der Zug in
+   mitziehen() zieht Text und Reel-Karte mit 0.22x nach, die Karte lief dabei
+   ueber den unteren Balken hinweg und endete als gerade Schnittkante an der
+   Sektionsgrenze (overflow:hidden). Jetzt taucht sie unter den Balken, der
+   Schnitt liest sich als Letterbox. Hoehe auf 48 px gedeckelt: die Polster
+   des Kopfs (120 px oben, --s4 = 64 px unten) bleiben groesser als der
+   Balken, im Stand ueberdeckt er nichts. Ebene 3 (Poster, 720 px hochkant)
+   steht als Detail auf 1.15;
    auf dem Handy passt das hochkante Poster ins hochkante Fenster, dort steht
    es auf 1. Das 360-Mosaik (ebene--360) faehrt im zweispaltigen Layout auf 1.4
    aus der linken Kante, damit die leuchtende Zahl unter der Reel-Karte liegt
@@ -2046,7 +2085,7 @@ body[data-frag="1"] .frag-knopf{display:none}
 .kopf--reel .kopf__bg[data-akt="1"] .ebene:nth-child(2),
 .kopf--reel .kopf__bg[data-akt="2"] .ebene:nth-child(3){opacity:1}
 .kopf--reel .kopf__bg::after{content:"";position:absolute;inset:0;background:rgba(24,24,24,.3)}
-.kopf__balken{position:absolute;inset:0 0 auto;height:6%;background:var(--nacht);z-index:0;pointer-events:none}
+.kopf__balken{position:absolute;inset:0 0 auto;height:min(6%,48px);background:var(--nacht);z-index:2;pointer-events:none}
 .kopf__balken--u{inset:auto 0 0}
 @media (max-width:860px){
   /* Einspaltig liegt die Reel-Karte unter dem Text: die Zahl faehrt aus der
@@ -2428,18 +2467,24 @@ body[data-frag="1"] .frag-knopf{display:none}
      getBoundingClientRect: die Kachel steht beim Messen evtl. schon
      verschoben. Versteckte Ansicht (Breite 0): abbrechen und nach dem
      naechsten Ansichtswechsel (hashchange, ein Frame spaeter) erneut messen.
-     Faktor .6 am Desktop, .35 auf dem Handy. Reduced-motion: kein Weg. */
+     Nachbesserung 05.09. (Befund 2): mit .6 lagen die Karten im Kern
+     uebereinander. Gemessen: nur der WAAGERECHTE Weg erzeugt sichtbare
+     Ueberdeckung (Nachbarn einer Reihe schliessen auf, waehrend die Reihe
+     unten ins Bild kommt); die Reihen darunter stehen schon, wenn sie
+     erscheinen. Darum zwei Faktoren: waagerecht .22, senkrecht .4 am
+     Desktop, .2 und .3 auf dem Handy. Mit Startscale .86 bleibt zwischen
+     zwei Nachbarn beim Eintritt Luft. Reduced-motion: kein Weg. */
   var rasterEl = document.querySelector('.raster');
   var rasterKacheln = rasterEl ? [].slice.call(rasterEl.querySelectorAll('.kachel')) : [];
   function rasterMessen(){
     if(ruhig || !rasterEl) return;
     var w = rasterEl.offsetWidth, h = rasterEl.offsetHeight;
     if(!w) return;
-    var f = innerWidth > 700 ? 0.6 : 0.35, cx = w / 2, cy = h / 2;
+    var breit = innerWidth > 700, fx = breit ? 0.22 : 0.2, fy = breit ? 0.4 : 0.3, cx = w / 2, cy = h / 2;
     rasterKacheln.forEach(function(k){
       var kx = k.offsetLeft + k.offsetWidth / 2, ky = k.offsetTop + k.offsetHeight / 2;
-      k.style.setProperty('--zx', Math.round((cx - kx) * f) + 'px');
-      k.style.setProperty('--zy', Math.round((cy - ky) * f) + 'px');
+      k.style.setProperty('--zx', Math.round((cx - kx) * fx) + 'px');
+      k.style.setProperty('--zy', Math.round((cy - ky) * fy) + 'px');
     });
   }
   rasterMessen();
@@ -2703,7 +2748,13 @@ body[data-frag="1"] .frag-knopf{display:none}
     var offen = a.querySelectorAll('.zeigt:not([data-auf])');
     var faellig = [];
     for(var i = 0; i < offen.length; i++){
-      var el = offen[i], r = el.getBoundingClientRect();
+      var el = offen[i];
+      /* Nachbesserung 05.09. (Befund 2): data-mess nennt einen Vorfahren, an
+         dessen Oberkante gemessen wird. Die Raster-Kacheln stehen vor der
+         Sprengung nach innen geschoben, ihre eigene Kante kam darum erst
+         nach zwei Dritteln der Fahrt ueber die Schwelle. */
+      var mess = el.dataset.mess ? (el.closest(el.dataset.mess) || el) : el;
+      var r = mess.getBoundingClientRect();
       /* Hohe Bloecke duerfen frueher ausloesen, sonst spielt die halbe Karte
          unterhalb der Kante ab. parseFloat auf einem fehlenden Attribut ist NaN. */
       var s = parseFloat(el.dataset.schwelle) || 0.94;
@@ -2832,7 +2883,9 @@ body[data-frag="1"] .frag-knopf{display:none}
        die Klasse hiess hier .kopf__in, die gibt es im Neubau nicht, der Zug
        lief also nie. Nur im zweispaltigen Layout (ab 861 px): darunter
        stapelt sich die Reel-Karte unter den Text und laege beim Hinscrollen
-       schon bei Deckkraft 0. */
+       schon bei Deckkraft 0. Nachbesserung 05.09. (Befund 3): Deckkraft bis
+       60 vh statt 85 vh auf 0, die Balken liegen jetzt als Letterbox ueber
+       dem Zug (z 2), die Karte taucht darunter statt an der Kante zu enden. */
     var teile = document.querySelectorAll('.ansicht:not([hidden]) .kopf__zwei');
     if(!teile.length) return;
     if(!kopfBreit.matches){
@@ -2841,7 +2894,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     }
     var tief = Math.min(y, innerHeight);
     var weg = 'translate3d(0,' + (tief * 0.22) + 'px,0)';
-    var deck = String(Math.max(0, 1 - tief / (innerHeight * 0.85)));
+    var deck = String(Math.max(0, 1 - tief / (innerHeight * 0.6)));
     for(var i = 0; i < teile.length; i++){
       teile[i].style.transform = weg;
       teile[i].style.opacity = deck;
@@ -2865,8 +2918,9 @@ body[data-frag="1"] .frag-knopf{display:none}
        Filter stehen sofort. Es bewegen sich nur Medien und die Anker eines
        Abschnitts, und es gibt genau zwei Staffeln: die Kacheln und die
        Zeitleiste. */
+    /* Viertes Feld (optional): Vorfahre, an dessen Oberkante oeffnen() misst. */
     var gruppen = [
-      ['.raster .kachel',  'zeigt',                     70],
+      ['.raster .kachel',  'zeigt',                     70, '.raster'],
       ['.band',            'zeigt zeigt--anker',         0],
       ['.band-laeuft',     'zeigt',                      0],
       ['.kopf--voll .kopf__tasten', 'zeigt',           0],
@@ -2891,6 +2945,7 @@ body[data-frag="1"] .frag-knopf{display:none}
         if(el.closest('.buehne')) return;
         g[1].split(' ').forEach(function(k){ el.classList.add(k); });
         if(g[2]) el.dataset.staffel = g[2];
+        if(g[3]) el.dataset.mess = g[3];
       });
     });
     oeffnen();
@@ -3895,13 +3950,18 @@ body[data-frag="1"] .frag-knopf{display:none}
      (Goldrahmen gezeichnet). Schnitt statt Blende: das CSS wechselt die
      Ebene hart, das Setzen macht die Ebene selbst. data-lief markiert, dass
      schon geschnitten wurde (das Grundbild setzt sich dann auch). Spaetere
-     Buehnen (Kursseiten-Kopf, v2-07) haengen sich mit demselben Attribut an. */
+     Buehnen (Kursseiten-Kopf, v2-07) haengen sich mit demselben Attribut an.
+     Nachbesserung 05.09. (Befund 4): data-runden="n" = so viele volle Runden,
+     dann steht die Buehne auf dem Grundbild (data-halt). Ohne data-runden
+     laeuft sie weiter (Kursseiten-Kopf). Die Marken-Tasten unter dem
+     Goldrahmen setzen das Bild von Hand und halten die Uhr an; sie gehen auch
+     bei reduzierter Bewegung (harter Schnitt, das Setzen liegt im CSS hinter
+     no-preference). */
   (function(){
-    if(ruhig) return;
     var uhren = Array.prototype.slice.call(document.querySelectorAll('[data-takt]'));
     if(!uhren.length) return;
-    var zeit = Array.prototype.slice.call(document.querySelectorAll('.zeit>div[data-i]'));
     var gruender = document.querySelector('.gruender__foto[data-takt]');
+    var marken = gruender ? Array.prototype.slice.call(gruender.querySelectorAll('.gruender__marken button')) : [];
     function schlaege(el){
       return (el.dataset.takt || '').trim().split(/\s+/).map(function(x){ return parseInt(x, 10) || 1; });
     }
@@ -3910,31 +3970,40 @@ body[data-frag="1"] .frag-knopf{display:none}
       i = ((i % s.length) + s.length) % s.length;
       el.dataset.akt = String(i);
       el.__n = 0;
-      if(el === gruender) zeit.forEach(function(z){ z.classList.toggle('akt', parseInt(z.dataset.i, 10) === i); });
+      if(el === gruender) marken.forEach(function(m){ m.setAttribute('aria-pressed', String(parseInt(m.dataset.fuer, 10) === i)); });
     }
     function darf(el){
       if(document.hidden || document.body.dataset.ruhe === '1') return false;
-      if(el.closest('[hidden]')) return false;
+      if(el.dataset.halt || el.closest('[hidden]')) return false;
       if(el.classList.contains('zeigt') && !el.dataset.auf) return false;
       var r = el.getBoundingClientRect();
       return r.width > 0 && r.bottom > 0 && r.top < innerHeight;
     }
-    var takt = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--takt')) || 500;
-    setInterval(function(){
-      uhren.forEach(function(el){
-        if(!darf(el)) return;
-        var s = schlaege(el), akt = parseInt(el.dataset.akt, 10) || 0;
-        el.__n = (el.__n || 0) + 1;
-        if(el.__n >= (s[akt] || 1)){
-          el.dataset.lief = '1';
-          setzen(el, akt + 1);
-        }
+    if(!ruhig){
+      var takt = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--takt')) || 500;
+      setInterval(function(){
+        uhren.forEach(function(el){
+          if(!darf(el)) return;
+          var s = schlaege(el), akt = parseInt(el.dataset.akt, 10) || 0;
+          el.__n = (el.__n || 0) + 1;
+          if(el.__n >= (s[akt] || 1)){
+            el.dataset.lief = '1';
+            var n = akt + 1;
+            if(n >= s.length){
+              el.__runden = (el.__runden || 0) + 1;
+              var max = parseInt(el.dataset.runden, 10);
+              if(max && el.__runden >= max) el.dataset.halt = '1';
+            }
+            setzen(el, n);
+          }
+        });
+      }, takt);
+    }
+    marken.forEach(function(m){
+      m.addEventListener('click', function(){
+        gruender.dataset.halt = '1';
+        setzen(gruender, parseInt(m.dataset.fuer, 10) || 0);
       });
-    }, takt);
-    zeit.forEach(function(z){
-      function hin(){ if(gruender) setzen(gruender, parseInt(z.dataset.i, 10) || 0); }
-      z.addEventListener('pointerenter', hin);
-      z.addEventListener('focusin', hin);
     });
     if(gruender) setzen(gruender, 0);
     addEventListener('hashchange', function(){ uhren.forEach(function(el){ setzen(el, 0); }); });
