@@ -1078,9 +1078,12 @@ a.trainer span{color:var(--pink)}
   margin-top:18px}
 
 /* Der Kalender zeigt erst einen Ausschnitt */
-.klappe{max-height:640px;overflow:hidden;position:relative;--klappe-grund:var(--hell)}
+/* Kalender-Runde 05.09.: 640 px reichten fuer den Tageskopf und knapp vier
+   Zeilen, von denen der Verlauf die letzten zwei schluckte. Jetzt so hoch,
+   dass acht Termine im Bild stehen (Zeile 82 px, Tageskopf rund 90). */
+.klappe{max-height:880px;overflow:hidden;position:relative;--klappe-grund:var(--hell)}
 .block--tief .klappe,.block--ink .klappe{--klappe-grund:var(--tief)}
-.klappe::after{content:"";position:absolute;inset:auto 0 0;height:210px;
+.klappe::after{content:"";position:absolute;inset:auto 0 0;height:150px;
   background:linear-gradient(to top,var(--klappe-grund) 34%,transparent);pointer-events:none}
 .klappe--offen{max-height:none}
 .klappe--offen::after{display:none}
@@ -3762,18 +3765,37 @@ body[data-frag="1"] .frag-knopf{display:none}
     liste.querySelectorAll('[data-tag]').forEach(function(g){
       g.querySelectorAll('.termin--kids').forEach(function(t){ g.appendChild(t); });
     });
-    /* Heute nichts mehr buchbar: auf den naechsten Tag springen */
+    /* Heute zu duenn: auf den naechsten Tag springen, der eine echte Auswahl
+       hat. Bis 05.09. sprang das erst, wenn heute GAR NICHTS mehr uebrig war;
+       am Nachmittag stand der Kalender dann mit einer einzigen Zeile da, obwohl
+       am naechsten Tag zwanzig Classes laufen. Jetzt zaehlt er: unter sechs
+       buchbaren Terminen sucht er den naechsten Tag mit mindestens sechs, und
+       wenn es den in der Woche nicht gibt, den mit den meisten. */
+    var MINDESTENS = 6;
+    function offen(tag){
+      var g = liste.querySelector('[data-tag="' + tag + '"]');
+      return g ? g.querySelectorAll('.termin:not(.vorbei)').length : 0;
+    }
     var chips = document.querySelector('.tagchips[data-fuer="liste-kalender"]');
     var aktiv = chips && chips.querySelector('button[aria-pressed="true"]');
-    if(aktiv && aktiv.dataset.chip !== 'alle'){
-      var g = liste.querySelector('[data-tag="' + aktiv.dataset.chip + '"]');
-      if(g && !g.querySelector('.termin:not(.vorbei)')){
-        var folge = ['Mo','Di','Mi','Do','Fr','Sa','So'];
-        var i = folge.indexOf(aktiv.dataset.chip);
-        for(var k = 1; k < 7; k++){
-          var z = chips.querySelector('button[data-chip="' + folge[(i + k) % 7] + '"]');
-          if(z){ z.click(); break; }
-        }
+    if(chips && aktiv && aktiv.dataset.chip !== 'alle' && offen(aktiv.dataset.chip) < MINDESTENS){
+      var folge = ['Mo','Di','Mi','Do','Fr','Sa','So'];
+      var i = folge.indexOf(aktiv.dataset.chip);
+      var bester = null, bestN = offen(aktiv.dataset.chip);
+      for(var k = 1; k < 7; k++){
+        var tag = folge[(i + k) % 7];
+        var z = chips.querySelector('button[data-chip="' + tag + '"]');
+        if(!z) continue;
+        var n = offen(tag);
+        if(n >= MINDESTENS){ bester = z; break; }
+        if(n > bestN){ bestN = n; bester = z; }
+      }
+      /* Reicht auch der beste Tag nicht (am Wochenende ist die laufende Woche
+         fast durch), dann alle verbleibenden Tage zeigen statt einer Zeile. */
+      if(bester && bestN >= MINDESTENS) bester.click();
+      else {
+        var alle = chips.querySelector('button[data-chip="alle"]');
+        if(alle) alle.click(); else if(bester) bester.click();
       }
     }
   })();
@@ -4256,7 +4278,18 @@ body[data-frag="1"] .frag-knopf{display:none}
       var STUFEN = {a: 'a', ab: 'am', m: 'm', f: 'f', x: 'amf'};
       function esc(x){ return String(x).replace(/[&<>"]/g, function(c){ return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
       function sonntag(){ var d = new Date(JETZT.iso + 'T12:00:00Z'); var wt = (d.getUTCDay() + 6) % 7; return new Date(d.getTime() + (6 - wt) * 86400000).toISOString().slice(0, 10); }
-      laden().then(function(d){ if(d && d.classes && d.classes.some(function(c){ return c.datum > sonntag(); })) knopf.hidden = false; });
+      laden().then(function(d){
+        if(!(d && d.classes && d.classes.some(function(c){ return c.datum > sonntag(); }))) return;
+        knopf.hidden = false;
+        /* Am Wochenende ist die laufende Woche fast durch. Dann laedt die
+           naechste Woche von selbst nach und der Kalender steht nicht mit
+           zwei Zeilen da; danach zeigt er alle Tage. */
+        if(liste.querySelectorAll('.termin:not(.vorbei)').length < 8){
+          knopf.click();
+          var alleChip = document.querySelector('.tagchips[data-fuer="liste-kalender"] button[data-chip="alle"]');
+          if(alleChip) setTimeout(function(){ alleChip.click(); }, 500);
+        }
+      });
       knopf.addEventListener('click', function(){
         laden().then(function(d){
           if(!d || !d.classes) return;
