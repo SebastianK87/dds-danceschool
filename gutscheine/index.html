@@ -2372,6 +2372,16 @@ body[data-frag="1"] .frag-knopf{display:none}
       var vorbei = k.classList.contains('buehne')
         ? scrollY > k.offsetHeight
         : k.getBoundingClientRect().bottom < 0;
+      /* Auf der Kursseite fuehrt die Leiste zu den Terminen. Steht der
+         Kursplan selbst im Bild, haengt sie nur ueber den Zeilen und
+         verdeckt Buchen-Knoepfe (Bug 05.09.). Dann weicht sie. */
+      if(vorbei){
+        var plan = document.querySelector('.ansicht:not([hidden]) section[id^="termine-"]');
+        if(plan){
+          var pr = plan.getBoundingClientRect();
+          if(pr.top < innerHeight * 0.75 && pr.bottom > innerHeight * 0.4) vorbei = false;
+        }
+      }
       leiste.dataset.zeig = vorbei ? '1' : '0';
     };
     addEventListener('scroll', beobKopf, {passive:true});
@@ -2662,9 +2672,16 @@ body[data-frag="1"] .frag-knopf{display:none}
     }
     /* Solange das Menue offen ist, ist der Rest der Seite nicht bedienbar.
        inert nimmt Maus, Tastatur und Screenreader in einem Zug. */
+    /* Nicht die ganze Kopfzeile: der Burger steht darin und muss das Menue
+       auch wieder schliessen. inert nimmt einem Element auch die Treffbarkeit
+       fuer die Maus, ein inertes .top machte den Knopf tot (Bug 05.09.).
+       Die Knoepfe der Kopfzeile bleiben bedienbar, sie liegen sichtbar ueber
+       dem Menue und schliessen es selbst (data-heim). Nur Marke, Zurueck und
+       die Schiene links werden gesperrt, dazu der Inhalt. */
     var haupt = document.getElementById('inhalt');
-    var kopf  = document.querySelector('.top');
-    [haupt, kopf].forEach(function(x){ if(x) x.inert = offen; });
+    var sperren = document.querySelectorAll('.top .marke, .top .zurueck, .schiene');
+    if(haupt) haupt.inert = offen;
+    for(var si = 0; si < sperren.length; si++) sperren[si].inert = offen;
     if(burger){
       burger.setAttribute('aria-expanded', String(offen));
       burger.querySelector('.zu').hidden  = offen;
@@ -2726,7 +2743,17 @@ body[data-frag="1"] .frag-knopf{display:none}
       if(a.dataset.ansicht === 'kurs'){
         var h = a.querySelector('h1');
         var m = (a.dataset.melde || '').match(/(\d+) Classes/);
-        b.textContent = h ? h.textContent : 'Diese Woche';
+        /* Die H1 traegt den Kicker ("Hip Hop Kurse in Berlin Mitte") als
+           Kind. textContent klebte beides zusammen, die Leiste sagte
+           "Hip Hop Kurse in Berlin Mitte Hip Hop" (Bug 05.09.). Nur der
+           Name gehoert in die Leiste. */
+        var name = '';
+        if(h){
+          var hk = h.cloneNode(true);
+          hk.querySelectorAll('.kicker').forEach(function(x){ x.remove(); });
+          name = hk.textContent.replace(/\s+/g, ' ').trim();
+        }
+        b.textContent = name || 'Diese Woche';
         t.textContent = m ? m[1] + ' Classes diese Woche' : 'Diese Woche';
         k.textContent = 'Zu den Terminen';
         k.setAttribute('href', '#termine-' + a.id.replace('kurs-',''));
