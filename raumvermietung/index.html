@@ -4040,7 +4040,11 @@ body[data-frag="1"] .frag-knopf{display:none}
       var offen = ziel.classList.toggle('klappe--offen');
       b.setAttribute('aria-expanded', String(offen));
       b.textContent = offen ? 'Weniger anzeigen' : 'Mehr anzeigen';
-      nachreichen();   /* frisch aufgeklappte Zeilen sonst auf opacity 0 */
+      /* nachreichen() lebt im Sichtbereich von bauen.py und wird dort als
+         window.__nachreichen exportiert; bar gerufen ist es hier undefiniert
+         und die Klappe brach mit ReferenceError ab. Gleiche Schreibweise wie
+         der Wachposten in bauen.py. */
+      if(typeof window.__nachreichen === 'function') window.__nachreichen();
       if(!offen){
         var sek = ziel.closest('section');
         if(sek) sek.scrollIntoView({behavior: ruhig ? 'auto' : 'smooth'});
