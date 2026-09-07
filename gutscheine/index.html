@@ -4533,7 +4533,13 @@ body[data-frag="1"] .frag-knopf{display:none}
           var stil = document.querySelector('[data-stilfilter="liste-kalender"] [aria-pressed="true"]'); if(stil && stil.dataset.stil !== 'alle') stil.click();
           var lvl = document.querySelector('.filter[data-filter="liste-kalender"] [aria-pressed="true"]'); if(lvl && lvl.dataset.stufe !== 'alle'){ lvl.click(); }
           var chip = document.querySelector('.tagchips[data-fuer="liste-kalender"] [data-chip="alle"]'); if(chip) chip.click();
-          var klappeKnopf = document.querySelector('.klappe__knopf'); if(klappeKnopf && klappeKnopf.getAttribute('aria-expanded') === 'false') klappeKnopf.click();
+          /* Hier klappte der Kalender sich selbst auf, damit die eben
+             nachgeladene Woche nicht hinter der Pixelgrenze verschwand. Das
+             war der Grund, warum die Startseite alle Termine zeigte: das
+             Nachladen laeuft beim Aufbau von allein, wenn die laufende Woche
+             fast durch ist. Seit die Begrenzung zaehlt statt misst, stehen
+             ohnehin acht Termine da (auf dem Handy drei) und der Rest liegt
+             hinter "Mehr anzeigen" - aufklappen muss hier niemand mehr. */
           knopf.remove(); zaehl('naechste_woche');
         });
       });
