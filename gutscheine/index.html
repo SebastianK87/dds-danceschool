@@ -2662,6 +2662,19 @@ body[data-frag="1"] .frag-knopf{display:none}
   #uebersicht>#auch{order:12}
 }
 
+/* ---------- Kalender 07.09.: acht Termine, mobil drei ----------
+   Die Klappe begrenzte ueber `max-height:880px`, also ueber Pixel. Wie viele
+   Termine das sind, haengt damit an Schriftgroesse, Zeilenumbruch und
+   Geraetebreite - mal sechs, mal alle. Jetzt zaehlt JavaScript die Termine,
+   die der Filter uebrig laesst, und markiert alles ab dem neunten (auf dem
+   Handy ab dem vierten) mit .zuviel. Die Pixelgrenze faellt fuer Listen mit
+   Terminen weg, und mit ihr der Verlauf am unteren Rand: es wird keine Zeile
+   mehr angeschnitten, die man ausblenden muesste. */
+.klappe:has(.termin){max-height:none}
+.klappe:has(.termin)::after{display:none}
+.klappe:has(.termin) + .klappe__mehr{margin-top:var(--s2)}
+.klappe:not(.klappe--offen) .termin.zuviel{display:none}
+
 /* ---------- Handy-Check 05.09.: seitliches Schieben ----------
    Gemessen auf 393 px: der Inhalt war 436 px breit, die Seite liess sich
    43 px nach rechts schieben. `html{overflow-x:hidden}` klippt das in WebKit
@@ -4868,6 +4881,53 @@ body[data-frag="1"] .frag-knopf{display:none}
    geschlossen - und beim Drehen ins Querformat wieder geoeffnet, sonst
    haengt am breiten Schirm ein zugeklappter Block. Hat der Besucher selbst
    aufgeklappt, bleibt das so: dann fasst der Umschalter nichts mehr an. */
+/* Kalender 07.09.: acht Termine sichtbar, auf dem Handy drei, der Rest
+   hinter "Mehr anzeigen". Gezaehlt wird, was der Filter uebrig laesst - eine
+   CSS-Regel mit :nth-child koennte das nicht, sie zaehlt auch die
+   ausgeblendeten mit. Ein MutationObserver haengt an der Liste statt an den
+   einzelnen Filterknoepfen: der Kalender wird an mehreren Stellen neu
+   aufgebaut (Tageswahl, Stilfilter, Levelfilter, naechste Woche nachladen),
+   und so muss keine davon davon wissen. */
+(function(){
+  'use strict';
+  var listen = [].slice.call(document.querySelectorAll('.klappe'))
+    .filter(function(l){ return l.querySelector('.termin'); });
+  if(!listen.length) return;
+  var schmal = window.matchMedia ? matchMedia('(max-width:700px)') : {matches: false};
+  var geplant = false, schreibt = false;
+
+  function begrenzen(){
+    geplant = false; schreibt = true;
+    var n = schmal.matches ? 3 : 8;
+    listen.forEach(function(l){
+      var alle = [].slice.call(l.querySelectorAll('.termin'));
+      /* Erst alle Marken loeschen, dann EINMAL lesen, dann schreiben. Lesen
+         und Schreiben abwechselnd wuerde pro Termin ein Layout erzwingen. */
+      alle.forEach(function(t){ t.classList.remove('zuviel'); });
+      var sichtbar = alle.filter(function(t){ return t.offsetParent !== null; });
+      sichtbar.forEach(function(t, i){ if(i >= n) t.classList.add('zuviel'); });
+      var knopf = document.querySelector('.klappe__knopf[aria-controls="' + l.id + '"]');
+      if(knopf) knopf.hidden = sichtbar.length <= n;
+    });
+    /* Die eigenen Schreibvorgaenge wecken den Observer. Der Riegel faellt
+       erst im naechsten Bild, danach sind die Rueckmeldungen durch. */
+    requestAnimationFrame(function(){ schreibt = false; });
+  }
+  function planen(){
+    if(geplant || schreibt) return;
+    geplant = true; requestAnimationFrame(begrenzen);
+  }
+
+  listen.forEach(function(l){
+    new MutationObserver(planen).observe(l,
+      {childList: true, subtree: true, attributes: true,
+       attributeFilter: ['hidden', 'class', 'style']});
+  });
+  if(schmal.addEventListener) schmal.addEventListener('change', planen);
+  else if(schmal.addListener) schmal.addListener(planen);
+  begrenzen();
+})();
+
 /* Mobile-Runde 05.09.: nach einem Sprung bleibt die Leiste stehen.
    Waehrend des weichen Scrollens nach unten taucht die Kopfzeile ab (v2-17),
    und der Besucher landet unter 127 px Luft ohne jede Navigation. Sobald das
