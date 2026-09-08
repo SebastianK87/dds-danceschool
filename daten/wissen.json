@@ -612,8 +612,21 @@
    ]
   },
   {
-   "name": "Julia",
+   "name": "Jule",
    "key": "c-22",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Pole"
+   ],
+   "classes": 1,
+   "tage": [
+    "Mi"
+   ]
+  },
+  {
+   "name": "Julia",
+   "key": "c-23",
    "rolle": "Commercial Coach",
    "motto": "Julia holt aus dir Präsenz, Power und Selbstbewusstsein, ohne dabei den Spaß am Tanzen zu verlieren.",
    "stile": [
@@ -628,7 +641,7 @@
   },
   {
    "name": "July",
-   "key": "c-23",
+   "key": "c-24",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -641,7 +654,7 @@
   },
   {
    "name": "Kate",
-   "key": "c-24",
+   "key": "c-25",
    "rolle": "House Dance Coach",
    "motto": "Kate verbindet solide Basics mit echtem Freiheitsgefühl, du gehst empowered und stolz nach Hause.",
    "stile": [
@@ -654,7 +667,7 @@
   },
   {
    "name": "Kathy",
-   "key": "c-25",
+   "key": "c-26",
    "rolle": "Reggaeton & Latin Dance Coach",
    "motto": "Rhythm. Cultura. Confidence.",
    "stile": [
@@ -666,8 +679,22 @@
    ]
   },
   {
+   "name": "Lara",
+   "key": "c-27",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Heels",
+    "Pole"
+   ],
+   "classes": 2,
+   "tage": [
+    "So"
+   ]
+  },
+  {
    "name": "Laura",
-   "key": "c-26",
+   "key": "c-28",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -680,7 +707,7 @@
   },
   {
    "name": "Laura Ann",
-   "key": "c-27",
+   "key": "c-29",
    "rolle": "Contemporary Fusion Coach",
    "motto": "Technique meets freedom, finde deinen Flow und deine eigene Ausdruckskraft.",
    "stile": [
@@ -693,7 +720,7 @@
   },
   {
    "name": "Laura Klein",
-   "key": "c-28",
+   "key": "c-30",
    "rolle": "Commercial Coach",
    "motto": "Power. Presence. Performance.",
    "stile": [
@@ -707,8 +734,21 @@
    ]
   },
   {
+   "name": "Laura Lareeva",
+   "key": "c-31",
+   "rolle": "Heels Coach",
+   "motto": "Heels ist mehr als Technik, es ist Selbstbewusstsein.",
+   "stile": [
+    "Heels"
+   ],
+   "classes": 2,
+   "tage": [
+    "Di"
+   ]
+  },
+  {
    "name": "Laura&Romy",
-   "key": "c-29",
+   "key": "c-32",
    "rolle": "Jazz Technique Coaches",
    "motto": "Technik. Präzision. Fokus., Intensives Jazz-Training auf hohem Niveau.",
    "stile": [
@@ -721,7 +761,7 @@
   },
   {
    "name": "Lavinia",
-   "key": "c-30",
+   "key": "c-33",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -734,7 +774,7 @@
   },
   {
    "name": "Levin & Sophie",
-   "key": "c-31",
+   "key": "c-34",
    "rolle": "Hip Hop Fusion Coaches",
    "motto": "Flow trifft Präzision, moderne Movement Quality mit Ausdruck und Power.",
    "stile": [
@@ -747,7 +787,7 @@
   },
   {
    "name": "Lili",
-   "key": "c-32",
+   "key": "c-35",
    "rolle": "Commercial Coach",
    "motto": "Lili bringt Show-Feeling ins Studio und schafft einen Space, in dem du mit Spaß und Selbstbewusstsein über dich hinauswächst.",
    "stile": [
@@ -760,7 +800,7 @@
   },
   {
    "name": "Lisa Klingner",
-   "key": "c-33",
+   "key": "c-36",
    "rolle": "Contemporary Fusion Coach",
    "motto": "Leave your comfort zone, and find yourself there.",
    "stile": [
@@ -773,8 +813,21 @@
    ]
   },
   {
+   "name": "Liv",
+   "key": "c-37",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Contemporary & Jazz"
+   ],
+   "classes": 1,
+   "tage": [
+    "Do"
+   ]
+  },
+  {
    "name": "Lya",
-   "key": "c-34",
+   "key": "c-38",
    "rolle": "",
    "motto": "Rhythmus, Energie und kultureller Ausdruck",
    "stile": [
@@ -786,8 +839,21 @@
    ]
   },
   {
+   "name": "Maja",
+   "key": "c-39",
+   "rolle": "",
+   "motto": "",
+   "stile": [
+    "Aerial Hoop"
+   ],
+   "classes": 2,
+   "tage": [
+    "Sa"
+   ]
+  },
+  {
    "name": "Maxine",
-   "key": "c-35",
+   "key": "c-40",
    "rolle": "Dance Athletics Coach",
    "motto": "Maxine bringt Athletik ins Studio und macht deinen Körper zur kompromisslosen Power-Maschine für Bühne und Alltag.",
    "stile": [
@@ -801,7 +867,7 @@
   },
   {
    "name": "Mehak",
-   "key": "c-36",
+   "key": "c-41",
    "rolle": "Bollywood Fusion Coach",
    "motto": "Main character energy meets Bollywood fire.",
    "stile": [
@@ -814,7 +880,7 @@
   },
   {
    "name": "Melis",
-   "key": "c-37",
+   "key": "c-42",
    "rolle": "K-Pop Coach",
    "motto": "Melis verbindet K-Pop-Energie mit Bühnen-Erfahrung und bringt ein echtes Performance-Feeling ins Studio.",
    "stile": [
@@ -827,7 +893,7 @@
   },
   {
    "name": "Michelle (Schelle) Dzida",
-   "key": "c-38",
+   "key": "c-43",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -845,7 +911,7 @@
   },
   {
    "name": "Michelle Dischleit",
-   "key": "c-39",
+   "key": "c-44",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -859,7 +925,7 @@
   },
   {
    "name": "Moritz",
-   "key": "c-40",
+   "key": "c-45",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -873,7 +939,7 @@
   },
   {
    "name": "Nate",
-   "key": "c-41",
+   "key": "c-46",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -891,7 +957,7 @@
   },
   {
    "name": "Neha",
-   "key": "c-42",
+   "key": "c-47",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -905,7 +971,7 @@
   },
   {
    "name": "Parmida",
-   "key": "c-43",
+   "key": "c-48",
    "rolle": "Choreography Coach",
    "motto": "Show up. Be real. Find your own character in movement.",
    "stile": [
@@ -920,7 +986,7 @@
   },
   {
    "name": "Rafael",
-   "key": "c-44",
+   "key": "c-49",
    "rolle": "Latin & Pop Coach",
    "motto": "Feel the rhythm. Move together. Share the energy.",
    "stile": [
@@ -934,7 +1000,7 @@
   },
   {
    "name": "Ricco",
-   "key": "c-45",
+   "key": "c-50",
    "rolle": "Afrobeats & Commercial Coach",
    "motto": "Strong vibes. Real culture. Confident performance.",
    "stile": [
@@ -948,7 +1014,7 @@
   },
   {
    "name": "Rieke",
-   "key": "c-46",
+   "key": "c-51",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -961,7 +1027,7 @@
   },
   {
    "name": "Roman",
-   "key": "c-47",
+   "key": "c-52",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -974,7 +1040,7 @@
   },
   {
    "name": "Samy",
-   "key": "c-48",
+   "key": "c-53",
    "rolle": "Hip Hop / Commercial Coach",
    "motto": "Train hard. Feel free. Dance like you’re in the club.",
    "stile": [
@@ -987,7 +1053,7 @@
   },
   {
    "name": "Sara",
-   "key": "c-49",
+   "key": "c-54",
    "rolle": "Pole Dance Coach",
    "motto": "Level up mit Technik, Flow und Selbstvertrauen.",
    "stile": [
@@ -1001,7 +1067,7 @@
   },
   {
    "name": "Sarah",
-   "key": "c-50",
+   "key": "c-55",
    "rolle": "Hip Hop & Commercial Coach",
    "motto": "Sarah schafft einen Safe Space mit Power und bringt dich mit Energie, Bühnenexperience und echtem Growth aufs nächste Level.",
    "stile": [
@@ -1014,7 +1080,7 @@
   },
   {
    "name": "Sasha",
-   "key": "c-51",
+   "key": "c-56",
    "rolle": "Pole Dance & Heels Coach",
    "motto": "Kraft trifft Sinnlichkeit, Technik, Ausdruck und individueller Flow in perfekter Balance.",
    "stile": [
@@ -1029,7 +1095,7 @@
   },
   {
    "name": "Sofian",
-   "key": "c-52",
+   "key": "c-57",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -1042,7 +1108,7 @@
   },
   {
    "name": "Sophie Kolter",
-   "key": "c-53",
+   "key": "c-58",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -1058,7 +1124,7 @@
   },
   {
    "name": "Steffi",
-   "key": "c-54",
+   "key": "c-59",
    "rolle": "Fitness & Commercial Coach",
    "motto": "Strong body. Strong mind. Sustainable growth.",
    "stile": [
@@ -1072,7 +1138,7 @@
   },
   {
    "name": "Tania",
-   "key": "c-55",
+   "key": "c-60",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -1085,7 +1151,7 @@
   },
   {
    "name": "Ulie Gross",
-   "key": "c-56",
+   "key": "c-61",
    "rolle": "Contemporary Coach & Dance Science Specialist",
    "motto": "Künstlerische Exzellenz verbunden mit wissenschaftlicher Präzision, für nachhaltige Stärke auf und hinter der Bühne.",
    "stile": [
@@ -1098,7 +1164,7 @@
   },
   {
    "name": "Yves",
-   "key": "c-57",
+   "key": "c-62",
    "rolle": "Senior Coach Kids, Teens & Adults",
    "motto": "Von der Bühne zur Company: Yves verbindet jahrzehntelange Tour-Erfahrung mit Nachwuchsförderung, Energie und echter Leidenschaft für Bewegung.",
    "stile": [
@@ -1113,7 +1179,7 @@
   },
   {
    "name": "Zandra Zoe",
-   "key": "c-58",
+   "key": "c-63",
    "rolle": "",
    "motto": "",
    "stile": [
@@ -1250,7 +1316,7 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 27,
+   "frei": 26,
    "gesamt": 50,
    "stile": [
     "heels"
@@ -1402,7 +1468,7 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 38,
+   "frei": 37,
    "gesamt": 50,
    "stile": [
     "heels"
@@ -1495,7 +1561,7 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 15,
+   "frei": 12,
    "gesamt": 50,
    "stile": [
     "choreography"
@@ -1533,7 +1599,7 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 30,
+   "frei": 31,
    "gesamt": 35,
    "stile": [
     "hip-hop"
@@ -1552,7 +1618,7 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 58,
+   "frei": 59,
    "gesamt": 70,
    "stile": [
     "hip-hop"
@@ -1743,7 +1809,7 @@
    "level": "Beginner",
    "stufen": "am",
    "kids": false,
-   "frei": 15,
+   "frei": 14,
    "gesamt": 22,
    "stile": [
     "pole"
@@ -1800,7 +1866,7 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 26,
+   "frei": 24,
    "gesamt": 70,
    "stile": [
     "commercial"
@@ -1838,7 +1904,7 @@
    "level": "Beginner / Intermediate",
    "stufen": "amf",
    "kids": false,
-   "frei": 15,
+   "frei": 16,
    "gesamt": 22,
    "stile": [
     "pole"
@@ -2273,7 +2339,7 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 23,
+   "frei": 22,
    "gesamt": 40,
    "stile": [
     "contemporary"
@@ -2292,7 +2358,7 @@
    "level": "Beginner / Intermediate",
    "stufen": "amf",
    "kids": false,
-   "frei": 16,
+   "frei": 15,
    "gesamt": 22,
    "stile": [
     "pole"
@@ -2522,7 +2588,7 @@
    "level": "Level 1",
    "stufen": "a",
    "kids": false,
-   "frei": 15,
+   "frei": 14,
    "gesamt": 22,
    "stile": [
     "pole"
@@ -2807,7 +2873,7 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 4,
+   "frei": 3,
    "gesamt": 22,
    "stile": [
     "pole"
@@ -3570,7 +3636,7 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 34,
+   "frei": 33,
    "gesamt": 35,
    "stile": [
     "hip-hop"
