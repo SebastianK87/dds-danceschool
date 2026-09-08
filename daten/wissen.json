@@ -314,11 +314,15 @@
    "rolle": "Choreography Coach",
    "motto": "Safe Space. Strong Performance. Honest Growth.",
    "stile": [
-    "Choreography"
+    "Choreography",
+    "Commercial",
+    "Hip Hop"
    ],
-   "classes": 3,
+   "classes": 6,
    "tage": [
+    "Mo",
     "Di",
+    "Mi",
     "Fr"
    ]
   },
@@ -452,8 +456,9 @@
     "Choreography",
     "Hip Hop"
    ],
-   "classes": 3,
+   "classes": 4,
    "tage": [
+    "Di",
     "Fr",
     "Sa"
    ]
@@ -467,10 +472,9 @@
     "Commercial",
     "Hip Hop"
    ],
-   "classes": 6,
+   "classes": 3,
    "tage": [
     "Mo",
-    "Di",
     "Do"
    ]
   },
@@ -506,10 +510,12 @@
    "rolle": "",
    "motto": "",
    "stile": [
-    "Commercial"
+    "Commercial",
+    "Hip Hop"
    ],
-   "classes": 3,
+   "classes": 5,
    "tage": [
+    "Di",
     "Do",
     "Fr"
    ]
@@ -694,9 +700,10 @@
     "Choreography",
     "Commercial"
    ],
-   "classes": 2,
+   "classes": 3,
    "tage": [
-    "Mo"
+    "Mo",
+    "Mi"
    ]
   },
   {
@@ -746,10 +753,9 @@
    "stile": [
     "Commercial"
    ],
-   "classes": 2,
+   "classes": 1,
    "tage": [
-    "Di",
-    "Mi"
+    "Di"
    ]
   },
   {
@@ -999,13 +1005,11 @@
    "rolle": "",
    "motto": "",
    "stile": [
-    "Commercial",
     "Hip Hop"
    ],
-   "classes": 4,
+   "classes": 1,
    "tage": [
-    "Mo",
-    "Mi"
+    "Mo"
    ]
   },
   {
@@ -1123,503 +1127,28 @@
  ],
  "plan": [
   {
-   "id": "9b74bf37-504c-401b-8b2e-44f31319c3f9",
-   "tag": "Mo",
-   "datum": "2026-10-05",
+   "id": "cdb83f43-5819-421a-8a19-e8fdff0a7bcf",
+   "tag": "Di",
+   "datum": "2026-09-08",
    "zeit": "10:00",
    "dauer": 60,
-   "titel": "Dance Athletics",
-   "coach": "Maxine",
-   "studio": "Studio 6 - Dark Space",
-   "level": "All Level",
-   "stufen": "amf",
+   "titel": "Pole Level 1 (Neubeginner)",
+   "coach": "Michelle (Schelle) Dzida",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "a",
    "kids": false,
    "frei": 16,
-   "gesamt": 16,
-   "stile": [
-    "fitness"
-   ],
-   "url": "https://www.eversports.de/org/activity/9b74bf37-504c-401b-8b2e-44f31319c3f9"
-  },
-  {
-   "id": "be3e3cea-471a-4e96-835c-402078288b46",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "10:00",
-   "dauer": 60,
-   "titel": "Stretching Open Level",
-   "coach": "Michelle (Schelle) Dzida",
-   "studio": "Studio 5 - Bright Space",
-   "level": "All Level",
-   "stufen": "amf",
-   "kids": false,
-   "frei": 50,
-   "gesamt": 50,
-   "stile": [
-    "fitness"
-   ],
-   "url": "https://www.eversports.de/org/activity/be3e3cea-471a-4e96-835c-402078288b46"
-  },
-  {
-   "id": "887c177a-6411-49db-a472-97ce09275594",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "11:00",
-   "dauer": 60,
-   "titel": "Dance Athletics - Strength",
-   "coach": "Maxine",
-   "studio": "Studio 6 - Dark Space",
-   "level": "All Level",
-   "stufen": "amf",
-   "kids": false,
-   "frei": 20,
-   "gesamt": 20,
-   "stile": [
-    "fitness"
-   ],
-   "url": "https://www.eversports.de/org/activity/887c177a-6411-49db-a472-97ce09275594"
-  },
-  {
-   "id": "d4ef0743-18ad-45f0-af9d-aeedce470d83",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "11:00",
-   "dauer": 60,
-   "titel": "Pole Level 1 (Neubeginner)",
-   "coach": "Sasha",
-   "studio": "Studio 4 - Pole Space",
-   "level": "Beginner",
-   "stufen": "a",
-   "kids": false,
-   "frei": 22,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/d4ef0743-18ad-45f0-af9d-aeedce470d83"
+   "url": "https://www.eversports.de/org/activity/cdb83f43-5819-421a-8a19-e8fdff0a7bcf"
   },
   {
-   "id": "f39877c4-fc00-4241-8a53-d651b656bf66",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "12:00",
-   "dauer": 60,
-   "titel": "Pole Choreo Level 1 (Neubeginner)",
-   "coach": "Sasha",
-   "studio": "Studio 4 - Pole Space",
-   "level": "Beginner",
-   "stufen": "a",
-   "kids": false,
-   "frei": 22,
-   "gesamt": 22,
-   "stile": [
-    "pole"
-   ],
-   "url": "https://www.eversports.de/org/activity/f39877c4-fc00-4241-8a53-d651b656bf66"
-  },
-  {
-   "id": "75bbe500-4c30-4ea5-8cfb-f4af693f8fa3",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "16:30",
-   "dauer": 60,
-   "titel": "Pole Dance Level 2",
-   "coach": "Sophie Kolter",
-   "studio": "Studio 4 - Pole Space",
-   "level": "Level 2",
-   "stufen": "m",
-   "kids": false,
-   "frei": 22,
-   "gesamt": 22,
-   "stile": [
-    "pole"
-   ],
-   "url": "https://www.eversports.de/org/activity/75bbe500-4c30-4ea5-8cfb-f4af693f8fa3"
-  },
-  {
-   "id": "9dff9539-c9de-4842-814e-11de4abd7e4b",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "17:00",
-   "dauer": 60,
-   "titel": "Commercial Beginner",
-   "coach": "Laura Klein",
-   "studio": "Studio 1 - Large Space",
-   "level": "Beginner",
-   "stufen": "a",
-   "kids": false,
-   "frei": 70,
-   "gesamt": 70,
-   "stile": [
-    "commercial"
-   ],
-   "url": "https://www.eversports.de/org/activity/9dff9539-c9de-4842-814e-11de4abd7e4b"
-  },
-  {
-   "id": "b2ee9682-0cc0-496f-833a-f686ab41dc79",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "17:00",
-   "dauer": 60,
-   "titel": "HipHop Basics",
-   "coach": "Jessica",
-   "studio": "Studio 3 - Grey Space",
-   "level": "Beginner",
-   "stufen": "a",
-   "kids": false,
-   "frei": 35,
-   "gesamt": 35,
-   "stile": [
-    "hip-hop"
-   ],
-   "url": "https://www.eversports.de/org/activity/b2ee9682-0cc0-496f-833a-f686ab41dc79"
-  },
-  {
-   "id": "c95ae24f-00cb-48dd-bb10-61232aedd23b",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "17:00",
-   "dauer": 60,
-   "titel": "HipHop Intermediate",
-   "coach": "Sarah",
-   "studio": "Studio 5 - Bright Space",
-   "level": "Intermediate",
-   "stufen": "m",
-   "kids": false,
-   "frei": 50,
-   "gesamt": 50,
-   "stile": [
-    "hip-hop"
-   ],
-   "url": "https://www.eversports.de/org/activity/c95ae24f-00cb-48dd-bb10-61232aedd23b"
-  },
-  {
-   "id": "9fff975d-83cf-4c26-a203-a43bafd6131a",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "17:00",
-   "dauer": 60,
-   "titel": "Tanz dich fit Einsteiger",
-   "coach": "Yves",
-   "studio": "Studio 3 - Grey Space",
-   "level": "All Level",
-   "stufen": "amf",
-   "kids": false,
-   "frei": 30,
-   "gesamt": 30,
-   "stile": [
-    "fitness"
-   ],
-   "url": "https://www.eversports.de/org/activity/9fff975d-83cf-4c26-a203-a43bafd6131a"
-  },
-  {
-   "id": "bb41e4ce-fb5b-435a-8cf1-5e2f3e14b770",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "17:30",
-   "dauer": 60,
-   "titel": "Pole Dance Level 1",
-   "coach": "Sophie Kolter",
-   "studio": "Studio 4 - Pole Space",
-   "level": "Level 1",
-   "stufen": "a",
-   "kids": false,
-   "frei": 22,
-   "gesamt": 22,
-   "stile": [
-    "pole"
-   ],
-   "url": "https://www.eversports.de/org/activity/bb41e4ce-fb5b-435a-8cf1-5e2f3e14b770"
-  },
-  {
-   "id": "8de365ec-60cd-4234-96a5-f7a9cfc2cf39",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "18:00",
-   "dauer": 60,
-   "titel": "Choreography Beginner/Intermediate",
-   "coach": "Emma Schorb",
-   "studio": "Studio 2 - White Space",
-   "level": "Beginner / Intermediate",
-   "stufen": "am",
-   "kids": false,
-   "frei": 50,
-   "gesamt": 50,
-   "stile": [
-    "choreography"
-   ],
-   "url": "https://www.eversports.de/org/activity/8de365ec-60cd-4234-96a5-f7a9cfc2cf39"
-  },
-  {
-   "id": "1aab8316-2465-4257-a32d-a2438ef9e2c0",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "18:00",
-   "dauer": 60,
-   "titel": "Choreography Intermediate",
-   "coach": "Laura Klein",
-   "studio": "Studio 1 - Large Space",
-   "level": "Intermediate",
-   "stufen": "m",
-   "kids": false,
-   "frei": 70,
-   "gesamt": 70,
-   "stile": [
-    "choreography"
-   ],
-   "url": "https://www.eversports.de/org/activity/1aab8316-2465-4257-a32d-a2438ef9e2c0"
-  },
-  {
-   "id": "de636f6d-4b80-41bd-99cc-b472792b7528",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "18:00",
-   "dauer": 90,
-   "titel": "Commercial Intermediate",
-   "coach": "Sarah",
-   "studio": "Studio 5 - Bright Space",
-   "level": "Intermediate",
-   "stufen": "m",
-   "kids": false,
-   "frei": 50,
-   "gesamt": 50,
-   "stile": [
-    "commercial"
-   ],
-   "url": "https://www.eversports.de/org/activity/de636f6d-4b80-41bd-99cc-b472792b7528"
-  },
-  {
-   "id": "1f41dfe1-e6fd-4694-93f3-f86bdbad361f",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "18:00",
-   "dauer": 60,
-   "titel": "HipHop Beginner/Intermediate",
-   "coach": "Jessica",
-   "studio": "Studio 3 - Grey Space",
-   "level": "Beginner / Intermediate",
-   "stufen": "am",
-   "kids": false,
-   "frei": 35,
-   "gesamt": 35,
-   "stile": [
-    "hip-hop"
-   ],
-   "url": "https://www.eversports.de/org/activity/1f41dfe1-e6fd-4694-93f3-f86bdbad361f"
-  },
-  {
-   "id": "208c36c8-bb82-4b89-9354-1303b5bd22ee",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "18:30",
-   "dauer": 60,
-   "titel": "Pole Dance Flow Level 2 (Beginner)",
-   "coach": "Sara",
-   "studio": "Studio 4 - Pole Space",
-   "level": "Beginner",
-   "stufen": "am",
-   "kids": false,
-   "frei": 22,
-   "gesamt": 22,
-   "stile": [
-    "pole"
-   ],
-   "url": "https://www.eversports.de/org/activity/208c36c8-bb82-4b89-9354-1303b5bd22ee"
-  },
-  {
-   "id": "38996cc3-b026-4f32-85a9-dd51cd2f4f69",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "19:00",
-   "dauer": 60,
-   "titel": "Contemporary Fusion Beginner",
-   "coach": "Lisa Klingner",
-   "studio": "Studio 2 - White Space",
-   "level": "Beginner",
-   "stufen": "a",
-   "kids": false,
-   "frei": 40,
-   "gesamt": 40,
-   "stile": [
-    "contemporary"
-   ],
-   "url": "https://www.eversports.de/org/activity/38996cc3-b026-4f32-85a9-dd51cd2f4f69"
-  },
-  {
-   "id": "fd1c5446-79bd-4493-b126-7c0f2ddb7583",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "19:00",
-   "dauer": 60,
-   "titel": "High Heels Beginner",
-   "coach": "Daria",
-   "studio": "Studio 1 - Large Space",
-   "level": "Beginner",
-   "stufen": "a",
-   "kids": false,
-   "frei": 70,
-   "gesamt": 70,
-   "stile": [
-    "heels"
-   ],
-   "url": "https://www.eversports.de/org/activity/fd1c5446-79bd-4493-b126-7c0f2ddb7583"
-  },
-  {
-   "id": "73d307ea-e210-48ec-94dc-fea1ca24ec35",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "19:00",
-   "dauer": 60,
-   "titel": "Tanz dich fit All Level",
-   "coach": "Yves",
-   "studio": "Studio 3 - Grey Space",
-   "level": "All Level",
-   "stufen": "amf",
-   "kids": false,
-   "frei": 30,
-   "gesamt": 30,
-   "stile": [
-    "fitness"
-   ],
-   "url": "https://www.eversports.de/org/activity/73d307ea-e210-48ec-94dc-fea1ca24ec35"
-  },
-  {
-   "id": "240ce970-51c5-4534-a266-9c33a82059f0",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "19:30",
-   "dauer": 90,
-   "titel": "Commercial Beginner/Intermediate",
-   "coach": "Roman",
-   "studio": "Studio 5 - Bright Space",
-   "level": "Beginner / Intermediate",
-   "stufen": "am",
-   "kids": false,
-   "frei": 50,
-   "gesamt": 50,
-   "stile": [
-    "commercial"
-   ],
-   "url": "https://www.eversports.de/org/activity/240ce970-51c5-4534-a266-9c33a82059f0"
-  },
-  {
-   "id": "67b46753-f5a7-4e13-adb4-9b46b48ec73a",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "19:30",
-   "dauer": 60,
-   "titel": "Pole Dance Level 3 (Beginner/Intermediate)",
-   "coach": "Sara",
-   "studio": "Studio 4 - Pole Space",
-   "level": "Beginner / Intermediate",
-   "stufen": "amf",
-   "kids": false,
-   "frei": 22,
-   "gesamt": 22,
-   "stile": [
-    "pole"
-   ],
-   "url": "https://www.eversports.de/org/activity/67b46753-f5a7-4e13-adb4-9b46b48ec73a"
-  },
-  {
-   "id": "7174ec1b-ce9c-4070-8c53-cdfc6d18642b",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "20:00",
-   "dauer": 90,
-   "titel": "Choreography Intermediate/Advanced",
-   "coach": "Dominik",
-   "studio": "Studio 3 - Grey Space",
-   "level": "Intermediate / Advanced",
-   "stufen": "mf",
-   "kids": false,
-   "frei": 35,
-   "gesamt": 35,
-   "stile": [
-    "choreography"
-   ],
-   "url": "https://www.eversports.de/org/activity/7174ec1b-ce9c-4070-8c53-cdfc6d18642b"
-  },
-  {
-   "id": "240b19ad-92e5-45d4-aad3-129cca5ee601",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "20:00",
-   "dauer": 90,
-   "titel": "Contemporary Fusion Intermediate",
-   "coach": "Lisa Klingner",
-   "studio": "Studio 2 - White Space",
-   "level": "Intermediate",
-   "stufen": "m",
-   "kids": false,
-   "frei": 40,
-   "gesamt": 40,
-   "stile": [
-    "contemporary"
-   ],
-   "url": "https://www.eversports.de/org/activity/240b19ad-92e5-45d4-aad3-129cca5ee601"
-  },
-  {
-   "id": "44e6220a-7bed-41a9-8e7b-0421d009f852",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "20:00",
-   "dauer": 90,
-   "titel": "High Heels Intermediate/Advanced",
-   "coach": "Daria",
-   "studio": "Studio 1 - Large Space",
-   "level": "Intermediate / Advanced",
-   "stufen": "mf",
-   "kids": false,
-   "frei": 70,
-   "gesamt": 70,
-   "stile": [
-    "heels"
-   ],
-   "url": "https://www.eversports.de/org/activity/44e6220a-7bed-41a9-8e7b-0421d009f852"
-  },
-  {
-   "id": "6440c5d7-c8f7-4cce-9d16-38a27b15e82c",
-   "tag": "Mo",
-   "datum": "2026-10-05",
-   "zeit": "20:00",
-   "dauer": 90,
-   "titel": "HipHop Lady Style Beginner/Intermediate",
-   "coach": "Emma Kant",
-   "studio": "Studio 1 - Large Space",
-   "level": "Beginner / Intermediate",
-   "stufen": "am",
-   "kids": false,
-   "frei": 70,
-   "gesamt": 70,
-   "stile": [
-    "hip-hop"
-   ],
-   "url": "https://www.eversports.de/org/activity/6440c5d7-c8f7-4cce-9d16-38a27b15e82c"
-  },
-  {
-   "id": "cb20416c-f8fa-40c2-b2ab-857c5d79cbc2",
+   "id": "f2db0141-ba24-4753-8b31-44ac356269a0",
    "tag": "Di",
-   "datum": "2026-10-06",
-   "zeit": "10:00",
-   "dauer": 60,
-   "titel": "Pole Level 1 (Neubeginner)",
-   "coach": "Michelle (Schelle) Dzida",
-   "studio": "Studio 4 - Pole Space",
-   "level": "Beginner",
-   "stufen": "a",
-   "kids": false,
-   "frei": 22,
-   "gesamt": 22,
-   "stile": [
-    "pole"
-   ],
-   "url": "https://www.eversports.de/org/activity/cb20416c-f8fa-40c2-b2ab-857c5d79cbc2"
-  },
-  {
-   "id": "0ed33be0-844f-4817-adaa-11ed77f0e452",
-   "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "10:30",
    "dauer": 60,
    "titel": "Dance Cardio",
@@ -1633,31 +1162,12 @@
    "stile": [
     "fitness"
    ],
-   "url": "https://www.eversports.de/org/activity/0ed33be0-844f-4817-adaa-11ed77f0e452"
+   "url": "https://www.eversports.de/org/activity/f2db0141-ba24-4753-8b31-44ac356269a0"
   },
   {
-   "id": "78398e4f-9f1d-4026-bacf-fb6cac824d72",
+   "id": "bb64994e-85fd-41a3-acf6-8c9df5cb41af",
    "tag": "Di",
-   "datum": "2026-10-06",
-   "zeit": "11:00",
-   "dauer": 60,
-   "titel": "Aerial Hoop Level 3 (Beginner/Intermediate)",
-   "coach": "Tania",
-   "studio": "Studio 5 - Bright Space",
-   "level": "Beginner / Intermediate",
-   "stufen": "amf",
-   "kids": false,
-   "frei": 15,
-   "gesamt": 15,
-   "stile": [
-    "aerial"
-   ],
-   "url": "https://www.eversports.de/org/activity/78398e4f-9f1d-4026-bacf-fb6cac824d72"
-  },
-  {
-   "id": "d8e1ab4c-54b4-4431-8b19-ac2e17abf00e",
-   "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "11:00",
    "dauer": 90,
    "titel": "Jazz Technique Advanced",
@@ -1666,17 +1176,17 @@
    "level": "Advanced",
    "stufen": "f",
    "kids": false,
-   "frei": 70,
+   "frei": 65,
    "gesamt": 70,
    "stile": [
     "contemporary"
    ],
-   "url": "https://www.eversports.de/org/activity/d8e1ab4c-54b4-4431-8b19-ac2e17abf00e"
+   "url": "https://www.eversports.de/org/activity/bb64994e-85fd-41a3-acf6-8c9df5cb41af"
   },
   {
-   "id": "56b25969-51f9-4fbd-89ea-1d0c3a3f7ce8",
+   "id": "10a60b80-af0a-4c94-be7e-b748684c0f81",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "11:00",
    "dauer": 60,
    "titel": "Pole Dance L2 Beginner",
@@ -1685,17 +1195,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 22,
+   "frei": 16,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/56b25969-51f9-4fbd-89ea-1d0c3a3f7ce8"
+   "url": "https://www.eversports.de/org/activity/10a60b80-af0a-4c94-be7e-b748684c0f81"
   },
   {
-   "id": "e2ebf022-21e6-4256-b43b-50d0094694b9",
+   "id": "a0c92c62-4438-4623-aa3d-89104619bdb3",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "11:30",
    "dauer": 30,
    "titel": "Core Intensive 4D",
@@ -1709,12 +1219,12 @@
    "stile": [
     "fitness"
    ],
-   "url": "https://www.eversports.de/org/activity/e2ebf022-21e6-4256-b43b-50d0094694b9"
+   "url": "https://www.eversports.de/org/activity/a0c92c62-4438-4623-aa3d-89104619bdb3"
   },
   {
-   "id": "7a81d150-a04c-44d7-a5c7-06c6a4b14e04",
+   "id": "3721d461-c7a7-45bd-b8d6-a428692720aa",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "Dance Ü25",
@@ -1723,15 +1233,15 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 70,
+   "frei": 58,
    "gesamt": 70,
    "stile": [],
-   "url": "https://www.eversports.de/org/activity/7a81d150-a04c-44d7-a5c7-06c6a4b14e04"
+   "url": "https://www.eversports.de/org/activity/3721d461-c7a7-45bd-b8d6-a428692720aa"
   },
   {
-   "id": "76d2913e-35a2-483b-9ccd-c5727db3423f",
+   "id": "2d72e423-279b-4794-b5b0-588439b15760",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "17:00",
    "dauer": 90,
    "titel": "High Heels Beginner",
@@ -1740,17 +1250,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 50,
+   "frei": 27,
    "gesamt": 50,
    "stile": [
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/76d2913e-35a2-483b-9ccd-c5727db3423f"
+   "url": "https://www.eversports.de/org/activity/2d72e423-279b-4794-b5b0-588439b15760"
   },
   {
-   "id": "aa8c0116-5468-4392-ae6b-6a3b08823767",
+   "id": "c2457dcd-e31b-4457-b4bc-d431fa6a68c6",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "HipHop Teens",
@@ -1759,17 +1269,17 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": true,
-   "frei": 50,
+   "frei": 45,
    "gesamt": 50,
    "stile": [
     "kids"
    ],
-   "url": "https://www.eversports.de/org/activity/aa8c0116-5468-4392-ae6b-6a3b08823767"
+   "url": "https://www.eversports.de/org/activity/c2457dcd-e31b-4457-b4bc-d431fa6a68c6"
   },
   {
-   "id": "ea9f1e35-0a5f-499a-bc48-3d5e359549ab",
+   "id": "86fa14c6-0a7c-46ec-81f5-bd3fd4fc3dca",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "Pole Dance Level 2 (Beginner)",
@@ -1778,17 +1288,17 @@
    "level": "Beginner",
    "stufen": "am",
    "kids": false,
-   "frei": 22,
+   "frei": 15,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/ea9f1e35-0a5f-499a-bc48-3d5e359549ab"
+   "url": "https://www.eversports.de/org/activity/86fa14c6-0a7c-46ec-81f5-bd3fd4fc3dca"
   },
   {
-   "id": "1cc83f06-3b29-458c-b70b-88060e43492f",
+   "id": "d2a80bb9-1516-4900-ae15-82ab67ab57ba",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "17:30",
    "dauer": 90,
    "titel": "Choreography Beginner/Intermediate",
@@ -1797,17 +1307,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 35,
+   "frei": 18,
    "gesamt": 35,
    "stile": [
     "choreography"
    ],
-   "url": "https://www.eversports.de/org/activity/1cc83f06-3b29-458c-b70b-88060e43492f"
+   "url": "https://www.eversports.de/org/activity/d2a80bb9-1516-4900-ae15-82ab67ab57ba"
   },
   {
-   "id": "c27dccf8-361e-48e3-b8db-076ff575c68a",
+   "id": "e02db518-f7a1-46ae-92aa-bbf900f952fe",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "Choreography Intermediate",
@@ -1821,12 +1331,12 @@
    "stile": [
     "choreography"
    ],
-   "url": "https://www.eversports.de/org/activity/c27dccf8-361e-48e3-b8db-076ff575c68a"
+   "url": "https://www.eversports.de/org/activity/e02db518-f7a1-46ae-92aa-bbf900f952fe"
   },
   {
-   "id": "656f6de2-ffe0-4fb6-bd92-6de580e6e939",
+   "id": "35d9323a-ea0c-47a9-a0eb-aba0e752a50f",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "Commercial Beginner",
@@ -1835,17 +1345,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 70,
+   "frei": 34,
    "gesamt": 70,
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/656f6de2-ffe0-4fb6-bd92-6de580e6e939"
+   "url": "https://www.eversports.de/org/activity/35d9323a-ea0c-47a9-a0eb-aba0e752a50f"
   },
   {
-   "id": "37349241-7302-4879-8aa1-324a75793e08",
+   "id": "e36a776a-7927-4224-9ce7-861419be0200",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "Move Latin",
@@ -1854,17 +1364,17 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 50,
+   "frei": 25,
    "gesamt": 50,
    "stile": [
     "latin"
    ],
-   "url": "https://www.eversports.de/org/activity/37349241-7302-4879-8aa1-324a75793e08"
+   "url": "https://www.eversports.de/org/activity/e36a776a-7927-4224-9ce7-861419be0200"
   },
   {
-   "id": "6185a857-cce7-4fc9-93f8-163de1865172",
+   "id": "e4a59d04-e603-4a58-901e-893e385e0097",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "Pole Dance Level 3 (Beginner/Intermediate)",
@@ -1873,17 +1383,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "amf",
    "kids": false,
-   "frei": 22,
+   "frei": 15,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/6185a857-cce7-4fc9-93f8-163de1865172"
+   "url": "https://www.eversports.de/org/activity/e4a59d04-e603-4a58-901e-893e385e0097"
   },
   {
-   "id": "8b4fd58e-487b-4a8b-a259-2bfdba04fe66",
+   "id": "2916f907-cce0-484e-a5da-41bd567c5121",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "18:30",
    "dauer": 90,
    "titel": "High Heels Intermediate",
@@ -1892,17 +1402,17 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 50,
+   "frei": 38,
    "gesamt": 50,
    "stile": [
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/8b4fd58e-487b-4a8b-a259-2bfdba04fe66"
+   "url": "https://www.eversports.de/org/activity/2916f907-cce0-484e-a5da-41bd567c5121"
   },
   {
-   "id": "862a5dae-f1da-46a3-bed8-54b013b113ad",
+   "id": "c1911f0a-923b-4bb6-aa6a-abe30cd8a2e9",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "Choreography Beginner",
@@ -1911,36 +1421,36 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 70,
+   "frei": 46,
    "gesamt": 70,
    "stile": [
     "choreography"
    ],
-   "url": "https://www.eversports.de/org/activity/862a5dae-f1da-46a3-bed8-54b013b113ad"
+   "url": "https://www.eversports.de/org/activity/c1911f0a-923b-4bb6-aa6a-abe30cd8a2e9"
   },
   {
-   "id": "3d564f83-7aef-4b4e-b461-37b9d6af5edf",
+   "id": "6925c99c-161b-4353-aa2b-ff72534ed0b2",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "HipHop Intermediate",
-   "coach": "Emma Kant",
+   "coach": "Elisa",
    "studio": "Studio 3 - Grey Space",
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 35,
+   "frei": 31,
    "gesamt": 35,
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/3d564f83-7aef-4b4e-b461-37b9d6af5edf"
+   "url": "https://www.eversports.de/org/activity/6925c99c-161b-4353-aa2b-ff72534ed0b2"
   },
   {
-   "id": "a2a7828b-4f58-4005-82ff-f0576a4d2e41",
+   "id": "f802aad9-938f-498d-9ee4-4736787b3bf8",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "Pole Dance Level 3",
@@ -1949,17 +1459,17 @@
    "level": "Level 3",
    "stufen": "f",
    "kids": false,
-   "frei": 22,
+   "frei": 9,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/a2a7828b-4f58-4005-82ff-f0576a4d2e41"
+   "url": "https://www.eversports.de/org/activity/f802aad9-938f-498d-9ee4-4736787b3bf8"
   },
   {
-   "id": "a9717161-bd8d-42b5-909d-3792ffd02eff",
+   "id": "37fe16e8-a0ea-4244-816c-3a09dcab599a",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "Pop Ü25",
@@ -1968,15 +1478,15 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 50,
+   "frei": 29,
    "gesamt": 50,
    "stile": [],
-   "url": "https://www.eversports.de/org/activity/a9717161-bd8d-42b5-909d-3792ffd02eff"
+   "url": "https://www.eversports.de/org/activity/37fe16e8-a0ea-4244-816c-3a09dcab599a"
   },
   {
-   "id": "74241bdc-3504-435e-9f94-72224bb01168",
+   "id": "80d88f37-7463-49a3-a129-760970f29f7c",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "Choreography Intermediate",
@@ -1985,17 +1495,17 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 50,
+   "frei": 15,
    "gesamt": 50,
    "stile": [
     "choreography"
    ],
-   "url": "https://www.eversports.de/org/activity/74241bdc-3504-435e-9f94-72224bb01168"
+   "url": "https://www.eversports.de/org/activity/80d88f37-7463-49a3-a129-760970f29f7c"
   },
   {
-   "id": "7c5f9ff6-a76c-4553-9d8a-64f14705ac2d",
+   "id": "021babe1-a490-4666-8eae-c975066365b1",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "20:00",
    "dauer": 60,
    "titel": "HipHop Beginner",
@@ -2004,17 +1514,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 50,
+   "frei": 33,
    "gesamt": 50,
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/7c5f9ff6-a76c-4553-9d8a-64f14705ac2d"
+   "url": "https://www.eversports.de/org/activity/021babe1-a490-4666-8eae-c975066365b1"
   },
   {
-   "id": "77d6bbf4-dc01-4c44-98b2-7071ecdd96b0",
+   "id": "255a1bb6-ce4c-4a5a-a8d5-52f4bdfd2d54",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "HipHop Fusion Intermediate",
@@ -2023,36 +1533,36 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 35,
+   "frei": 30,
    "gesamt": 35,
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/77d6bbf4-dc01-4c44-98b2-7071ecdd96b0"
+   "url": "https://www.eversports.de/org/activity/255a1bb6-ce4c-4a5a-a8d5-52f4bdfd2d54"
   },
   {
-   "id": "8ceeb20f-cdb2-4b70-800e-630fa317ecf7",
+   "id": "eaff7d3c-ebae-46c6-bcb9-d9f93406b5ae",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "HipHop Lady Style Beginner/Intermediate",
-   "coach": "Emma Kant",
+   "coach": "Fabio",
    "studio": "Studio 1 - Large Space",
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 70,
+   "frei": 58,
    "gesamt": 70,
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/8ceeb20f-cdb2-4b70-800e-630fa317ecf7"
+   "url": "https://www.eversports.de/org/activity/eaff7d3c-ebae-46c6-bcb9-d9f93406b5ae"
   },
   {
-   "id": "2914e6be-a7fe-480d-9890-1264f007f53b",
+   "id": "167dd001-9a34-4346-a940-d4b181a676fc",
    "tag": "Di",
-   "datum": "2026-10-06",
+   "datum": "2026-09-08",
    "zeit": "20:00",
    "dauer": 60,
    "titel": "Pole Dance Contemporary All Level",
@@ -2061,18 +1571,18 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 22,
+   "frei": 18,
    "gesamt": 22,
    "stile": [
     "pole",
     "contemporary"
    ],
-   "url": "https://www.eversports.de/org/activity/2914e6be-a7fe-480d-9890-1264f007f53b"
+   "url": "https://www.eversports.de/org/activity/167dd001-9a34-4346-a940-d4b181a676fc"
   },
   {
-   "id": "c39a357a-422a-4861-a144-3f361c99d4b0",
+   "id": "b2b0ce36-5a21-4a3d-be42-3f4a40a876ec",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "10:00",
    "dauer": 60,
    "titel": "Pole Dance Level 2 (Beginner)",
@@ -2081,17 +1591,17 @@
    "level": "Beginner",
    "stufen": "am",
    "kids": false,
-   "frei": 22,
+   "frei": 12,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/c39a357a-422a-4861-a144-3f361c99d4b0"
+   "url": "https://www.eversports.de/org/activity/b2b0ce36-5a21-4a3d-be42-3f4a40a876ec"
   },
   {
-   "id": "246b0c0f-3b37-47c0-b4c7-90a2ce10d8dc",
+   "id": "fefc6d60-507e-410b-9a94-9183f3c3ac9f",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "10:30",
    "dauer": 60,
    "titel": "Commercial Beginner/Intermediate",
@@ -2100,17 +1610,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 50,
+   "frei": 44,
    "gesamt": 50,
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/246b0c0f-3b37-47c0-b4c7-90a2ce10d8dc"
+   "url": "https://www.eversports.de/org/activity/fefc6d60-507e-410b-9a94-9183f3c3ac9f"
   },
   {
-   "id": "85e3b751-fe83-4995-9b8a-4a96920a98ee",
+   "id": "cb3cf324-dd83-4674-987c-c7af0e2b2f1b",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "11:00",
    "dauer": 90,
    "titel": "Contemporary Fusion Intermediate",
@@ -2119,17 +1629,17 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 40,
+   "frei": 35,
    "gesamt": 40,
    "stile": [
     "contemporary"
    ],
-   "url": "https://www.eversports.de/org/activity/85e3b751-fe83-4995-9b8a-4a96920a98ee"
+   "url": "https://www.eversports.de/org/activity/cb3cf324-dd83-4674-987c-c7af0e2b2f1b"
   },
   {
-   "id": "98913ba5-3ab9-440d-b90e-c150a237029b",
+   "id": "881e1afe-37fb-41a5-9059-65805865dec4",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "11:00",
    "dauer": 60,
    "titel": "Pole Dance Level 3 (Beginner/Intermediate)",
@@ -2138,17 +1648,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "amf",
    "kids": false,
-   "frei": 22,
+   "frei": 14,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/98913ba5-3ab9-440d-b90e-c150a237029b"
+   "url": "https://www.eversports.de/org/activity/881e1afe-37fb-41a5-9059-65805865dec4"
   },
   {
-   "id": "1799383c-f929-49e1-8644-8b04d0e2d210",
+   "id": "f5600452-ab89-456e-b718-26416428b871",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "11:30",
    "dauer": 60,
    "titel": "High Heels Beginner/Intermediate",
@@ -2157,17 +1667,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 50,
+   "frei": 34,
    "gesamt": 50,
    "stile": [
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/1799383c-f929-49e1-8644-8b04d0e2d210"
+   "url": "https://www.eversports.de/org/activity/f5600452-ab89-456e-b718-26416428b871"
   },
   {
-   "id": "02a155c9-ca9b-49ce-bde3-c451c6b1d38e",
+   "id": "89c69a5a-0c05-47a3-82e4-530205dde306",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "12:00",
    "dauer": 60,
    "titel": "Pole Level 1 (Neubeginner)",
@@ -2176,17 +1686,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 22,
+   "frei": 9,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/02a155c9-ca9b-49ce-bde3-c451c6b1d38e"
+   "url": "https://www.eversports.de/org/activity/89c69a5a-0c05-47a3-82e4-530205dde306"
   },
   {
-   "id": "1d3a447b-4244-43f8-9cbf-23a5ae21cda8",
+   "id": "4162b29f-487c-4089-97d2-84eee7b3e32c",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "Hip Hop Kids",
@@ -2195,36 +1705,36 @@
    "level": "All Level",
    "stufen": "a",
    "kids": true,
-   "frei": 35,
+   "frei": 34,
    "gesamt": 35,
    "stile": [
     "kids"
    ],
-   "url": "https://www.eversports.de/org/activity/1d3a447b-4244-43f8-9cbf-23a5ae21cda8"
+   "url": "https://www.eversports.de/org/activity/4162b29f-487c-4089-97d2-84eee7b3e32c"
   },
   {
-   "id": "974130c5-04b2-46aa-8969-a60cc8220f57",
+   "id": "3f497048-210f-4b95-9d76-9aad93993787",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "HipHop Beginner",
-   "coach": "Sarah",
+   "coach": "Ada",
    "studio": "Studio 1 - Large Space",
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 70,
+   "frei": 60,
    "gesamt": 70,
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/974130c5-04b2-46aa-8969-a60cc8220f57"
+   "url": "https://www.eversports.de/org/activity/3f497048-210f-4b95-9d76-9aad93993787"
   },
   {
-   "id": "bdad8f14-76a0-4122-9bf3-f069116ca554",
+   "id": "214ed8a0-4230-48af-974e-3bf949ad742e",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "Pole Dance Spinning Level 2 (Beginner)",
@@ -2233,17 +1743,17 @@
    "level": "Beginner",
    "stufen": "am",
    "kids": false,
-   "frei": 22,
+   "frei": 15,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/bdad8f14-76a0-4122-9bf3-f069116ca554"
+   "url": "https://www.eversports.de/org/activity/214ed8a0-4230-48af-974e-3bf949ad742e"
   },
   {
-   "id": "fcb22436-c55a-4ad6-92e7-3a20b7f65ee2",
+   "id": "8a11ae37-0f09-49f9-bc52-99c9ad627fee",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "17:30",
    "dauer": 60,
    "titel": "Choreography Beginner",
@@ -2252,17 +1762,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 50,
+   "frei": 42,
    "gesamt": 50,
    "stile": [
     "choreography"
    ],
-   "url": "https://www.eversports.de/org/activity/fcb22436-c55a-4ad6-92e7-3a20b7f65ee2"
+   "url": "https://www.eversports.de/org/activity/8a11ae37-0f09-49f9-bc52-99c9ad627fee"
   },
   {
-   "id": "1dd83748-df34-4bb8-b3dd-4efc5442eb29",
+   "id": "37501798-9ff0-4281-901e-2c67a3d860cb",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "17:30",
    "dauer": 90,
    "titel": "Jazz Fusion Intermediate",
@@ -2271,36 +1781,36 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 40,
+   "frei": 33,
    "gesamt": 40,
    "stile": [
     "contemporary"
    ],
-   "url": "https://www.eversports.de/org/activity/1dd83748-df34-4bb8-b3dd-4efc5442eb29"
+   "url": "https://www.eversports.de/org/activity/37501798-9ff0-4281-901e-2c67a3d860cb"
   },
   {
-   "id": "6234ce75-dab1-4465-a74d-8ec9a961b275",
+   "id": "7dfd9283-8126-40f8-bb90-cf14d7d15c4f",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "Commercial Beginner",
-   "coach": "Sarah",
+   "coach": "Ada",
    "studio": "Studio 1 - Large Space",
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 70,
+   "frei": 26,
    "gesamt": 70,
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/6234ce75-dab1-4465-a74d-8ec9a961b275"
+   "url": "https://www.eversports.de/org/activity/7dfd9283-8126-40f8-bb90-cf14d7d15c4f"
   },
   {
-   "id": "90f705c3-7c7c-48f9-89a4-aaa45ced4036",
+   "id": "1c20191e-3fd5-45f4-9feb-31a96263d809",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "Hip Hop Juniors",
@@ -2314,12 +1824,12 @@
    "stile": [
     "kids"
    ],
-   "url": "https://www.eversports.de/org/activity/90f705c3-7c7c-48f9-89a4-aaa45ced4036"
+   "url": "https://www.eversports.de/org/activity/1c20191e-3fd5-45f4-9feb-31a96263d809"
   },
   {
-   "id": "2b1e4e5f-3985-4c10-adfb-6cbdf70c7b62",
+   "id": "c2d1786a-98b1-46c7-8dcd-32a1f908377d",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "Pole Dance Spinning Level 3 (Beginner/Intermediate)",
@@ -2328,17 +1838,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "amf",
    "kids": false,
-   "frei": 22,
+   "frei": 15,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/2b1e4e5f-3985-4c10-adfb-6cbdf70c7b62"
+   "url": "https://www.eversports.de/org/activity/c2d1786a-98b1-46c7-8dcd-32a1f908377d"
   },
   {
-   "id": "39d8ba2d-e5ad-4dd5-ac53-9f99e15ff716",
+   "id": "975b7b71-d843-4f14-afed-4bd7ac431306",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "18:30",
    "dauer": 90,
    "titel": "Commercial Intermediate/Advanced",
@@ -2347,36 +1857,36 @@
    "level": "Intermediate / Advanced",
    "stufen": "mf",
    "kids": false,
-   "frei": 50,
+   "frei": 37,
    "gesamt": 50,
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/39d8ba2d-e5ad-4dd5-ac53-9f99e15ff716"
+   "url": "https://www.eversports.de/org/activity/975b7b71-d843-4f14-afed-4bd7ac431306"
   },
   {
-   "id": "4b705ed8-2ce0-4c14-a2eb-7aeb30d5029f",
+   "id": "3e961aa9-cdee-48dc-b578-f8287878b21d",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "Choreography Intermediate",
    "coach": "Barbora",
-   "studio": "Studio 1 - Large Space",
+   "studio": "Studio 3 - Grey Space",
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 70,
-   "gesamt": 70,
+   "frei": 35,
+   "gesamt": 35,
    "stile": [
     "choreography"
    ],
-   "url": "https://www.eversports.de/org/activity/4b705ed8-2ce0-4c14-a2eb-7aeb30d5029f"
+   "url": "https://www.eversports.de/org/activity/3e961aa9-cdee-48dc-b578-f8287878b21d"
   },
   {
-   "id": "346d0364-c67d-4519-a441-8bc64bc83d62",
+   "id": "76205baa-5b0f-43bd-b915-1ee81811f029",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "Dance Athletics",
@@ -2385,17 +1895,17 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 16,
+   "frei": 8,
    "gesamt": 16,
    "stile": [
     "fitness"
    ],
-   "url": "https://www.eversports.de/org/activity/346d0364-c67d-4519-a441-8bc64bc83d62"
+   "url": "https://www.eversports.de/org/activity/76205baa-5b0f-43bd-b915-1ee81811f029"
   },
   {
-   "id": "4c0dad26-da84-4609-8f46-9fc56963142d",
+   "id": "31facd7e-efd4-43dd-bb6e-b73aae4a9113",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "Female Style Beginner",
@@ -2404,17 +1914,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 35,
+   "frei": 19,
    "gesamt": 35,
    "stile": [
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/4c0dad26-da84-4609-8f46-9fc56963142d"
+   "url": "https://www.eversports.de/org/activity/31facd7e-efd4-43dd-bb6e-b73aae4a9113"
   },
   {
-   "id": "ea6f9c14-77ad-4629-9328-30f620817efc",
+   "id": "2066787b-31a3-460e-802c-ff6ab85a5d8a",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "Pole Dance Level 2 Beginner",
@@ -2423,17 +1933,17 @@
    "level": "Beginner",
    "stufen": "am",
    "kids": false,
-   "frei": 22,
+   "frei": 14,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/ea6f9c14-77ad-4629-9328-30f620817efc"
+   "url": "https://www.eversports.de/org/activity/2066787b-31a3-460e-802c-ff6ab85a5d8a"
   },
   {
-   "id": "ffc72da7-cd31-4aac-9487-082a3758fada",
+   "id": "9f2b7259-8ae6-4cc3-b0a2-9107bb9afe9c",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "Tanz dich fit",
@@ -2442,17 +1952,17 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 50,
+   "frei": 47,
    "gesamt": 50,
    "stile": [
     "fitness"
    ],
-   "url": "https://www.eversports.de/org/activity/ffc72da7-cd31-4aac-9487-082a3758fada"
+   "url": "https://www.eversports.de/org/activity/9f2b7259-8ae6-4cc3-b0a2-9107bb9afe9c"
   },
   {
-   "id": "a209a49b-4843-4bd1-bf17-38ea87d4ebc9",
+   "id": "95db8529-4c8e-4f5d-99d9-6c0ba1e678ed",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "Afro Fusion Beginner/Intermediate",
@@ -2466,12 +1976,12 @@
    "stile": [
     "latin"
    ],
-   "url": "https://www.eversports.de/org/activity/a209a49b-4843-4bd1-bf17-38ea87d4ebc9"
+   "url": "https://www.eversports.de/org/activity/95db8529-4c8e-4f5d-99d9-6c0ba1e678ed"
   },
   {
-   "id": "ae31e3dc-0711-4d8c-aa5f-50d4f43bc085",
+   "id": "b991fa99-7836-4c3e-8af1-db77897c1f54",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "Choreography Advanced",
@@ -2480,36 +1990,36 @@
    "level": "Advanced",
    "stufen": "f",
    "kids": false,
-   "frei": 50,
+   "frei": 45,
    "gesamt": 50,
    "stile": [
     "choreography"
    ],
-   "url": "https://www.eversports.de/org/activity/ae31e3dc-0711-4d8c-aa5f-50d4f43bc085"
+   "url": "https://www.eversports.de/org/activity/b991fa99-7836-4c3e-8af1-db77897c1f54"
   },
   {
-   "id": "e01ef888-9ceb-4659-8c3b-1a043fd8d1e8",
+   "id": "0a2146ea-a7e7-4b7a-94bc-c00b43cedb1c",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "Commercial Beginner/Intermediate",
-   "coach": "Lili",
+   "coach": "Laura Klein",
    "studio": "Studio 1 - Large Space",
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 70,
+   "frei": 59,
    "gesamt": 70,
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/e01ef888-9ceb-4659-8c3b-1a043fd8d1e8"
+   "url": "https://www.eversports.de/org/activity/0a2146ea-a7e7-4b7a-94bc-c00b43cedb1c"
   },
   {
-   "id": "b53c5eeb-b05c-4be9-9810-02f74b49a963",
+   "id": "e85aaba7-f9ae-457f-890e-4d392637e5fd",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "20:00",
    "dauer": 60,
    "titel": "Contemporary Fusion Intermediate",
@@ -2523,12 +2033,12 @@
    "stile": [
     "contemporary"
    ],
-   "url": "https://www.eversports.de/org/activity/b53c5eeb-b05c-4be9-9810-02f74b49a963"
+   "url": "https://www.eversports.de/org/activity/e85aaba7-f9ae-457f-890e-4d392637e5fd"
   },
   {
-   "id": "eac0b510-10fc-4c42-894a-e64ca50ef4ab",
+   "id": "a9b926fc-0060-4b89-b449-ea6185acf531",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "20:00",
    "dauer": 60,
    "titel": "Dance Athletics - Strength",
@@ -2537,17 +2047,17 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 20,
+   "frei": 18,
    "gesamt": 20,
    "stile": [
     "fitness"
    ],
-   "url": "https://www.eversports.de/org/activity/eac0b510-10fc-4c42-894a-e64ca50ef4ab"
+   "url": "https://www.eversports.de/org/activity/a9b926fc-0060-4b89-b449-ea6185acf531"
   },
   {
-   "id": "4c98737d-12a7-4cef-841e-e38ffee5f222",
+   "id": "3f36114d-bfbf-4352-8790-3b192fb0f94e",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "20:00",
    "dauer": 60,
    "titel": "Heels Style Beginner/Intermediate",
@@ -2556,17 +2066,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 50,
+   "frei": 48,
    "gesamt": 50,
    "stile": [
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/4c98737d-12a7-4cef-841e-e38ffee5f222"
+   "url": "https://www.eversports.de/org/activity/3f36114d-bfbf-4352-8790-3b192fb0f94e"
   },
   {
-   "id": "26c7e982-67b7-4d35-82e7-15dba2287f31",
+   "id": "7bf2633e-b201-4b17-821d-fb77a2150bf7",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "HipHop Intermediate",
@@ -2575,17 +2085,17 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 35,
+   "frei": 29,
    "gesamt": 35,
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/26c7e982-67b7-4d35-82e7-15dba2287f31"
+   "url": "https://www.eversports.de/org/activity/7bf2633e-b201-4b17-821d-fb77a2150bf7"
   },
   {
-   "id": "ad1b11c6-0d30-4809-8418-3c1b9b8d98b9",
+   "id": "8adc2aa6-abb7-4074-8f88-4b53f35ca3a8",
    "tag": "Mi",
-   "datum": "2026-10-07",
+   "datum": "2026-09-09",
    "zeit": "20:00",
    "dauer": 60,
    "titel": "Pole Level 1 (Neubeginner)",
@@ -2594,17 +2104,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 22,
+   "frei": 5,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/ad1b11c6-0d30-4809-8418-3c1b9b8d98b9"
+   "url": "https://www.eversports.de/org/activity/8adc2aa6-abb7-4074-8f88-4b53f35ca3a8"
   },
   {
-   "id": "58de75ee-82e7-4642-af19-b127f797158b",
+   "id": "c722e2f7-84d9-4649-b1bd-8f0384a1481c",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "10:00",
    "dauer": 60,
    "titel": "Aerial Hoop Neubeginner",
@@ -2613,17 +2123,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 15,
+   "frei": 12,
    "gesamt": 15,
    "stile": [
     "aerial"
    ],
-   "url": "https://www.eversports.de/org/activity/58de75ee-82e7-4642-af19-b127f797158b"
+   "url": "https://www.eversports.de/org/activity/c722e2f7-84d9-4649-b1bd-8f0384a1481c"
   },
   {
-   "id": "360d0aac-3e64-4f92-8fb3-a331d7ea84cc",
+   "id": "4f274db8-d353-4c34-8ea0-a0a6456ff062",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "11:00",
    "dauer": 60,
    "titel": "Aerial Hoop Beginner",
@@ -2632,17 +2142,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 15,
+   "frei": 13,
    "gesamt": 15,
    "stile": [
     "aerial"
    ],
-   "url": "https://www.eversports.de/org/activity/360d0aac-3e64-4f92-8fb3-a331d7ea84cc"
+   "url": "https://www.eversports.de/org/activity/4f274db8-d353-4c34-8ea0-a0a6456ff062"
   },
   {
-   "id": "46565269-b7f9-4c9b-9964-21804225d250",
+   "id": "866507a8-52bd-4683-8db6-603d06647cbe",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "11:00",
    "dauer": 60,
    "titel": "Pole Open Training",
@@ -2651,17 +2161,17 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 12,
+   "frei": 7,
    "gesamt": 12,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/46565269-b7f9-4c9b-9964-21804225d250"
+   "url": "https://www.eversports.de/org/activity/866507a8-52bd-4683-8db6-603d06647cbe"
   },
   {
-   "id": "93575c81-f11b-4889-963a-39ee2fe48760",
+   "id": "a7c14a8b-07ec-46f1-8c33-c7dbb63015f5",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "Commercial Beginner/Intermediate",
@@ -2670,17 +2180,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 50,
+   "frei": 39,
    "gesamt": 50,
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/93575c81-f11b-4889-963a-39ee2fe48760"
+   "url": "https://www.eversports.de/org/activity/a7c14a8b-07ec-46f1-8c33-c7dbb63015f5"
   },
   {
-   "id": "e206a8c4-4743-4d80-b242-88e4974cf2a4",
+   "id": "d46d4d21-f436-4ae2-a141-b0007f39d1a7",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "17:15",
    "dauer": 60,
    "titel": "Pole Dance Level 2 (Beginner)",
@@ -2689,17 +2199,17 @@
    "level": "Beginner",
    "stufen": "am",
    "kids": false,
-   "frei": 22,
+   "frei": 15,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/e206a8c4-4743-4d80-b242-88e4974cf2a4"
+   "url": "https://www.eversports.de/org/activity/d46d4d21-f436-4ae2-a141-b0007f39d1a7"
   },
   {
-   "id": "c3153a05-15ef-4854-a2c4-030f3fd9dce3",
+   "id": "fb44a02a-3ab2-4a6c-8b74-b022e52c1547",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "17:30",
    "dauer": 60,
    "titel": "Commercial Intermediate",
@@ -2713,12 +2223,12 @@
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/c3153a05-15ef-4854-a2c4-030f3fd9dce3"
+   "url": "https://www.eversports.de/org/activity/fb44a02a-3ab2-4a6c-8b74-b022e52c1547"
   },
   {
-   "id": "273c8102-c61f-49c7-9bda-34d44cdd8fd3",
+   "id": "b9987fb8-ccfc-4e6f-914f-faf66c01bb3e",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "17:30",
    "dauer": 60,
    "titel": "Dance Ü25",
@@ -2727,15 +2237,15 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 50,
+   "frei": 34,
    "gesamt": 50,
    "stile": [],
-   "url": "https://www.eversports.de/org/activity/273c8102-c61f-49c7-9bda-34d44cdd8fd3"
+   "url": "https://www.eversports.de/org/activity/b9987fb8-ccfc-4e6f-914f-faf66c01bb3e"
   },
   {
-   "id": "b3cd8bb6-6ebf-4aaa-8b0a-238f2e4eb059",
+   "id": "f92a7392-a563-4f8d-bf72-d6dbb6c1122a",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "17:30",
    "dauer": 60,
    "titel": "HipHop Beginner",
@@ -2744,17 +2254,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 70,
+   "frei": 59,
    "gesamt": 70,
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/b3cd8bb6-6ebf-4aaa-8b0a-238f2e4eb059"
+   "url": "https://www.eversports.de/org/activity/f92a7392-a563-4f8d-bf72-d6dbb6c1122a"
   },
   {
-   "id": "1ea48acd-2369-41a2-90c1-6bd56377f5a6",
+   "id": "8425b980-6173-4afe-8dea-0bbfcba8bd4f",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "Jazz Styles Beginner",
@@ -2763,17 +2273,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 40,
+   "frei": 23,
    "gesamt": 40,
    "stile": [
     "contemporary"
    ],
-   "url": "https://www.eversports.de/org/activity/1ea48acd-2369-41a2-90c1-6bd56377f5a6"
+   "url": "https://www.eversports.de/org/activity/8425b980-6173-4afe-8dea-0bbfcba8bd4f"
   },
   {
-   "id": "e3672fa7-bdae-4280-bb4a-cd9a8b01d1d4",
+   "id": "25a0c147-b95d-4363-a143-041e6e419bd0",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "18:15",
    "dauer": 60,
    "titel": "Pole Dance Level 3 (Beginner/Intermediate)",
@@ -2782,17 +2292,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "amf",
    "kids": false,
-   "frei": 22,
+   "frei": 16,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/e3672fa7-bdae-4280-bb4a-cd9a8b01d1d4"
+   "url": "https://www.eversports.de/org/activity/25a0c147-b95d-4363-a143-041e6e419bd0"
   },
   {
-   "id": "afa38d4f-229c-456e-bdf2-ee08844a4de0",
+   "id": "a8763025-287b-4a2a-9491-67ece78cd4ee",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "18:30",
    "dauer": 90,
    "titel": "Commercial Intermediate/Advanced",
@@ -2801,17 +2311,17 @@
    "level": "Intermediate / Advanced",
    "stufen": "mf",
    "kids": false,
-   "frei": 50,
+   "frei": 44,
    "gesamt": 50,
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/afa38d4f-229c-456e-bdf2-ee08844a4de0"
+   "url": "https://www.eversports.de/org/activity/a8763025-287b-4a2a-9491-67ece78cd4ee"
   },
   {
-   "id": "17a96dee-5667-41b3-8a4a-69fc33e10d1d",
+   "id": "0615df61-6864-4576-a234-b32b4d32b3fb",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "18:30",
    "dauer": 60,
    "titel": "Move Latin",
@@ -2820,17 +2330,17 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 70,
+   "frei": 49,
    "gesamt": 70,
    "stile": [
     "latin"
    ],
-   "url": "https://www.eversports.de/org/activity/17a96dee-5667-41b3-8a4a-69fc33e10d1d"
+   "url": "https://www.eversports.de/org/activity/0615df61-6864-4576-a234-b32b4d32b3fb"
   },
   {
-   "id": "58ad0b4b-67b0-4b23-9055-daf47548f3f6",
+   "id": "8860561d-8353-4755-8a0d-be8ff1995945",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "HipHop Basics",
@@ -2839,17 +2349,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 50,
+   "frei": 45,
    "gesamt": 50,
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/58ad0b4b-67b0-4b23-9055-daf47548f3f6"
+   "url": "https://www.eversports.de/org/activity/8860561d-8353-4755-8a0d-be8ff1995945"
   },
   {
-   "id": "99dd539d-3b1f-454c-8a8f-e962fc45ca34",
+   "id": "268b1d42-ec50-488f-9578-c86c639cb1e9",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "19:15",
    "dauer": 60,
    "titel": "Pole Dance Flying Heels Level 3",
@@ -2858,18 +2368,18 @@
    "level": "Level 3",
    "stufen": "f",
    "kids": false,
-   "frei": 22,
+   "frei": 15,
    "gesamt": 22,
    "stile": [
     "pole",
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/99dd539d-3b1f-454c-8a8f-e962fc45ca34"
+   "url": "https://www.eversports.de/org/activity/268b1d42-ec50-488f-9578-c86c639cb1e9"
   },
   {
-   "id": "997ab077-2f2c-4e1f-82fa-5d4a7ac668cc",
+   "id": "fb99142a-8db2-44ee-a6a6-b193f6e4aff3",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "19:30",
    "dauer": 60,
    "titel": "High Heels Beginner/Intermediate",
@@ -2878,17 +2388,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 70,
+   "frei": 47,
    "gesamt": 70,
    "stile": [
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/997ab077-2f2c-4e1f-82fa-5d4a7ac668cc"
+   "url": "https://www.eversports.de/org/activity/fb99142a-8db2-44ee-a6a6-b193f6e4aff3"
   },
   {
-   "id": "0bb59663-c9c0-486f-abe8-d8122b3e48c5",
+   "id": "bd371f14-f915-410f-9e02-43106efb1567",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "CollaboClass Commercial Beginner/Intermediate (Fabio&Emma)",
@@ -2902,12 +2412,12 @@
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/0bb59663-c9c0-486f-abe8-d8122b3e48c5"
+   "url": "https://www.eversports.de/org/activity/bd371f14-f915-410f-9e02-43106efb1567"
   },
   {
-   "id": "be38916b-87f3-4ed9-883b-fbb650c9ad50",
+   "id": "0a78aa5f-3218-40b2-87c7-0f037d41e435",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "HipHop Beginner/Intermediate",
@@ -2916,36 +2426,36 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 35,
+   "frei": 29,
    "gesamt": 35,
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/be38916b-87f3-4ed9-883b-fbb650c9ad50"
+   "url": "https://www.eversports.de/org/activity/0a78aa5f-3218-40b2-87c7-0f037d41e435"
   },
   {
-   "id": "9ce4b2bd-1914-4bbf-82d3-0addffdaa6e9",
+   "id": "c34ed8d9-953d-43a0-b080-708c465a2a72",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "HipHop Lady Style Beginner/Intermediate",
-   "coach": "Emma Kant",
+   "coach": "Fabio",
    "studio": "Studio 5 - Bright Space",
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 50,
+   "frei": 40,
    "gesamt": 50,
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/9ce4b2bd-1914-4bbf-82d3-0addffdaa6e9"
+   "url": "https://www.eversports.de/org/activity/c34ed8d9-953d-43a0-b080-708c465a2a72"
   },
   {
-   "id": "9b7201cf-8104-4a18-99f9-f073b9ee5e4c",
+   "id": "d6c20479-f8c9-4777-8257-01c2727d1650",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "Jazz Styles Intermediate",
@@ -2954,17 +2464,17 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 40,
+   "frei": 34,
    "gesamt": 40,
    "stile": [
     "contemporary"
    ],
-   "url": "https://www.eversports.de/org/activity/9b7201cf-8104-4a18-99f9-f073b9ee5e4c"
+   "url": "https://www.eversports.de/org/activity/d6c20479-f8c9-4777-8257-01c2727d1650"
   },
   {
-   "id": "9484757d-ff12-478d-b25e-1a21192e3dfe",
+   "id": "44f55155-9ca9-42f1-acc8-024a7387995d",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "20:15",
    "dauer": 60,
    "titel": "Pole & Heels Open Level",
@@ -2973,18 +2483,18 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 22,
+   "frei": 15,
    "gesamt": 22,
    "stile": [
     "pole",
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/9484757d-ff12-478d-b25e-1a21192e3dfe"
+   "url": "https://www.eversports.de/org/activity/44f55155-9ca9-42f1-acc8-024a7387995d"
   },
   {
-   "id": "ac6f778a-bd02-43dd-b393-c213548983ba",
+   "id": "6f908e5e-e908-4b07-ba84-7da57e473bc3",
    "tag": "Do",
-   "datum": "2026-10-08",
+   "datum": "2026-09-10",
    "zeit": "20:30",
    "dauer": 60,
    "titel": "Commercial Beginner/Intermediate",
@@ -2993,17 +2503,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 70,
+   "frei": 54,
    "gesamt": 70,
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/ac6f778a-bd02-43dd-b393-c213548983ba"
+   "url": "https://www.eversports.de/org/activity/6f908e5e-e908-4b07-ba84-7da57e473bc3"
   },
   {
-   "id": "e9c6ea49-af98-4112-9b36-c33c75254f71",
+   "id": "41503863-a79b-4d6c-a2e1-0689951960cf",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "10:00",
    "dauer": 60,
    "titel": "Pole Dance Level 1",
@@ -3012,17 +2522,17 @@
    "level": "Level 1",
    "stufen": "a",
    "kids": false,
-   "frei": 22,
+   "frei": 15,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/e9c6ea49-af98-4112-9b36-c33c75254f71"
+   "url": "https://www.eversports.de/org/activity/41503863-a79b-4d6c-a2e1-0689951960cf"
   },
   {
-   "id": "aebdf966-c24f-4e61-9a62-7016a49e0d7d",
+   "id": "a9063d8b-2b95-43db-bb7d-463f26583b01",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "10:30",
    "dauer": 90,
    "titel": "Jazz Technique Intermediate",
@@ -3031,17 +2541,17 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 70,
+   "frei": 63,
    "gesamt": 70,
    "stile": [
     "contemporary"
    ],
-   "url": "https://www.eversports.de/org/activity/aebdf966-c24f-4e61-9a62-7016a49e0d7d"
+   "url": "https://www.eversports.de/org/activity/a9063d8b-2b95-43db-bb7d-463f26583b01"
   },
   {
-   "id": "5436bec2-8848-4494-a619-b4aa3d821fdf",
+   "id": "27f7771a-55df-4d48-847b-003519043918",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "11:00",
    "dauer": 60,
    "titel": "Pole Dance Level 2 (Beginner)",
@@ -3050,17 +2560,17 @@
    "level": "Beginner",
    "stufen": "am",
    "kids": false,
-   "frei": 22,
+   "frei": 15,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/5436bec2-8848-4494-a619-b4aa3d821fdf"
+   "url": "https://www.eversports.de/org/activity/27f7771a-55df-4d48-847b-003519043918"
   },
   {
-   "id": "973eb7b2-6bdc-4f9a-b5de-453fdbb7f86c",
+   "id": "ed257c2c-5436-4e71-a188-f9dfbec8d11d",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "12:00",
    "dauer": 60,
    "titel": "Pole Dance Level 1 Neubeginner",
@@ -3069,17 +2579,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 22,
+   "frei": 19,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/973eb7b2-6bdc-4f9a-b5de-453fdbb7f86c"
+   "url": "https://www.eversports.de/org/activity/ed257c2c-5436-4e71-a188-f9dfbec8d11d"
   },
   {
-   "id": "20a1b7d5-d420-4284-93b4-bce1f286cbd4",
+   "id": "e3481ccd-6c5c-4a02-be8d-19a5747bae87",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "Choreography Beginner",
@@ -3088,17 +2598,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 50,
+   "frei": 49,
    "gesamt": 50,
    "stile": [
     "choreography"
    ],
-   "url": "https://www.eversports.de/org/activity/20a1b7d5-d420-4284-93b4-bce1f286cbd4"
+   "url": "https://www.eversports.de/org/activity/e3481ccd-6c5c-4a02-be8d-19a5747bae87"
   },
   {
-   "id": "a7084192-981f-4ec7-8626-4d29c05250d6",
+   "id": "eebd72e1-9aa4-4123-af7d-130c6d1e36ce",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "Commercial Beginner",
@@ -3107,17 +2617,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 70,
+   "frei": 54,
    "gesamt": 70,
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/a7084192-981f-4ec7-8626-4d29c05250d6"
+   "url": "https://www.eversports.de/org/activity/eebd72e1-9aa4-4123-af7d-130c6d1e36ce"
   },
   {
-   "id": "3358c6d6-9224-4624-85af-8083122949e6",
+   "id": "8854266f-62f1-434c-8a6c-f1afd8dcf02f",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "First Tricks Upside Down",
@@ -3126,17 +2636,17 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 22,
+   "frei": 17,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/3358c6d6-9224-4624-85af-8083122949e6"
+   "url": "https://www.eversports.de/org/activity/8854266f-62f1-434c-8a6c-f1afd8dcf02f"
   },
   {
-   "id": "b0638056-e15b-4d0c-82af-bb04734e4a33",
+   "id": "51405b7b-c639-442d-80de-619ca46013ea",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "High Heels Intermediate",
@@ -3145,17 +2655,17 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 50,
+   "frei": 45,
    "gesamt": 50,
    "stile": [
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/b0638056-e15b-4d0c-82af-bb04734e4a33"
+   "url": "https://www.eversports.de/org/activity/51405b7b-c639-442d-80de-619ca46013ea"
   },
   {
-   "id": "4ef0b5c2-69cd-4081-b012-f2d58e3de748",
+   "id": "1db74346-d811-4aac-bea5-a438dce5dcc3",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "HipHop Fusion Beginner/Intermediate",
@@ -3169,12 +2679,12 @@
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/4ef0b5c2-69cd-4081-b012-f2d58e3de748"
+   "url": "https://www.eversports.de/org/activity/1db74346-d811-4aac-bea5-a438dce5dcc3"
   },
   {
-   "id": "f2ecda9a-16f4-48fb-9bc1-8a891b1d5994",
+   "id": "e858ccf2-3259-4a02-ab89-4af5fb4a7e1d",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "Legs & Core",
@@ -3188,12 +2698,12 @@
    "stile": [
     "fitness"
    ],
-   "url": "https://www.eversports.de/org/activity/f2ecda9a-16f4-48fb-9bc1-8a891b1d5994"
+   "url": "https://www.eversports.de/org/activity/e858ccf2-3259-4a02-ab89-4af5fb4a7e1d"
   },
   {
-   "id": "736204c4-ac9a-4b69-ad1e-41e4c30e00cc",
+   "id": "dd49d5b2-17d7-46a2-ad15-5f1989047066",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "Choreography Intermediate",
@@ -3207,12 +2717,12 @@
    "stile": [
     "choreography"
    ],
-   "url": "https://www.eversports.de/org/activity/736204c4-ac9a-4b69-ad1e-41e4c30e00cc"
+   "url": "https://www.eversports.de/org/activity/dd49d5b2-17d7-46a2-ad15-5f1989047066"
   },
   {
-   "id": "b7f90af7-9288-4edd-b02d-94c03a9f8163",
+   "id": "fc6f556b-6f6e-4ddf-92ae-09e4199ec7b6",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "18:00",
    "dauer": 90,
    "titel": "Commercial Intermediate",
@@ -3221,17 +2731,17 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 70,
+   "frei": 66,
    "gesamt": 70,
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/b7f90af7-9288-4edd-b02d-94c03a9f8163"
+   "url": "https://www.eversports.de/org/activity/fc6f556b-6f6e-4ddf-92ae-09e4199ec7b6"
   },
   {
-   "id": "ac49f7b8-a1ed-45ec-b42e-da44e61567a1",
+   "id": "ca2f9c48-34e2-4738-9605-a0892eb9e93b",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "Female Fitness",
@@ -3245,12 +2755,12 @@
    "stile": [
     "fitness"
    ],
-   "url": "https://www.eversports.de/org/activity/ac49f7b8-a1ed-45ec-b42e-da44e61567a1"
+   "url": "https://www.eversports.de/org/activity/ca2f9c48-34e2-4738-9605-a0892eb9e93b"
   },
   {
-   "id": "36803315-0532-4386-a157-3b0e6991fae3",
+   "id": "4424d6e7-fa13-46db-a5d7-d2c1cce2cb40",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "HipHop New Style Beginner/Intermediate",
@@ -3259,17 +2769,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 50,
+   "frei": 40,
    "gesamt": 50,
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/36803315-0532-4386-a157-3b0e6991fae3"
+   "url": "https://www.eversports.de/org/activity/4424d6e7-fa13-46db-a5d7-d2c1cce2cb40"
   },
   {
-   "id": "aadfb17d-ea55-4bd9-b8df-164a7012c586",
+   "id": "01d2e174-e3e0-4f7d-80ff-90be07fcea09",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "Latin Twerk Intermediate",
@@ -3278,17 +2788,17 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 50,
+   "frei": 47,
    "gesamt": 50,
    "stile": [
     "latin"
    ],
-   "url": "https://www.eversports.de/org/activity/aadfb17d-ea55-4bd9-b8df-164a7012c586"
+   "url": "https://www.eversports.de/org/activity/01d2e174-e3e0-4f7d-80ff-90be07fcea09"
   },
   {
-   "id": "f3c93a96-3f60-4642-813a-da54e3215f92",
+   "id": "3ad954e4-c037-4dea-8372-1964e2201ce9",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "Pole Level 1 (Neubeginner)",
@@ -3297,17 +2807,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 22,
+   "frei": 4,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/f3c93a96-3f60-4642-813a-da54e3215f92"
+   "url": "https://www.eversports.de/org/activity/3ad954e4-c037-4dea-8372-1964e2201ce9"
   },
   {
-   "id": "d6574e56-fa77-4582-8d79-7c403a819788",
+   "id": "93e917f8-893a-4bac-ab75-d5e331514e33",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "Choreography Beginner",
@@ -3316,17 +2826,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 35,
+   "frei": 26,
    "gesamt": 35,
    "stile": [
     "choreography"
    ],
-   "url": "https://www.eversports.de/org/activity/d6574e56-fa77-4582-8d79-7c403a819788"
+   "url": "https://www.eversports.de/org/activity/93e917f8-893a-4bac-ab75-d5e331514e33"
   },
   {
-   "id": "ce12fce8-7f83-49f9-bfe8-1849596c8fda",
+   "id": "aa6dc84a-cd92-45f5-aba2-068a02fd37bb",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "High Heels Beginner",
@@ -3335,17 +2845,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 50,
+   "frei": 44,
    "gesamt": 50,
    "stile": [
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/ce12fce8-7f83-49f9-bfe8-1849596c8fda"
+   "url": "https://www.eversports.de/org/activity/aa6dc84a-cd92-45f5-aba2-068a02fd37bb"
   },
   {
-   "id": "45ac491b-e533-4532-899d-7f1fe1da5565",
+   "id": "8dfc4ac1-c03c-4056-99b3-1f3d37810c6f",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "Latin Commercial Intermediate",
@@ -3360,12 +2870,12 @@
     "commercial",
     "latin"
    ],
-   "url": "https://www.eversports.de/org/activity/45ac491b-e533-4532-899d-7f1fe1da5565"
+   "url": "https://www.eversports.de/org/activity/8dfc4ac1-c03c-4056-99b3-1f3d37810c6f"
   },
   {
-   "id": "ae9e9b05-14e3-4c31-9443-dc07297182c8",
+   "id": "b33cb7f9-92c2-475a-b5fb-0c749e4f7c31",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "Pole Dance Level 2 (Beginner)",
@@ -3374,17 +2884,17 @@
    "level": "Beginner",
    "stufen": "am",
    "kids": false,
-   "frei": 22,
+   "frei": 7,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/ae9e9b05-14e3-4c31-9443-dc07297182c8"
+   "url": "https://www.eversports.de/org/activity/b33cb7f9-92c2-475a-b5fb-0c749e4f7c31"
   },
   {
-   "id": "43e8d130-1422-413b-be4e-d69c1e5c1433",
+   "id": "6593b7db-d71e-4032-b015-720e5c7ad726",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "19:00",
    "dauer": 90,
    "titel": "Reggaeton Beginner/Intermediate",
@@ -3393,17 +2903,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 50,
+   "frei": 40,
    "gesamt": 50,
    "stile": [
     "latin"
    ],
-   "url": "https://www.eversports.de/org/activity/43e8d130-1422-413b-be4e-d69c1e5c1433"
+   "url": "https://www.eversports.de/org/activity/6593b7db-d71e-4032-b015-720e5c7ad726"
   },
   {
-   "id": "1c1ee639-66a8-4f7e-aaf0-151aebdb0168",
+   "id": "624b75fa-a851-43ee-ba41-80a7ee76b87e",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "19:30",
    "dauer": 90,
    "titel": "Choreography Intermediate",
@@ -3412,17 +2922,17 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 70,
+   "frei": 58,
    "gesamt": 70,
    "stile": [
     "choreography"
    ],
-   "url": "https://www.eversports.de/org/activity/1c1ee639-66a8-4f7e-aaf0-151aebdb0168"
+   "url": "https://www.eversports.de/org/activity/624b75fa-a851-43ee-ba41-80a7ee76b87e"
   },
   {
-   "id": "5ccdcbf7-d9d0-45f9-a629-d41e15828f8f",
+   "id": "cd32890a-e2ed-4b25-922e-0008b686aa17",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "19:30",
    "dauer": 90,
    "titel": "Choreography Intermediate/Advanced",
@@ -3436,12 +2946,12 @@
    "stile": [
     "choreography"
    ],
-   "url": "https://www.eversports.de/org/activity/5ccdcbf7-d9d0-45f9-a629-d41e15828f8f"
+   "url": "https://www.eversports.de/org/activity/cd32890a-e2ed-4b25-922e-0008b686aa17"
   },
   {
-   "id": "cac9c2dc-908e-4a4b-8d07-5f08554e3229",
+   "id": "e7243660-ae62-4217-8cda-83e32030c055",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "20:00",
    "dauer": 60,
    "titel": "Female HipHop Beginner/Intermediate",
@@ -3455,12 +2965,12 @@
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/cac9c2dc-908e-4a4b-8d07-5f08554e3229"
+   "url": "https://www.eversports.de/org/activity/e7243660-ae62-4217-8cda-83e32030c055"
   },
   {
-   "id": "bfc8b541-a95d-46bd-8b15-ab2821e50192",
+   "id": "862f083a-72ea-46c9-aeaa-19444a594ebc",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "20:00",
    "dauer": 60,
    "titel": "High Heels Beginner",
@@ -3474,12 +2984,12 @@
    "stile": [
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/bfc8b541-a95d-46bd-8b15-ab2821e50192"
+   "url": "https://www.eversports.de/org/activity/862f083a-72ea-46c9-aeaa-19444a594ebc"
   },
   {
-   "id": "d2a92a9b-9956-48b5-8252-4721bbb24484",
+   "id": "f5e8b16b-e062-4a19-bc91-40d7a9b48877",
    "tag": "Fr",
-   "datum": "2026-10-09",
+   "datum": "2026-09-11",
    "zeit": "20:00",
    "dauer": 60,
    "titel": "Pole Open Training",
@@ -3488,17 +2998,17 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 12,
+   "frei": 8,
    "gesamt": 12,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/d2a92a9b-9956-48b5-8252-4721bbb24484"
+   "url": "https://www.eversports.de/org/activity/f5e8b16b-e062-4a19-bc91-40d7a9b48877"
   },
   {
-   "id": "f49526cf-3155-4aac-b908-a3336156ac2a",
+   "id": "43e45101-ebcf-47ac-a9ce-4765b158b158",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "11:00",
    "dauer": 60,
    "titel": "Flavour Power Dance",
@@ -3507,17 +3017,17 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 35,
+   "frei": 33,
    "gesamt": 35,
    "stile": [
     "fitness"
    ],
-   "url": "https://www.eversports.de/org/activity/f49526cf-3155-4aac-b908-a3336156ac2a"
+   "url": "https://www.eversports.de/org/activity/43e45101-ebcf-47ac-a9ce-4765b158b158"
   },
   {
-   "id": "05f63e39-dbad-4345-ae5e-6971d6dd4f61",
+   "id": "3324bc29-cd9a-41c4-939d-91d790183e90",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "11:00",
    "dauer": 60,
    "titel": "High Heels Beginner/Intermediate",
@@ -3526,17 +3036,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 70,
+   "frei": 63,
    "gesamt": 70,
    "stile": [
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/05f63e39-dbad-4345-ae5e-6971d6dd4f61"
+   "url": "https://www.eversports.de/org/activity/3324bc29-cd9a-41c4-939d-91d790183e90"
   },
   {
-   "id": "eaa74bb2-0854-4e3e-8340-11d2e81e5281",
+   "id": "01cb3d6a-e980-4eb2-a6a8-1079ab6e0d66",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "11:00",
    "dauer": 60,
    "titel": "Hip Hop Kids 6 - 10 Jahre",
@@ -3550,12 +3060,12 @@
    "stile": [
     "kids"
    ],
-   "url": "https://www.eversports.de/org/activity/eaa74bb2-0854-4e3e-8340-11d2e81e5281"
+   "url": "https://www.eversports.de/org/activity/01cb3d6a-e980-4eb2-a6a8-1079ab6e0d66"
   },
   {
-   "id": "20cc04fe-a3fa-4813-8776-9dff9264927c",
+   "id": "f793c24d-a3cb-487d-8705-6d603edb3c2f",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "11:00",
    "dauer": 60,
    "titel": "Pole Level 1 (Neubeginner)",
@@ -3564,17 +3074,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 22,
+   "frei": 12,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/20cc04fe-a3fa-4813-8776-9dff9264927c"
+   "url": "https://www.eversports.de/org/activity/f793c24d-a3cb-487d-8705-6d603edb3c2f"
   },
   {
-   "id": "a7a1bbf3-9d78-454e-9fdf-673dbebca9b6",
+   "id": "30a5d2f6-21d0-4de6-bc23-d896d2185ffc",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "11:30",
    "dauer": 90,
    "titel": "K-Pop All Level",
@@ -3583,17 +3093,17 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 50,
+   "frei": 38,
    "gesamt": 50,
    "stile": [
     "kpop"
    ],
-   "url": "https://www.eversports.de/org/activity/a7a1bbf3-9d78-454e-9fdf-673dbebca9b6"
+   "url": "https://www.eversports.de/org/activity/30a5d2f6-21d0-4de6-bc23-d896d2185ffc"
   },
   {
-   "id": "74e10ce0-1050-4b19-8dcc-23c0e4f26b38",
+   "id": "5db537a1-7301-44cd-83e1-3f0b1f82e15b",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "12:00",
    "dauer": 60,
    "titel": "Bollywood All Level",
@@ -3602,17 +3112,17 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 35,
+   "frei": 31,
    "gesamt": 35,
    "stile": [
     "latin"
    ],
-   "url": "https://www.eversports.de/org/activity/74e10ce0-1050-4b19-8dcc-23c0e4f26b38"
+   "url": "https://www.eversports.de/org/activity/5db537a1-7301-44cd-83e1-3f0b1f82e15b"
   },
   {
-   "id": "6f8517d8-cf49-4986-bbd9-b9a5e53a8675",
+   "id": "71701658-9ea7-4d09-a0de-2a4451e9719b",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "12:00",
    "dauer": 60,
    "titel": "House Basics Beginner",
@@ -3621,17 +3131,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 50,
+   "frei": 47,
    "gesamt": 50,
    "stile": [
     "house"
    ],
-   "url": "https://www.eversports.de/org/activity/6f8517d8-cf49-4986-bbd9-b9a5e53a8675"
+   "url": "https://www.eversports.de/org/activity/71701658-9ea7-4d09-a0de-2a4451e9719b"
   },
   {
-   "id": "eb7ab1f2-2e68-43f2-93fb-4737132bc691",
+   "id": "a0d69d9f-914a-4505-82bb-310184bd5699",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "12:00",
    "dauer": 60,
    "titel": "Latin Twerk Intermediate",
@@ -3640,17 +3150,17 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 70,
+   "frei": 65,
    "gesamt": 70,
    "stile": [
     "latin"
    ],
-   "url": "https://www.eversports.de/org/activity/eb7ab1f2-2e68-43f2-93fb-4737132bc691"
+   "url": "https://www.eversports.de/org/activity/a0d69d9f-914a-4505-82bb-310184bd5699"
   },
   {
-   "id": "87d3838a-6220-4dc6-b7c0-9a2179d69034",
+   "id": "d6a6f5f2-3f2b-4d73-985c-7f41b8bd6920",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "12:00",
    "dauer": 60,
    "titel": "Pole Dance Spinning Level 2",
@@ -3659,17 +3169,17 @@
    "level": "Level 2",
    "stufen": "m",
    "kids": false,
-   "frei": 22,
+   "frei": 18,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/87d3838a-6220-4dc6-b7c0-9a2179d69034"
+   "url": "https://www.eversports.de/org/activity/d6a6f5f2-3f2b-4d73-985c-7f41b8bd6920"
   },
   {
-   "id": "553f50cf-c886-49e8-b3ba-7ea20fb12f63",
+   "id": "a663e874-df4d-4cf2-9d1e-ccce0a54f921",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "13:00",
    "dauer": 60,
    "titel": "Afro Beats Beginner",
@@ -3678,17 +3188,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 35,
+   "frei": 30,
    "gesamt": 35,
    "stile": [
     "latin"
    ],
-   "url": "https://www.eversports.de/org/activity/553f50cf-c886-49e8-b3ba-7ea20fb12f63"
+   "url": "https://www.eversports.de/org/activity/a663e874-df4d-4cf2-9d1e-ccce0a54f921"
   },
   {
-   "id": "2de948ca-7704-410b-a509-e31159c24f54",
+   "id": "54e1ca1b-4b48-4e6f-9c36-4c91e959f776",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "13:00",
    "dauer": 60,
    "titel": "HipHop Beginner",
@@ -3697,17 +3207,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 70,
+   "frei": 63,
    "gesamt": 70,
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/2de948ca-7704-410b-a509-e31159c24f54"
+   "url": "https://www.eversports.de/org/activity/54e1ca1b-4b48-4e6f-9c36-4c91e959f776"
   },
   {
-   "id": "a3cefeed-f2f0-4014-81a3-a28f26717979",
+   "id": "18d4f3a8-0769-4370-bd42-82deb83b4d0b",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "13:00",
    "dauer": 60,
    "titel": "House Beginner/Intermediate",
@@ -3716,17 +3226,17 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 50,
+   "frei": 48,
    "gesamt": 50,
    "stile": [
     "house"
    ],
-   "url": "https://www.eversports.de/org/activity/a3cefeed-f2f0-4014-81a3-a28f26717979"
+   "url": "https://www.eversports.de/org/activity/18d4f3a8-0769-4370-bd42-82deb83b4d0b"
   },
   {
-   "id": "1e811617-380a-4366-b8db-468351599fe2",
+   "id": "3ae3783b-491b-4096-b87a-26f93b3b8cb7",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "13:00",
    "dauer": 90,
    "titel": "Pole & Heels Open Level",
@@ -3735,18 +3245,18 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 22,
+   "frei": 17,
    "gesamt": 22,
    "stile": [
     "pole",
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/1e811617-380a-4366-b8db-468351599fe2"
+   "url": "https://www.eversports.de/org/activity/3ae3783b-491b-4096-b87a-26f93b3b8cb7"
   },
   {
-   "id": "37d5d0ae-eed5-47e4-86ab-a9e27f98e8c3",
+   "id": "dc73ed35-ee15-4285-af39-c2bee623a88c",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "13:30",
    "dauer": 60,
    "titel": "Aerial Hoop Neubeginner",
@@ -3755,17 +3265,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 15,
+   "frei": 0,
    "gesamt": 15,
    "stile": [
     "aerial"
    ],
-   "url": "https://www.eversports.de/org/activity/37d5d0ae-eed5-47e4-86ab-a9e27f98e8c3"
+   "url": "https://www.eversports.de/org/activity/dc73ed35-ee15-4285-af39-c2bee623a88c"
   },
   {
-   "id": "1cbf138b-b22e-48c8-a926-381bf8f5cc81",
+   "id": "df66105c-eaaf-4b79-b5ef-3d97f0773abb",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "14:00",
    "dauer": 60,
    "titel": "Choreography Intermediate",
@@ -3774,17 +3284,17 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 35,
+   "frei": 30,
    "gesamt": 35,
    "stile": [
     "choreography"
    ],
-   "url": "https://www.eversports.de/org/activity/1cbf138b-b22e-48c8-a926-381bf8f5cc81"
+   "url": "https://www.eversports.de/org/activity/df66105c-eaaf-4b79-b5ef-3d97f0773abb"
   },
   {
-   "id": "2f4db7e3-eb42-40a4-8325-9682dafbc0db",
+   "id": "ad2a9879-6481-4671-b971-7ee1409e03e0",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "14:00",
    "dauer": 60,
    "titel": "Commercial Beginner",
@@ -3793,17 +3303,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 50,
+   "frei": 48,
    "gesamt": 50,
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/2f4db7e3-eb42-40a4-8325-9682dafbc0db"
+   "url": "https://www.eversports.de/org/activity/ad2a9879-6481-4671-b971-7ee1409e03e0"
   },
   {
-   "id": "f24dbf40-31f2-45c4-b9aa-9e421b2d5663",
+   "id": "3dad00d4-c1c6-4eb4-acd3-f1c212b7c7f9",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "14:00",
    "dauer": 90,
    "titel": "POP UP CLASS High Heels Beginner/Intermediate",
@@ -3817,12 +3327,12 @@
    "stile": [
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/f24dbf40-31f2-45c4-b9aa-9e421b2d5663"
+   "url": "https://www.eversports.de/org/activity/3dad00d4-c1c6-4eb4-acd3-f1c212b7c7f9"
   },
   {
-   "id": "acbad151-d0df-467c-9019-05abe53d612d",
+   "id": "f1fc0781-724a-4764-ada9-91804d5f368e",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "14:30",
    "dauer": 60,
    "titel": "Aerial Hoop Beginner",
@@ -3831,17 +3341,17 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 15,
+   "frei": 9,
    "gesamt": 15,
    "stile": [
     "aerial"
    ],
-   "url": "https://www.eversports.de/org/activity/acbad151-d0df-467c-9019-05abe53d612d"
+   "url": "https://www.eversports.de/org/activity/f1fc0781-724a-4764-ada9-91804d5f368e"
   },
   {
-   "id": "0bc844ba-e31e-4635-be6d-3cf61a0df043",
+   "id": "3f65a4f0-c0ae-4f3c-961d-6c028c20a3dc",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "14:30",
    "dauer": 60,
    "titel": "Pole Open Training",
@@ -3850,17 +3360,17 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 12,
+   "frei": 10,
    "gesamt": 12,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/0bc844ba-e31e-4635-be6d-3cf61a0df043"
+   "url": "https://www.eversports.de/org/activity/3f65a4f0-c0ae-4f3c-961d-6c028c20a3dc"
   },
   {
-   "id": "5506000d-427d-4f48-9560-922ae00b663f",
+   "id": "06fd4734-d4bb-41b6-b5a0-45c9a5f8b16b",
    "tag": "Sa",
-   "datum": "2026-10-10",
+   "datum": "2026-09-12",
    "zeit": "15:00",
    "dauer": 90,
    "titel": "High Heels Beginner/Intermediate",
@@ -3874,12 +3384,12 @@
    "stile": [
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/5506000d-427d-4f48-9560-922ae00b663f"
+   "url": "https://www.eversports.de/org/activity/06fd4734-d4bb-41b6-b5a0-45c9a5f8b16b"
   },
   {
-   "id": "3288c748-5a75-439f-b54d-fa9a937bc35c",
+   "id": "aeb0bd35-617e-4f1d-9e68-4c1de101e4f5",
    "tag": "So",
-   "datum": "2026-10-11",
+   "datum": "2026-09-13",
    "zeit": "11:00",
    "dauer": 60,
    "titel": "Pole Level 1",
@@ -3888,17 +3398,17 @@
    "level": "Level 1",
    "stufen": "a",
    "kids": false,
-   "frei": 22,
+   "frei": 16,
    "gesamt": 22,
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/3288c748-5a75-439f-b54d-fa9a937bc35c"
+   "url": "https://www.eversports.de/org/activity/aeb0bd35-617e-4f1d-9e68-4c1de101e4f5"
   },
   {
-   "id": "8a9f9b49-3172-49ad-8e39-a374ddcbe448",
+   "id": "1eeede03-e44d-4511-950c-7fb14bdede8d",
    "tag": "So",
-   "datum": "2026-10-11",
+   "datum": "2026-09-13",
    "zeit": "12:00",
    "dauer": 60,
    "titel": "Pole & Heels Level 1",
@@ -3907,13 +3417,507 @@
    "level": "Level 1",
    "stufen": "a",
    "kids": false,
-   "frei": 22,
+   "frei": 20,
    "gesamt": 22,
    "stile": [
     "pole",
     "heels"
    ],
-   "url": "https://www.eversports.de/org/activity/8a9f9b49-3172-49ad-8e39-a374ddcbe448"
+   "url": "https://www.eversports.de/org/activity/1eeede03-e44d-4511-950c-7fb14bdede8d"
+  },
+  {
+   "id": "96fc3d4d-5e9a-4bab-bfd2-1b6d1f59c70a",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "10:00",
+   "dauer": 60,
+   "titel": "Dance Athletics",
+   "coach": "Maxine",
+   "studio": "Studio 6 - Dark Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "frei": 16,
+   "gesamt": 16,
+   "stile": [
+    "fitness"
+   ],
+   "url": "https://www.eversports.de/org/activity/96fc3d4d-5e9a-4bab-bfd2-1b6d1f59c70a"
+  },
+  {
+   "id": "176e25bb-229e-456e-93c0-4bdd1fa89201",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "10:00",
+   "dauer": 60,
+   "titel": "Stretching Open Level",
+   "coach": "Michelle (Schelle) Dzida",
+   "studio": "Studio 5 - Bright Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "frei": 47,
+   "gesamt": 50,
+   "stile": [
+    "fitness"
+   ],
+   "url": "https://www.eversports.de/org/activity/176e25bb-229e-456e-93c0-4bdd1fa89201"
+  },
+  {
+   "id": "e1894254-502a-4a98-91c0-3f2fe8544cc9",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Dance Athletics - Strength",
+   "coach": "Maxine",
+   "studio": "Studio 6 - Dark Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "frei": 19,
+   "gesamt": 20,
+   "stile": [
+    "fitness"
+   ],
+   "url": "https://www.eversports.de/org/activity/e1894254-502a-4a98-91c0-3f2fe8544cc9"
+  },
+  {
+   "id": "dc2bf4c4-eaed-4ffb-ba40-47aba631640d",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Pole Level 1 (Neubeginner)",
+   "coach": "Sasha",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "frei": 21,
+   "gesamt": 22,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/dc2bf4c4-eaed-4ffb-ba40-47aba631640d"
+  },
+  {
+   "id": "fe01926b-e61d-49fa-91c1-6c65ca03e533",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "12:00",
+   "dauer": 60,
+   "titel": "Pole Choreo Level 1 (Neubeginner)",
+   "coach": "Sasha",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "frei": 20,
+   "gesamt": 22,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/fe01926b-e61d-49fa-91c1-6c65ca03e533"
+  },
+  {
+   "id": "9619a498-bbcb-49e5-adca-91f819941f45",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "16:30",
+   "dauer": 60,
+   "titel": "Pole Dance Level 2",
+   "coach": "Sophie Kolter",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Level 2",
+   "stufen": "m",
+   "kids": false,
+   "frei": 18,
+   "gesamt": 22,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/9619a498-bbcb-49e5-adca-91f819941f45"
+  },
+  {
+   "id": "95fc929e-c5f5-4353-a2a8-9c8d48514bd2",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "Commercial Beginner",
+   "coach": "Laura Klein",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "frei": 65,
+   "gesamt": 70,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/95fc929e-c5f5-4353-a2a8-9c8d48514bd2"
+  },
+  {
+   "id": "be24cd5a-e261-4c4b-8ae6-8efe0e919a24",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "HipHop Basics",
+   "coach": "Jessica",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "frei": 34,
+   "gesamt": 35,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/be24cd5a-e261-4c4b-8ae6-8efe0e919a24"
+  },
+  {
+   "id": "bec3228f-afd3-4930-a999-8860131e3901",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "HipHop Intermediate",
+   "coach": "Sarah",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "frei": 50,
+   "gesamt": 50,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/bec3228f-afd3-4930-a999-8860131e3901"
+  },
+  {
+   "id": "b19065ba-9c52-4819-b4ee-4ce73da0aafb",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "17:00",
+   "dauer": 60,
+   "titel": "Tanz dich fit Einsteiger",
+   "coach": "Yves",
+   "studio": "Studio 3 - Grey Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "frei": 30,
+   "gesamt": 30,
+   "stile": [
+    "fitness"
+   ],
+   "url": "https://www.eversports.de/org/activity/b19065ba-9c52-4819-b4ee-4ce73da0aafb"
+  },
+  {
+   "id": "f8997599-feb9-496d-880a-0139f3ad4b7f",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "17:30",
+   "dauer": 60,
+   "titel": "Pole Dance Level 1",
+   "coach": "Sophie Kolter",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Level 1",
+   "stufen": "a",
+   "kids": false,
+   "frei": 19,
+   "gesamt": 22,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/f8997599-feb9-496d-880a-0139f3ad4b7f"
+  },
+  {
+   "id": "02221355-5625-4f43-bae4-2ebf1bed5792",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "Choreography Beginner/Intermediate",
+   "coach": "Emma Schorb",
+   "studio": "Studio 2 - White Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "frei": 47,
+   "gesamt": 50,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/02221355-5625-4f43-bae4-2ebf1bed5792"
+  },
+  {
+   "id": "ae8f29db-ee1c-427b-84c8-e5a8bb1dcc65",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "Choreography Intermediate",
+   "coach": "Laura Klein",
+   "studio": "Studio 1 - Large Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "frei": 66,
+   "gesamt": 70,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/ae8f29db-ee1c-427b-84c8-e5a8bb1dcc65"
+  },
+  {
+   "id": "aafd8489-e0c4-46f1-a76d-90d8bbd3bf87",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "18:00",
+   "dauer": 90,
+   "titel": "Commercial Intermediate",
+   "coach": "Ada",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "frei": 50,
+   "gesamt": 50,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/aafd8489-e0c4-46f1-a76d-90d8bbd3bf87"
+  },
+  {
+   "id": "5d7182f5-304f-49e0-96ed-438645addb4e",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "18:00",
+   "dauer": 60,
+   "titel": "HipHop Beginner/Intermediate",
+   "coach": "Jessica",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "frei": 35,
+   "gesamt": 35,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/5d7182f5-304f-49e0-96ed-438645addb4e"
+  },
+  {
+   "id": "12a45a6c-ae0e-4887-b5d9-7ff9fcb24277",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "18:30",
+   "dauer": 60,
+   "titel": "Pole Dance Flow Level 2 (Beginner)",
+   "coach": "Sara",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner",
+   "stufen": "am",
+   "kids": false,
+   "frei": 21,
+   "gesamt": 22,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/12a45a6c-ae0e-4887-b5d9-7ff9fcb24277"
+  },
+  {
+   "id": "5b5b8d53-2f32-4285-a15d-4afaf6efc6a3",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Contemporary Fusion Beginner",
+   "coach": "Lisa Klingner",
+   "studio": "Studio 2 - White Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "frei": 37,
+   "gesamt": 40,
+   "stile": [
+    "contemporary"
+   ],
+   "url": "https://www.eversports.de/org/activity/5b5b8d53-2f32-4285-a15d-4afaf6efc6a3"
+  },
+  {
+   "id": "29015656-1637-463e-85fd-524d31664cb8",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "High Heels Beginner",
+   "coach": "Daria",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner",
+   "stufen": "a",
+   "kids": false,
+   "frei": 63,
+   "gesamt": 70,
+   "stile": [
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/29015656-1637-463e-85fd-524d31664cb8"
+  },
+  {
+   "id": "f233c033-963f-4adb-87d7-3335c68f247d",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "19:00",
+   "dauer": 60,
+   "titel": "Tanz dich fit All Level",
+   "coach": "Yves",
+   "studio": "Studio 3 - Grey Space",
+   "level": "All Level",
+   "stufen": "amf",
+   "kids": false,
+   "frei": 30,
+   "gesamt": 30,
+   "stile": [
+    "fitness"
+   ],
+   "url": "https://www.eversports.de/org/activity/f233c033-963f-4adb-87d7-3335c68f247d"
+  },
+  {
+   "id": "65bffa56-ee05-415e-a7d6-243456ad02d4",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "19:30",
+   "dauer": 90,
+   "titel": "Commercial Beginner/Intermediate",
+   "coach": "Roman",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "frei": 45,
+   "gesamt": 50,
+   "stile": [
+    "commercial"
+   ],
+   "url": "https://www.eversports.de/org/activity/65bffa56-ee05-415e-a7d6-243456ad02d4"
+  },
+  {
+   "id": "f6b6f0f2-fca0-4d84-a3ed-df1001bd9b93",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "19:30",
+   "dauer": 60,
+   "titel": "Pole Dance Level 3 (Beginner/Intermediate)",
+   "coach": "Sara",
+   "studio": "Studio 4 - Pole Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "amf",
+   "kids": false,
+   "frei": 22,
+   "gesamt": 22,
+   "stile": [
+    "pole"
+   ],
+   "url": "https://www.eversports.de/org/activity/f6b6f0f2-fca0-4d84-a3ed-df1001bd9b93"
+  },
+  {
+   "id": "2c484cc0-1c7c-4412-be61-bed1f2df73fa",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "Choreography Intermediate/Advanced",
+   "coach": "Dominik",
+   "studio": "Studio 3 - Grey Space",
+   "level": "Intermediate / Advanced",
+   "stufen": "mf",
+   "kids": false,
+   "frei": 34,
+   "gesamt": 35,
+   "stile": [
+    "choreography"
+   ],
+   "url": "https://www.eversports.de/org/activity/2c484cc0-1c7c-4412-be61-bed1f2df73fa"
+  },
+  {
+   "id": "ea0536ae-8b36-4e74-91ef-22154fc2c204",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "Contemporary Fusion Intermediate",
+   "coach": "Lisa Klingner",
+   "studio": "Studio 2 - White Space",
+   "level": "Intermediate",
+   "stufen": "m",
+   "kids": false,
+   "frei": 38,
+   "gesamt": 40,
+   "stile": [
+    "contemporary"
+   ],
+   "url": "https://www.eversports.de/org/activity/ea0536ae-8b36-4e74-91ef-22154fc2c204"
+  },
+  {
+   "id": "fcab5862-a823-42c5-b1c0-49218c10aec0",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "High Heels Intermediate/Advanced",
+   "coach": "Daria",
+   "studio": "Studio 1 - Large Space",
+   "level": "Intermediate / Advanced",
+   "stufen": "mf",
+   "kids": false,
+   "frei": 69,
+   "gesamt": 70,
+   "stile": [
+    "heels"
+   ],
+   "url": "https://www.eversports.de/org/activity/fcab5862-a823-42c5-b1c0-49218c10aec0"
+  },
+  {
+   "id": "349fe5eb-343c-413a-ab76-4a78ff5abe7e",
+   "tag": "Mo",
+   "datum": "2026-09-14",
+   "zeit": "20:00",
+   "dauer": 90,
+   "titel": "HipHop Lady Style Beginner/Intermediate",
+   "coach": "Emma Kant",
+   "studio": "Studio 1 - Large Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "am",
+   "kids": false,
+   "frei": 70,
+   "gesamt": 70,
+   "stile": [
+    "hip-hop"
+   ],
+   "url": "https://www.eversports.de/org/activity/349fe5eb-343c-413a-ab76-4a78ff5abe7e"
+  },
+  {
+   "id": "e9408b2b-68d4-4587-ac89-08d96f68d0fc",
+   "tag": "Di",
+   "datum": "2026-09-15",
+   "zeit": "11:00",
+   "dauer": 60,
+   "titel": "Aerial Hoop Level 3 (Beginner/Intermediate)",
+   "coach": "Tania",
+   "studio": "Studio 5 - Bright Space",
+   "level": "Beginner / Intermediate",
+   "stufen": "amf",
+   "kids": false,
+   "frei": 14,
+   "gesamt": 15,
+   "stile": [
+    "aerial"
+   ],
+   "url": "https://www.eversports.de/org/activity/e9408b2b-68d4-4587-ac89-08d96f68d0fc"
   }
  ]
 }
