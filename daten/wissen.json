@@ -342,8 +342,8 @@
   {
    "name": "Barbora",
    "key": "c-2",
-   "rolle": "",
-   "motto": "",
+   "rolle": "Choreography Coach",
+   "motto": "Support und Push in einem, ein Space, in dem du dich frei ausdrückst und Grenzen sprengst",
    "stile": [
     "Choreography"
    ],
@@ -355,8 +355,8 @@
   {
    "name": "Bella",
    "key": "c-3",
-   "rolle": "",
-   "motto": "",
+   "rolle": "High Heels Coach",
+   "motto": "Technik trifft Ausdruck, wachse über dich hinaus und verlasse das Studio stärker, selbstbewusster und mit einem Lächeln.",
    "stile": [
     "Heels"
    ],
@@ -398,7 +398,7 @@
    "name": "Chantel",
    "key": "c-6",
    "rolle": "Heels Coach",
-   "motto": "Feminine Energy & Empowerment",
+   "motto": "Lass deine Nervosität los, entfalte deine feminine Kraft und entdecke, wie magisch sich Heels Dance anfühlen kann.",
    "stile": [
     "Heels"
    ],
@@ -426,7 +426,7 @@
    "name": "Detlef",
    "key": "c-8",
    "rolle": "",
-   "motto": "",
+   "motto": "Detlef Soost bewegt Deutschland.",
    "stile": [],
    "classes": 2,
    "tage": [
@@ -438,7 +438,7 @@
    "name": "Dominik",
    "key": "c-9",
    "rolle": "Commercial & Hip Hop Coach",
-   "motto": "Dynamic Textures & Advanced Musicality",
+   "motto": "High Level Training trifft Safe Space, wachse über dich hinaus und bring deine Performance aufs nächste Level.",
    "stile": [
     "Choreography"
    ],
@@ -451,7 +451,7 @@
    "name": "Elisa",
    "key": "c-10",
    "rolle": "Hip Hop Coach & Choreographer",
-   "motto": "Performance, Groove & Presence",
+   "motto": "Elisa kombiniert Champion-Mindset mit kreativer Power und formt aus Technik, Groove und Ausdruck deinen eigenen unverwechselbaren Style.",
    "stile": [
     "Choreography",
     "Hip Hop"
@@ -507,8 +507,8 @@
   {
    "name": "Fabio",
    "key": "c-14",
-   "rolle": "",
-   "motto": "",
+   "rolle": "Commercial & Jazz-Funk Coach",
+   "motto": "Fabio bringt Struktur, Style und Herz ins Studio und formt aus Moves echte Präsenz mit Haltung.",
    "stile": [
     "Commercial",
     "Hip Hop"
@@ -589,7 +589,7 @@
    "name": "Jessica",
    "key": "c-20",
    "rolle": "Hip Hop Coach",
-   "motto": "Culture, Community & Confidence",
+   "motto": "Jessica bringt echte Hip-Hop-Energie ins Studio und schafft einen warmen Space, in dem du frei tanzt und wächst.",
    "stile": [
     "Hip Hop"
    ],
@@ -655,8 +655,8 @@
   {
    "name": "Kathy",
    "key": "c-25",
-   "rolle": "",
-   "motto": "",
+   "rolle": "Reggaeton & Latin Dance Coach",
+   "motto": "Rhythm. Cultura. Confidence.",
    "stile": [
     "Latin & Afro"
    ],
@@ -749,7 +749,7 @@
    "name": "Lili",
    "key": "c-32",
    "rolle": "Commercial Coach",
-   "motto": "Performance, Joy & Confidence",
+   "motto": "Lili bringt Show-Feeling ins Studio und schafft einen Space, in dem du mit Spaß und Selbstbewusstsein über dich hinauswächst.",
    "stile": [
     "Commercial"
    ],
@@ -776,7 +776,7 @@
    "name": "Lya",
    "key": "c-34",
    "rolle": "",
-   "motto": "",
+   "motto": "Rhythmus, Energie und kultureller Ausdruck",
    "stile": [
     "Latin & Afro"
    ],
@@ -789,7 +789,7 @@
    "name": "Maxine",
    "key": "c-35",
    "rolle": "Dance Athletics Coach",
-   "motto": "Strength, Power & Performance Science",
+   "motto": "Maxine bringt Athletik ins Studio und macht deinen Körper zur kompromisslosen Power-Maschine für Bühne und Alltag.",
    "stile": [
     "Fitness"
    ],
@@ -816,7 +816,7 @@
    "name": "Melis",
    "key": "c-37",
    "rolle": "K-Pop Coach",
-   "motto": "Energy, Performance & Stage Presence",
+   "motto": "Melis verbindet K-Pop-Energie mit Bühnen-Erfahrung und bringt ein echtes Performance-Feeling ins Studio.",
    "stile": [
     "K-Pop"
    ],
@@ -921,8 +921,8 @@
   {
    "name": "Rafael",
    "key": "c-44",
-   "rolle": "",
-   "motto": "",
+   "rolle": "Latin & Pop Coach",
+   "motto": "Feel the rhythm. Move together. Share the energy.",
    "stile": [
     "Latin & Afro"
    ],
@@ -988,8 +988,8 @@
   {
    "name": "Sara",
    "key": "c-49",
-   "rolle": "Level up mit Technik, Flow und Selbstvertrauen.",
-   "motto": "Pole Dance Coach, Technique, Flow & Empowerment",
+   "rolle": "Pole Dance Coach",
+   "motto": "Level up mit Technik, Flow und Selbstvertrauen.",
    "stile": [
     "Pole"
    ],
@@ -1059,8 +1059,8 @@
   {
    "name": "Steffi",
    "key": "c-54",
-   "rolle": "",
-   "motto": "",
+   "rolle": "Fitness & Commercial Coach",
+   "motto": "Strong body. Strong mind. Sustainable growth.",
    "stile": [
     "Fitness"
    ],
@@ -1087,7 +1087,7 @@
    "name": "Ulie Gross",
    "key": "c-56",
    "rolle": "Contemporary Coach & Dance Science Specialist",
-   "motto": "Performance trifft Wissenschaft",
+   "motto": "Künstlerische Exzellenz verbunden mit wissenschaftlicher Präzision, für nachhaltige Stärke auf und hinter der Bühne.",
    "stile": [
     "Contemporary & Jazz"
    ],
@@ -1100,7 +1100,7 @@
    "name": "Yves",
    "key": "c-57",
    "rolle": "Senior Coach Kids, Teens & Adults",
-   "motto": "Mit der Anmeldung erhältst du unseren Newsletter. Abmeldung jederzeit möglich. Mehr Infos in unserer",
+   "motto": "Von der Bühne zur Company: Yves verbindet jahrzehntelange Tour-Erfahrung mit Nachwuchsförderung, Energie und echter Leidenschaft für Bewegung.",
    "stile": [
     "Fitness",
     "Kids & Teens"
