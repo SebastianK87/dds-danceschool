@@ -3719,6 +3719,12 @@ body[data-frag="1"] .frag-knopf{display:none}
             wt: new Date(iso + 'T12:00:00').getDay()};
   }
   var JETZT = berlin();
+  /* Coaches, die nicht mehr unterrichten, in Eversports aber noch an Classes
+     haengen. Der Kalender kommt live von dort, also muss der Name hier raus,
+     sonst steht er trotz Bau von gestern wieder auf der Seite.
+     Pflege: bilder/coach-raus.json. */
+  var EX_COACH = ["Barbora", "Hidia", "Laura Ann", "Lavinia", "Lya", "Samy", "Steffi"];
+  function cn(n){ return n && EX_COACH.indexOf(n) < 0 ? n : ''; }
   var ruhig = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var spar  = (navigator.connection && (navigator.connection.saveData ||
               /2g/.test(navigator.connection.effectiveType || ''))) || false;
@@ -4404,7 +4410,7 @@ body[data-frag="1"] .frag-knopf{display:none}
       return -1;
     }
     function karte(c, nr){
-      var key = keys[c.coach] || null, initialen = (c.coach || 'D!').split(/\s+/).map(function(w){ return w[0]; }).join('').slice(0, 2).toUpperCase();
+      var key = keys[cn(c.coach)] || null, initialen = (cn(c.coach) || 'D!').split(/\s+/).map(function(w){ return w[0]; }).join('').slice(0, 2).toUpperCase();
       var st = stile(c.titel)[0], frei = typeof c.frei === 'number' && c.frei <= 5 ? '<span class="knapp">nur noch ' + c.frei + (c.frei === 1 ? ' Platz' : ' Pl\u00e4tze') + '</span>' : '';
       var el = document.createElement('div'); el.className = 'pk'; el.dataset.id = c.id;
       el.innerHTML = '<span class="pk__nr">Class ' + nr + '</span>' +
@@ -4414,7 +4420,7 @@ body[data-frag="1"] .frag-knopf{display:none}
         '<div class="pk__tasten"><a class="buchen" target="_blank" rel="noopener">Buchen</a>' +
         '<button type="button" class="pk__tausch">Andere Class</button></div>';
       el.querySelector('.pk__titel').textContent = c.titel;
-      el.querySelector('.pk__meta').innerHTML = [c.coach ? 'mit ' + c.coach : '', c.studio, STIL_NAMEN[st] || ''].filter(Boolean).map(function(x){ return x.replace(/</g, '&lt;'); }).join(' \u00b7 ') + frei;
+      el.querySelector('.pk__meta').innerHTML = [cn(c.coach) ? 'mit ' + cn(c.coach) : '', c.studio, STIL_NAMEN[st] || ''].filter(Boolean).map(function(x){ return x.replace(/</g, '&lt;'); }).join(' \u00b7 ') + frei;
       var a = el.querySelector('.buchen'); a.href = c.url; a.dataset.retter = c.titel + '|' + c.tag + '|' + c.zeit + '|' + c.datum + '|' + c.id;
       if(key){ el.querySelector('.pk__ava').addEventListener('click', function(){ var b = document.createElement('button'); b.dataset.coach = key; b.hidden = true; document.body.appendChild(b); b.click(); b.remove(); }); el.querySelector('.pk__ava').style.cursor = 'pointer'; }
       el.querySelector('.pk__tausch').addEventListener('click', function(){ tausch(nr - 1); });
@@ -4444,7 +4450,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     function ics(liste){
       var jetzt = icsZeit(Date.now());
       var ev = liste.map(function(c){ var s0 = utcVon(c.datum, c.zeit); return ['BEGIN:VEVENT', 'UID:' + c.id + '@deesworld.de', 'DTSTAMP:' + jetzt, 'DTSTART:' + icsZeit(s0), 'DTEND:' + icsZeit(s0 + (c.dauer || 60) * 60000),
-        'SUMMARY:' + c.titel + (c.coach ? ' mit ' + c.coach : '') + ' (D!\'s Dance School)', 'LOCATION:' + ADRESSE + (c.studio ? ', ' + c.studio : ''), 'URL:' + c.url,
+        'SUMMARY:' + c.titel + (cn(c.coach) ? ' mit ' + cn(c.coach) : '') + ' (D!\'s Dance School)', 'LOCATION:' + ADRESSE + (c.studio ? ', ' + c.studio : ''), 'URL:' + c.url,
         'DESCRIPTION:Welcome Pass Class. Absagen bis 6 Stunden vorher kostenlos: ' + c.url, 'BEGIN:VALARM', 'TRIGGER:-PT3H', 'ACTION:DISPLAY', 'DESCRIPTION:Heute Abend: ' + c.titel, 'END:VALARM', 'END:VEVENT'].join('\r\n'); });
       return 'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//D!s Dance School//Welcome Pass//DE\r\nCALSCALE:GREGORIAN\r\n' + ev.join('\r\n') + '\r\nEND:VCALENDAR\r\n';
     }
@@ -4537,7 +4543,7 @@ body[data-frag="1"] .frag-knopf{display:none}
               var frei = c.frei === 0 ? '<span class="voll">ausgebucht</span>' : (typeof c.frei === 'number' && c.frei <= 5 ? '<span class="knapp">nur noch ' + c.frei + (c.frei === 1 ? ' Platz' : ' Pl\u00e4tze') + '</span>' : '');
               html += '<div class="termin' + (kids ? ' termin--kids' : '') + (c.frei === 0 ? ' voll-class' : '') + '" data-stufe="' + (kids ? 'k' : STUFEN[lv]) + '" data-zeit="' + c.zeit + '" data-id="' + c.id + '" data-stile="' + st.join(' ') + '">' +
                 '<div class="termin__zeit">' + c.zeit + '<small>' + c.dauer + ' min</small></div>' +
-                '<div class="termin__was"><p class="termin__name">' + esc(c.titel) + '</p><div class="termin__meta"><span class="stufe">' + STUFENWORT[lv] + '</span>' + (c.coach ? '<span>' + esc(c.coach) + '</span>' : '') + '<span>' + esc(c.studio.replace(/ - /g, ' \u00b7 ')) + '</span><span class="termin__frei">' + frei + '</span></div></div>' +
+                '<div class="termin__was"><p class="termin__name">' + esc(c.titel) + '</p><div class="termin__meta"><span class="stufe">' + STUFENWORT[lv] + '</span>' + (cn(c.coach) ? '<span>' + esc(cn(c.coach)) + '</span>' : '') + '<span>' + esc(c.studio.replace(/ - /g, ' \u00b7 ')) + '</span><span class="termin__frei">' + frei + '</span></div></div>' +
                 '<div class="termin__cta"><a class="buchen" href="' + c.url + '" target="_blank" rel="noopener">' + (c.frei === 0 ? 'Warteliste' : 'Buchen') + '</a><button type="button" class="teilen" aria-label="Class teilen">' + teilenSvg + '</button></div></div>';
             });
             html += '</div>';
@@ -4694,7 +4700,7 @@ body[data-frag="1"] .frag-knopf{display:none}
         z.appendChild(el('b', '', (k.tag || '') + ' ' + (k.zeit || '')));
         var mitte = el('div', '');
         mitte.appendChild(el('span', '', k.titel || ''));
-        var meta = [k.coach, k.level, k.studio].filter(Boolean).join(' \u00b7 ');
+        var meta = [cn(k.coach), k.level, k.studio].filter(Boolean).join(' \u00b7 ');
         if(meta) mitte.appendChild(el('small', '', meta));
         z.appendChild(mitte);
         var a = el('a', 'buchen', 'Buchen');
