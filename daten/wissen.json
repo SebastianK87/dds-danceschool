@@ -13,7 +13,7 @@
   "counter": "Counter: Mo bis Fr 16:30 bis 21:30 Uhr, Sa 10 bis 15 Uhr",
   "google": "4,7 Sterne bei 98 Bewertungen",
   "classes_pro_woche": 147,
-  "coaches": 52,
+  "coaches": 50,
   "styles": 12,
   "saele": 5,
   "seite": "https://www.deesworld.de/dance-school/",
@@ -314,15 +314,11 @@
    "rolle": "Choreography Coach",
    "motto": "Safe Space. Strong Performance. Honest Growth.",
    "stile": [
-    "Choreography",
-    "Commercial",
-    "Hip Hop"
+    "Choreography"
    ],
-   "classes": 6,
+   "classes": 3,
    "tage": [
-    "Mo",
     "Di",
-    "Mi",
     "Fr"
    ]
   },
@@ -332,11 +328,15 @@
    "rolle": "Head of Pole",
    "motto": "Power. Flow. Self-Confidence.",
    "stile": [
+    "Aerial Hoop",
     "Pole"
    ],
-   "classes": 3,
+   "classes": 11,
    "tage": [
-    "Mi"
+    "Di",
+    "Mi",
+    "Do",
+    "Sa"
    ]
   },
   {
@@ -456,9 +456,8 @@
     "Choreography",
     "Hip Hop"
    ],
-   "classes": 4,
+   "classes": 3,
    "tage": [
-    "Di",
     "Fr",
     "Sa"
    ]
@@ -472,9 +471,10 @@
     "Commercial",
     "Hip Hop"
    ],
-   "classes": 3,
+   "classes": 6,
    "tage": [
     "Mo",
+    "Di",
     "Do"
    ]
   },
@@ -510,12 +510,10 @@
    "rolle": "Commercial & Jazz-Funk Coach",
    "motto": "Fabio bringt Struktur, Style und Herz ins Studio und formt aus Moves echte Präsenz mit Haltung.",
    "stile": [
-    "Commercial",
-    "Hip Hop"
+    "Commercial"
    ],
-   "classes": 5,
+   "classes": 3,
    "tage": [
-    "Di",
     "Do",
     "Fr"
    ]
@@ -634,7 +632,7 @@
    "stile": [
     "Aerial Hoop"
    ],
-   "classes": 2,
+   "classes": 6,
    "tage": [
     "Sa"
    ]
@@ -701,10 +699,9 @@
     "Choreography",
     "Commercial"
    ],
-   "classes": 3,
+   "classes": 2,
    "tage": [
-    "Mo",
-    "Mi"
+    "Mo"
    ]
   },
   {
@@ -754,9 +751,10 @@
    "stile": [
     "Commercial"
    ],
-   "classes": 1,
+   "classes": 2,
    "tage": [
-    "Di"
+    "Di",
+    "Mi"
    ]
   },
   {
@@ -845,15 +843,13 @@
    "rolle": "",
    "motto": "",
    "stile": [
-    "Aerial Hoop",
     "Fitness",
     "Heels",
     "Pole"
    ],
-   "classes": 7,
+   "classes": 3,
    "tage": [
     "Mo",
-    "Di",
     "Do"
    ]
   },
@@ -968,7 +964,7 @@
    "stile": [
     "Pole"
    ],
-   "classes": 2,
+   "classes": 6,
    "tage": [
     "Do"
    ]
@@ -1006,11 +1002,13 @@
    "rolle": "Hip Hop & Commercial Coach",
    "motto": "Sarah schafft einen Safe Space mit Power und bringt dich mit Energie, Bühnenexperience und echtem Growth aufs nächste Level.",
    "stile": [
+    "Commercial",
     "Hip Hop"
    ],
-   "classes": 1,
+   "classes": 4,
    "tage": [
-    "Mo"
+    "Mo",
+    "Mi"
    ]
   },
   {
@@ -1247,23 +1245,23 @@
    "url": "https://www.eversports.de/org/activity/4162b29f-487c-4089-97d2-84eee7b3e32c"
   },
   {
-   "id": "3f497048-210f-4b95-9d76-9aad93993787",
+   "id": "af9cd2c7-2853-423c-9215-c177f948c2b8",
    "tag": "Mi",
    "datum": "2026-09-09",
    "zeit": "17:00",
    "dauer": 60,
    "titel": "HipHop Beginner",
-   "coach": "Ada",
+   "coach": "Sarah",
    "studio": "Studio 1 - Large Space",
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 59,
+   "frei": 58,
    "gesamt": 70,
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/3f497048-210f-4b95-9d76-9aad93993787"
+   "url": "https://www.eversports.de/org/activity/af9cd2c7-2853-423c-9215-c177f948c2b8"
   },
   {
    "id": "9127b9d4-c67d-4478-ba13-598b5a8deccc",
@@ -1323,13 +1321,13 @@
    "url": "https://www.eversports.de/org/activity/37501798-9ff0-4281-901e-2c67a3d860cb"
   },
   {
-   "id": "7dfd9283-8126-40f8-bb90-cf14d7d15c4f",
+   "id": "c4dd9a17-2833-491a-85eb-8574788e7463",
    "tag": "Mi",
    "datum": "2026-09-09",
    "zeit": "18:00",
    "dauer": 60,
    "titel": "Commercial Beginner",
-   "coach": "Ada",
+   "coach": "Sarah",
    "studio": "Studio 1 - Large Space",
    "level": "Beginner",
    "stufen": "a",
@@ -1339,7 +1337,7 @@
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/7dfd9283-8126-40f8-bb90-cf14d7d15c4f"
+   "url": "https://www.eversports.de/org/activity/c4dd9a17-2833-491a-85eb-8574788e7463"
   },
   {
    "id": "1c20191e-3fd5-45f4-9feb-31a96263d809",
@@ -1524,7 +1522,7 @@
    "level": "Advanced",
    "stufen": "f",
    "kids": false,
-   "frei": 45,
+   "frei": 44,
    "gesamt": 50,
    "stile": [
     "choreography"
@@ -1532,23 +1530,23 @@
    "url": "https://www.eversports.de/org/activity/b991fa99-7836-4c3e-8af1-db77897c1f54"
   },
   {
-   "id": "0a2146ea-a7e7-4b7a-94bc-c00b43cedb1c",
+   "id": "2d4d7b07-71a4-425b-bc33-c12dd0c7f6c3",
    "tag": "Mi",
    "datum": "2026-09-09",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "Commercial Beginner/Intermediate",
-   "coach": "Laura Klein",
+   "coach": "Lili",
    "studio": "Studio 1 - Large Space",
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 58,
+   "frei": 57,
    "gesamt": 70,
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/0a2146ea-a7e7-4b7a-94bc-c00b43cedb1c"
+   "url": "https://www.eversports.de/org/activity/2d4d7b07-71a4-425b-bc33-c12dd0c7f6c3"
   },
   {
    "id": "e85aaba7-f9ae-457f-890e-4d392637e5fd",
@@ -1646,13 +1644,13 @@
    "url": "https://www.eversports.de/org/activity/8adc2aa6-abb7-4074-8f88-4b53f35ca3a8"
   },
   {
-   "id": "c722e2f7-84d9-4649-b1bd-8f0384a1481c",
+   "id": "1de5af02-18f7-40c3-a648-ec7af8b3e36e",
    "tag": "Do",
    "datum": "2026-09-10",
    "zeit": "10:00",
    "dauer": 60,
    "titel": "Aerial Hoop Neubeginner",
-   "coach": "Michelle (Schelle) Dzida",
+   "coach": "Aino",
    "studio": "Studio 5 - Bright Space",
    "level": "Beginner",
    "stufen": "a",
@@ -1662,16 +1660,16 @@
    "stile": [
     "aerial"
    ],
-   "url": "https://www.eversports.de/org/activity/c722e2f7-84d9-4649-b1bd-8f0384a1481c"
+   "url": "https://www.eversports.de/org/activity/1de5af02-18f7-40c3-a648-ec7af8b3e36e"
   },
   {
-   "id": "4f274db8-d353-4c34-8ea0-a0a6456ff062",
+   "id": "77d9b8b5-7574-477a-81e3-ee5f326e0206",
    "tag": "Do",
    "datum": "2026-09-10",
    "zeit": "11:00",
    "dauer": 60,
    "titel": "Aerial Hoop Beginner",
-   "coach": "Michelle (Schelle) Dzida",
+   "coach": "Aino",
    "studio": "Studio 5 - Bright Space",
    "level": "Beginner",
    "stufen": "a",
@@ -1681,7 +1679,7 @@
    "stile": [
     "aerial"
    ],
-   "url": "https://www.eversports.de/org/activity/4f274db8-d353-4c34-8ea0-a0a6456ff062"
+   "url": "https://www.eversports.de/org/activity/77d9b8b5-7574-477a-81e3-ee5f326e0206"
   },
   {
    "id": "866507a8-52bd-4683-8db6-603d06647cbe",
@@ -1722,13 +1720,13 @@
    "url": "https://www.eversports.de/org/activity/a7c14a8b-07ec-46f1-8c33-c7dbb63015f5"
   },
   {
-   "id": "d46d4d21-f436-4ae2-a141-b0007f39d1a7",
+   "id": "0cd7ea50-a1ec-49a7-8061-378e154ee3a9",
    "tag": "Do",
    "datum": "2026-09-10",
    "zeit": "17:15",
    "dauer": 60,
    "titel": "Pole Dance Level 2 (Beginner)",
-   "coach": "Rieke",
+   "coach": "Aino",
    "studio": "Studio 4 - Pole Space",
    "level": "Beginner",
    "stufen": "am",
@@ -1738,7 +1736,7 @@
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/d46d4d21-f436-4ae2-a141-b0007f39d1a7"
+   "url": "https://www.eversports.de/org/activity/0cd7ea50-a1ec-49a7-8061-378e154ee3a9"
   },
   {
    "id": "fb44a02a-3ab2-4a6c-8b74-b022e52c1547",
@@ -1815,13 +1813,13 @@
    "url": "https://www.eversports.de/org/activity/8425b980-6173-4afe-8dea-0bbfcba8bd4f"
   },
   {
-   "id": "25a0c147-b95d-4363-a143-041e6e419bd0",
+   "id": "73625fc2-b0ff-4c0d-a5d5-2cf8afef44ba",
    "tag": "Do",
    "datum": "2026-09-10",
    "zeit": "18:15",
    "dauer": 60,
    "titel": "Pole Dance Level 3 (Beginner/Intermediate)",
-   "coach": "Rieke",
+   "coach": "Aino",
    "studio": "Studio 4 - Pole Space",
    "level": "Beginner / Intermediate",
    "stufen": "amf",
@@ -1831,7 +1829,7 @@
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/25a0c147-b95d-4363-a143-041e6e419bd0"
+   "url": "https://www.eversports.de/org/activity/73625fc2-b0ff-4c0d-a5d5-2cf8afef44ba"
   },
   {
    "id": "a8763025-287b-4a2a-9491-67ece78cd4ee",
@@ -1968,13 +1966,13 @@
    "url": "https://www.eversports.de/org/activity/0a78aa5f-3218-40b2-87c7-0f037d41e435"
   },
   {
-   "id": "c34ed8d9-953d-43a0-b080-708c465a2a72",
+   "id": "6b8d7e04-4a2b-4f12-8892-4bbd49bdc350",
    "tag": "Do",
    "datum": "2026-09-10",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "HipHop Lady Style Beginner/Intermediate",
-   "coach": "Fabio",
+   "coach": "Emma Kant",
    "studio": "Studio 5 - Bright Space",
    "level": "Beginner / Intermediate",
    "stufen": "am",
@@ -1984,7 +1982,7 @@
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/c34ed8d9-953d-43a0-b080-708c465a2a72"
+   "url": "https://www.eversports.de/org/activity/6b8d7e04-4a2b-4f12-8892-4bbd49bdc350"
   },
   {
    "id": "d6c20479-f8c9-4777-8257-01c2727d1650",
@@ -2788,13 +2786,13 @@
    "url": "https://www.eversports.de/org/activity/3ae3783b-491b-4096-b87a-26f93b3b8cb7"
   },
   {
-   "id": "dc73ed35-ee15-4285-af39-c2bee623a88c",
+   "id": "1b12d55b-473d-41ba-b441-8a080d3032fd",
    "tag": "Sa",
    "datum": "2026-09-12",
    "zeit": "13:30",
    "dauer": 60,
    "titel": "Aerial Hoop Neubeginner",
-   "coach": "July",
+   "coach": "Aino",
    "studio": "Studio 5 - Bright Space",
    "level": "Beginner",
    "stufen": "a",
@@ -2804,7 +2802,7 @@
    "stile": [
     "aerial"
    ],
-   "url": "https://www.eversports.de/org/activity/dc73ed35-ee15-4285-af39-c2bee623a88c"
+   "url": "https://www.eversports.de/org/activity/1b12d55b-473d-41ba-b441-8a080d3032fd"
   },
   {
    "id": "df66105c-eaaf-4b79-b5ef-3d97f0773abb",
@@ -2864,13 +2862,13 @@
    "url": "https://www.eversports.de/org/activity/3dad00d4-c1c6-4eb4-acd3-f1c212b7c7f9"
   },
   {
-   "id": "f1fc0781-724a-4764-ada9-91804d5f368e",
+   "id": "4d6c1ad1-2361-455c-aff7-c440079e91b0",
    "tag": "Sa",
    "datum": "2026-09-12",
    "zeit": "14:30",
    "dauer": 60,
    "titel": "Aerial Hoop Beginner",
-   "coach": "July",
+   "coach": "Aino",
    "studio": "Studio 5 - Bright Space",
    "level": "Beginner",
    "stufen": "a",
@@ -2880,7 +2878,7 @@
    "stile": [
     "aerial"
    ],
-   "url": "https://www.eversports.de/org/activity/f1fc0781-724a-4764-ada9-91804d5f368e"
+   "url": "https://www.eversports.de/org/activity/4d6c1ad1-2361-455c-aff7-c440079e91b0"
   },
   {
    "id": "3f65a4f0-c0ae-4f3c-961d-6c028c20a3dc",
@@ -3207,13 +3205,13 @@
    "url": "https://www.eversports.de/org/activity/ae8f29db-ee1c-427b-84c8-e5a8bb1dcc65"
   },
   {
-   "id": "aafd8489-e0c4-46f1-a76d-90d8bbd3bf87",
+   "id": "d870727b-cba3-40c9-b946-3306ee017cb7",
    "tag": "Mo",
    "datum": "2026-09-14",
    "zeit": "18:00",
    "dauer": 90,
    "titel": "Commercial Intermediate",
-   "coach": "Ada",
+   "coach": "Sarah",
    "studio": "Studio 5 - Bright Space",
    "level": "Intermediate",
    "stufen": "m",
@@ -3223,7 +3221,7 @@
    "stile": [
     "commercial"
    ],
-   "url": "https://www.eversports.de/org/activity/aafd8489-e0c4-46f1-a76d-90d8bbd3bf87"
+   "url": "https://www.eversports.de/org/activity/d870727b-cba3-40c9-b946-3306ee017cb7"
   },
   {
    "id": "5d7182f5-304f-49e0-96ed-438645addb4e",
@@ -3435,13 +3433,13 @@
    "url": "https://www.eversports.de/org/activity/349fe5eb-343c-413a-ab76-4a78ff5abe7e"
   },
   {
-   "id": "8b607493-e3fb-4e49-9fb0-8c62be1af724",
+   "id": "09b0cc1e-ca7e-4470-8eb8-ab8936b73e8f",
    "tag": "Di",
    "datum": "2026-09-15",
    "zeit": "10:00",
    "dauer": 60,
    "titel": "Pole Level 1 (Neubeginner)",
-   "coach": "Michelle (Schelle) Dzida",
+   "coach": "Aino",
    "studio": "Studio 4 - Pole Space",
    "level": "Beginner",
    "stufen": "a",
@@ -3451,7 +3449,7 @@
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/8b607493-e3fb-4e49-9fb0-8c62be1af724"
+   "url": "https://www.eversports.de/org/activity/09b0cc1e-ca7e-4470-8eb8-ab8936b73e8f"
   },
   {
    "id": "ae4b5628-89ef-4831-ba27-04f96a7b54a9",
@@ -3511,13 +3509,13 @@
    "url": "https://www.eversports.de/org/activity/aeb45d55-9ad3-42c2-91ed-598b1bb308c7"
   },
   {
-   "id": "8f5f58bc-9a17-4ae6-99d9-b39bf989a419",
+   "id": "5ad12654-194b-4322-b978-34e8aa793c9e",
    "tag": "Di",
    "datum": "2026-09-15",
    "zeit": "11:00",
    "dauer": 60,
    "titel": "Pole Dance L2 Beginner",
-   "coach": "Michelle (Schelle) Dzida",
+   "coach": "Aino",
    "studio": "Studio 4 - Pole Space",
    "level": "Beginner",
    "stufen": "a",
@@ -3527,7 +3525,7 @@
    "stile": [
     "pole"
    ],
-   "url": "https://www.eversports.de/org/activity/8f5f58bc-9a17-4ae6-99d9-b39bf989a419"
+   "url": "https://www.eversports.de/org/activity/5ad12654-194b-4322-b978-34e8aa793c9e"
   },
   {
    "id": "10e84595-bc13-4ebb-94dd-d2be220fc329",
@@ -3560,7 +3558,7 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 68,
+   "frei": 66,
    "gesamt": 70,
    "stile": [],
    "url": "https://www.eversports.de/org/activity/3d35a018-09ec-48f3-8cfc-573274008ecb"
@@ -3756,13 +3754,13 @@
    "url": "https://www.eversports.de/org/activity/c2e90ff5-c086-4834-8c78-bd6eae2b2beb"
   },
   {
-   "id": "f88151c1-cf9a-40de-af46-ce8d34a0720d",
+   "id": "2272e400-5720-422c-87ab-4738e02e95e2",
    "tag": "Di",
    "datum": "2026-09-15",
    "zeit": "19:00",
    "dauer": 60,
    "titel": "HipHop Intermediate",
-   "coach": "Elisa",
+   "coach": "Emma Kant",
    "studio": "Studio 3 - Grey Space",
    "level": "Intermediate",
    "stufen": "m",
@@ -3772,7 +3770,7 @@
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/f88151c1-cf9a-40de-af46-ce8d34a0720d"
+   "url": "https://www.eversports.de/org/activity/2272e400-5720-422c-87ab-4738e02e95e2"
   },
   {
    "id": "214aaf7b-6d35-447e-9e67-f628bdfbbbbd",
@@ -3868,13 +3866,13 @@
    "url": "https://www.eversports.de/org/activity/d04e86aa-51db-4719-8ab6-e06722e49d2d"
   },
   {
-   "id": "6a8d2d54-0dfd-4238-887c-f00c76dfcad4",
+   "id": "60ed0230-23aa-4da5-93a0-419d9f21fd31",
    "tag": "Di",
    "datum": "2026-09-15",
    "zeit": "20:00",
    "dauer": 90,
    "titel": "HipHop Lady Style Beginner/Intermediate",
-   "coach": "Fabio",
+   "coach": "Emma Kant",
    "studio": "Studio 1 - Large Space",
    "level": "Beginner / Intermediate",
    "stufen": "am",
@@ -3884,7 +3882,7 @@
    "stile": [
     "hip-hop"
    ],
-   "url": "https://www.eversports.de/org/activity/6a8d2d54-0dfd-4238-887c-f00c76dfcad4"
+   "url": "https://www.eversports.de/org/activity/60ed0230-23aa-4da5-93a0-419d9f21fd31"
   },
   {
    "id": "b17e483c-7631-4d2f-befe-28a532c8cca1",
