@@ -16,6 +16,9 @@
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#181818">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
+<!-- llms.txt: die Kurzfassung dieser Seite fuer KI-Systeme. Der Verweis macht
+     sie auffindbar, ohne dass jemand die Adresse raten muss. -->
+<link rel="alternate" type="text/plain" href="/llms.txt" title="Kurzfassung fuer KI-Systeme">
 <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -361,6 +364,14 @@ body[data-oben="0"] .buehne__ton{opacity:0;pointer-events:none}
 .buehne__kicker>span{flex:0 0 auto}
 .buehne__kicker .trenn{font-style:normal;opacity:.45;font-weight:500}
 /* Die Live-Zeile ist der Einstieg in den Kursplan: ein Link, kein Schild. */
+/* Pruefung 10.09.2026: der Ticker war 122 x 14 px gross und damit unter der
+   Grenze von 24 x 24 (WCAG 2.5.8, Zielgroesse). Auf dem Handy trifft ihn ein
+   Daumen nicht zuverlaessig. Die Schrift bleibt, die Trefferflaeche waechst
+   ueber ein Polster, das die Zeile optisch nicht verschiebt. */
+@media (max-width:700px){
+  .buehne__live{padding-block:6px;min-height:24px;display:flex!important;align-items:center}
+  .hinweis a{display:inline-block;padding-block:4px;min-height:24px}
+}
 .buehne__live{display:block;flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;
   color:inherit;text-decoration:none;transition:color var(--d1b) var(--e)}
 .buehne__live:hover{color:var(--pink);text-decoration:underline;text-underline-offset:3px}
@@ -632,6 +643,16 @@ body[data-oben="1"] .frag-knopf{transform:translateY(calc(100% + 40px));pointer-
 .kachel:hover{transform:translateY(-6px);border-color:rgba(255,167,226,.6);
   box-shadow:0 24px 44px -18px rgba(0,0,0,.55)}
 .kachel__m{position:absolute;inset:0;width:100%;height:100%}
+/* Pruefung 10.09.2026: die Kursbilder lagen nur als Hintergrund im Stilblatt,
+   und was in CSS steht, nimmt Google nicht in die Bildersuche auf. Der Bau
+   legt jetzt ein echtes Bild darueber, mit demselben Pfad. Der Browser laedt
+   die Datei deshalb nur einmal, und solange sie unterwegs ist, steht der
+   Hintergrund darunter. */
+.bild__echt{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:inherit;border-radius:inherit;pointer-events:none;z-index:0}
+/* Die Ebenen darueber (Zweitbild, Verlauf, Beschriftung) muessen sichtbar
+   bleiben: das echte Bild liegt ganz unten, wie der Hintergrund vorher. */
+.event__bild>i,.event__bild>*:not(.bild__echt),.kachel__m>*:not(.bild__echt){position:relative;z-index:1}
 .kachel__m.bild{background-size:cover;background-position:center}
 .kachel::after{content:"";position:absolute;inset:0;
   background:linear-gradient(to top,rgba(24,24,24,.92) 0,rgba(24,24,24,.25) 46%,rgba(24,24,24,.12) 100%);
@@ -2870,7 +2891,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     <nav class="top__nav" aria-label="Bereiche"><a href="../../#raster" data-heim>Kurse</a><a href="../../#preise" data-heim>Preise</a><a href="../../#events" data-heim>Events</a><a href="../../#school" data-heim>Die School</a></nav>
     <div class="top__recht">
       <a class="top__wa" href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank" rel="noopener"
-         aria-label="WhatsApp schreiben"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.4 11.4 0 0 0 4.4 3.9 14.8 14.8 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg></a>
+         aria-label="WhatsApp schreiben, oeffnet in einem neuen Tab"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.4 11.4 0 0 0 4.4 3.9 14.8 14.8 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg></a>
       <a class="top__pass knopf" href="../../#welcome" data-heim>Welcome Pass &middot; 29 &euro;</a>
       <a class="top__cta knopf knopf--rand" href="../../#kalender" data-heim>Kursplan</a>
       <button class="burger" type="button" aria-expanded="false" aria-label="Alles anzeigen">
@@ -3119,7 +3140,7 @@ body[data-frag="1"] .frag-knopf{display:none}
         <b>Hier findest du uns</b>
         <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Holzmarktstra&szlig;e 66, 3. Etage<br>10179 Berlin<br>
         <span class="fuss__soft">S+U Jannowitzbr&uuml;cke, zwei Minuten zu Fu&szlig;</span></p>
-        <p class="fuss__soft">Counter: Mo bis Fr 16:30 bis 21:30 Uhr, Sa 10 bis 15 Uhr</p>
+        <p class="fuss__soft">Classes: t&auml;glich ab 10 Uhr, letzte bis gegen 22 Uhr<br>Counter besetzt: Mo bis Fr 16:30 bis 21:30 Uhr, Sa 10 bis 15 Uhr</p>
       </div>
       <div>
         <b>Schreib uns</b>
@@ -3154,7 +3175,7 @@ body[data-frag="1"] .frag-knopf{display:none}
       <span>&copy; 2026 D!&#8217;s Dance School GmbH</span>
       <span><a href="../../impressum/">Impressum</a>
       &middot; <a href="../../datenschutz/">Datenschutz</a>
-      &middot; <a href="https://www.deesworld.de/agb/" target="_blank" rel="noopener">AGB</a></span>
+      &middot; <a href="https://www.deesworld.de/agb/" target="_blank" rel="noopener">AGB<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></span>
     </div>
   </div>
 </footer>
@@ -3776,7 +3797,7 @@ body[data-frag="1"] .frag-knopf{display:none}
 </div></template>
 <dialog class="coach" id="coachdialog" aria-labelledby="coach-titel"><button type="button" class="coach__zu" aria-label="Schlie&szlig;en"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button><div class="coach__inhalt"></div></dialog>
 <p id="sage" class="nurSR" role="status" aria-live="polite"></p>
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://deesdanceschool.de/#website", "url": "https://deesdanceschool.de/", "name": "D!'s Dance School", "inLanguage": "de", "publisher": {"@id": "https://deesdanceschool.de/#danceschool"}, "alternateName": "D!'s Dance School Berlin"}, {"@type": ["DanceSchool", "LocalBusiness"], "@id": "https://deesdanceschool.de/#danceschool", "name": "D!'s Dance School", "url": "https://deesdanceschool.de/", "image": "https://deesdanceschool.de/vorschau.jpg", "telephone": "+49-30-20605924", "address": {"@type": "PostalAddress", "streetAddress": "Holzmarktstraße 66, 3. Etage", "postalCode": "10179", "addressLocality": "Berlin", "addressCountry": "DE"}, "sameAs": ["https://www.instagram.com/dsdanceworld/", "https://www.google.com/maps/place/?q=place_id:ChIJq6q6YTtOqEcRJSN0aZHNWfY"]}, {"@type": "WebPage", "@id": "https://deesdanceschool.de/kurse/kids-teens/#webpage", "url": "https://deesdanceschool.de/kurse/kids-teens/", "name": "Kindertanz und Hip Hop für Teens Berlin | D!'s Dance School", "description": "Kids & Teens in Berlin Mitte: 4 Classes pro Woche, Hip Hop ab sechs Jahren. Erste Class 17 €, Welcome Pass 29 €. S+U Jannowitzbrücke.", "inLanguage": "de", "isPartOf": {"@id": "https://deesdanceschool.de/#website"}, "about": {"@id": "https://deesdanceschool.de/#danceschool"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://deesdanceschool.de/medien/kurs-kids.jpg"}, "breadcrumb": {"@id": "https://deesdanceschool.de/kurse/kids-teens/#breadcrumb"}, "dateModified": "2026-09-02", "mainEntity": {"@id": "https://deesdanceschool.de/kurse/kids-teens/#course"}, "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".kopf__claim"]}}, {"@type": "BreadcrumbList", "@id": "https://deesdanceschool.de/kurse/kids-teens/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "D!'s Dance School", "item": "https://deesdanceschool.de/"}, {"@type": "ListItem", "position": 2, "name": "Kids & Teens"}]}, {"@type": "Course", "@id": "https://deesdanceschool.de/kurse/kids-teens/#course", "name": "Kindertanz und Hip Hop für Teens in Berlin Mitte", "alternateName": "Kids & Teens bei D!'s Dance School", "description": "Hip Hop ab sechs Jahren. Gleiche Musik, gleicher Spaß, altersgerecht unterrichtet. Die Kleinen lernen Groove über Spiele, die Teens tanzen schon ganze Choreos. 4 Classes pro Woche.", "url": "https://deesdanceschool.de/kurse/kids-teens/", "image": "https://deesdanceschool.de/medien/kurs-kids.jpg", "provider": {"@id": "https://deesdanceschool.de/#danceschool"}, "inLanguage": "de", "availableLanguage": ["de", "en"], "coursePrerequisites": "Keine. Beginner-Classes setzen nichts voraus.", "teaches": ["Hip Hop für Kinder", "Koordination", "Teamgefühl", "Teens Choreografie"], "offers": [{"@type": "Offer", "category": "Paid", "name": "Einzelticket", "price": "17.00", "priceCurrency": "EUR", "url": "https://www.eversports.de/sp/ds-dance-school", "availability": "https://schema.org/InStock"}, {"@type": "Offer", "category": "Subscription", "name": "Membership Basic, 59 € im Monat bei 12 Monaten", "url": "https://www.eversports.de/sp/ds-dance-school", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "59.00", "priceCurrency": "EUR", "unitCode": "MON", "billingIncrement": 1, "billingDuration": 12}}], "hasCourseInstance": [{"@type": "CourseInstance", "name": "Hip Hop Kids", "courseMode": "Onsite", "courseWorkload": "PT60M", "location": {"@id": "https://deesdanceschool.de/#danceschool"}, "courseSchedule": {"@type": "Schedule", "repeatFrequency": "Weekly", "repeatCount": 16, "byDay": ["https://schema.org/Wednesday"], "startTime": "17:00", "endTime": "18:00", "duration": "PT60M", "scheduleTimezone": "Europe/Berlin", "startDate": "2026-09-09", "endDate": "2026-12-31"}, "offers": {"@type": "Offer", "category": "Paid", "price": "17.00", "priceCurrency": "EUR", "url": "https://www.eversports.de/sp/ds-dance-school", "availability": "https://schema.org/InStock"}, "instructor": [{"@type": "Person", "name": "Yves"}]}, {"@type": "CourseInstance", "name": "Hip Hop Juniors", "courseMode": "Onsite", "courseWorkload": "PT60M", "location": {"@id": "https://deesdanceschool.de/#danceschool"}, "courseSchedule": {"@type": "Schedule", "repeatFrequency": "Weekly", "repeatCount": 16, "byDay": ["https://schema.org/Wednesday"], "startTime": "18:00", "endTime": "19:00", "duration": "PT60M", "scheduleTimezone": "Europe/Berlin", "startDate": "2026-09-09", "endDate": "2026-12-31"}, "offers": {"@type": "Offer", "category": "Paid", "price": "17.00", "priceCurrency": "EUR", "url": "https://www.eversports.de/sp/ds-dance-school", "availability": "https://schema.org/InStock"}, "instructor": [{"@type": "Person", "name": "Yves"}]}, {"@type": "CourseInstance", "name": "Hip Hop Kids 6 - 10 Jahre", "courseMode": "Onsite", "courseWorkload": "PT60M", "location": {"@id": "https://deesdanceschool.de/#danceschool"}, "courseSchedule": {"@type": "Schedule", "repeatFrequency": "Weekly", "repeatCount": 15, "byDay": ["https://schema.org/Saturday"], "startTime": "11:00", "endTime": "12:00", "duration": "PT60M", "scheduleTimezone": "Europe/Berlin", "startDate": "2026-09-12", "endDate": "2026-12-31"}, "offers": {"@type": "Offer", "category": "Paid", "price": "17.00", "priceCurrency": "EUR", "url": "https://www.eversports.de/sp/ds-dance-school", "availability": "https://schema.org/InStock"}, "instructor": [{"@type": "Person", "name": "Joanna"}]}, {"@type": "CourseInstance", "name": "HipHop Teens", "courseMode": "Onsite", "courseWorkload": "PT60M", "location": {"@id": "https://deesdanceschool.de/#danceschool"}, "courseSchedule": {"@type": "Schedule", "repeatFrequency": "Weekly", "repeatCount": 15, "byDay": ["https://schema.org/Tuesday"], "startTime": "17:00", "endTime": "18:00", "duration": "PT60M", "scheduleTimezone": "Europe/Berlin", "startDate": "2026-09-15", "endDate": "2026-12-31"}, "offers": {"@type": "Offer", "category": "Paid", "price": "17.00", "priceCurrency": "EUR", "url": "https://www.eversports.de/sp/ds-dance-school", "availability": "https://schema.org/InStock"}, "instructor": [{"@type": "Person", "name": "Chani"}]}]}, {"@type": "FAQPage", "@id": "https://deesdanceschool.de/kurse/kids-teens/#faq", "mainEntity": [{"@type": "Question", "name": "Was ziehe ich für Kids & Teens an?", "acceptedAnswer": {"@type": "Answer", "text": "Bequeme Kleidung und Hallenschuhe. Trinkflasche nicht vergessen."}}, {"@type": "Question", "name": "Kids & Teens für Anfänger: Kann ich ohne Vorkenntnisse starten?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Beginner-Classes setzen nichts voraus. Du baust Technik Schritt für Schritt auf, niemand fängt oben an."}}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://deesdanceschool.de/#website", "url": "https://deesdanceschool.de/", "name": "D!'s Dance School", "inLanguage": "de", "publisher": {"@id": "https://deesdanceschool.de/#danceschool"}, "alternateName": "D!'s Dance School Berlin"}, {"@type": ["DanceSchool", "LocalBusiness"], "@id": "https://deesdanceschool.de/#danceschool", "name": "D!'s Dance School", "url": "https://deesdanceschool.de/", "image": "https://deesdanceschool.de/vorschau.jpg", "telephone": "+49-30-20605924", "address": {"@type": "PostalAddress", "streetAddress": "Holzmarktstraße 66, 3. Etage", "postalCode": "10179", "addressLocality": "Berlin", "addressCountry": "DE"}, "sameAs": ["https://www.instagram.com/dsdanceworld/", "https://www.google.com/maps/place/?q=place_id:ChIJq6q6YTtOqEcRJSN0aZHNWfY"]}, {"@type": "WebPage", "@id": "https://deesdanceschool.de/kurse/kids-teens/#webpage", "url": "https://deesdanceschool.de/kurse/kids-teens/", "name": "Kindertanz und Hip Hop für Teens Berlin | D!'s Dance School", "description": "Kids & Teens in Berlin Mitte: 4 Classes pro Woche, Hip Hop ab sechs Jahren. Erste Class 17 €, Welcome Pass 29 €. S+U Jannowitzbrücke.", "inLanguage": "de", "isPartOf": {"@id": "https://deesdanceschool.de/#website"}, "about": {"@id": "https://deesdanceschool.de/#danceschool"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://deesdanceschool.de/medien/kurs-kids.jpg"}, "breadcrumb": {"@id": "https://deesdanceschool.de/kurse/kids-teens/#breadcrumb"}, "dateModified": "2026-09-10", "mainEntity": {"@id": "https://deesdanceschool.de/kurse/kids-teens/#course"}, "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".kopf__claim"]}}, {"@type": "BreadcrumbList", "@id": "https://deesdanceschool.de/kurse/kids-teens/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "D!'s Dance School", "item": "https://deesdanceschool.de/"}, {"@type": "ListItem", "position": 2, "name": "Kids & Teens"}]}, {"@type": "Course", "@id": "https://deesdanceschool.de/kurse/kids-teens/#course", "name": "Kindertanz und Hip Hop für Teens in Berlin Mitte", "alternateName": "Kids & Teens bei D!'s Dance School", "description": "Hip Hop ab sechs Jahren. Gleiche Musik, gleicher Spaß, altersgerecht unterrichtet. Die Kleinen lernen Groove über Spiele, die Teens tanzen schon ganze Choreos. 4 Classes pro Woche.", "url": "https://deesdanceschool.de/kurse/kids-teens/", "image": "https://deesdanceschool.de/medien/kurs-kids.jpg", "provider": {"@id": "https://deesdanceschool.de/#danceschool"}, "inLanguage": "de", "availableLanguage": ["de", "en"], "coursePrerequisites": "Keine. Beginner-Classes setzen nichts voraus.", "teaches": ["Hip Hop für Kinder", "Koordination", "Teamgefühl", "Teens Choreografie"], "offers": [{"@type": "Offer", "category": "Paid", "name": "Einzelticket", "price": "17.00", "priceCurrency": "EUR", "url": "https://www.eversports.de/sp/ds-dance-school", "availability": "https://schema.org/InStock"}, {"@type": "Offer", "category": "Subscription", "name": "Membership Basic, 59 € im Monat bei 12 Monaten", "url": "https://www.eversports.de/sp/ds-dance-school", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "59.00", "priceCurrency": "EUR", "unitCode": "MON", "billingIncrement": 1, "billingDuration": 12}}], "hasCourseInstance": [{"@type": "CourseInstance", "name": "Hip Hop Kids", "courseMode": "Onsite", "courseWorkload": "PT60M", "location": {"@id": "https://deesdanceschool.de/#danceschool"}, "courseSchedule": {"@type": "Schedule", "repeatFrequency": "Weekly", "repeatCount": 16, "byDay": ["https://schema.org/Wednesday"], "startTime": "17:00", "endTime": "18:00", "duration": "PT60M", "scheduleTimezone": "Europe/Berlin", "startDate": "2026-09-09", "endDate": "2026-12-31"}, "offers": {"@type": "Offer", "category": "Paid", "price": "17.00", "priceCurrency": "EUR", "url": "https://www.eversports.de/sp/ds-dance-school", "availability": "https://schema.org/InStock"}, "instructor": [{"@type": "Person", "name": "Yves"}]}, {"@type": "CourseInstance", "name": "Hip Hop Juniors", "courseMode": "Onsite", "courseWorkload": "PT60M", "location": {"@id": "https://deesdanceschool.de/#danceschool"}, "courseSchedule": {"@type": "Schedule", "repeatFrequency": "Weekly", "repeatCount": 16, "byDay": ["https://schema.org/Wednesday"], "startTime": "18:00", "endTime": "19:00", "duration": "PT60M", "scheduleTimezone": "Europe/Berlin", "startDate": "2026-09-09", "endDate": "2026-12-31"}, "offers": {"@type": "Offer", "category": "Paid", "price": "17.00", "priceCurrency": "EUR", "url": "https://www.eversports.de/sp/ds-dance-school", "availability": "https://schema.org/InStock"}, "instructor": [{"@type": "Person", "name": "Yves"}]}, {"@type": "CourseInstance", "name": "Hip Hop Kids 6 - 10 Jahre", "courseMode": "Onsite", "courseWorkload": "PT60M", "location": {"@id": "https://deesdanceschool.de/#danceschool"}, "courseSchedule": {"@type": "Schedule", "repeatFrequency": "Weekly", "repeatCount": 15, "byDay": ["https://schema.org/Saturday"], "startTime": "11:00", "endTime": "12:00", "duration": "PT60M", "scheduleTimezone": "Europe/Berlin", "startDate": "2026-09-12", "endDate": "2026-12-31"}, "offers": {"@type": "Offer", "category": "Paid", "price": "17.00", "priceCurrency": "EUR", "url": "https://www.eversports.de/sp/ds-dance-school", "availability": "https://schema.org/InStock"}, "instructor": [{"@type": "Person", "name": "Joanna"}]}, {"@type": "CourseInstance", "name": "HipHop Teens", "courseMode": "Onsite", "courseWorkload": "PT60M", "location": {"@id": "https://deesdanceschool.de/#danceschool"}, "courseSchedule": {"@type": "Schedule", "repeatFrequency": "Weekly", "repeatCount": 15, "byDay": ["https://schema.org/Tuesday"], "startTime": "17:00", "endTime": "18:00", "duration": "PT60M", "scheduleTimezone": "Europe/Berlin", "startDate": "2026-09-15", "endDate": "2026-12-31"}, "offers": {"@type": "Offer", "category": "Paid", "price": "17.00", "priceCurrency": "EUR", "url": "https://www.eversports.de/sp/ds-dance-school", "availability": "https://schema.org/InStock"}, "instructor": [{"@type": "Person", "name": "Chani"}]}]}, {"@type": "FAQPage", "@id": "https://deesdanceschool.de/kurse/kids-teens/#faq", "mainEntity": [{"@type": "Question", "name": "Was ziehe ich für Kids & Teens an?", "acceptedAnswer": {"@type": "Answer", "text": "Bequeme Kleidung und Hallenschuhe. Trinkflasche nicht vergessen."}}, {"@type": "Question", "name": "Kids & Teens für Anfänger: Kann ich ohne Vorkenntnisse starten?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Beginner-Classes setzen nichts voraus. Du baust Technik Schritt für Schritt auf, niemand fängt oben an."}}]}]}</script>
 <script type="application/json" id="filme">{"aerial": "../../medien/clip-aerial.mp4", "choreography": "../../medien/clip-choreography.mp4", "commercial": "../../medien/clip-commercial.mp4", "contemporary": "../../medien/clip-contemporary.mp4", "fitness": "../../medien/clip-fitness.mp4", "heels": "../../medien/clip-heels.mp4", "hip-hop": "../../medien/clip-hip-hop.mp4", "latin": "../../medien/clip-latin.mp4"}</script>
 
 <script>
@@ -4811,8 +4832,14 @@ body[data-frag="1"] .frag-knopf{display:none}
         if((t.dataset.stufe || '').indexOf('a') < 0) return;
         var name = t.querySelector('.termin__name');
         var coach = t.querySelector('.termin__coach:not([hidden])');
-        treffer.push((k === 0 ? 'heute' : tag) + ' ' + t.dataset.zeit + ' ' +
-          (name ? name.textContent.trim() : '') + (coach ? ' (' + coach.textContent.trim() + ')' : ''));
+        var titel = name ? name.textContent.trim() : '';
+        var wer = coach ? coach.textContent.trim() : '';
+        /* Pruefung 10.09.2026: manche Class traegt den Coach schon im Namen
+           ("CollaboClass Commercial (Fabio&Emma)"). Dann stand er zweimal da:
+           einmal im Titel, einmal in Klammern dahinter. */
+        var doppelt = wer && titel.toLowerCase().indexOf(wer.toLowerCase().split(/\s+/)[0].toLowerCase()) >= 0;
+        treffer.push((k === 0 ? 'heute' : tag) + ' ' + t.dataset.zeit + ' ' + titel +
+          (wer && !doppelt ? ' (' + wer + ')' : ''));
       });
     }
     if(treffer.length){
@@ -4942,8 +4969,13 @@ body[data-frag="1"] .frag-knopf{display:none}
         if(oEl && c.studio) oEl.textContent = String(c.studio).replace(/ - /g, ' \u00b7 ');
         if(!box || c.frei === null || c.frei === undefined) return;
         z.classList.toggle('voll-class', c.frei === 0);
-        if(c.frei === 0) box.innerHTML = '<span class="voll">ausgebucht</span>';
-        else if(c.frei <= 5) box.innerHTML = '<span class="knapp">nur noch ' + c.frei + (c.frei === 1 ? ' Platz' : ' Pl\u00e4tze') + '</span>';
+        /* Pruefung 10.09.2026: hier kam eine Zahl aus einem fremden Dienst
+           ungeprueft in HTML. Bei Eversports ist es immer eine Zahl, aber ein
+           Wert, der von aussen kommt, wird erzwungen, nicht angenommen. */
+        var freiZahl = parseInt(c.frei, 10);
+        if(!isFinite(freiZahl)) return;
+        if(freiZahl === 0) box.innerHTML = '<span class="voll">ausgebucht</span>';
+        else if(freiZahl <= 5) box.innerHTML = '<span class="knapp">nur noch ' + freiZahl + (freiZahl === 1 ? ' Platz' : ' Pl\u00e4tze') + '</span>';
         else box.innerHTML = '';
       });
     }).catch(function(){});
@@ -5088,9 +5120,14 @@ body[data-frag="1"] .frag-knopf{display:none}
         /* Die naechste Class verschweigen, nur weil sie online zu ist, waere
            irrefuehrend. Vorn steht, was gleich laeuft, dahinter was buchbar ist. */
         if(laeuft && laeuft.zeit !== naechste.zeit){
-          stark = 'Gleich ' + laeuft.zeit + ': ' + laeuft.titel;
-          leis = 'Heute ' + heute.length + ' Classes, ' + offen.length + ' online buchbar ab '
-               + naechste.zeit + '.' + eng;
+          /* Pruefung 10.09.2026: hier stand nur "Gleich 17:00: Commercial".
+             Der Zusatz, dass diese Class online schon zu ist, steckte im
+             zweiten Teil der Zeile, und den blendet das Layout aus. Wer
+             klickte, fand im Kalender keinen Buchen-Knopf. Der Hinweis
+             gehoert deshalb in den Teil, der wirklich zu sehen ist. */
+          stark = 'Gleich ' + laeuft.zeit + ': ' + laeuft.titel
+                + ' \u00b7 online buchbar ab ' + naechste.zeit;
+          leis = 'Heute ' + heute.length + ' Classes, ' + offen.length + ' online buchbar.' + eng;
         } else {
           stark = 'Als N\u00e4chstes ' + naechste.zeit + ': ' + naechste.titel;
           leis = 'Heute ' + heute.length + ' Classes, ' + offen.length + ' davon buchbar.' + eng;
@@ -5098,8 +5135,9 @@ body[data-frag="1"] .frag-knopf{display:none}
       } else {
         var morgen = d.classes.filter(function(c){ return c.datum > JETZT.iso && c.frei !== 0; }).sort(function(a, b){ return a.datum.localeCompare(b.datum) || a.zeit.localeCompare(b.zeit); })[0];
         if(laeuft){
-          stark = 'Gleich ' + laeuft.zeit + ': ' + laeuft.titel;
-          leis = 'Heute ' + heute.length + ' Classes, online ist Buchungsschluss.';
+          stark = 'Gleich ' + laeuft.zeit + ': ' + laeuft.titel
+                + ' \u00b7 online ist Buchungsschluss';
+          leis = 'Heute ' + heute.length + ' Classes. Am Counter geht es weiter.';
         } else {
           stark = heute.length ? 'Heute ' + heute.length + ' Classes' : 'Heute ist Ruhetag';
           leis = heute.length ? 'Online ist Buchungsschluss.' : '';
@@ -5208,10 +5246,16 @@ body[data-frag="1"] .frag-knopf{display:none}
         '<div class="pk__ava' + (key ? ' hat-foto cf-' + key : '') + '">' + initialen + '</div>' +
         '<div><div class="pk__wann">' + c.tag + ' ' + c.datum.slice(8, 10) + '.' + c.datum.slice(5, 7) + '. ' + c.zeit + '<small>' + c.dauer + ' min</small></div>' +
         '<p class="pk__titel"></p><p class="pk__meta"></p></div>' +
-        '<div class="pk__tasten"><a class="buchen" target="_blank" rel="noopener">Buchen</a>' +
+        '<div class="pk__tasten"><a class="buchen" target="_blank" rel="noopener">Buchen<span class="nurSR">, \u00f6ffnet in einem neuen Tab</span></a>' +
         '<button type="button" class="pk__tausch">Andere Class</button></div>';
       el.querySelector('.pk__titel').textContent = c.titel;
-      el.querySelector('.pk__meta').innerHTML = [cn(c.coach) ? 'mit ' + cn(c.coach) : '', c.studio, STIL_NAMEN[st] || ''].filter(Boolean).map(function(x){ return x.replace(/</g, '&lt;'); }).join(' \u00b7 ') + frei;
+      /* Pruefung 10.09.2026: hier stand innerHTML mit einem halben Schutz
+         (nur < wurde ersetzt). Der Text braucht kein HTML, also bekommt er
+         auch keins: der Zusatz "frei" ist das einzige Markup und wird
+         getrennt angehaengt. */
+      var pkMeta = el.querySelector('.pk__meta');
+      pkMeta.textContent = [cn(c.coach) ? 'mit ' + cn(c.coach) : '', c.studio, STIL_NAMEN[st] || ''].filter(Boolean).join(' \u00b7 ');
+      if(frei) pkMeta.insertAdjacentHTML('beforeend', frei);
       var a = el.querySelector('.buchen'); a.href = c.url; a.dataset.retter = c.titel + '|' + c.tag + '|' + c.zeit + '|' + c.datum + '|' + c.id;
       if(key){ el.querySelector('.pk__ava').addEventListener('click', function(){ var b = document.createElement('button'); b.dataset.coach = key; b.hidden = true; document.body.appendChild(b); b.click(); b.remove(); }); el.querySelector('.pk__ava').style.cursor = 'pointer'; }
       el.querySelector('.pk__tausch').addEventListener('click', function(){ tausch(nr - 1); });
@@ -5338,7 +5382,7 @@ body[data-frag="1"] .frag-knopf{display:none}
               html += '<div class="termin' + (kids ? ' termin--kids' : '') + (c.frei === 0 ? ' voll-class' : '') + '" data-stufe="' + (kids ? 'k' : STUFEN[lv]) + '" data-zeit="' + c.zeit + '" data-id="' + c.id + '" data-stile="' + st.join(' ') + '">' +
                 '<div class="termin__zeit">' + c.zeit + '<small>' + c.dauer + ' min</small></div>' +
                 '<div class="termin__was"><p class="termin__name">' + esc(c.titel) + '</p><div class="termin__meta"><span class="stufe">' + STUFENWORT[lv] + '</span>' + '<span class="termin__coach"' + (cn(c.coach) ? '' : ' hidden') + '>' + esc(cn(c.coach) || '') + '</span>' + '<span class="termin__ort">' + + '</span><span class="termin__frei">' + frei + '</span></div></div>' +
-                '<div class="termin__cta"><a class="buchen" href="' + c.url + '" target="_blank" rel="noopener">' + (c.frei === 0 ? 'Warteliste' : 'Buchen') + '</a><button type="button" class="teilen" aria-label="Class teilen">' + teilenSvg + '</button></div></div>';
+                '<div class="termin__cta"><a class="buchen" href="' + c.url + '" target="_blank" rel="noopener">' + (c.frei === 0 ? 'Warteliste' : 'Buchen') + '<span class="nurSR">, \u00f6ffnet in einem neuen Tab</span></a><button type="button" class="teilen" aria-label="Class teilen">' + teilenSvg + '</button></div></div>';
             });
             html += '</div>';
           });
