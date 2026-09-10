@@ -86,6 +86,12 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;scro
    erste Abschnitt bleiben aussen vor, sie stehen sofort im Bild. */
 #raster,#preise,#kalender,#wie,#faq,#events,#auch,#school{
   content-visibility:auto;contain-intrinsic-size:auto 1200px}
+/* Sobald jemand einen Anker anspringt, setzt ausHash() in bauen.py data-voll,
+   und alle Abschnitte werden fertig gerendert. Sonst landet der Sprung
+   Tausende Pixel daneben, weil die Seite beim Scrollen waechst. */
+html[data-voll="1"] #raster,html[data-voll="1"] #preise,html[data-voll="1"] #kalender,
+html[data-voll="1"] #wie,html[data-voll="1"] #faq,html[data-voll="1"] #events,
+html[data-voll="1"] #auch,html[data-voll="1"] #school{content-visibility:visible}
 #welcome,#kalender,#preise,#raster,#events,#faq,#school,#wie,#saele,#gutschein,
 #detlef{scroll-margin-top:86px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -4165,6 +4171,17 @@ body[data-frag="1"] .frag-knopf{display:none}
       zeigen('uebersicht', false);
       var el = document.getElementById(h);
       if(el){
+        /* Pruefung 10.09.2026, Runde 5: acht Abschnitte stehen auf
+           content-visibility:auto mit 1200 px Ersatzhoehe, damit ihre
+           Hintergrundbilder beim ersten Aufruf nicht mit dem Film um die
+           Leitung streiten. Beim Sprung rendert der Browser die Abschnitte
+           erst, wenn er an ihnen vorbeiscrollt, und jeder ist hoeher als sein
+           Platzhalter. Gemessen auf 393x852: die Seite wuchs beim Sprung um 14
+           bis 29 Prozent, #events landete 4419 px, #faq 3816 px, #kalender
+           2240 px unter der Oberkante. Vor dem Sprung werden die Abschnitte
+           deshalb einmal fertig gerendert, dann stimmt jede Position. Das
+           bleibt so: wer einmal springt, will die Seite ohnehin sehen. */
+        document.documentElement.dataset.voll = '1';
         /* Zweimal anfahren: der Kalender laedt seine Termine nach und waechst
            dabei um mehrere Bildschirmhoehen. Wer nur einmal springt, landet
            weit ueber dem Ziel (gemessen 10.09.: Abschnitt 1533 px unterhalb
@@ -5888,14 +5905,28 @@ body[data-frag="1"] .frag-knopf{display:none}
       if(!ziel || ziel.charAt(0) !== '#') return;
       e.preventDefault();
       menue(false);
+      /* Pruefung 10.09.2026, Runde 5: acht Abschnitte stehen auf
+         content-visibility:auto, jeder hoeher als sein 1200-px-Platzhalter.
+         Der Sprung rannte durch ungerenderte Abschnitte, die Seite wuchs
+         dabei um bis zu 29 Prozent, und das Ziel landete Tausende Pixel
+         unter der Oberkante (gemessen 393x852: #events 4419 px daneben).
+         Vor dem Sprung wird alles einmal fertig gerendert (data-voll, siehe
+         Stilblock), dann ein Frame gewartet, dann gesprungen. Ein zweiter
+         Anlauf faengt Reste ab, etwa wenn der Kalender gerade nachlaedt. */
+      document.documentElement.dataset.voll = '1';
       function hin(){
         var el = document.querySelector(ziel);
-        if(el) el.scrollIntoView({behavior: ruhig ? 'auto' : 'smooth'});
+        if(!el) return;
+        el.scrollIntoView({behavior: ruhig ? 'auto' : 'smooth'});
+        setTimeout(function(){
+          var r = el.getBoundingClientRect();
+          if(Math.abs(r.top) > 120) el.scrollIntoView({behavior: 'auto'});
+        }, ruhig ? 120 : 900);
       }
       if(document.body.dataset.view === 'kurs'){
         location.hash = '';
         setTimeout(hin, 90);
-      } else hin();
+      } else requestAnimationFrame(function(){ requestAnimationFrame(hin); });
     });
   });
 
