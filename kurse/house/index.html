@@ -3084,7 +3084,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   </div>
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/71701658-9ea7-4d09-a0de-2a4451e9719b"
-       target="_blank" rel="noopener">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+       target="_blank" rel="noopener" aria-label="Buchen: House Basics Beginner, Samstag 12:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="am" data-zeit="13:00" data-id="18d4f3a8-0769-4370-bd42-82deb83b4d0b" data-stile="house">
@@ -3097,7 +3097,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   </div>
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/18d4f3a8-0769-4370-bd42-82deb83b4d0b"
-       target="_blank" rel="noopener">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
+       target="_blank" rel="noopener" aria-label="Buchen: House Beginner/Intermediate, Samstag 13:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
     <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><p class="leer" hidden>Mit dieser Auswahl l&auml;uft diese Woche keine Class mehr. Nimm ein anderes Level, einen anderen Style, oder hol dir unten die n&auml;chste Woche dazu.</p></div>
@@ -3672,10 +3672,17 @@ body[data-frag="1"] .frag-knopf{display:none}
   });
 
   /* -------- Fragen auf und zu -------- */
+  /* Pruefung 10.09.2026, Runde 5: die zugeklappten Antworten (16 Stueck,
+     454 Woerter) standen trotz aria-expanded="false" im Zugaenglichkeitsbaum.
+     Ein Screenreader las sie alle vor, als waeren sie offen. inert nimmt die
+     zugeklappte Antwort heraus, ohne die Aufklapp-Animation anzufassen. */
   document.querySelectorAll('.frage button').forEach(function(b){
+    var a = document.getElementById(b.getAttribute('aria-controls') || '');
+    if(a && b.getAttribute('aria-expanded') !== 'true') a.inert = true;
     b.addEventListener('click', function(){
       var offen = b.getAttribute('aria-expanded') === 'true';
       b.setAttribute('aria-expanded', String(!offen));
+      if(a) a.inert = offen;
     });
   });
 
@@ -4983,7 +4990,7 @@ body[data-frag="1"] .frag-knopf{display:none}
               html += '<div class="termin' + (kids ? ' termin--kids' : '') + (c.frei === 0 ? ' voll-class' : '') + '" data-stufe="' + (kids ? 'k' : STUFEN[lv]) + '" data-zeit="' + c.zeit + '" data-id="' + c.id + '" data-stile="' + st.join(' ') + '">' +
                 '<div class="termin__zeit">' + c.zeit + '<small>' + c.dauer + ' min</small></div>' +
                 '<div class="termin__was"><p class="termin__name">' + esc(c.titel) + '</p><div class="termin__meta"><span class="stufe">' + STUFENWORT[lv] + '</span>' + '<span class="termin__coach"' + (cn(c.coach) ? '' : ' hidden') + '>' + esc(cn(c.coach) || '') + '</span>' + '<span class="termin__ort">' + esc(String(c.studio || '').replace(/ - /g, ' \u00b7 ')) + '</span><span class="termin__frei">' + frei + '</span></div></div>' +
-                '<div class="termin__cta"><a class="buchen" href="' + c.url + '" target="_blank" rel="noopener">' + (c.frei === 0 ? 'Warteliste' : 'Buchen') + '<span class="nurSR">, \u00f6ffnet in einem neuen Tab</span></a><button type="button" class="teilen" aria-label="Class teilen">' + teilenSvg + '</button></div></div>';
+                '<div class="termin__cta"><a class="buchen" href="' + c.url + '" target="_blank" rel="noopener" aria-label="' + (c.frei === 0 ? 'Warteliste' : 'Buchen') + ': ' + esc(c.titel) + ', ' + TAGNAME[tag] + ' ' + c.zeit + ' Uhr, \u00f6ffnet in einem neuen Tab">' + (c.frei === 0 ? 'Warteliste' : 'Buchen') + '<span class="nurSR">, \u00f6ffnet in einem neuen Tab</span></a><button type="button" class="teilen" aria-label="Class teilen">' + teilenSvg + '</button></div></div>';
             });
             html += '</div>';
           });
