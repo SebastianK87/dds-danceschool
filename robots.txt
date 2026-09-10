@@ -1,2 +1,5 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /check/
+
+Sitemap: https://deesdanceschool.de/sitemap.xml
