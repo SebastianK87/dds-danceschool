@@ -1602,6 +1602,8 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .saal__text b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:17px;
   letter-spacing:.02em}
 .saal__text p{margin:6px 0 0;font-size:16px;line-height:1.45;color:var(--auf-ink-soft)}
+.raster__fuss{margin:18px auto 0;max-width:62ch;text-align:center;font-size:15px;
+  line-height:1.5;color:var(--auf-ink-leis)}
 .saal__alle{margin-top:var(--s3)}
 .saal__alle h3{font-size:clamp(20px,2.4vw,26px);text-align:center}
 .saal__liste{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:2px;
@@ -3005,10 +3007,10 @@ body[data-frag="1"] .frag-knopf{display:none}
     <figcaption>
       <div class="gruender__marken" role="group" aria-label="Bild im Goldrahmen">
         <button type="button" data-fuer="0" aria-pressed="true"><span class="nurSR">Detlef Soost, Gr&uuml;nder</span></button>
-        <button type="button" data-fuer="1" aria-pressed="false"><span class="nurSR">Holzmarktstra&szlig;e 66, f&uuml;nf S&auml;le</span></button>
+        <button type="button" data-fuer="1" aria-pressed="false"><span class="nurSR">Holzmarktstra&szlig;e 66, sechs S&auml;le</span></button>
         <button type="button" data-fuer="2" aria-pressed="false"><span class="nurSR">Jede Class, jedes Level</span></button>
       </div>
-      <span data-fuer="0">Detlef Soost, Gr&uuml;nder</span><span data-fuer="1">Holzmarktstra&szlig;e 66, f&uuml;nf S&auml;le</span><span data-fuer="2">Jede Class, jedes Level</span>
+      <span data-fuer="0">Detlef Soost, Gr&uuml;nder</span><span data-fuer="1">Holzmarktstra&szlig;e 66, sechs S&auml;le</span><span data-fuer="2">Jede Class, jedes Level</span>
     </figcaption>
   </figure>
   <div class="gr__k gr__k--b"><p>Genau das sehe ich hier jeden Tag. Tanzen ver&auml;ndert, wie du dich h&auml;ltst und wie du in einen Raum gehst. Bei Kindern, bei Leuten, die mit 45 zum ersten Mal in einer Class stehen. Darum habe ich 2002 aufgemacht. Nicht f&uuml;r die, die schon k&ouml;nnen. F&uuml;r alle, die es wollen.</p></div>
@@ -3020,7 +3022,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div data-i="0"><b>2002</b><span>Zwei Trainingsr&auml;ume und ein kleines Kosmetikstudio.
     Drei, vier Kurse am Tag: Jazzdance, Hip Hop, Go-Go.</span></div>
   <div data-i="1"><b>2026</b><span>Der Umzug an die Holzmarktstra&szlig;e 66, direkt an der
-    Jannowitzbr&uuml;cke: f&uuml;nf S&auml;le, eigener Pole-Raum, Fitness Area,
+    Jannowitzbr&uuml;cke: sechs S&auml;le, eigener Pole-Raum, Fitness Area,
     50 Coaches und 137 Classes die Woche.</span></div>
   <div data-i="2"><b>Heute</b><span>Hier kann jede:r tanzen lernen, egal welches Level, egal
     welches Alter. Als Teil des D!&#8217;s Dance Club Netzwerks tanzen wir mit
@@ -3139,6 +3141,14 @@ body[data-frag="1"] .frag-knopf{display:none}
     <span class="kachel__zahl">Sa</span>
   </span>
 </a></div>
+      <!-- Pruefung 10.09.2026: wer die Kachelzahlen addiert, kommt auf 140, die
+           Ueberschrift sagt 137. Beides stimmt: sechs Classes verbinden zwei
+           Styles und stehen in beiden Kacheln, drei Ue25-Classes haben keine
+           eigene Kachel. Statt eine der Zahlen zu schoenen, steht der Grund da. -->
+      <p class="raster__fuss">Ein paar Classes verbinden zwei Styles, zum Beispiel
+        Pole &amp; Heels, und stehen deshalb in beiden Kacheln. Dance &Uuml;25 und
+        Pop &Uuml;25 haben keine eigene Kachel, die findest du im
+        <a href="#kalender">Kurskalender</a>.</p>
     </div>
   </section>
 
@@ -5239,7 +5249,7 @@ body[data-frag="1"] .frag-knopf{display:none}
         <b>Hier findest du uns</b>
         <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Holzmarktstra&szlig;e 66, 3. Etage<br>10179 Berlin<br>
         <span class="fuss__soft">S+U Jannowitzbr&uuml;cke, zwei Minuten zu Fu&szlig;</span></p>
-        <p class="fuss__soft">Classes: t&auml;glich ab 10 Uhr, letzte bis gegen 22 Uhr<br>Counter besetzt: Mo bis Fr 16:30 bis 21:30 Uhr, Sa 10 bis 15 Uhr</p>
+        <p class="fuss__soft">Classes: Mo bis Do 10 bis 21:30 Uhr, Fr 10 bis 21 Uhr, Sa 11 bis 16:30 Uhr, So 11 bis 13 Uhr<br>Counter besetzt: Mo bis Fr 16:30 bis 21:30 Uhr, Sa 10 bis 15 Uhr</p>
       </div>
       <div>
         <b>Schreib uns</b>
