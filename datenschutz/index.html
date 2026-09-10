@@ -222,6 +222,16 @@ body[data-oben="1"]:not([data-menu="1"]) .top{background:transparent;
   .top__in:has(.zurueck) .top__recht{gap:6px}
   .top__in:has(.zurueck) .marke{font-size:16px}
 }
+/* WCAG 1.4.10 Reflow: bei 320 px (400 Prozent Zoom) muss alles bedienbar
+   bleiben. Gemessen: mit Zurueck-Knopf reichte die Zeile bis 375 px, der
+   Burger stand komplett draussen; ohne Zurueck-Knopf bis 321. Unter 380 px
+   weicht die Kursplan-Pille, sie steht auf dem Handy ohnehin in der
+   Sprungleiste und im Menue, und die Wortmarke wird eine Stufe kleiner. */
+@media (max-width:380px){
+  .top__in:has(.zurueck) .top__cta{display:none}
+  .marke{font-size:15px}
+  .top__in{gap:10px}
+}
 .zurueck:hover{background:rgba(225,226,220,.16)}
 body[data-view="kurs"] .zurueck{display:inline-flex}
 body[data-view="kurs"] .top__nav{display:none}
@@ -830,6 +840,9 @@ body[data-oben="1"] .frag-knopf{transform:translateY(calc(100% + 40px));pointer-
   text-decoration-thickness:2.5px;text-underline-offset:5px}
 
 /* ---------- Coach-Band ---------- */
+/* Pruefung 10.09.2026, Runde 5: aria-hidden nimmt die Kopie aus dem
+   Vorlesen, aber nicht aus dem Tab-Weg. 40 Coach-Knoepfe darin waren per
+   Tab erreichbar, ohne dass ein Screenreader sie nannte. inert nimmt beides. */
 .spur__kopie{display:contents}
 .band-laeuft{overflow:hidden;margin-top:var(--s4);
   -webkit-mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);
@@ -5258,6 +5271,10 @@ body[data-frag="1"] .frag-knopf{display:none}
      kommt hoch. Leerzeichen bleiben Text, sonst bricht die Zeile falsch. */
   document.querySelectorAll('.menu__links a').forEach(function(a){
     var t = a.textContent, n = 0, frag = document.createDocumentFragment();
+    /* Pruefung 10.09.2026, Runde 5: Buchstabe fuer Buchstabe in eigenen
+       Spans liest VoiceOver als "K u r s e". Der Link bekommt das ganze Wort
+       als Namen, die Spans bleiben reine Optik. */
+    if(!a.getAttribute('aria-label')) a.setAttribute('aria-label', t.replace(/\s+/g, ' ').trim());
     for(var i = 0; i < t.length; i++){
       var z = t.charAt(i);
       if(z === ' '){ frag.appendChild(document.createTextNode(' ')); continue; }
