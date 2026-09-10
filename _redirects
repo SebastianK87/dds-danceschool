@@ -306,8 +306,6 @@
 # 307 (temporaer, gibt keine Linkkraft weiter), /impressum dagegen 301, weil es
 # dafuer schon eine Regel gab. Jetzt haben alle 18 Adressen eine.
 /gutscheine /gutscheine/ 301
-/raumvermietung /raumvermietung/ 301
-/datenschutz /datenschutz/ 301
 /schulprojekte /schulprojekte/ 301
 /kurse/pole-dance /kurse/pole-dance/ 301
 /kurse/commercial /kurse/commercial/ 301
