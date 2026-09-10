@@ -261,6 +261,32 @@
 /fotos/* / 301
 /images/* / 301
 /static/* / 301
+# --- Nachtrag 10.09.2026: 17 Adressen aus dem Webarchiv, die noch 404 gaben ---
+# Gemessen: von 439 alten HTML-Pfaden im Wayback-Archiv antworteten 415 mit 301,
+# 7 mit 200 und diese 17 mit 404. Alte Blogbeitraege gehen auf die Startseite,
+# alles mit Kursbezug auf das Stil-Raster.
+# ACHTUNG: /kurse/ steht hier EXAKT, ohne Stern. Ein Muster /kurse/* wuerde die
+# zwoelf echten Kursseiten treffen.
+/kurse/ /#raster 301
+/kurse/page/2/ /#raster 301
+/kurse/page/3/ /#raster 301
+/kurse/page/4/ /#raster 301
+/kurse/page/5/ /#raster 301
+/kurse/page/6/ /#raster 301
+/dance/ /#raster 301
+/fitness/ /kurse/fitness/ 301
+/vertragsdetails/ /#preise 301
+/widerrufsbelehrung/ https://www.deesworld.de/widerrufsbelehrung/ 301
+/comments/feed/ / 301
+/achtung/ / 301
+/back-to-the-roots/ / 301
+/be-yourself-trust-yourself/ / 301
+/we-are-back/ / 301
+/winner/ / 301
+/lifestyle/ / 301
+/video-zur-show/ / 301
+/scheiss-drauf-machs-einfach-die-neue-live-show-von-detlef-soost/ / 301
+
 /newsletter/* / 301
 /preise/* /#preise 301
 /angebot/* /#raster 301
