@@ -3718,6 +3718,20 @@ body[data-frag="1"] .frag-knopf{display:none}
      Pflege: bilder/coach-raus.json. */
   var EX_COACH = ["Barbora", "Hidia", "Laura Ann", "Lavinia", "Lya", "Samy", "Steffi"];
   function cn(n){ return n && EX_COACH.indexOf(n) < 0 ? n : ''; }
+  /* Karteileichen ganz ausblenden, nicht nur den Namen.
+     Wer auf EX_COACH steht, unterrichtet hier nicht mehr. Eine Class, die nur
+     auf so jemanden laeuft, ist damit unbesetzt. Nachgemessen am 10.09.2026:
+     alle zehn betroffenen hatten ueber zwei Wochen null Buchungen, und fuenf
+     lagen zur selben Zeit im selben Raum wie eine Class, die wirklich gebucht
+     wird. Zwei Classes im selben Raum gehen nicht, also ist die leere der Rest
+     eines Umbaus.
+     Nur den Namen wegzulassen reichte nicht: dann stand die Leiche ohne Coach
+     im Kalender, mit Buchen-Knopf daneben, teils direkt neben der echten
+     Class gleichen Namens. */
+  function exRaus(d){
+    if(d && d.classes) d.classes = d.classes.filter(function(c){ return EX_COACH.indexOf(c.coach) < 0; });
+    return d;
+  }
   var ruhig = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var spar  = (navigator.connection && (navigator.connection.saveData ||
               /2g/.test(navigator.connection.effectiveType || ''))) || false;
@@ -4138,6 +4152,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     var zeilen = document.querySelectorAll('.termin[data-id]'); if(!zeilen.length) return;
     fetch(panel.dataset.url.replace('/frag', '/plan')).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
       if(!d || !d.classes) return;
+      exRaus(d);
       var live = {}; d.classes.forEach(function(c){ live[c.id] = c; });
       var weg = {}; (d.abgesagt || []).forEach(function(id){ weg[id] = 1; });
       zeilen.forEach(function(z){
@@ -4276,6 +4291,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     if(!zeile || !panel || !panel.dataset.url) return;
     fetch(panel.dataset.url.replace('/frag', '/plan')).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
       if(!d || !d.classes) return;
+      exRaus(d);
       var heute = d.classes.filter(function(c){ return c.datum === JETZT.iso; });
       function minuten(c){ return parseInt(c.zeit.slice(0, 2), 10) * 60 + parseInt(c.zeit.slice(3, 5), 10); }
       var nachSpalte = function(a, b){ return a.zeit.localeCompare(b.zeit); };
@@ -4492,7 +4508,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     function laden(){
       if(plan) return Promise.resolve(plan);
       if(!url) { plan = ausDom(); return Promise.resolve(plan); }
-      return fetch(url).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){ plan = (d && d.classes && d.classes.length) ? d : ausDom(); return plan; }).catch(function(){ plan = ausDom(); return plan; });
+      return fetch(url).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){ d = exRaus(d); plan = (d && d.classes && d.classes.length) ? d : ausDom(); return plan; }).catch(function(){ plan = ausDom(); return plan; });
     }
     if(start) start.addEventListener('click', function(){ start.setAttribute('aria-expanded', 'true'); inhalt.hidden = false; zaehl('planer_start'); laden().then(stilChips); });
     planer.addEventListener('click', function(e){
@@ -4524,6 +4540,7 @@ body[data-frag="1"] .frag-knopf{display:none}
       knopf.addEventListener('click', function(){
         laden().then(function(d){
           if(!d || !d.classes) return;
+      exRaus(d);
           var so = sonntag(), tage = {};
           d.classes.filter(function(c){ return c.datum > so; }).forEach(function(c){ (tage[c.datum] = tage[c.datum] || []).push(c); });
           var leer = liste.querySelector('.leer'), html = '';
