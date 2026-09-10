@@ -1,7 +1,7 @@
 {
  "stand": "2026-09-10",
  "school": {
-  "name": "D!'s Dance School",
+  "name": "D!’s Dance School",
   "gruender": "Detlef Soost",
   "seit": 2002,
   "adresse": "Holzmarktstraße 66, 3. Etage, 10179 Berlin",
@@ -10,15 +10,15 @@
   "whatsapp_link": "https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School.",
   "telefon": "+49 30 20605924 (Mo bis Fr 10 bis 15 Uhr)",
   "mail": "info@deesworld.de",
-  "counter": "Classes: täglich ab 10 Uhr, letzte bis gegen 22 Uhr<br>Counter besetzt: Mo bis Fr 16:30 bis 21:30 Uhr, Sa 10 bis 15 Uhr",
+  "counter": "Classes: Mo bis Do 10 bis 21:30 Uhr, Fr 10 bis 21 Uhr, Sa 11 bis 16:30 Uhr, So 11 bis 13 Uhr<br>Counter besetzt: Mo bis Fr 16:30 bis 21:30 Uhr, Sa 10 bis 15 Uhr",
   "google": "4,7 Sterne bei 98 Bewertungen",
   "classes_pro_woche": 137,
   "coaches": 50,
   "styles": 12,
-  "saele": 5,
-  "seite": "https://www.deesworld.de/dance-school/",
+  "saele": 6,
+  "seite": "https://deesdanceschool.de/",
   "shop": "https://www.eversports.de/sp/ds-dance-school",
-  "kursplan": "https://www.deesworld.de/dance-school/#kalender",
+  "kursplan": "https://deesdanceschool.de/#kalender",
   "schulprojekte": "/dance-school/schulprojekte/",
   "gutscheine": "Gutscheine gibt es online: Betrag frei wählbar, Gruß dazuschreiben, sofort als PDF. Einlösbar auf Classes, Karten und Memberships. Auf der Seite unter Gutscheine.",
   "raumvermietung": {
@@ -30,7 +30,7 @@
     "Studio 4 · Pole Space",
     "Fitness Area"
    ],
-   "text": "Fünf Säle mitten in Berlin, große Fenster, Spiegelwand, Sound. Vormittags und an Wochenenden frei für Proben, Shootings, Workshops und Castings."
+   "text": "Sechs Säle und eine Fitness Area mitten in Berlin, große Fenster, Spiegelwand, Sound. Vormittags und an Wochenenden frei für Proben, Shootings, Workshops und Castings."
   },
   "detlef_buchen": {
    "text": "Detlef steht nicht nur vorne im Saal. Seit über zwanzig Jahren arbeitet er mit Menschen, die etwas verändern wollen: auf der Bühne, im TV, in Unternehmen und eins zu eins. Über 500 Events, tausende aktivierte Menschen. Wenn du mehr willst als eine Class, frag ihn direkt an.",
@@ -87,8 +87,8 @@
    "Refill-Station: Wasser gratis, so oft du willst."
   ],
   "regeln": [
-   "Buchen bis 6 Stunden vor Kursbeginn über Eversports.",
-   "Kostenlos absagen bis 6 Stunden vor Beginn.",
+   "Buchen über Eversports, bis zum Start der Class, solange Plätze frei sind. Online buchbar ab 7 Tage vorher.",
+   "Kostenlos absagen in der Regel bis 6 Stunden vor Beginn; die genaue Frist steht bei jeder Class in Eversports.",
    "Alle Preise inkl. MwSt. 12 Monate Laufzeit: Kündigungsfrist 30 Tage zum Laufzeitende."
   ]
  },
@@ -104,28 +104,24 @@
    "name": "Family & Friends",
    "wann": "12. Dezember 2026",
    "text": "Der Abend, an dem die ganze School auf der Bühne steht. Alle Kurse, eine Show, ein Haus voller Leute.",
-   "url": "https://www.deesworld.de/dance-school/#events",
+   "url": "https://deesdanceschool.de/#events",
    "ticket": ""
   }
  ],
  "schulprojekte": {
-  "satz": "Tanz gehört nicht nur ins Studio. Mit vier Formaten bringen wir Bewegung, Teamgeist und Selbstvertrauen direkt an Berliner Schulen.",
+  "satz": "Tanz gehört nicht nur ins Studio. Mit drei Formaten bringen wir Bewegung, Teamgeist und Selbstvertrauen direkt an Berliner Schulen.",
   "formate": [
    {
-    "name": "Tanz AG",
+    "name": "Tanz-AG",
     "text": "Ein D!’s Coach kommt wöchentlich an eure Schule. Eine feste Gruppe, ein Schuljahr, echte Fortschritte."
    },
    {
-    "name": "Dance School Day",
-    "text": "Ein ganzer Tag an eurer Schule: Workshops, Bewegung, mentale Stärke, Teamgeist."
-   },
-   {
     "name": "Wandertag",
-    "text": "Die Klasse kommt zu uns ins Haus und erlebt die School von innen. Tanz, Motivation, gemeinsam was schaffen."
+    "text": "Die Klasse kommt zu uns ins Haus und erlebt die School von innen. Tanz, Motivation, gemeinsam was schaffen. 19 € pro Person."
    },
    {
     "name": "Dance School Program",
-    "text": "Das Choreo-Portal für Lehrkräfte: bringt Tanz schnell und einfach ins Klassenzimmer."
+    "text": "Das Choreo-Portal für Lehrkräfte: bringt Tanz schnell und einfach ins Klassenzimmer. 99 € pauschal je Schule."
    }
   ],
   "url": "/dance-school/schulprojekte/",
@@ -138,7 +134,7 @@
   },
   {
    "frage": "Bis wann kann ich buchen?",
-   "antwort": "Bis sechs Stunden vor Kursbeginn über Eversports. Danach ist der Termin zu."
+   "antwort": "Über Eversports, bis zum Start der Class, solange Plätze frei sind. Online buchbar ist eine Class ab sieben Tage vorher."
   },
   {
    "frage": "Ich komme allein. Ist das komisch?",
@@ -154,7 +150,7 @@
   },
   {
    "frage": "Kann ich absagen, wenn ich es doch nicht schaffe?",
-   "antwort": "Ja. Bis sechs Stunden vor Beginn kannst du über Eversports absagen. Danach ist der Platz verbraucht."
+   "antwort": "Ja. In der Regel bis sechs Stunden vor Beginn über Eversports; die genaue Frist steht bei der Class. Danach ist der Platz verbraucht."
   },
   {
    "frage": "Was ist der Unterschied zwischen Beginner und Intermediate?",
@@ -182,7 +178,7 @@
   },
   {
    "frage": "Was passiert, wenn ich gebucht habe und nicht komme?",
-   "antwort": "Absagen ist bis sechs Stunden vor Beginn kostenlos, der Betrag wird dir gutgeschrieben. Wer gebucht hat und ohne Absage nicht kommt, zahlt eine No-Show-Gebühr von 15 €. Also lieber kurz absagen, das geht in der Eversports-App mit zwei Tipps."
+   "antwort": "Absagen ist in der Regel bis sechs Stunden vor Beginn kostenlos, der Betrag wird dir gutgeschrieben. Wer gebucht hat und ohne Absage nicht kommt, zahlt eine No-Show-Gebühr von 15 €. Also lieber kurz absagen, das geht in der Eversports-App mit zwei Tipps."
   },
   {
    "frage": "Was ziehe ich an, muss ich etwas mitbringen?",
@@ -205,7 +201,7 @@
    "claim": "Kraft, Technik, Kontrolle.",
    "fuer": "Alle, die Kraft aufbauen wollen, ohne ins Fitnessstudio zu gehen. Vorkenntnisse brauchst du keine, Level 1 Neubeginner ist genau dafür da.",
    "anziehen": "Kurze Hose und Top. Deine Haut braucht Kontakt zur Stange, in langer Kleidung rutschst du ab. Creme und Öl am Trainingstag bitte weglassen.",
-   "url": "https://www.deesworld.de/dance-school/kurse/pole-dance/"
+   "url": "https://deesdanceschool.de/kurse/pole-dance/"
   },
   {
    "slug": "commercial",
@@ -214,7 +210,7 @@
    "claim": "Der Stil aus dem Musikvideo.",
    "fuer": "Der beste Einstieg, wenn du noch nie getanzt hast. Beginner heißt hier wirklich Beginner. Die Ü25-Classes laufen im selben Stil, nur im eigenen Tempo.",
    "anziehen": "Bequeme Trainingskleidung und saubere Hallenschuhe.",
-   "url": "https://www.deesworld.de/dance-school/kurse/commercial/"
+   "url": "https://deesdanceschool.de/kurse/commercial/"
   },
   {
    "slug": "hip-hop",
@@ -223,7 +219,7 @@
    "claim": "Groove kommt vor Choreografie.",
    "fuer": "Alle Level. Basics für den Einstieg, Fusion und New Style, wenn du schon Erfahrung mitbringst.",
    "anziehen": "Trainingskleidung und Sneaker mit sauberer Sohle.",
-   "url": "https://www.deesworld.de/dance-school/kurse/hip-hop/"
+   "url": "https://deesdanceschool.de/kurse/hip-hop/"
   },
   {
    "slug": "heels",
@@ -232,7 +228,7 @@
    "claim": "Haltung, Ausdruck, Sicherheit.",
    "fuer": "Alle, unabhängig von Erfahrung mit Absätzen. Beginner-Classes bauen den Stand von Grund auf.",
    "anziehen": "Absatzschuhe mit festem Riemen, fünf bis neun Zentimeter. Beim ersten Mal reichen auch Sneaker. Erst ausprobieren, dann kaufen.",
-   "url": "https://www.deesworld.de/dance-school/kurse/heels/"
+   "url": "https://deesdanceschool.de/kurse/heels/"
   },
   {
    "slug": "choreography",
@@ -241,7 +237,7 @@
    "claim": "Die ganze Choreo, nicht acht Counts.",
    "fuer": "Für alle, die nicht nur mitlaufen, sondern eine Choreo am Ende wirklich sitzen haben.",
    "anziehen": "Trainingskleidung und Hallenschuhe.",
-   "url": "https://www.deesworld.de/dance-school/kurse/choreography/"
+   "url": "https://deesdanceschool.de/kurse/choreography/"
   },
   {
    "slug": "contemporary",
@@ -250,7 +246,7 @@
    "claim": "Linie, Fluss, Technik.",
    "fuer": "Alle, die an Technik arbeiten wollen. Auch als Ergänzung, wenn dein Hauptstil woanders liegt.",
    "anziehen": "Enganliegende Kleidung, barfuß oder Socken.",
-   "url": "https://www.deesworld.de/dance-school/kurse/contemporary-jazz/"
+   "url": "https://deesdanceschool.de/kurse/contemporary-jazz/"
   },
   {
    "slug": "fitness",
@@ -259,7 +255,7 @@
    "claim": "Das Training, das den Tanz trägt.",
    "fuer": "Alle, auch ohne Tanzerfahrung. Vormittags und abends im Programm.",
    "anziehen": "Trainingskleidung, Matte ist da.",
-   "url": "https://www.deesworld.de/dance-school/kurse/fitness/"
+   "url": "https://deesdanceschool.de/kurse/fitness/"
   },
   {
    "slug": "latin",
@@ -268,7 +264,7 @@
    "claim": "Bewegung, die aus der Hüfte kommt.",
    "fuer": "Alle Level. Die meisten Classes sind Beginner oder Intermediate.",
    "anziehen": "Bequeme Kleidung und Sneaker.",
-   "url": "https://www.deesworld.de/dance-school/kurse/latin-afro/"
+   "url": "https://deesdanceschool.de/kurse/latin-afro/"
   },
   {
    "slug": "aerial",
@@ -277,7 +273,7 @@
    "claim": "Akrobatik im Reifen.",
    "fuer": "Alle ab Neubeginner. Kraft brauchst du nicht mitzubringen, die baust du hier auf.",
    "anziehen": "Enganliegende Kleidung, die die Kniekehlen bedeckt. Kein Schmuck.",
-   "url": "https://www.deesworld.de/dance-school/kurse/aerial-hoop/"
+   "url": "https://deesdanceschool.de/kurse/aerial-hoop/"
   },
   {
    "slug": "kids",
@@ -286,7 +282,7 @@
    "claim": "Hip Hop ab sechs Jahren.",
    "fuer": "Kinder ab sechs Jahren und Jugendliche. Vorkenntnisse braucht niemand.",
    "anziehen": "Bequeme Kleidung und Hallenschuhe. Trinkflasche nicht vergessen.",
-   "url": "https://www.deesworld.de/dance-school/kurse/kids-teens/"
+   "url": "https://deesdanceschool.de/kurse/kids-teens/"
   },
   {
    "slug": "house",
@@ -295,7 +291,7 @@
    "claim": "Schnelle Füße, lockerer Oberkörper.",
    "fuer": "Basics für den Einstieg, Beginner/Intermediate für alle, die schon Groove haben.",
    "anziehen": "Leichte Sneaker, in denen du gleiten kannst.",
-   "url": "https://www.deesworld.de/dance-school/kurse/house/"
+   "url": "https://deesdanceschool.de/kurse/house/"
   },
   {
    "slug": "kpop",
@@ -304,7 +300,7 @@
    "claim": "Choreografie wie im Original.",
    "fuer": "All Level. Wenn du die Songs kennst, kennst du schon die Hälfte.",
    "anziehen": "Bequeme Kleidung und Hallenschuhe.",
-   "url": "https://www.deesworld.de/dance-school/kurse/k-pop/"
+   "url": "https://deesdanceschool.de/kurse/k-pop/"
   }
  ],
  "coaches": [
