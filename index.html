@@ -1687,7 +1687,6 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
   .termin:hover .teilen,.termin:focus-within .teilen{opacity:.5}
   .termin .teilen:hover,.termin .teilen:focus-visible{opacity:1}
 }
-.termin.voll-class .buchen{opacity:.8}
 .klappe__mehr{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .tag--naechste span::after{content:"nächste Woche";font:700 12px/1 var(--grot);letter-spacing:.1em;
   text-transform:uppercase;color:var(--gold);margin-left:10px}
@@ -1718,8 +1717,18 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 body[data-retter="1"] .leiste,body[data-retter="1"] .frag-knopf{display:none}
 
 /* ---------- Live-Plaetze im Kalender ---------- */
+/* Pruefung 10.09.2026, Runde 5: --auf-ink-leis ist eine helle Farbe fuer dunkle
+   Flaechen. Der Kalender liegt aber auf dem hellen Block, dort stand
+   "ausgebucht" mit Kontrast 1,09 zu 1, also unsichtbar. Auf dem hellen Block
+   gilt jetzt die dunkle Leise-Farbe (12,5 zu 1). Und der Knopf sagt
+   "Warteliste", war aber per pointer-events tot: wer draufdrueckte, kam
+   nirgends hin. Die Eversports-Seite der Class bietet die Warteliste an,
+   der Link fuehrt also jetzt wirklich dorthin, gedaempft, aber klickbar. */
 .voll{color:var(--auf-ink-leis);font-weight:700;text-decoration:line-through}
-.termin.voll-class .buchen{opacity:.45;pointer-events:none}
+/* Die Terminkarte ist immer hell (.termin hat background:var(--hell2)),
+   egal in welchem Block sie liegt. */
+.termin .voll{color:var(--auf-hell-leis)}
+.termin.voll-class .buchen{opacity:.8}
 .termin__frei:empty{display:none}
 
 /* ---------- Drop-in-Karten als Links ---------- */
