@@ -21,7 +21,13 @@
   Cross-Origin-Opener-Policy: same-origin
   X-Frame-Options: DENY
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://widget-static.eversports.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://files.eversports.com https://widget-static.eversports.io; media-src 'self' blob:; font-src 'self' data: https://widget-static.eversports.io; connect-src 'self' data: https://dds-frag.s-kellerberlin.workers.dev https://graphql-widget-master.production.eversports.cloud https://widget-static.eversports.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://www.eversports.de; object-src 'none'; upgrade-insecure-requests
-  Strict-Transport-Security: max-age=31536000
+  # includeSubDomains ergaenzt 10.09.2026. Geprueft wurden alle vier
+  # Subdomains: www, events und 360 antworten sauber ueber HTTPS,
+  # autodiscover leitet http ohnehin schon auf https um. Es geht also
+  # nichts kaputt, was nicht vorher schon so war.
+  # preload absichtlich NICHT: die Aufnahme in die Browserliste laesst
+  # sich monatelang nicht rueckgaengig machen, das entscheidet Sebastian.
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 # Medien aendern sich nur mit ihrem Namen (Inhalts-Fingerabdruck bei Bildern,
 # fester Name bei den Clips). Ein Jahr Cache spart bei jedem zweiten Besuch
