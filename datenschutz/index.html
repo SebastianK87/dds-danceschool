@@ -3034,7 +3034,7 @@ body[data-frag="1"] .frag-knopf{display:none}
       </div>
       <div>
         <b>Alle Styles</b>
-        <p><a href="../#/pole">Pole</a><br><a href="../#/commercial">Commercial</a><br><a href="../#/hip-hop">Hip Hop</a><br><a href="../#/heels">Heels</a><br><a href="../#/choreography">Choreography</a><br><a href="../#/contemporary">Contemporary & Jazz</a><br><a href="../#/fitness">Fitness</a><br><a href="../#/latin">Latin & Afro</a><br><a href="../#/aerial">Aerial Hoop</a><br><a href="../#/kids">Kids & Teens</a><br><a href="../#/house">House</a><br><a href="../#/kpop">K-Pop</a></p>
+        <p><a href="../kurse/pole-dance/">Pole</a><br><a href="../kurse/commercial/">Commercial</a><br><a href="../kurse/hip-hop/">Hip Hop</a><br><a href="../kurse/heels/">Heels</a><br><a href="../kurse/choreography/">Choreography</a><br><a href="../kurse/contemporary-jazz/">Contemporary & Jazz</a><br><a href="../kurse/fitness/">Fitness</a><br><a href="../kurse/latin-afro/">Latin & Afro</a><br><a href="../kurse/aerial-hoop/">Aerial Hoop</a><br><a href="../kurse/kids-teens/">Kids & Teens</a><br><a href="../kurse/house/">House</a><br><a href="../kurse/k-pop/">K-Pop</a></p>
       </div>
     </div>
     <p><button type="button" class="ruhe" aria-pressed="false">
@@ -3277,9 +3277,21 @@ body[data-frag="1"] .frag-knopf{display:none}
     if(h && !document.getElementById('kurs-' + h)){
       zeigen('uebersicht', false);
       var el = document.getElementById(h);
-      if(el) setTimeout(function(){
-        el.scrollIntoView({behavior: ruhig ? 'auto' : 'smooth', block: 'start'});
-      }, 60);
+      if(el){
+        /* Zweimal anfahren: der Kalender laedt seine Termine nach und waechst
+           dabei um mehrere Bildschirmhoehen. Wer nur einmal springt, landet
+           weit ueber dem Ziel (gemessen 10.09.: Abschnitt 1533 px unterhalb
+           des Fensters). Der zweite Anlauf korrigiert das, sobald die Seite
+           steht, und nur, wenn der Besucher nicht selbst weitergescrollt hat. */
+        var hin = function(){ el.scrollIntoView({behavior: ruhig ? 'auto' : 'smooth', block: 'start'}); };
+        setTimeout(hin, 60);
+        var korrektur = function(){
+          var r = el.getBoundingClientRect();
+          if(Math.abs(r.top) > 120 && r.top > 0) hin();
+        };
+        if(document.readyState === 'complete') setTimeout(korrektur, 900);
+        else addEventListener('load', function(){ setTimeout(korrektur, 900); });
+      }
       return;
     }
     zeigen(h ? 'kurs-' + h : 'uebersicht', true);

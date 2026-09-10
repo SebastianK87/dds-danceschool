@@ -3,18 +3,18 @@
 
 ## Seiten
 - [Dance School](https://deesdanceschool.de/): Übersicht, Preise, Kurskalender, FAQ
-- [Pole](https://deesdanceschool.de/#/pole): 37 Classes/Woche, Kraft, Technik, Kontrolle.
-- [Heels](https://deesdanceschool.de/#/heels): 18 Classes/Woche, Haltung, Ausdruck, Sicherheit.
-- [Commercial](https://deesdanceschool.de/#/commercial): 17 Classes/Woche, Der Stil aus dem Musikvideo.
-- [Hip Hop](https://deesdanceschool.de/#/hip-hop): 17 Classes/Woche, Groove kommt vor Choreografie.
-- [Choreography](https://deesdanceschool.de/#/choreography): 13 Classes/Woche, Die ganze Choreo, nicht acht Counts.
-- [Contemporary & Jazz](https://deesdanceschool.de/#/contemporary): 9 Classes/Woche, Linie, Fluss, Technik.
-- [Fitness](https://deesdanceschool.de/#/fitness): 9 Classes/Woche, Das Training, das den Tanz trägt.
-- [Latin & Afro](https://deesdanceschool.de/#/latin): 8 Classes/Woche, Bewegung, die aus der Hüfte kommt.
-- [Aerial Hoop](https://deesdanceschool.de/#/aerial): 5 Classes/Woche, Akrobatik im Reifen.
-- [Kids & Teens](https://deesdanceschool.de/#/kids): 4 Classes/Woche, Hip Hop ab sechs Jahren.
-- [House](https://deesdanceschool.de/#/house): 2 Classes/Woche, Schnelle Füße, lockerer Oberkörper.
-- [K-Pop](https://deesdanceschool.de/#/kpop): 1 Class/Woche, Choreografie wie im Original.
+- [Pole](https://deesdanceschool.de/kurse/pole-dance/): 37 Classes/Woche, Kraft, Technik, Kontrolle.
+- [Heels](https://deesdanceschool.de/kurse/heels/): 18 Classes/Woche, Haltung, Ausdruck, Sicherheit.
+- [Commercial](https://deesdanceschool.de/kurse/commercial/): 17 Classes/Woche, Der Stil aus dem Musikvideo.
+- [Hip Hop](https://deesdanceschool.de/kurse/hip-hop/): 17 Classes/Woche, Groove kommt vor Choreografie.
+- [Choreography](https://deesdanceschool.de/kurse/choreography/): 13 Classes/Woche, Die ganze Choreo, nicht acht Counts.
+- [Contemporary & Jazz](https://deesdanceschool.de/kurse/contemporary-jazz/): 9 Classes/Woche, Linie, Fluss, Technik.
+- [Fitness](https://deesdanceschool.de/kurse/fitness/): 9 Classes/Woche, Das Training, das den Tanz trägt.
+- [Latin & Afro](https://deesdanceschool.de/kurse/latin-afro/): 8 Classes/Woche, Bewegung, die aus der Hüfte kommt.
+- [Aerial Hoop](https://deesdanceschool.de/kurse/aerial-hoop/): 5 Classes/Woche, Akrobatik im Reifen.
+- [Kids & Teens](https://deesdanceschool.de/kurse/kids-teens/): 4 Classes/Woche, Hip Hop ab sechs Jahren.
+- [House](https://deesdanceschool.de/kurse/house/): 2 Classes/Woche, Schnelle Füße, lockerer Oberkörper.
+- [K-Pop](https://deesdanceschool.de/kurse/k-pop/): 1 Class/Woche, Choreografie wie im Original.
 - [Coaches](https://deesdanceschool.de/#school): alle Profile
 - [360D!GREES](https://360.deesworld.de/): Special Coaching, 16. bis 18. Oktober 2026
 
