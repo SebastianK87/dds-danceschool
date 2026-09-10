@@ -15,7 +15,10 @@
 <meta property="og:url" content="https://deesdanceschool.de/datenschutz/">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#181818">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪩</text></svg>">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <style>*{margin:0}</style>
 </head>
 <body data-oben="1">
@@ -73,6 +76,14 @@
 html[data-kurz="1"]{--schlag:250ms}
 *{margin:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;scroll-padding-top:86px}
+/* Pruefung 10.09.: 67 Hintergrundbilder (3,6 MB) starten zusammen mit dem
+   Buehnenfilm und nehmen ihm die Leitung. content-visibility ueberspringt
+   Layout und Malen fuer alles, was noch weit unter der Falz liegt, und der
+   Browser fordert die Bilder darin erst an, wenn sie naeher kommen. Die
+   Ersatzhoehe verhindert, dass die Bildlaufleiste springt. Der Hero und der
+   erste Abschnitt bleiben aussen vor, sie stehen sofort im Bild. */
+#raster,#preise,#kalender,#wie,#faq,#events,#auch,#school{
+  content-visibility:auto;contain-intrinsic-size:auto 1200px}
 #welcome,#kalender,#preise,#raster,#events,#faq,#school,#wie,#saele,#gutschein,
 #detlef{scroll-margin-top:86px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -772,6 +783,7 @@ body[data-oben="1"] .frag-knopf{transform:translateY(calc(100% + 40px));pointer-
   text-decoration-thickness:2.5px;text-underline-offset:5px}
 
 /* ---------- Coach-Band ---------- */
+.spur__kopie{display:contents}
 .band-laeuft{overflow:hidden;margin-top:var(--s4);
   -webkit-mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);
   mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent)}
@@ -967,6 +979,9 @@ a.trainer span{color:var(--pink)}
 .leiste__d .dlogo{width:56%;height:56%}
 @media (max-width:700px){
   .leiste{display:flex}
+  /* Pruefung 10.09.: die Leiste (70 px) verdeckte fokussierte Knoepfe am
+     unteren Bildrand (WCAG 2.4.11). Der Browser haelt sie jetzt darueber. */
+  html{scroll-padding-bottom:96px}
   /* Eine Leiste statt zwei Pillen: der D!-Avatar in der Leiste oeffnet Frag D!. */
   body:has(.leiste[data-zeig="1"]) .frag-knopf{display:none}
   .fuss{padding-bottom:96px}
@@ -2843,8 +2858,8 @@ body[data-frag="1"] .frag-knopf{display:none}
 <i class="fortschritt" aria-hidden="true"></i>
 <header class="top">
   <div class="wrap top__in">
-    <button class="zurueck" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Alle Kurse</button>
-    <a class="marke" href="#" data-zu="">D<i>!</i>&#8217;S DANCE SCHOOL</a>
+    <a class="zurueck" href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Zur Dance School</a>
+    <a class="marke" href="#">D<i>!</i>&#8217;S DANCE SCHOOL</a>
     <nav class="top__nav" aria-label="Bereiche"><a href="../#raster" data-heim>Kurse</a><a href="../#preise" data-heim>Preise</a><a href="../#events" data-heim>Events</a><a href="../#school" data-heim>Die School</a></nav>
     <div class="top__recht">
       <a class="top__wa" href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank" rel="noopener"
@@ -2859,7 +2874,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <nav class="sprung" aria-label="Direkt zu einem Abschnitt"><a href="../#raster" data-heim data-abschnitt="raster">Kurse</a><a href="../#preise" data-heim data-abschnitt="preise">Preise</a><a href="../#kalender" data-heim data-abschnitt="kalender">Kursplan</a><a href="../#events" data-heim data-abschnitt="events">Events</a><a href="../#school" data-heim data-abschnitt="school">Die School</a><a href="../#faq" data-heim data-abschnitt="faq">Fragen</a></nav>
 </header>
 <nav class="schiene" aria-label="Abschnitte dieser Seite">
-  <a class="schiene__marke" href="#" data-zu="" aria-label="Nach oben">D<i>!</i></a>
+  <a class="schiene__marke" href="#" aria-label="Nach oben">D<i>!</i></a>
   <span class="schiene__linie" aria-hidden="true"><i></i></span>
   <ul class="schiene__punkte"><li><a href="../#school" data-heim data-abschnitt="school"><i aria-hidden="true"></i><span>Die School</span></a></li><li><a href="../#raster" data-heim data-abschnitt="raster"><i aria-hidden="true"></i><span>Kurse</span></a></li><li><a href="../#preise" data-heim data-abschnitt="preise"><i aria-hidden="true"></i><span>Preise</span></a></li><li><a href="../#kalender" data-heim data-abschnitt="kalender"><i aria-hidden="true"></i><span>Kursplan</span></a></li><li><a href="../#events" data-heim data-abschnitt="events"><i aria-hidden="true"></i><span>Events</span></a></li></ul>
 </nav>
@@ -3019,7 +3034,7 @@ body[data-frag="1"] .frag-knopf{display:none}
       </div>
       <div>
         <b>Alle Styles</b>
-        <p><a href="#/pole" data-zu="pole">Pole</a><br><a href="#/commercial" data-zu="commercial">Commercial</a><br><a href="#/hip-hop" data-zu="hip-hop">Hip Hop</a><br><a href="#/heels" data-zu="heels">Heels</a><br><a href="#/choreography" data-zu="choreography">Choreography</a><br><a href="#/contemporary" data-zu="contemporary">Contemporary & Jazz</a><br><a href="#/fitness" data-zu="fitness">Fitness</a><br><a href="#/latin" data-zu="latin">Latin & Afro</a><br><a href="#/aerial" data-zu="aerial">Aerial Hoop</a><br><a href="#/kids" data-zu="kids">Kids & Teens</a><br><a href="#/house" data-zu="house">House</a><br><a href="#/kpop" data-zu="kpop">K-Pop</a></p>
+        <p><a href="../#/pole">Pole</a><br><a href="../#/commercial">Commercial</a><br><a href="../#/hip-hop">Hip Hop</a><br><a href="../#/heels">Heels</a><br><a href="../#/choreography">Choreography</a><br><a href="../#/contemporary">Contemporary & Jazz</a><br><a href="../#/fitness">Fitness</a><br><a href="../#/latin">Latin & Afro</a><br><a href="../#/aerial">Aerial Hoop</a><br><a href="../#/kids">Kids & Teens</a><br><a href="../#/house">House</a><br><a href="../#/kpop">K-Pop</a></p>
       </div>
     </div>
     <p><button type="button" class="ruhe" aria-pressed="false">
@@ -3241,7 +3256,9 @@ body[data-frag="1"] .frag-knopf{display:none}
     });
     if(ansichten.length > 1){
       var h = ziel.querySelector('h1');
-      if(h){ h.setAttribute('tabindex','-1'); h.focus({preventScroll:true}); }
+      /* Pruefung 10.09.: nicht beim ersten Laden. Sonst steht der Fokus
+         auf der Buehnen-H1 und der Skip-Link ist mit Tab nie erreichbar. */
+      if(h && zeigen.gestartet){ h.setAttribute('tabindex','-1'); h.focus({preventScroll:true}); }
       var t = ziel.dataset.titel;
       if(t) document.title = t;
     }
@@ -3252,6 +3269,19 @@ body[data-frag="1"] .frag-knopf{display:none}
   }
   function ausHash(){
     var h = (location.hash || '').replace(/^#\/?/, '');
+    /* Pruefung 10.09.: ein Hash, der keine Kursansicht ist (#einstieg vom
+       Sprunglink, #preise, #kalender, spaeter die 301 alter Adressen), landete
+       hier ebenfalls und liess die Seite nach ganz oben springen. Das Ziel war
+       damit nie zu sehen. Jetzt: Uebersicht zeigen, ohne zu scrollen, und den
+       Anker selbst ansteuern. */
+    if(h && !document.getElementById('kurs-' + h)){
+      zeigen('uebersicht', false);
+      var el = document.getElementById(h);
+      if(el) setTimeout(function(){
+        el.scrollIntoView({behavior: ruhig ? 'auto' : 'smooth', block: 'start'});
+      }, 60);
+      return;
+    }
     zeigen(h ? 'kurs-' + h : 'uebersicht', true);
   }
   window.addEventListener('hashchange', ausHash);
@@ -3728,6 +3758,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   }
 
   ausHash();
+  zeigen.gestartet = true;
 })();
 </script>
 <script>
@@ -3895,7 +3926,9 @@ body[data-frag="1"] .frag-knopf{display:none}
        dem Menue und schliessen es selbst (data-heim). Nur Marke, Zurueck und
        die Schiene links werden gesperrt, dazu der Inhalt. */
     var haupt = document.getElementById('inhalt');
-    var sperren = document.querySelectorAll('.top .marke, .top .zurueck, .schiene');
+    /* Pruefung 10.09.: Fuss und Leiste gehoeren dazu, sonst laeuft der Fokus
+       nach dem letzten Menuepunkt in den Fuss und Escape findet nicht zurueck. */
+    var sperren = document.querySelectorAll('.top .marke, .top .zurueck, .schiene, .fuss, .leiste, .frag-knopf, .skip, .fortschritt');
     if(haupt) haupt.inert = offen;
     for(var si = 0; si < sperren.length; si++) sperren[si].inert = offen;
     if(burger){
@@ -3914,7 +3947,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     menue(document.body.dataset.menu !== '1');
   });
   addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && document.body.dataset.menu === '1') menue(false);
+    if(e.key === 'Escape' && document.body.dataset.menu === '1'){ menue(false); if(burger) burger.focus({preventScroll:true}); }
   });
 
   /* -------- Termine: nach Tag springen, Heute markieren -------- */
@@ -4167,7 +4200,7 @@ body[data-frag="1"] .frag-knopf{display:none}
           var kl = lauf === 'jahr' ? 'je-jahr' : 'je-flex';
           pl.dataset[lauf === 'jahr' ? 'aktionJahr' : 'aktionFlex'] = hat ? '1' : '0';
           var big = pl.querySelector('.plan__zahl.' + kl); if(big) big.textContent = zahl(hat ? e.aktion : e.regulaer);
-          var alt = pl.querySelector('.plan__alt.' + kl); if(alt) alt.textContent = zahl(e.regulaer);
+          var alt = pl.querySelector('.plan__alt.' + kl + ' .plan__altzahl') || pl.querySelector('.plan__alt.' + kl); if(alt) alt.textContent = zahl(e.regulaer);
           var ak = pl.querySelector('.plan__aktion.' + kl);
           if(ak && hat){ ak.textContent = (e.aktion_monate === 1 ? 'Aktionspreis im ersten Monat' : 'Aktionspreis f\u00fcr die ersten ' + e.aktion_monate + ' Monate') + ', danach ' + zahl(e.regulaer) + ' \u20ac'; }
           var hin = pl.querySelector('.plan__hin.' + kl);

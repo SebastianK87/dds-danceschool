@@ -3,8 +3,11 @@
 # und schickt die Zeilen bei jeder Antwort mit.
 #
 # Die Richtlinie ist bewusst eng und stuetzt sich auf eine Messung, nicht auf
-# eine Vermutung: die Seite laedt aus genau zwei Quellen, sich selbst und dem
-# Worker. Kein externes Skript, kein externes Stylesheet, kein iframe.
+# eine Vermutung: die Seite laedt aus genau drei Quellen: sich selbst, dem
+# Worker und dem Eversports-Gutschein-Widget auf /gutscheine/ (loader.js von
+# widget-static.eversports.io, GraphQL-API und Bilder von files.eversports.com;
+# der Checkout oeffnet www.eversports.de in einem neuen Tab). Gemessen am
+# 10.09.2026: ohne diese Freigaben blieb das Widget unsichtbar, 0 px hoch.
 #
 # ACHTUNG, wenn spaeter GA4 oder der Meta-Pixel dazukommen: dann muessen
 # script-src, connect-src und img-src um die Google- und Meta-Adressen
@@ -17,8 +20,8 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()
   Cross-Origin-Opener-Policy: same-origin
   X-Frame-Options: DENY
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self' data:; connect-src 'self' https://dds-frag.s-kellerberlin.workers.dev; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests
-  Strict-Transport-Security: max-age=15552000
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://widget-static.eversports.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://files.eversports.com https://widget-static.eversports.io; media-src 'self' blob:; font-src 'self' data: https://widget-static.eversports.io; connect-src 'self' data: https://dds-frag.s-kellerberlin.workers.dev https://graphql-widget-master.production.eversports.cloud https://widget-static.eversports.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://www.eversports.de; object-src 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=31536000
 
 # Medien aendern sich nur mit ihrem Namen (Inhalts-Fingerabdruck bei Bildern,
 # fester Name bei den Clips). Ein Jahr Cache spart bei jedem zweiten Besuch
@@ -29,3 +32,11 @@
 # Die Pruefliste ist ein internes Werkzeug und geht niemanden sonst etwas an.
 /check/*
   X-Robots-Tag: noindex, nofollow
+
+# Icons und Manifest aendern sich selten, ein Tag Cache reicht.
+/favicon.ico
+  Cache-Control: public, max-age=86400
+/icon-*.png
+  Cache-Control: public, max-age=86400
+/apple-touch-icon.png
+  Cache-Control: public, max-age=86400
