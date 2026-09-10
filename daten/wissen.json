@@ -12,7 +12,7 @@
   "mail": "info@deesworld.de",
   "counter": "Counter: Mo bis Fr 16:30 bis 21:30 Uhr, Sa 10 bis 15 Uhr",
   "google": "4,7 Sterne bei 98 Bewertungen",
-  "classes_pro_woche": 147,
+  "classes_pro_woche": 137,
   "coaches": 50,
   "styles": 12,
   "saele": 5,
@@ -219,7 +219,7 @@
   {
    "slug": "hip-hop",
    "name": "Hip Hop",
-   "classes": 18,
+   "classes": 17,
    "claim": "Groove kommt vor Choreografie.",
    "fuer": "Alle Level. Basics für den Einstieg, Fusion und New Style, wenn du schon Erfahrung mitbringst.",
    "anziehen": "Trainingskleidung und Sneaker mit sauberer Sohle.",
@@ -237,7 +237,7 @@
   {
    "slug": "choreography",
    "name": "Choreography",
-   "classes": 16,
+   "classes": 13,
    "claim": "Die ganze Choreo, nicht acht Counts.",
    "fuer": "Für alle, die nicht nur mitlaufen, sondern eine Choreo am Ende wirklich sitzen haben.",
    "anziehen": "Trainingskleidung und Hallenschuhe.",
@@ -246,7 +246,7 @@
   {
    "slug": "contemporary",
    "name": "Contemporary & Jazz",
-   "classes": 10,
+   "classes": 9,
    "claim": "Linie, Fluss, Technik.",
    "fuer": "Alle, die an Technik arbeiten wollen. Auch als Ergänzung, wenn dein Hauptstil woanders liegt.",
    "anziehen": "Enganliegende Kleidung, barfuß oder Socken.",
@@ -255,7 +255,7 @@
   {
    "slug": "fitness",
    "name": "Fitness",
-   "classes": 13,
+   "classes": 9,
    "claim": "Das Training, das den Tanz trägt.",
    "fuer": "Alle, auch ohne Tanzerfahrung. Vormittags und abends im Programm.",
    "anziehen": "Trainingskleidung, Matte ist da.",
@@ -264,7 +264,7 @@
   {
    "slug": "latin",
    "name": "Latin & Afro",
-   "classes": 9,
+   "classes": 8,
    "claim": "Bewegung, die aus der Hüfte kommt.",
    "fuer": "Alle Level. Die meisten Classes sind Beginner oder Intermediate.",
    "anziehen": "Bequeme Kleidung und Sneaker.",
@@ -1397,25 +1397,6 @@
    "url": "https://www.eversports.de/org/activity/975b7b71-d843-4f14-afed-4bd7ac431306"
   },
   {
-   "id": "3e961aa9-cdee-48dc-b578-f8287878b21d",
-   "tag": "Mi",
-   "datum": "2026-09-09",
-   "zeit": "19:00",
-   "dauer": 60,
-   "titel": "Choreography Intermediate",
-   "coach": "",
-   "studio": "Studio 3 - Grey Space",
-   "level": "Intermediate",
-   "stufen": "m",
-   "kids": false,
-   "frei": 35,
-   "gesamt": 35,
-   "stile": [
-    "choreography"
-   ],
-   "url": "https://www.eversports.de/org/activity/3e961aa9-cdee-48dc-b578-f8287878b21d"
-  },
-  {
    "id": "76205baa-5b0f-43bd-b915-1ee81811f029",
    "tag": "Mi",
    "datum": "2026-09-09",
@@ -1492,25 +1473,6 @@
    "url": "https://www.eversports.de/org/activity/9f2b7259-8ae6-4cc3-b0a2-9107bb9afe9c"
   },
   {
-   "id": "95db8529-4c8e-4f5d-99d9-6c0ba1e678ed",
-   "tag": "Mi",
-   "datum": "2026-09-09",
-   "zeit": "20:00",
-   "dauer": 90,
-   "titel": "Afro Fusion Beginner/Intermediate",
-   "coach": "",
-   "studio": "Studio 5 - Bright Space",
-   "level": "Beginner / Intermediate",
-   "stufen": "am",
-   "kids": false,
-   "frei": 50,
-   "gesamt": 50,
-   "stile": [
-    "latin"
-   ],
-   "url": "https://www.eversports.de/org/activity/95db8529-4c8e-4f5d-99d9-6c0ba1e678ed"
-  },
-  {
    "id": "b991fa99-7836-4c3e-8af1-db77897c1f54",
    "tag": "Mi",
    "datum": "2026-09-09",
@@ -1547,25 +1509,6 @@
     "commercial"
    ],
    "url": "https://www.eversports.de/org/activity/2d4d7b07-71a4-425b-bc33-c12dd0c7f6c3"
-  },
-  {
-   "id": "e85aaba7-f9ae-457f-890e-4d392637e5fd",
-   "tag": "Mi",
-   "datum": "2026-09-09",
-   "zeit": "20:00",
-   "dauer": 60,
-   "titel": "Contemporary Fusion Intermediate",
-   "coach": "",
-   "studio": "Studio 2 - White Space",
-   "level": "Intermediate",
-   "stufen": "m",
-   "kids": false,
-   "frei": 50,
-   "gesamt": 50,
-   "stile": [
-    "contemporary"
-   ],
-   "url": "https://www.eversports.de/org/activity/e85aaba7-f9ae-457f-890e-4d392637e5fd"
   },
   {
    "id": "a9b926fc-0060-4b89-b449-ea6185acf531",
@@ -2214,25 +2157,6 @@
    "url": "https://www.eversports.de/org/activity/1db74346-d811-4aac-bea5-a438dce5dcc3"
   },
   {
-   "id": "e858ccf2-3259-4a02-ab89-4af5fb4a7e1d",
-   "tag": "Fr",
-   "datum": "2026-09-11",
-   "zeit": "17:00",
-   "dauer": 60,
-   "titel": "Legs & Core",
-   "coach": "",
-   "studio": "Studio 6 - Dark Space",
-   "level": "All Level",
-   "stufen": "amf",
-   "kids": false,
-   "frei": 12,
-   "gesamt": 12,
-   "stile": [
-    "fitness"
-   ],
-   "url": "https://www.eversports.de/org/activity/e858ccf2-3259-4a02-ab89-4af5fb4a7e1d"
-  },
-  {
    "id": "dd49d5b2-17d7-46a2-ad15-5f1989047066",
    "tag": "Fr",
    "datum": "2026-09-11",
@@ -2269,25 +2193,6 @@
     "commercial"
    ],
    "url": "https://www.eversports.de/org/activity/fc6f556b-6f6e-4ddf-92ae-09e4199ec7b6"
-  },
-  {
-   "id": "ca2f9c48-34e2-4738-9605-a0892eb9e93b",
-   "tag": "Fr",
-   "datum": "2026-09-11",
-   "zeit": "18:00",
-   "dauer": 60,
-   "titel": "Female Fitness",
-   "coach": "",
-   "studio": "Studio 6 - Dark Space",
-   "level": "All Level",
-   "stufen": "amf",
-   "kids": false,
-   "frei": 12,
-   "gesamt": 12,
-   "stile": [
-    "fitness"
-   ],
-   "url": "https://www.eversports.de/org/activity/ca2f9c48-34e2-4738-9605-a0892eb9e93b"
   },
   {
    "id": "4424d6e7-fa13-46db-a5d7-d2c1cce2cb40",
@@ -2460,44 +2365,6 @@
     "choreography"
    ],
    "url": "https://www.eversports.de/org/activity/624b75fa-a851-43ee-ba41-80a7ee76b87e"
-  },
-  {
-   "id": "cd32890a-e2ed-4b25-922e-0008b686aa17",
-   "tag": "Fr",
-   "datum": "2026-09-11",
-   "zeit": "19:30",
-   "dauer": 90,
-   "titel": "Choreography Intermediate/Advanced",
-   "coach": "",
-   "studio": "Studio 1 - Large Space",
-   "level": "Intermediate / Advanced",
-   "stufen": "mf",
-   "kids": false,
-   "frei": 70,
-   "gesamt": 70,
-   "stile": [
-    "choreography"
-   ],
-   "url": "https://www.eversports.de/org/activity/cd32890a-e2ed-4b25-922e-0008b686aa17"
-  },
-  {
-   "id": "e7243660-ae62-4217-8cda-83e32030c055",
-   "tag": "Fr",
-   "datum": "2026-09-11",
-   "zeit": "20:00",
-   "dauer": 60,
-   "titel": "Female HipHop Beginner/Intermediate",
-   "coach": "",
-   "studio": "Studio 5 - Bright Space",
-   "level": "Beginner / Intermediate",
-   "stufen": "am",
-   "kids": false,
-   "frei": 50,
-   "gesamt": 50,
-   "stile": [
-    "hip-hop"
-   ],
-   "url": "https://www.eversports.de/org/activity/e7243660-ae62-4217-8cda-83e32030c055"
   },
   {
    "id": "862f083a-72ea-46c9-aeaa-19444a594ebc",
@@ -3452,25 +3319,6 @@
    "url": "https://www.eversports.de/org/activity/09b0cc1e-ca7e-4470-8eb8-ab8936b73e8f"
   },
   {
-   "id": "ae4b5628-89ef-4831-ba27-04f96a7b54a9",
-   "tag": "Di",
-   "datum": "2026-09-15",
-   "zeit": "10:30",
-   "dauer": 60,
-   "titel": "Dance Cardio",
-   "coach": "",
-   "studio": "Studio 5 - Bright Space",
-   "level": "All Level",
-   "stufen": "amf",
-   "kids": false,
-   "frei": 50,
-   "gesamt": 50,
-   "stile": [
-    "fitness"
-   ],
-   "url": "https://www.eversports.de/org/activity/ae4b5628-89ef-4831-ba27-04f96a7b54a9"
-  },
-  {
    "id": "e9408b2b-68d4-4587-ac89-08d96f68d0fc",
    "tag": "Di",
    "datum": "2026-09-15",
@@ -3526,25 +3374,6 @@
     "pole"
    ],
    "url": "https://www.eversports.de/org/activity/5ad12654-194b-4322-b978-34e8aa793c9e"
-  },
-  {
-   "id": "10e84595-bc13-4ebb-94dd-d2be220fc329",
-   "tag": "Di",
-   "datum": "2026-09-15",
-   "zeit": "11:30",
-   "dauer": 30,
-   "titel": "Core Intensive 4D",
-   "coach": "",
-   "studio": "Studio 5 - Bright Space",
-   "level": "All Level",
-   "stufen": "amf",
-   "kids": false,
-   "frei": 50,
-   "gesamt": 50,
-   "stile": [
-    "fitness"
-   ],
-   "url": "https://www.eversports.de/org/activity/10e84595-bc13-4ebb-94dd-d2be220fc329"
   },
   {
    "id": "3d35a018-09ec-48f3-8cfc-573274008ecb",
@@ -3638,25 +3467,6 @@
     "choreography"
    ],
    "url": "https://www.eversports.de/org/activity/275606d6-7d17-4f67-a9c2-d8003baa0d22"
-  },
-  {
-   "id": "68e05735-8260-4b73-b810-9e293d29ffe8",
-   "tag": "Di",
-   "datum": "2026-09-15",
-   "zeit": "18:00",
-   "dauer": 60,
-   "titel": "Choreography Intermediate",
-   "coach": "",
-   "studio": "Studio 3 - Grey Space",
-   "level": "Intermediate",
-   "stufen": "m",
-   "kids": false,
-   "frei": 35,
-   "gesamt": 35,
-   "stile": [
-    "choreography"
-   ],
-   "url": "https://www.eversports.de/org/activity/68e05735-8260-4b73-b810-9e293d29ffe8"
   },
   {
    "id": "35d9323a-ea0c-47a9-a0eb-aba0e752a50f",
