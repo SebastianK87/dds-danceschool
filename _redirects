@@ -287,6 +287,41 @@
 /video-zur-show/ / 301
 /scheiss-drauf-machs-einfach-die-neue-live-show-von-detlef-soost/ / 301
 
+# --- Nachtrag 2, Runde 5: Adressen, die Menschen und Links raten ---
+# Gemessen: /kontakt/, /anfahrt/ und /faq/ gaben 404, obwohl /preise/, /kurse/
+# und /team/ laengst umgeleitet werden. Das sind die Adressen, die jemand von
+# Hand tippt oder aus einer alten Mail anklickt.
+/kontakt/ /#kontakt 301
+/kontakt /#kontakt 301
+/anfahrt/ /#kontakt 301
+/anfahrt /#kontakt 301
+/faq/ /#faq 301
+/faq /#faq 301
+/haeufige-fragen/ /#faq 301
+/oeffnungszeiten/ /#kontakt 301
+/probestunde/ /#welcome 301
+/schnupperstunde/ /#welcome 301
+
+# Ohne Schraegstrich mit 301 statt Cloudflares 307. Gemessen: /gutscheine gab
+# 307 (temporaer, gibt keine Linkkraft weiter), /impressum dagegen 301, weil es
+# dafuer schon eine Regel gab. Jetzt haben alle 18 Adressen eine.
+/gutscheine /gutscheine/ 301
+/raumvermietung /raumvermietung/ 301
+/datenschutz /datenschutz/ 301
+/schulprojekte /schulprojekte/ 301
+/kurse/pole-dance /kurse/pole-dance/ 301
+/kurse/commercial /kurse/commercial/ 301
+/kurse/hip-hop /kurse/hip-hop/ 301
+/kurse/heels /kurse/heels/ 301
+/kurse/choreography /kurse/choreography/ 301
+/kurse/contemporary-jazz /kurse/contemporary-jazz/ 301
+/kurse/fitness /kurse/fitness/ 301
+/kurse/latin-afro /kurse/latin-afro/ 301
+/kurse/aerial-hoop /kurse/aerial-hoop/ 301
+/kurse/kids-teens /kurse/kids-teens/ 301
+/kurse/house /kurse/house/ 301
+/kurse/k-pop /kurse/k-pop/ 301
+
 /newsletter/* / 301
 /preise/* /#preise 301
 /angebot/* /#raster 301
