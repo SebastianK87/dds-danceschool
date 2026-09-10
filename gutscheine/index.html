@@ -1687,6 +1687,7 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
   .termin .teilen:hover,.termin .teilen:focus-visible{opacity:1}
 }
 .klappe__mehr{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag--vorbei{display:none!important}
 .tag--naechste span::after{content:"nächste Woche";font:700 12px/1 var(--grot);letter-spacing:.1em;
   text-transform:uppercase;color:var(--gold);margin-left:10px}
 .planer__ankommen{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0;font-size:14px;line-height:1.45;
@@ -4050,6 +4051,31 @@ body[data-frag="1"] .frag-knopf{display:none}
   });
   (function(){
     var iso = JETZT.iso;
+    /* Pruefung 10.09.2026, Runde 5: der Bau altert. Zwischen zwei Baeuen
+       rutschen Tage in die Vergangenheit und stehen trotzdem mit
+       Buchen-Knoepfen im Plan (gemessen: Mittwoch 09.09. am Donnerstag
+       10.09., 25 Knoepfe). Beim Laden werden die Tagesbloecke nach Datum
+       geordnet, vergangene Tage verschwinden. Ueberschrift und Block gehoeren
+       zusammen, sie wandern als Paar. */
+    document.querySelectorAll('#liste-kalender, [id^="liste-"]').forEach(function(liste){
+      var paare = [];
+      liste.querySelectorAll(':scope > [data-tag][data-datum]').forEach(function(g){
+        var k = g.previousElementSibling;
+        if(k && k.classList.contains('tag')) paare.push({k: k, g: g, d: g.dataset.datum});
+      });
+      if(paare.length < 2) return;
+      paare.sort(function(a, b){ return a.d < b.d ? -1 : a.d > b.d ? 1 : 0; });
+      var anker = paare[0].k.previousElementSibling;
+      paare.forEach(function(pr){
+        /* Nicht ueber hidden: der Tagesfilter ("Alle Tage") setzt hidden auf
+           allen Bloecken neu und holte vergangene Tage damit zurueck. Eine
+           eigene Klasse bleibt stehen. */
+        var vorbei = pr.d < iso;
+        pr.k.classList.toggle('tag--vorbei', vorbei); pr.g.classList.toggle('tag--vorbei', vorbei);
+        if(anker){ anker.after(pr.k, pr.g); } else { liste.prepend(pr.k, pr.g); }
+        anker = pr.g;
+      });
+    });
     document.querySelectorAll('[data-tag][data-datum="' + iso + '"]').forEach(function(g){
       var k = g.previousElementSibling;
       if(k && k.classList.contains('tag') && !k.querySelector('.heute'))
@@ -4123,18 +4149,54 @@ body[data-frag="1"] .frag-knopf{display:none}
 
   /* -------- Kalender: was schon gelaufen ist, verschwindet -------- */
   (function(){
-    var liste = document.getElementById('liste-kalender');
-    if(!liste) return;
-    var frist = 6 * 60;
-    liste.querySelectorAll('[data-tag]').forEach(function(g){
-      var d = g.dataset.datum; if(!d) return;
-      g.querySelectorAll('.termin').forEach(function(t){
-        var z = (t.dataset.zeit || '00:00').split(':');
-        var startMin = parseInt(z[0], 10) * 60 + parseInt(z[1] || '0', 10);
-        var vorbei = d < JETZT.iso || (d === JETZT.iso && startMin - JETZT.min < frist);
-        if(vorbei) t.classList.add('vorbei');
+    /* Pruefung 10.09.2026, Runde 5, zwei Fehler an dieser Stelle:
+       1. Lief nur fuer #liste-kalender, die Startseite. Die zwoelf
+          Kursseiten haben eigene Listen (#liste-<stil>) und markierten nie,
+          was schon gelaufen ist: um 23:30 stand dort "Naechster Termin:
+          heute um 17:30 Uhr".
+       2. frist = 6 * 60: die dritte Stelle mit dem erfundenen
+          Buchungsschluss. An der Eversports-Schnittstelle gemessen gibt es
+          keinen (bookableWindowEnd bei 147 von 147 Classes leer). Eine
+          Class ist vorbei, wenn sie angefangen hat, nicht sechs Stunden
+          vorher. */
+    var listen = document.querySelectorAll('#liste-kalender, [id^="liste-"]');
+    if(!listen.length) return;
+    listen.forEach(function(liste){
+      liste.querySelectorAll('[data-tag]').forEach(function(g){
+        var d = g.dataset.datum; if(!d) return;
+        g.querySelectorAll('.termin').forEach(function(t){
+          var z = (t.dataset.zeit || '00:00').split(':');
+          var startMin = parseInt(z[0], 10) * 60 + parseInt(z[1] || '0', 10);
+          var vorbei = d < JETZT.iso || (d === JETZT.iso && startMin <= JETZT.min);
+          if(vorbei) t.classList.add('vorbei');
+        });
+        /* Ein Tag, dessen Classes alle gelaufen sind, ist kein Angebot mehr.
+           Auf der Startseite erledigt das anwenden() ueber .tag-zu, auf den
+           Kursseiten stand die Ueberschrift sonst ueber einer leeren Gruppe. */
+        if(!g.querySelector('.termin:not(.vorbei)')){
+          g.classList.add('tag--vorbei');
+          var kopfV = g.previousElementSibling;
+          if(kopfV && kopfV.classList.contains('tag')) kopfV.classList.add('tag--vorbei');
+        }
       });
     });
+    /* "Naechster Termin" auf den Kursseiten: aus dem ersten Termin, der nach
+       dem Ordnen noch sichtbar ist, statt aus dem Stand des Baus. */
+    var nt = document.querySelector('.naechster-termin');
+    if(nt){
+      var NAMEN = {Mo: 'Montag', Di: 'Dienstag', Mi: 'Mittwoch', Do: 'Donnerstag', Fr: 'Freitag', Sa: 'Samstag', So: 'Sonntag'};
+      var gruppen = document.querySelectorAll('[id^="liste-"] [data-tag][data-datum]:not(.tag--vorbei)');
+      for(var gi = 0; gi < gruppen.length; gi++){
+        var erste = gruppen[gi].querySelector('.termin:not(.vorbei)');
+        if(erste && erste.dataset.zeit){
+          var heute = gruppen[gi].dataset.datum === JETZT.iso;
+          nt.textContent = 'N\u00e4chster Termin: ' + (heute ? 'heute' : NAMEN[gruppen[gi].dataset.tag]) + ' um ' + erste.dataset.zeit + ' Uhr.';
+          break;
+        }
+      }
+    }
+    var liste = document.getElementById('liste-kalender');
+    if(!liste) return;
     /* Kids-Classes ans Ende des Tages, auch fuer Screenreader */
     liste.querySelectorAll('[data-tag]').forEach(function(g){
       g.querySelectorAll('.termin--kids').forEach(function(t){ g.appendChild(t); });
@@ -4742,6 +4804,10 @@ body[data-frag="1"] .frag-knopf{display:none}
           var leer = liste.querySelector('.leer'), html = '';
           var vorlage = liste.querySelector('.teilen'), teilenSvg = vorlage ? vorlage.innerHTML : '';
           Object.keys(tage).sort().forEach(function(datum){
+            /* Die Regelwoche reicht in die naechste Woche hinein (Mo und Di
+               standen schon im Bau). Ohne diese Pruefung kamen sie ein
+               zweites Mal dazu (gemessen: Montag und Dienstag doppelt). */
+            if(liste.querySelector('[data-datum="' + datum + '"]')) return;
             var cs = tage[datum].sort(function(a, b){ return a.zeit.localeCompare(b.zeit); }), tag = cs[0].tag;
             html += '<div class="tag tag--naechste"><span>' + TAGNAME[tag] + ' <small>' + datum.slice(8, 10) + '.' + datum.slice(5, 7) + '.</small></span></div><div data-tag="' + tag + '" data-datum="' + datum + '">';
             cs.forEach(function(c){
@@ -4749,7 +4815,7 @@ body[data-frag="1"] .frag-knopf{display:none}
               var frei = c.frei === 0 ? '<span class="voll">ausgebucht</span>' : (typeof c.frei === 'number' && c.frei <= 5 ? '<span class="knapp">nur noch ' + c.frei + (c.frei === 1 ? ' Platz' : ' Pl\u00e4tze') + '</span>' : '');
               html += '<div class="termin' + (kids ? ' termin--kids' : '') + (c.frei === 0 ? ' voll-class' : '') + '" data-stufe="' + (kids ? 'k' : STUFEN[lv]) + '" data-zeit="' + c.zeit + '" data-id="' + c.id + '" data-stile="' + st.join(' ') + '">' +
                 '<div class="termin__zeit">' + c.zeit + '<small>' + c.dauer + ' min</small></div>' +
-                '<div class="termin__was"><p class="termin__name">' + esc(c.titel) + '</p><div class="termin__meta"><span class="stufe">' + STUFENWORT[lv] + '</span>' + '<span class="termin__coach"' + (cn(c.coach) ? '' : ' hidden') + '>' + esc(cn(c.coach) || '') + '</span>' + '<span class="termin__ort">' + + '</span><span class="termin__frei">' + frei + '</span></div></div>' +
+                '<div class="termin__was"><p class="termin__name">' + esc(c.titel) + '</p><div class="termin__meta"><span class="stufe">' + STUFENWORT[lv] + '</span>' + '<span class="termin__coach"' + (cn(c.coach) ? '' : ' hidden') + '>' + esc(cn(c.coach) || '') + '</span>' + '<span class="termin__ort">' + esc(String(c.studio || '').replace(/ - /g, ' \u00b7 ')) + '</span><span class="termin__frei">' + frei + '</span></div></div>' +
                 '<div class="termin__cta"><a class="buchen" href="' + c.url + '" target="_blank" rel="noopener">' + (c.frei === 0 ? 'Warteliste' : 'Buchen') + '<span class="nurSR">, \u00f6ffnet in einem neuen Tab</span></a><button type="button" class="teilen" aria-label="Class teilen">' + teilenSvg + '</button></div></div>';
             });
             html += '</div>';
