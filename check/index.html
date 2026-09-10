@@ -87,7 +87,7 @@ margin:16px 0 0;font-size:14px;color:#c9cac4}
 <div class="wrap">
 <header class="kopf">
   <p style="margin:0;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)">
-    Interne Pr&uuml;fliste &middot; Stand 09.09.2026</p>
+    Interne Pr&uuml;fliste &middot; Stand 10.09.2026</p>
   <h1>Stimmen die Coaches<br>und die <span>Classes</span>?</h1>
   <p class="lead">Alles hier kommt aus Eversports, aus den n&auml;chsten vier Wochen. Geh die Liste
   durch und sag, wo es klemmt: falscher Coach, falsche Zeit, jemand unterrichtet nicht mehr,
@@ -934,7 +934,7 @@ document.getElementById('zuruecksetzen').addEventListener('click', () => {
 });
 
 document.getElementById('sammeln').addEventListener('click', async () => {
-  const zeilen = ['Pruefung Coaches und Classes, Stand 09.09.2026', ''];
+  const zeilen = ['Pruefung Coaches und Classes, Stand 10.09.2026', ''];
   const teil = (titel, wahl) => {
     const treffer = Object.entries(stand).filter(([k, v]) => k !== '__rest' && wahl(v));
     if (!treffer.length) return;
