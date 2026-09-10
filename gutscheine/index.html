@@ -192,9 +192,30 @@ body[data-oben="1"]:not([data-menu="1"]) .top{background:transparent;
 .menu__trenn{display:block;height:1px;width:64px;background:rgba(225,226,220,.2);margin:14px 0}
 .menu__links a.menu__leise{opacity:.7;font-size:clamp(19px,4vw,30px)}
 .burger svg{width:22px;height:22px}
+/* Pruefung 10.09.2026, Runde 5: der Knopf hatte kein nowrap und keine feste
+   Breite. Auf 393 px brach "Zur Dance School" in drei Zeilen (84x96 px in
+   einer 66 px hohen Kopfzeile), die Zeile wurde 436 px breit, und das
+   Burger-Menue stand mit 1,4 von 44 Pixeln im Bild. Auf 16 von 18 Seiten war
+   das Menue auf dem Handy damit nicht zu oeffnen. Jetzt: nie umbrechen, nie
+   schrumpfen, und auf dem Handy nur der Pfeil, der Text bleibt fuer
+   Screenreader im Knopf. */
 .zurueck{display:none;align-items:center;gap:8px;font-weight:700;font-size:16px;
-  padding:9px 16px 9px 10px;border-radius:999px;background:rgba(225,226,220,.08)}
-.zurueck svg{width:16px;height:16px}
+  padding:9px 16px 9px 10px;border-radius:999px;background:rgba(225,226,220,.08);
+  white-space:nowrap;flex:0 0 auto}
+.zurueck svg{width:16px;height:16px;flex:0 0 auto}
+@media (max-width:700px){
+  .zurueck{width:44px;height:44px;padding:0;justify-content:center;gap:0}
+  .zurueck svg{width:20px;height:20px}
+  .zurueck__t{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+    clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  /* Mit Pfeil, Wortmarke, Kursplan-Pille und Burger reicht die Zeile auf 393 px
+     bis 395: zwei Pixel zu viel, der rechte Rand ganz aufgebraucht. Gemessen
+     nach dem Umbau. Sitzt ein Zurueck-Knopf in der Zeile, ruecken die Teile
+     enger zusammen: 18 auf 10 px, und die Pille verliert zwei Pixel Polster. */
+  .top__in:has(.zurueck){gap:10px}
+  .top__in:has(.zurueck) .top__recht{gap:6px}
+  .top__in:has(.zurueck) .marke{font-size:16px}
+}
 .zurueck:hover{background:rgba(225,226,220,.16)}
 body[data-view="kurs"] .zurueck{display:inline-flex}
 body[data-view="kurs"] .top__nav{display:none}
@@ -2935,7 +2956,7 @@ body[data-frag="1"] .frag-knopf{display:none}
 <i class="fortschritt" aria-hidden="true"></i>
 <header class="top">
   <div class="wrap top__in">
-    <a class="zurueck" href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Zur Dance School</a>
+    <a class="zurueck" href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span class="zurueck__t">Zur Dance School</span></a>
     <a class="marke" href="../">D<i>!</i>&#8217;S DANCE SCHOOL</a>
     <nav class="top__nav" aria-label="Bereiche"><a href="../#raster" data-heim>Kurse</a><a href="../#preise" data-heim>Preise</a><a href="../#events" data-heim>Events</a><a href="../#school" data-heim>Die School</a></nav>
     <div class="top__recht">
