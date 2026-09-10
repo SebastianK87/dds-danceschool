@@ -837,6 +837,14 @@ a.trainer span{color:var(--pink)}
 
 /* ---------- Fragen ---------- */
 .fragen-box{max-width:820px;margin:var(--s3) auto 0}
+/* Der Einordnungs-Absatz: ruhig, lesbar, kein Schmuck. Er ist fuer Menschen
+   geschrieben und faellt Suchmaschinen und KI-Antworten dadurch zu. */
+.einordnung{max-width:62ch;margin:0 auto var(--s4);font-size:17px;line-height:1.72;
+  color:var(--auf-ink-soft);text-align:center}
+.einordnung b{color:var(--hell);font-weight:600}
+@media (max-width:700px){.einordnung{font-size:16px;text-align:left;margin-bottom:var(--s3)}}
+.fragen-mehr{margin-top:var(--s2);text-align:center;font-size:15px}
+.fragen-mehr a{text-decoration:underline;text-underline-offset:4px}
 .frage{border-bottom:1px solid var(--linie-d)}
 .block--hell .frage{border-color:var(--linie-h)}
 .frage button{width:100%;display:flex;align-items:center;justify-content:space-between;
@@ -2859,7 +2867,7 @@ body[data-frag="1"] .frag-knopf{display:none}
 <header class="top">
   <div class="wrap top__in">
     <a class="zurueck" href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Zur Dance School</a>
-    <a class="marke" href="#">D<i>!</i>&#8217;S DANCE SCHOOL</a>
+    <a class="marke" href="../">D<i>!</i>&#8217;S DANCE SCHOOL</a>
     <nav class="top__nav" aria-label="Bereiche"><a href="../#raster" data-heim>Kurse</a><a href="../#preise" data-heim>Preise</a><a href="../#events" data-heim>Events</a><a href="../#school" data-heim>Die School</a></nav>
     <div class="top__recht">
       <a class="top__wa" href="https://wa.me/4915173048373?text=Hi%21%20Ich%20habe%20eine%20Frage%20zur%20Dance%20School." target="_blank" rel="noopener"
@@ -2944,37 +2952,13 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="frage__a" id="f-raum-4"><p>Mail oder WhatsApp an Emily mit Datum, Uhrzeit, Dauer und Personenzahl. Du bekommst freie Zeiten und einen Preis zur&uuml;ck.</p></div>
 </div><div class="frage">
   <button type="button" aria-expanded="false" aria-controls="f-raum-5">
-    <span>Ich habe noch nie getanzt. Kann ich einfach kommen?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
-  <div class="frage__a" id="f-raum-5"><p>Ja. Alles, was Beginner oder Neubeginner hei&szlig;t, ist genau daf&uuml;r gemacht. Du musst nichts k&ouml;nnen und nichts vorbereiten.</p></div>
+    <span>Wie komme ich hin?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  <div class="frage__a" id="f-raum-5"><p>Holzmarktstra&szlig;e 66, 10179 Berlin. N&auml;chste Station: S+U Jannowitzbr&uuml;cke, zwei Minuten zu Fu&szlig;.</p></div>
 </div><div class="frage">
   <button type="button" aria-expanded="false" aria-controls="f-raum-6">
-    <span>Bis wann kann ich buchen?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
-  <div class="frage__a" id="f-raum-6"><p>Bis sechs Stunden vor Kursbeginn &uuml;ber Eversports. Danach ist der Termin zu.</p></div>
-</div><div class="frage">
-  <button type="button" aria-expanded="false" aria-controls="f-raum-7">
-    <span>Ich komme allein. Ist das komisch?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
-  <div class="frage__a" id="f-raum-7"><p>Nein, das ist der Normalfall. Die meisten kommen allein und kennen nach der zweiten Class die halbe Gruppe.</p></div>
-</div><div class="frage">
-  <button type="button" aria-expanded="false" aria-controls="f-raum-8">
-    <span>Wie komme ich hin?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
-  <div class="frage__a" id="f-raum-8"><p>Holzmarktstra&szlig;e 66, 10179 Berlin. N&auml;chste Station: S+U Jannowitzbr&uuml;cke, zwei Minuten zu Fu&szlig;.</p></div>
-</div><div class="frage">
-  <button type="button" aria-expanded="false" aria-controls="f-raum-9">
-    <span>Was bringt mir eine Mitgliedschaft?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
-  <div class="frage__a" id="f-raum-9"><p>Du hast Vorrang beim Buchen, alle Styles sind drin und die Fitness Area kannst du frei nutzen.</p></div>
-</div><div class="frage">
-  <button type="button" aria-expanded="false" aria-controls="f-raum-10">
     <span>Kann ich absagen, wenn ich es doch nicht schaffe?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
-  <div class="frage__a" id="f-raum-10"><p>Ja. Bis sechs Stunden vor Beginn kannst du &uuml;ber Eversports absagen. Danach ist der Platz verbraucht.</p></div>
-</div><div class="frage">
-  <button type="button" aria-expanded="false" aria-controls="f-raum-11">
-    <span>Was ist der Unterschied zwischen Beginner und Intermediate?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
-  <div class="frage__a" id="f-raum-11"><p>Beginner setzt nichts voraus. Intermediate geht davon aus, dass du eine Choreo in einer Stunde aufnehmen kannst. Dazwischen liegen meist ein paar Monate, es gibt keine Pr&uuml;fung.</p></div>
-</div><div class="frage">
-  <button type="button" aria-expanded="false" aria-controls="f-raum-12">
-    <span>Wie alt sind die Leute im Kurs?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
-  <div class="frage__a" id="f-raum-12"><p>Gemischt. Wer lieber unter Gleichaltrigen tanzt: Dance &Uuml;25 und Pop &Uuml;25 sind eigene Classes daf&uuml;r.</p></div>
-</div></div>
+  <div class="frage__a" id="f-raum-6"><p>Ja. Bis sechs Stunden vor Beginn kannst du &uuml;ber Eversports absagen. Danach ist der Platz verbraucht.</p></div>
+</div><p class="fragen-mehr"><a href="../#faq">Alle h&auml;ufigen Fragen zur Dance School</a></p></div>
     </div>
   </section>
 </section>
@@ -3066,7 +3050,7 @@ body[data-frag="1"] .frag-knopf{display:none}
 </div>
 
 <p id="sage" class="nurSR" role="status" aria-live="polite"></p>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://deesdanceschool.de/#website","url":"https://www.deesworld.de/","name":"D!'s Dance World","inLanguage":"de","publisher":{"@id":"https://deesdanceschool.de/#danceschool"}},{"@type":["DanceSchool","LocalBusiness"],"@id":"https://deesdanceschool.de/#danceschool","name":"D!'s Dance School","url":"https://deesdanceschool.de/","image":"https://deesdanceschool.de/vorschau.jpg","telephone":"+49-30-20605924","address":{"@type":"PostalAddress","streetAddress":"Holzmarktstraße 66, 3. Etage","postalCode":"10179","addressLocality":"Berlin","addressCountry":"DE"},"sameAs":["https://www.instagram.com/dsdanceworld/","https://www.google.com/maps/place/?q=place_id:ChIJq6q6YTtOqEcRJSN0aZHNWfY"]},{"@type":"WebPage","@id":"https://deesdanceschool.de/raumvermietung/#webpage","url":"https://deesdanceschool.de/raumvermietung/","name":"Tanzraum mieten Berlin Mitte | D!'s Dance School","description":"Tanzsaal mieten in Berlin Mitte, ab 89 € pro Stunde. Spiegelwand, Sound, Tageslicht. Für Proben, Shootings, Workshops und Castings.","inLanguage":"de","isPartOf":{"@id":"https://deesdanceschool.de/#website"},"about":{"@id":"https://deesdanceschool.de/#danceschool"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://deesdanceschool.de/vorschau.jpg"},"breadcrumb":{"@id":"https://deesdanceschool.de/raumvermietung/#breadcrumb"},"dateModified":"2026-09-02","mainEntity":{"@id":"https://deesdanceschool.de/raumvermietung/#service"},"speakable":{"@type":"SpeakableSpecification","cssSelector":[".kopf__claim"]}},{"@type":"BreadcrumbList","@id":"https://deesdanceschool.de/raumvermietung/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"D!'s Dance World","item":"https://www.deesworld.de/"},{"@type":"ListItem","position":2,"name":"Dance School","item":"https://deesdanceschool.de/"},{"@type":"ListItem","position":3,"name":"Räume mieten"}]},{"@type":"Service","@id":"https://deesdanceschool.de/raumvermietung/#service","name":"Tanzraum mieten in Berlin Mitte","serviceType":"Raumvermietung","description":"Tanzsaal mieten in Berlin Mitte, ab 89 € pro Stunde. Spiegelwand, Sound, Tageslicht. Für Proben, Shootings, Workshops und Castings.","provider":{"@id":"https://deesdanceschool.de/#danceschool"},"areaServed":{"@type":"City","name":"Berlin"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Räume","itemListElement":[{"@type":"Offer","name":"Studio 1 · Large Space"},{"@type":"Offer","name":"Studio 4 · Pole Space"},{"@type":"Offer","name":"Fitness Area"}]},"offers":{"@type":"Offer","priceCurrency":"EUR","priceSpecification":{"@type":"UnitPriceSpecification","priceCurrency":"EUR","minPrice":89,"unitCode":"HUR"},"url":"https://deesdanceschool.de/raumvermietung/"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://deesdanceschool.de/#website", "url": "https://deesdanceschool.de/", "name": "D!'s Dance School", "inLanguage": "de", "publisher": {"@id": "https://deesdanceschool.de/#danceschool"}, "alternateName": "D!'s Dance School Berlin"}, {"@type": ["DanceSchool", "LocalBusiness"], "@id": "https://deesdanceschool.de/#danceschool", "name": "D!'s Dance School", "url": "https://deesdanceschool.de/", "image": "https://deesdanceschool.de/vorschau.jpg", "telephone": "+49-30-20605924", "address": {"@type": "PostalAddress", "streetAddress": "Holzmarktstraße 66, 3. Etage", "postalCode": "10179", "addressLocality": "Berlin", "addressCountry": "DE"}, "sameAs": ["https://www.instagram.com/dsdanceworld/", "https://www.google.com/maps/place/?q=place_id:ChIJq6q6YTtOqEcRJSN0aZHNWfY"]}, {"@type": "WebPage", "@id": "https://deesdanceschool.de/raumvermietung/#webpage", "url": "https://deesdanceschool.de/raumvermietung/", "name": "Tanzraum mieten Berlin Mitte | D!'s Dance School", "description": "Tanzsaal mieten in Berlin Mitte, ab 89 € pro Stunde. Spiegelwand, Sound, Tageslicht. Für Proben, Shootings, Workshops und Castings.", "inLanguage": "de", "isPartOf": {"@id": "https://deesdanceschool.de/#website"}, "about": {"@id": "https://deesdanceschool.de/#danceschool"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://deesdanceschool.de/vorschau.jpg"}, "breadcrumb": {"@id": "https://deesdanceschool.de/raumvermietung/#breadcrumb"}, "dateModified": "2026-09-02", "mainEntity": {"@id": "https://deesdanceschool.de/raumvermietung/#service"}, "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".kopf__claim"]}}, {"@type": "BreadcrumbList", "@id": "https://deesdanceschool.de/raumvermietung/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "D!'s Dance School", "item": "https://deesdanceschool.de/"}, {"@type": "ListItem", "position": 2, "name": "Räume mieten"}]}, {"@type": "Service", "@id": "https://deesdanceschool.de/raumvermietung/#service", "name": "Tanzraum mieten in Berlin Mitte", "serviceType": "Raumvermietung", "description": "Tanzsaal mieten in Berlin Mitte, ab 89 € pro Stunde. Spiegelwand, Sound, Tageslicht. Für Proben, Shootings, Workshops und Castings.", "provider": {"@id": "https://deesdanceschool.de/#danceschool"}, "areaServed": {"@type": "City", "name": "Berlin"}, "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Räume", "itemListElement": [{"@type": "Offer", "name": "Studio 1 · Large Space"}, {"@type": "Offer", "name": "Studio 4 · Pole Space"}, {"@type": "Offer", "name": "Fitness Area"}]}, "offers": {"@type": "Offer", "priceCurrency": "EUR", "priceSpecification": {"@type": "UnitPriceSpecification", "priceCurrency": "EUR", "minPrice": 89, "unitCode": "HUR"}, "url": "https://deesdanceschool.de/raumvermietung/"}}]}</script>
 
 
 <script>
