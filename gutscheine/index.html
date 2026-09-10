@@ -1002,9 +1002,25 @@ a.trainer span{color:var(--pink)}
 .leiste__t{flex:1;min-width:0;display:grid;font-size:12px;color:var(--auf-ink-leis)}
 .leiste__t b{font:700 16px/1.45 var(--grot);color:var(--hell)}
 .leiste .knopf{padding:12px 20px;font-size:16px}
-.leiste__d{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;
-  background:var(--pink);color:var(--ink);flex:0 0 auto}
-.leiste__d .dlogo{width:56%;height:56%}
+/* Pruefung 10.09.2026, Runde 5: auf dem Handy blendet
+   `body:has(.leiste[data-zeig="1"]) .frag-knopf{display:none}` den schwebenden
+   Chat-Knopf aus, sobald diese Leiste erscheint. Der Chat war danach nur noch
+   ueber ein 42x42 grosses Symbol erreichbar, ohne ein Wort daneben. Gemessen:
+   der Knopf ist ab dem ersten Scrollen weg, auf 393x852 und 393x659. Selbst
+   Sebastian hat den Chat nicht mehr gefunden. Das Symbol traegt jetzt seinen
+   Namen. Der Kreis bleibt 42 px, das Tippziel schrumpft also nicht.
+   ACHTUNG: der Kreis braucht ein eigenes Element mit fester Groesse. Setzt man
+   die Prozentgroesse des Logos auf einen Kasten ohne eigene Groesse, faellt das
+   SVG auf seine Standardbreite von 300 px zurueck und sprengt die Leiste,
+   gemessen 373x183 statt 373x70. */
+.leiste__d{display:flex;flex-direction:column;align-items:center;gap:3px;
+  flex:0 0 auto;width:46px;background:none;border:0;padding:0;cursor:pointer}
+.leiste__d-k{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;
+  background:var(--pink);color:var(--ink)}
+.leiste__d-k .dlogo{width:56%;height:56%}
+.leiste__d-t{font:700 9px/1 var(--grot);letter-spacing:.06em;text-transform:uppercase;
+  color:var(--auf-ink-soft);white-space:nowrap}
+.leiste__d:hover .leiste__d-t,.leiste__d:focus-visible .leiste__d-t{color:var(--pink)}
 @media (max-width:700px){
   .leiste{display:flex}
   /* Pruefung 10.09.: die Leiste (70 px) verdeckte fokussierte Knoepfe am
@@ -3083,7 +3099,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   </div>
 </div>
 <div class="leiste" data-zeig="0">
-  <button type="button" class="leiste__d" aria-label="Frag D!, dein digitaler Welcomer"><svg class="dlogo" aria-hidden="true"><use href="#dlogo"/></svg></button>
+  <button type="button" class="leiste__d" aria-label="Frag D!, dein digitaler Welcomer"><span class="leiste__d-k"><svg class="dlogo" aria-hidden="true"><use href="#dlogo"/></svg></span><span class="leiste__d-t">Frag D!</span></button>
   <div class="leiste__t"><b>Welcome Pass 29 &euro;</b>2 Classes &middot; 10 Tage</div>
   <a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Buchen<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
 </div>
