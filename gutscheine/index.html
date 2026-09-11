@@ -386,11 +386,14 @@ body[data-film="1"] .buehne__video{opacity:1}
 body[data-film="1"] .buehne__ton{opacity:1;pointer-events:auto}
 body[data-oben="0"] .buehne__ton{opacity:0;pointer-events:none}
 .buehne__ton svg{width:20px;height:20px}
-.buehne__pause{margin-top:30px}
+/* Zwei Klassen, damit die Handy-Regel fuer .buehne__ton weiter unten (38 px,
+   margin-top -19px) den Abstand nicht wieder ueberschreibt. Gemessen: beide
+   Knoepfe lagen auf 331,404 uebereinander. */
+.buehne__ton.buehne__pause{margin-top:30px}
 /* Pruefung 10.09.2026, Runde 5: der Link war 14 px hoch, das naechste Ziel
    16 px entfernt (WCAG 2.5.8 verlangt 24). Polster statt groesserer Schrift. */
 .nebenlink--ziel{display:inline-flex;align-items:center;min-height:28px;padding-block:5px}
-@media (max-width:700px){.buehne__pause{margin-top:26px}}
+@media (max-width:700px){.buehne__ton.buehne__pause{margin-top:27px}}
 .buehne__ton:hover{border-color:var(--pink)}
 .buehne__in{position:relative;z-index:2;width:100%;container-type:inline-size;
   display:flex;flex-direction:column;min-height:100svh;
