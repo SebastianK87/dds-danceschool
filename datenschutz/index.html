@@ -487,6 +487,11 @@ body[data-oben="1"] .frag-knopf{transform:translateY(calc(100% + 40px));pointer-
 .bild__echt{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   object-position:inherit;border-radius:inherit;pointer-events:none;z-index:0}
 :has(> .bild__echt){position:relative}
+.trainer i,.vibe,.auch3__b,.schulteaser__bild{position:relative}
+.trainer i{object-position:center top}
+.ebene,.event__zwei,.auch3__zwei{object-position:50% 30%}
+.statement__film .ebene{object-position:50% 35%}
+.trainer i>.bild__echt{border-radius:9px}
 .event__bild>i,.event__bild>*:not(.bild__echt),.kachel__m>*:not(.bild__echt){position:relative;z-index:1}
 .kachel__m.bild{background-size:cover;background-position:center}
 .kachel::after{content:"";position:absolute;inset:0;
@@ -3330,7 +3335,10 @@ body[data-frag="1"] .frag-knopf{display:none}
     var hochkant = matchMedia('(max-width:700px) and (orientation:portrait)');
     function quelle(){
       if(video.src) return true;
-      var d = hochkant.matches ? (video.dataset.dateiHoch || video.dataset.datei) : video.dataset.datei;
+      /* 11.09.2026: der kleine Lader hinter dem Video hat die Datei nach
+         Codec und Leitung schon gewaehlt (data-wahl). Die gilt, sonst laufen
+         zwei Dateien an (gemessen: H.264 und AV1 gleichzeitig). */
+      var d = video.dataset.wahl || (hochkant.matches ? (video.dataset.dateiHoch || video.dataset.datei) : video.dataset.datei);
       if(d){ video.src = d; return true; }
       var el = document.getElementById('recapfilm');
       if(!el) return false;

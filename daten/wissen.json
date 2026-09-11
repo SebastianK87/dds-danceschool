@@ -1329,7 +1329,7 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 7,
+   "frei": 6,
    "gesamt": 22,
    "stile": [
     "pole"
@@ -1348,7 +1348,7 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 26,
+   "frei": 27,
    "gesamt": 35,
    "stile": [
     "choreography"
@@ -1577,7 +1577,7 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 36,
+   "frei": 37,
    "gesamt": 50,
    "stile": [
     "kpop"
@@ -1596,7 +1596,7 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 27,
+   "frei": 28,
    "gesamt": 35,
    "stile": [
     "latin"
@@ -1653,7 +1653,7 @@
    "level": "Level 2",
    "stufen": "m",
    "kids": false,
-   "frei": 10,
+   "frei": 11,
    "gesamt": 22,
    "stile": [
     "pole"
@@ -2698,7 +2698,7 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 46,
+   "frei": 45,
    "gesamt": 50,
    "stile": [],
    "url": "https://www.eversports.de/org/activity/75f0048c-7922-4a5b-9f07-2221a463d17f"
@@ -2906,7 +2906,7 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 19,
+   "frei": 18,
    "gesamt": 22,
    "stile": [
     "pole"
@@ -3417,7 +3417,7 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 69,
+   "frei": 68,
    "gesamt": 70,
    "stile": [
     "hip-hop"
@@ -3608,7 +3608,7 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 49,
+   "frei": 48,
    "gesamt": 50,
    "stile": [
     "hip-hop"
