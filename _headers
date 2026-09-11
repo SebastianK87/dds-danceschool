@@ -53,6 +53,12 @@
 /apple-touch-icon.png
   Cache-Control: public, max-age=86400
 
+# Pruefung 11.09.2026: llms.txt kam als text/plain ohne charset. Wer die
+# Datei ohne Vorwissen liest (KI-Fetcher, curl, Browser), deutet Umlaute
+# dann falsch. robots.txt bekommt das charset von Cloudflare, llms.txt nicht.
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+
 # --- Je Seite: Skripte nur mit passendem Fingerabdruck ---
 /datenschutz/
   Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'sha256-HlfZlCWdQN6vJyf9PbR83JAYGxaElw0p5LTJ3Q0mkyE=' 'sha256-Q/yGIqzwqOS+3ncLrvTj/eBP6UR7N2CvZmWnAO4jzdk=' 'sha256-mxUdToCjEAiAhbQ6eZ/zxtgKTt1ZQ7fsUKQmFi5IG2c='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://files.eversports.com https://widget-static.eversports.io; media-src 'self' blob:; font-src 'self' data: https://widget-static.eversports.io; connect-src 'self' data: https://cloudflareinsights.com https://dds-frag.s-kellerberlin.workers.dev https://graphql-widget-master.production.eversports.cloud https://widget-static.eversports.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://www.eversports.de; object-src 'none'; upgrade-insecure-requests
