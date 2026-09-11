@@ -1386,6 +1386,10 @@ body[data-retter="1"] .leiste,body[data-retter="1"] .frag-knopf{display:none}
 .voll{color:var(--auf-ink-leis);font-weight:700;text-decoration:line-through}
 .termin .voll{color:var(--auf-hell-leis)}
 .termin.voll-class .buchen{opacity:.8}
+.termin--abgesagt .termin__name{text-decoration:line-through;text-decoration-thickness:1.5px;opacity:.7}
+.termin--abgesagt .termin__meta,.termin--abgesagt .termin__zeit{opacity:.6}
+.termin--abgesagt .abgesagt{font:600 13px/1 var(--grot);letter-spacing:.04em;text-transform:uppercase;color:var(--auf-hell-leis);padding:10px 0}
+.block--hell .termin--abgesagt .abgesagt{color:var(--auf-hell-leis)}
 .termin__frei:empty{display:none}
 a.dropin{color:inherit;text-decoration:none;transition:transform .35s var(--e),box-shadow .35s}
 a.dropin:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(0,0,0,.35)}
@@ -3226,7 +3230,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     var nt = document.querySelector('.naechster-termin'); if(!nt) return;
     var gruppen = document.querySelectorAll('[id^="liste-"] [data-tag][data-datum]:not(.tag--vorbei)');
     for(var gi = 0; gi < gruppen.length; gi++){
-      var erste = gruppen[gi].querySelector('.termin:not(.vorbei):not([hidden])');
+      var erste = gruppen[gi].querySelector('.termin:not(.vorbei):not([hidden]):not(.termin--abgesagt)');
       if(erste && erste.dataset.zeit){
         var heute = gruppen[gi].dataset.datum === JETZT.iso;
         nt.textContent = 'N\u00e4chster Termin: ' + (heute ? 'heute' : TAGNAME_KAL[gruppen[gi].dataset.tag]) + ' um ' + erste.dataset.zeit + ' Uhr.';
@@ -3567,7 +3571,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     var MINDESTENS = 6;
     function offen(tag){
       var g = liste.querySelector('[data-tag="' + tag + '"]');
-      return g ? g.querySelectorAll('.termin:not(.vorbei)').length : 0;
+      return g ? g.querySelectorAll('.termin:not(.vorbei):not(.termin--abgesagt)').length : 0;
     }
     var chips = document.querySelector('.tagchips[data-fuer="liste-kalender"]');
     var aktiv = chips && chips.querySelector('button[aria-pressed="true"]');
@@ -3605,7 +3609,7 @@ body[data-frag="1"] .frag-knopf{display:none}
       var tag = folge[(start + k) % 7];
       var g = liste.querySelector('[data-tag="' + tag + '"]');
       if(!g) continue;
-      g.querySelectorAll('.termin:not(.vorbei)').forEach(function(t){
+      g.querySelectorAll('.termin:not(.vorbei):not(.termin--abgesagt)').forEach(function(t){
         if(treffer.length >= 2) return;
         if((t.dataset.stufe || '').indexOf('a') < 0) return;
         var name = t.querySelector('.termin__name');
@@ -3734,6 +3738,17 @@ body[data-frag="1"] .frag-knopf{display:none}
      angelegt (neue ID, anderer Coach); die Seite zeigte bis zum naechsten Bau
      den alten Stand mit totem Buchen-Link. Der naechtliche Bau (nachtbau.sh)
      zieht die Grundlage nach, dieser Block deckt den Tag dazwischen ab. */
+  /* Absage im Browser: Zeile bleibt, Knopf wird zu "faellt aus", genau wie
+     im Bau (termin--abgesagt). Die Zeile zaehlt nicht mehr als naechster
+     Termin und nicht fuer "Heute X Classes". */
+  function absagen(z){
+    if(z.classList.contains('termin--abgesagt')) return;
+    z.classList.add('termin--abgesagt'); z.setAttribute('aria-label', 'abgesagt');
+    var a = z.querySelector('a.buchen');
+    if(a){ var m = document.createElement('span'); m.className = 'abgesagt'; m.setAttribute('role', 'text'); m.textContent = 'f\u00e4llt aus'; a.replaceWith(m); }
+    var t = z.querySelector('.teilen'); if(t) t.hidden = true;
+    var f = z.querySelector('.termin__frei'); if(f) f.innerHTML = '';
+  }
   function kalenderAbgleichen(d){
     if(!d || !d.classes) return;
     exRaus(d);
@@ -3747,7 +3762,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     var gesehen = {};
     zeilen.forEach(function(z){
       var id = z.dataset.id, c = live[id], box = z.querySelector('.termin__frei');
-      if(weg[id]){ z.hidden = true; return; }
+      if(weg[id]){ absagen(z); return; }
       var tagEl = z.closest('[data-datum]'), datum = tagEl ? tagEl.dataset.datum : '';
       /* 11.09.2026: 26 von 147 Zeilen trugen die ID einer Class an einem
          anderen Datum (Bau nahm die ID des Stammtrainers, Wochen spaeter).
@@ -4219,7 +4234,7 @@ body[data-frag="1"] .frag-knopf{display:none}
         /* Am Wochenende ist die laufende Woche fast durch. Dann laedt die
            naechste Woche von selbst nach und der Kalender steht nicht mit
            zwei Zeilen da; danach zeigt er alle Tage. */
-        if(liste.querySelectorAll('.termin:not(.vorbei)').length < 8){
+        if(liste.querySelectorAll('.termin:not(.vorbei):not(.termin--abgesagt)').length < 8){
           knopf.click();
           var alleChip = document.querySelector('.tagchips[data-fuer="liste-kalender"] button[data-chip="alle"]');
           if(alleChip) setTimeout(function(){ alleChip.click(); }, 500);
