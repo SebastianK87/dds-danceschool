@@ -166,7 +166,7 @@ body[data-oben="1"]:not([data-menu="1"]) .top{background:transparent;
 .burger{display:grid;width:42px;height:42px;place-items:center;border-radius:50%}
 .burger:hover{background:rgba(225,226,220,.1)}
 .menu__trenn{display:block;height:1px;width:64px;background:rgba(225,226,220,.2);margin:14px 0}
-.menu__links a.menu__leise{opacity:.7;font-size:clamp(19px,4vw,30px)}
+.menu__links a.menu__leise{opacity:.7;font-size:clamp(19px,4vw,30px);padding-block:4px;min-height:28px;display:inline-flex;align-items:center}
 .burger svg{width:22px;height:22px}
 .zurueck{display:none;align-items:center;gap:8px;font-weight:700;font-size:16px;
   padding:9px 16px 9px 10px;border-radius:999px;background:rgba(225,226,220,.08);
@@ -1362,6 +1362,8 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .filterblock{display:grid;gap:10px;margin-block:var(--s3);padding:18px 16px 20px;border-radius:var(--rund2);
   background:var(--hell2);border:1px solid var(--linie-h);color:var(--auf-hell)}
 .filterblock .filter,.filterblock .tagchips{margin:0}
+.gutschein__ersatz{margin-top:14px}
+.gutschein[data-steht="1"] .gutschein__ersatz{display:none}
 .filter__stand{margin:6px 0 0;font:600 15px/1.4 var(--grot);color:var(--auf-hell);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
 .filter__hin{color:var(--auf-hell);text-decoration:underline;text-underline-offset:3px;padding-block:6px}
 @media (min-width:701px){.filter__hin{display:none}}
@@ -2052,6 +2054,8 @@ body[data-frag="1"] .frag-knopf{display:none}
     padding:8px clamp(18px,4vw,36px) 9px;
     border-top:1px solid var(--linie-d);
     overflow-x:auto;overflow-y:hidden;scrollbar-width:none;
+    -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 44px),transparent);
+    mask-image:linear-gradient(to right,#000 calc(100% - 44px),transparent);
     scroll-snap-type:x proximity;overscroll-behavior-x:contain;
     max-height:64px;opacity:1;visibility:visible;
     transition:max-height 260ms var(--e),opacity 180ms var(--e),
@@ -2137,6 +2141,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   .dropins .textlink{flex:0 0 auto;align-self:center;padding-right:4px}
 }
 </style>
+<noscript><style>.frag-knopf,.filterblock,.tagchips,.klappe__knopf,.woche-knopf,.leiste__d{display:none!important}.termin.zuviel{display:grid}</style></noscript>
 <script>(function(){
   var d=document.documentElement;
   /* Solange die Buehne im Bild ist: kein Glas, kein Frag D!. Das Attribut
@@ -2279,7 +2284,7 @@ body[data-frag="1"] .frag-knopf{display:none}
       <div class="kopf__zahlen">
         <div class="kopf__zahl"><b>18</b><span>Classes pro Woche</span></div>
         <div class="kopf__zahl"><b>7</b><span>Tage im Programm</span></div>
-        <div class="kopf__zahl"><b>8</b><span>Coaches</span></div>
+        <div class="kopf__zahl"><b>8</b><span>feste Coaches</span></div>
         <div class="kopf__zahl kopf__zahl--preis"><b>17&nbsp;&euro;</b><span>erste Class, <a href="#welcome-kurs">Welcome Pass 29&nbsp;&euro;</a></span></div>
       </div>
       <div class="kopf__tasten">
@@ -2302,7 +2307,7 @@ body[data-frag="1"] .frag-knopf{display:none}
        469 px hohen Block, 320 px davon leer. Jetzt ist er der Vorspann des
        "Fuer wen"-Blocks, ohne eigenen Block. -->
   <section class="block">
-    <div class="wrap"><p class="einordnung einordnung--links einordnung--vorspann"><b>High-Heels-Tanzkurse in Berlin Mitte:</b> bei uns hei&szlig;en sie Classes. 18 pro Woche an 7 Tagen, unterrichtet von 8 Coaches. 13 davon sind f&uuml;r Anf&auml;nger:innen und Wiedereinsteiger:innen geeignet. Die fr&uuml;heste beginnt um 11:00 Uhr, die sp&auml;teste um 20:15 Uhr. Jede Class ist einzeln buchbar, die erste kostet 17&nbsp;&euro;, der Welcome Pass 29&nbsp;&euro; f&uuml;r zwei. Holzmarktstra&szlig;e 66, zwei Minuten vom S+U Jannowitzbr&uuml;cke.</p></div>
+    <div class="wrap"><p class="einordnung einordnung--links einordnung--vorspann"><b>High-Heels-Tanzkurse in Berlin Mitte:</b> bei uns hei&szlig;en sie Classes. 18 pro Woche an 7 Tagen, unterrichtet von 8 festen Coaches, dazu Vertretungen. 13 davon sind f&uuml;r Anf&auml;nger:innen und Wiedereinsteiger:innen geeignet. Die fr&uuml;heste beginnt um 11:00 Uhr, die sp&auml;teste um 20:15 Uhr. Jede Class ist einzeln buchbar, die erste kostet 17&nbsp;&euro;, der Welcome Pass 29&nbsp;&euro; f&uuml;r zwei. Holzmarktstra&szlig;e 66, zwei Minuten vom S+U Jannowitzbr&uuml;cke.</p></div>
     <div class="wrap zwei">
       <div>
         <p class="kicker">F&uuml;r wen</p>
@@ -2352,7 +2357,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/51405b7b-c639-442d-80de-619ca46013ea"
        target="_blank" rel="noopener" aria-label="Buchen: High Heels Intermediate, Freitag 17:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: High Heels Intermediate, Freitag 17:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="a" data-zeit="19:00" data-id="aa6dc84a-cd92-45f5-aba2-068a02fd37bb" data-stile="heels">
   <div class="termin__zeit">19:00<small>60 min</small></div>
@@ -2365,7 +2370,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/aa6dc84a-cd92-45f5-aba2-068a02fd37bb"
        target="_blank" rel="noopener" aria-label="Buchen: High Heels Beginner, Freitag 19:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: High Heels Beginner, Freitag 19:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="a" data-zeit="20:00" data-id="862f083a-72ea-46c9-aeaa-19444a594ebc" data-stile="heels">
   <div class="termin__zeit">20:00<small>60 min</small></div>
@@ -2378,7 +2383,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/862f083a-72ea-46c9-aeaa-19444a594ebc"
        target="_blank" rel="noopener" aria-label="Buchen: High Heels Beginner, Freitag 20:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: High Heels Beginner, Freitag 20:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><div class="tag"><span>Samstag <small>12.09.</small></span></div><div data-tag="Sa" data-datum="2026-09-12"><div class="termin" data-stufe="am" data-zeit="11:00" data-id="3324bc29-cd9a-41c4-939d-91d790183e90" data-stile="heels">
   <div class="termin__zeit">11:00<small>60 min</small></div>
@@ -2391,7 +2396,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/3324bc29-cd9a-41c4-939d-91d790183e90"
        target="_blank" rel="noopener" aria-label="Buchen: High Heels Beginner/Intermediate, Samstag 11:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: High Heels Beginner/Intermediate, Samstag 11:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="amf" data-zeit="13:00" data-id="9219d90d-6d93-465a-96f5-400faccafac9" data-stile="pole heels">
   <div class="termin__zeit">13:00<small>90 min</small></div>
@@ -2404,7 +2409,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/9219d90d-6d93-465a-96f5-400faccafac9"
        target="_blank" rel="noopener" aria-label="Buchen: Pole &amp; Heels Open Level, Samstag 13:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole &amp; Heels Open Level, Samstag 13:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="am" data-zeit="14:00" data-id="3dad00d4-c1c6-4eb4-acd3-f1c212b7c7f9" data-stile="heels">
   <div class="termin__zeit">14:00<small>90 min</small></div>
@@ -2417,7 +2422,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/3dad00d4-c1c6-4eb4-acd3-f1c212b7c7f9"
        target="_blank" rel="noopener" aria-label="Buchen: POP UP CLASS High Heels Beginner/Intermediate, Samstag 14:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: POP UP CLASS High Heels Beginner/Intermediate, Samstag 14:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="am" data-zeit="15:00" data-id="06fd4734-d4bb-41b6-b5a0-45c9a5f8b16b" data-stile="heels">
   <div class="termin__zeit">15:00<small>90 min</small></div>
@@ -2430,7 +2435,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/06fd4734-d4bb-41b6-b5a0-45c9a5f8b16b"
        target="_blank" rel="noopener" aria-label="Buchen: High Heels Beginner/Intermediate, Samstag 15:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: High Heels Beginner/Intermediate, Samstag 15:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><div class="tag"><span>Sonntag <small>13.09.</small></span></div><div data-tag="So" data-datum="2026-09-13"><div class="termin" data-stufe="a" data-zeit="12:00" data-id="f8c22e1e-2873-4d1e-a81b-177c0f42a95a" data-stile="pole heels">
   <div class="termin__zeit">12:00<small>60 min</small></div>
@@ -2443,7 +2448,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/f8c22e1e-2873-4d1e-a81b-177c0f42a95a"
        target="_blank" rel="noopener" aria-label="Buchen: Pole &amp; Heels Level 1, Sonntag 12:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole &amp; Heels Level 1, Sonntag 12:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><div class="tag"><span>Montag <small>14.09.</small></span></div><div data-tag="Mo" data-datum="2026-09-14"><div class="termin" data-stufe="a" data-zeit="19:00" data-id="29015656-1637-463e-85fd-524d31664cb8" data-stile="heels">
   <div class="termin__zeit">19:00<small>60 min</small></div>
@@ -2456,7 +2461,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/29015656-1637-463e-85fd-524d31664cb8"
        target="_blank" rel="noopener" aria-label="Buchen: High Heels Beginner, Montag 19:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: High Heels Beginner, Montag 19:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="mf" data-zeit="20:00" data-id="fcab5862-a823-42c5-b1c0-49218c10aec0" data-stile="heels">
   <div class="termin__zeit">20:00<small>90 min</small></div>
@@ -2469,7 +2474,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/fcab5862-a823-42c5-b1c0-49218c10aec0"
        target="_blank" rel="noopener" aria-label="Buchen: High Heels Intermediate/Advanced, Montag 20:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: High Heels Intermediate/Advanced, Montag 20:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><div class="tag"><span>Dienstag <small>15.09.</small></span></div><div data-tag="Di" data-datum="2026-09-15"><div class="termin" data-stufe="a" data-zeit="17:00" data-id="2d72e423-279b-4794-b5b0-588439b15760" data-stile="heels">
   <div class="termin__zeit">17:00<small>90 min</small></div>
@@ -2482,7 +2487,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/2d72e423-279b-4794-b5b0-588439b15760"
        target="_blank" rel="noopener" aria-label="Buchen: High Heels Beginner, Dienstag 17:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: High Heels Beginner, Dienstag 17:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="m" data-zeit="18:30" data-id="2916f907-cce0-484e-a5da-41bd567c5121" data-stile="heels">
   <div class="termin__zeit">18:30<small>90 min</small></div>
@@ -2495,7 +2500,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/2916f907-cce0-484e-a5da-41bd567c5121"
        target="_blank" rel="noopener" aria-label="Buchen: High Heels Intermediate, Dienstag 18:30 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: High Heels Intermediate, Dienstag 18:30 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><div class="tag"><span>Mittwoch <small>16.09.</small></span></div><div data-tag="Mi" data-datum="2026-09-16"><div class="termin" data-stufe="am" data-zeit="11:30" data-id="47317472-298a-4a94-8081-26d54cd8ca1f" data-stile="heels">
   <div class="termin__zeit">11:30<small>60 min</small></div>
@@ -2508,7 +2513,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/47317472-298a-4a94-8081-26d54cd8ca1f"
        target="_blank" rel="noopener" aria-label="Buchen: High Heels Beginner/Intermediate, Mittwoch 11:30 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: High Heels Beginner/Intermediate, Mittwoch 11:30 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="a" data-zeit="19:00" data-id="15268a61-847e-4e71-a428-60aa6130931b" data-stile="heels">
   <div class="termin__zeit">19:00<small>60 min</small></div>
@@ -2521,7 +2526,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/15268a61-847e-4e71-a428-60aa6130931b"
        target="_blank" rel="noopener" aria-label="Buchen: Female Style Beginner, Mittwoch 19:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Female Style Beginner, Mittwoch 19:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="am" data-zeit="20:00" data-id="e473c6c7-d5d4-4514-8d01-39d7d903d821" data-stile="heels">
   <div class="termin__zeit">20:00<small>60 min</small></div>
@@ -2534,7 +2539,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/e473c6c7-d5d4-4514-8d01-39d7d903d821"
        target="_blank" rel="noopener" aria-label="Buchen: Heels Style Beginner/Intermediate, Mittwoch 20:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Heels Style Beginner/Intermediate, Mittwoch 20:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><div class="tag"><span>Donnerstag <small>17.09.</small></span></div><div data-tag="Do" data-datum="2026-09-17"><div class="termin" data-stufe="f" data-zeit="19:15" data-id="6f13c5e8-19d6-4bc5-80df-0eb3915b4b2a" data-stile="pole heels">
   <div class="termin__zeit">19:15<small>60 min</small></div>
@@ -2547,7 +2552,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/6f13c5e8-19d6-4bc5-80df-0eb3915b4b2a"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Flying Heels Level 3, Donnerstag 19:15 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Flying Heels Level 3, Donnerstag 19:15 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="am" data-zeit="19:30" data-id="d85bc18d-e9ea-4673-ac64-295eea80d5ac" data-stile="heels">
   <div class="termin__zeit">19:30<small>60 min</small></div>
@@ -2560,7 +2565,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/d85bc18d-e9ea-4673-ac64-295eea80d5ac"
        target="_blank" rel="noopener" aria-label="Buchen: High Heels Beginner/Intermediate, Donnerstag 19:30 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: High Heels Beginner/Intermediate, Donnerstag 19:30 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="amf" data-zeit="20:15" data-id="ff4833bc-ce21-462f-8c94-b33bb315da20" data-stile="pole heels">
   <div class="termin__zeit">20:15<small>60 min</small></div>
@@ -2573,7 +2578,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/ff4833bc-ce21-462f-8c94-b33bb315da20"
        target="_blank" rel="noopener" aria-label="Buchen: Pole &amp; Heels Open Level, Donnerstag 20:15 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole &amp; Heels Open Level, Donnerstag 20:15 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><p class="leer" hidden>Mit dieser Auswahl l&auml;uft diese Woche keine Class mehr. Nimm ein anderes Level, einen anderen Style, oder hol dir unten die n&auml;chste Woche dazu.</p></div>
       <p class="hinweis">Buchen kannst du bis zum Start, solange Pl&auml;tze frei sind.
@@ -3824,7 +3829,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     return '<div class="termin' + (kids ? ' termin--kids' : '') + (c.frei === 0 ? ' voll-class' : '') + '" data-stufe="' + (kids ? 'k' : STUFEN_KAL[lv]) + '" data-zeit="' + escKal(c.zeit) + '" data-id="' + escKal(c.id) + '" data-stile="' + st.join(' ') + '">' +
       '<div class="termin__zeit">' + escKal(c.zeit) + '<small>' + escKal(c.dauer) + ' min</small></div>' +
       '<div class="termin__was"><p class="termin__name">' + escKal(c.titel) + '</p><div class="termin__meta"><span class="stufe">' + STUFENWORT_KAL[lv] + '</span>' + '<span class="termin__coach"' + (cn(c.coach) ? '' : ' hidden') + '>' + escKal(cn(c.coach) || '') + '</span>' + '<span class="termin__ort">' + escKal(String(c.studio || '').replace(/ - /g, ' \u00b7 ')) + '</span><span class="termin__frei">' + freiHtml(c.frei) + '</span></div></div>' +
-      '<div class="termin__cta"><a class="buchen" href="' + escKal(url) + '" target="_blank" rel="noopener" aria-label="' + knopf + ': ' + escKal(c.titel) + ', ' + TAGNAME_KAL[tag] + ' ' + escKal(c.zeit) + ' Uhr, \u00f6ffnet in einem neuen Tab">' + knopf + '<span class="nurSR">, \u00f6ffnet in einem neuen Tab</span></a><button type="button" class="teilen" aria-label="Class teilen">' + (teilenSvg || '') + '</button></div></div>';
+      '<div class="termin__cta"><a class="buchen" href="' + escKal(url) + '" target="_blank" rel="noopener" aria-label="' + knopf + ': ' + escKal(c.titel) + ', ' + TAGNAME_KAL[tag] + ' ' + escKal(c.zeit) + ' Uhr, \u00f6ffnet in einem neuen Tab">' + knopf + '<span class="nurSR">, \u00f6ffnet in einem neuen Tab</span></a><button type="button" class="teilen" aria-label="Class teilen: ' + escKal(c.titel) + ', ' + TAGNAME_KAL[tag] + ' ' + escKal(c.zeit) + ' Uhr">' + (teilenSvg || '') + '</button></div></div>';
   }
   function naechsterTerminSetzen(){
     var nt = document.querySelector('.naechster-termin'); if(!nt) return;
@@ -3839,6 +3844,15 @@ body[data-frag="1"] .frag-knopf{display:none}
     }
   }
   function teilenSymbol(){ var v = document.querySelector('.termin .teilen'); return v ? v.innerHTML : ''; }
+  /* Gutschein-Formular (Eversports): sobald es im Rahmen steht, faellt der
+     Ersatzweg darunter weg. Steht es nach zehn Sekunden nicht, bleibt er. */
+  (function(){
+    var box = document.querySelector('.gutschein'); if(!box) return;
+    var rahmen = box.querySelector('[data-eversports-widget-id]'); if(!rahmen) return;
+    function pruefen(){ if(rahmen.getBoundingClientRect().height > 200 || rahmen.shadowRoot || rahmen.children.length){ box.dataset.steht = '1'; return true; } return false; }
+    if(pruefen()) return;
+    var n = 0, t = setInterval(function(){ if(pruefen() || ++n > 20) clearInterval(t); }, 500);
+  })();
   var ruhig = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var spar  = (navigator.connection && (navigator.connection.saveData ||
               /2g/.test(navigator.connection.effectiveType || ''))) || false;
@@ -4647,6 +4661,9 @@ body[data-frag="1"] .frag-knopf{display:none}
         }
         if(morgen) leis += (leis ? ' ' : '') + 'Weiter ' + morgen.tag + ' ' + morgen.zeit + ' mit ' + morgen.titel + '.';
       }
+      /* Kommt der Plan aus der letzten guten Kopie (Eversports nicht
+         erreichbar), steht der Stand dabei, statt als live zu gelten. */
+      if(d.quelle === 'kv-letzte-kopie' && d.stand) leis += ' Stand ' + String(d.stand).slice(11, 16) + ' Uhr.';
       zeile.querySelector('b').textContent = stark;
       zeile.querySelector('span').textContent = leis;
       zeile.hidden = false;

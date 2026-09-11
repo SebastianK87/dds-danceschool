@@ -166,7 +166,7 @@ body[data-oben="1"]:not([data-menu="1"]) .top{background:transparent;
 .burger{display:grid;width:42px;height:42px;place-items:center;border-radius:50%}
 .burger:hover{background:rgba(225,226,220,.1)}
 .menu__trenn{display:block;height:1px;width:64px;background:rgba(225,226,220,.2);margin:14px 0}
-.menu__links a.menu__leise{opacity:.7;font-size:clamp(19px,4vw,30px)}
+.menu__links a.menu__leise{opacity:.7;font-size:clamp(19px,4vw,30px);padding-block:4px;min-height:28px;display:inline-flex;align-items:center}
 .burger svg{width:22px;height:22px}
 .zurueck{display:none;align-items:center;gap:8px;font-weight:700;font-size:16px;
   padding:9px 16px 9px 10px;border-radius:999px;background:rgba(225,226,220,.08);
@@ -1362,6 +1362,8 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .filterblock{display:grid;gap:10px;margin-block:var(--s3);padding:18px 16px 20px;border-radius:var(--rund2);
   background:var(--hell2);border:1px solid var(--linie-h);color:var(--auf-hell)}
 .filterblock .filter,.filterblock .tagchips{margin:0}
+.gutschein__ersatz{margin-top:14px}
+.gutschein[data-steht="1"] .gutschein__ersatz{display:none}
 .filter__stand{margin:6px 0 0;font:600 15px/1.4 var(--grot);color:var(--auf-hell);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
 .filter__hin{color:var(--auf-hell);text-decoration:underline;text-underline-offset:3px;padding-block:6px}
 @media (min-width:701px){.filter__hin{display:none}}
@@ -2052,6 +2054,8 @@ body[data-frag="1"] .frag-knopf{display:none}
     padding:8px clamp(18px,4vw,36px) 9px;
     border-top:1px solid var(--linie-d);
     overflow-x:auto;overflow-y:hidden;scrollbar-width:none;
+    -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 44px),transparent);
+    mask-image:linear-gradient(to right,#000 calc(100% - 44px),transparent);
     scroll-snap-type:x proximity;overscroll-behavior-x:contain;
     max-height:64px;opacity:1;visibility:visible;
     transition:max-height 260ms var(--e),opacity 180ms var(--e),
@@ -2137,6 +2141,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   .dropins .textlink{flex:0 0 auto;align-self:center;padding-right:4px}
 }
 </style>
+<noscript><style>.frag-knopf,.filterblock,.tagchips,.klappe__knopf,.woche-knopf,.leiste__d{display:none!important}.termin.zuviel{display:grid}</style></noscript>
 <script>(function(){
   var d=document.documentElement;
   /* Solange die Buehne im Bild ist: kein Glas, kein Frag D!. Das Attribut
@@ -2269,16 +2274,17 @@ body[data-frag="1"] .frag-knopf{display:none}
    data-titel="Gutscheine &middot; D!&#8217;s Dance School" data-melde="Verschenk das Tanzen.">
   <header class="kopf kopf--seite">
     <div class="wrap">
-      <p class="kicker">Gutscheine</p>
+      <p class="kicker">Gutschein f&uuml;r Tanzkurse in Berlin</p>
       <h1>Verschenk das Tanzen<em class="pkt" aria-hidden="true"></em></h1>
-      <p class="kopf__claim">Betrag frei w&auml;hlen, Gru&szlig; dazuschreiben, sofort als PDF. Einl&ouml;sbar auf alles: Classes, Karten und Memberships.</p>
+      <p class="kopf__claim">Der Tanzkurs-Gutschein der D!&#8217;s Dance School in Berlin Mitte: Betrag frei w&auml;hlen, Gru&szlig; dazuschreiben, sofort als PDF. Einl&ouml;sbar auf alles, was hier l&auml;uft: Classes in zw&ouml;lf Styles, Karten und Memberships.</p>
       <p class="kopf__tasten"><a class="knopf" href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">Gutschein kaufen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></p>
     </div>
   </header>
   <section class="block">
     <div class="wrap">
   <div class="gutschein"><div data-eversports-widget-id="d76f0b1a-3106-4311-b61e-9fe6e63eb34b"></div>
-<script type="module" src="https://widget-static.eversports.io/loader.js" async defer></script></div></div>
+<script type="module" src="https://widget-static.eversports.io/loader.js" async defer></script>
+<p class="gutschein__ersatz hinweis mitte-h">Das Kaufformular l&auml;dt nicht? <a href="https://www.eversports.de/sp/ds-dance-school" target="_blank" rel="noopener">Gutschein direkt bei Eversports kaufen<span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a></p></div></div>
   </section>
   <section class="block block--hell">
     <div class="wrap">
@@ -3258,7 +3264,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     return '<div class="termin' + (kids ? ' termin--kids' : '') + (c.frei === 0 ? ' voll-class' : '') + '" data-stufe="' + (kids ? 'k' : STUFEN_KAL[lv]) + '" data-zeit="' + escKal(c.zeit) + '" data-id="' + escKal(c.id) + '" data-stile="' + st.join(' ') + '">' +
       '<div class="termin__zeit">' + escKal(c.zeit) + '<small>' + escKal(c.dauer) + ' min</small></div>' +
       '<div class="termin__was"><p class="termin__name">' + escKal(c.titel) + '</p><div class="termin__meta"><span class="stufe">' + STUFENWORT_KAL[lv] + '</span>' + '<span class="termin__coach"' + (cn(c.coach) ? '' : ' hidden') + '>' + escKal(cn(c.coach) || '') + '</span>' + '<span class="termin__ort">' + escKal(String(c.studio || '').replace(/ - /g, ' \u00b7 ')) + '</span><span class="termin__frei">' + freiHtml(c.frei) + '</span></div></div>' +
-      '<div class="termin__cta"><a class="buchen" href="' + escKal(url) + '" target="_blank" rel="noopener" aria-label="' + knopf + ': ' + escKal(c.titel) + ', ' + TAGNAME_KAL[tag] + ' ' + escKal(c.zeit) + ' Uhr, \u00f6ffnet in einem neuen Tab">' + knopf + '<span class="nurSR">, \u00f6ffnet in einem neuen Tab</span></a><button type="button" class="teilen" aria-label="Class teilen">' + (teilenSvg || '') + '</button></div></div>';
+      '<div class="termin__cta"><a class="buchen" href="' + escKal(url) + '" target="_blank" rel="noopener" aria-label="' + knopf + ': ' + escKal(c.titel) + ', ' + TAGNAME_KAL[tag] + ' ' + escKal(c.zeit) + ' Uhr, \u00f6ffnet in einem neuen Tab">' + knopf + '<span class="nurSR">, \u00f6ffnet in einem neuen Tab</span></a><button type="button" class="teilen" aria-label="Class teilen: ' + escKal(c.titel) + ', ' + TAGNAME_KAL[tag] + ' ' + escKal(c.zeit) + ' Uhr">' + (teilenSvg || '') + '</button></div></div>';
   }
   function naechsterTerminSetzen(){
     var nt = document.querySelector('.naechster-termin'); if(!nt) return;
@@ -3273,6 +3279,15 @@ body[data-frag="1"] .frag-knopf{display:none}
     }
   }
   function teilenSymbol(){ var v = document.querySelector('.termin .teilen'); return v ? v.innerHTML : ''; }
+  /* Gutschein-Formular (Eversports): sobald es im Rahmen steht, faellt der
+     Ersatzweg darunter weg. Steht es nach zehn Sekunden nicht, bleibt er. */
+  (function(){
+    var box = document.querySelector('.gutschein'); if(!box) return;
+    var rahmen = box.querySelector('[data-eversports-widget-id]'); if(!rahmen) return;
+    function pruefen(){ if(rahmen.getBoundingClientRect().height > 200 || rahmen.shadowRoot || rahmen.children.length){ box.dataset.steht = '1'; return true; } return false; }
+    if(pruefen()) return;
+    var n = 0, t = setInterval(function(){ if(pruefen() || ++n > 20) clearInterval(t); }, 500);
+  })();
   var ruhig = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var spar  = (navigator.connection && (navigator.connection.saveData ||
               /2g/.test(navigator.connection.effectiveType || ''))) || false;
@@ -4081,6 +4096,9 @@ body[data-frag="1"] .frag-knopf{display:none}
         }
         if(morgen) leis += (leis ? ' ' : '') + 'Weiter ' + morgen.tag + ' ' + morgen.zeit + ' mit ' + morgen.titel + '.';
       }
+      /* Kommt der Plan aus der letzten guten Kopie (Eversports nicht
+         erreichbar), steht der Stand dabei, statt als live zu gelten. */
+      if(d.quelle === 'kv-letzte-kopie' && d.stand) leis += ' Stand ' + String(d.stand).slice(11, 16) + ' Uhr.';
       zeile.querySelector('b').textContent = stark;
       zeile.querySelector('span').textContent = leis;
       zeile.hidden = false;

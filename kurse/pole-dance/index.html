@@ -166,7 +166,7 @@ body[data-oben="1"]:not([data-menu="1"]) .top{background:transparent;
 .burger{display:grid;width:42px;height:42px;place-items:center;border-radius:50%}
 .burger:hover{background:rgba(225,226,220,.1)}
 .menu__trenn{display:block;height:1px;width:64px;background:rgba(225,226,220,.2);margin:14px 0}
-.menu__links a.menu__leise{opacity:.7;font-size:clamp(19px,4vw,30px)}
+.menu__links a.menu__leise{opacity:.7;font-size:clamp(19px,4vw,30px);padding-block:4px;min-height:28px;display:inline-flex;align-items:center}
 .burger svg{width:22px;height:22px}
 .zurueck{display:none;align-items:center;gap:8px;font-weight:700;font-size:16px;
   padding:9px 16px 9px 10px;border-radius:999px;background:rgba(225,226,220,.08);
@@ -1362,6 +1362,8 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .filterblock{display:grid;gap:10px;margin-block:var(--s3);padding:18px 16px 20px;border-radius:var(--rund2);
   background:var(--hell2);border:1px solid var(--linie-h);color:var(--auf-hell)}
 .filterblock .filter,.filterblock .tagchips{margin:0}
+.gutschein__ersatz{margin-top:14px}
+.gutschein[data-steht="1"] .gutschein__ersatz{display:none}
 .filter__stand{margin:6px 0 0;font:600 15px/1.4 var(--grot);color:var(--auf-hell);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
 .filter__hin{color:var(--auf-hell);text-decoration:underline;text-underline-offset:3px;padding-block:6px}
 @media (min-width:701px){.filter__hin{display:none}}
@@ -2052,6 +2054,8 @@ body[data-frag="1"] .frag-knopf{display:none}
     padding:8px clamp(18px,4vw,36px) 9px;
     border-top:1px solid var(--linie-d);
     overflow-x:auto;overflow-y:hidden;scrollbar-width:none;
+    -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 44px),transparent);
+    mask-image:linear-gradient(to right,#000 calc(100% - 44px),transparent);
     scroll-snap-type:x proximity;overscroll-behavior-x:contain;
     max-height:64px;opacity:1;visibility:visible;
     transition:max-height 260ms var(--e),opacity 180ms var(--e),
@@ -2137,6 +2141,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   .dropins .textlink{flex:0 0 auto;align-self:center;padding-right:4px}
 }
 </style>
+<noscript><style>.frag-knopf,.filterblock,.tagchips,.klappe__knopf,.woche-knopf,.leiste__d{display:none!important}.termin.zuviel{display:grid}</style></noscript>
 <script>(function(){
   var d=document.documentElement;
   /* Solange die Buehne im Bild ist: kein Glas, kein Frag D!. Das Attribut
@@ -2279,7 +2284,7 @@ body[data-frag="1"] .frag-knopf{display:none}
       <div class="kopf__zahlen">
         <div class="kopf__zahl"><b>37</b><span>Classes pro Woche</span></div>
         <div class="kopf__zahl"><b>7</b><span>Tage im Programm</span></div>
-        <div class="kopf__zahl"><b>8</b><span>Coaches</span></div>
+        <div class="kopf__zahl"><b>8</b><span>feste Coaches</span></div>
         <div class="kopf__zahl kopf__zahl--preis"><b>17&nbsp;&euro;</b><span>erste Class, <a href="#welcome-kurs">Welcome Pass 29&nbsp;&euro;</a></span></div>
       </div>
       <div class="kopf__tasten">
@@ -2302,7 +2307,7 @@ body[data-frag="1"] .frag-knopf{display:none}
        469 px hohen Block, 320 px davon leer. Jetzt ist er der Vorspann des
        "Fuer wen"-Blocks, ohne eigenen Block. -->
   <section class="block">
-    <div class="wrap"><p class="einordnung einordnung--links einordnung--vorspann"><b>Pole-Dance-Kurse in Berlin Mitte:</b> bei uns hei&szlig;en sie Classes. 37 pro Woche an 7 Tagen, unterrichtet von 8 Coaches. 28 davon sind f&uuml;r Anf&auml;nger:innen und Wiedereinsteiger:innen geeignet. Die fr&uuml;heste beginnt um 10:00 Uhr, die sp&auml;teste um 20:15 Uhr. Jede Class ist einzeln buchbar, die erste kostet 17&nbsp;&euro;, der Welcome Pass 29&nbsp;&euro; f&uuml;r zwei. Holzmarktstra&szlig;e 66, zwei Minuten vom S+U Jannowitzbr&uuml;cke.</p></div>
+    <div class="wrap"><p class="einordnung einordnung--links einordnung--vorspann"><b>Pole-Dance-Kurse in Berlin Mitte:</b> bei uns hei&szlig;en sie Classes. 37 pro Woche an 7 Tagen, unterrichtet von 8 festen Coaches, dazu Vertretungen. 28 davon sind f&uuml;r Anf&auml;nger:innen und Wiedereinsteiger:innen geeignet. Die fr&uuml;heste beginnt um 10:00 Uhr, die sp&auml;teste um 20:15 Uhr. Jede Class ist einzeln buchbar, die erste kostet 17&nbsp;&euro;, der Welcome Pass 29&nbsp;&euro; f&uuml;r zwei. Holzmarktstra&szlig;e 66, zwei Minuten vom S+U Jannowitzbr&uuml;cke.</p></div>
     <div class="wrap zwei">
       <div>
         <p class="kicker">F&uuml;r wen</p>
@@ -2352,7 +2357,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/41503863-a79b-4d6c-a2e1-0689951960cf"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 1, Freitag 10:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 1, Freitag 10:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="am" data-zeit="11:00" data-id="27f7771a-55df-4d48-847b-003519043918" data-stile="pole">
   <div class="termin__zeit">11:00<small>60 min</small></div>
@@ -2365,7 +2370,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/27f7771a-55df-4d48-847b-003519043918"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 2 (Beginner), Freitag 11:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 2 (Beginner), Freitag 11:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="a" data-zeit="12:00" data-id="ed257c2c-5436-4e71-a188-f9dfbec8d11d" data-stile="pole">
   <div class="termin__zeit">12:00<small>60 min</small></div>
@@ -2378,7 +2383,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/ed257c2c-5436-4e71-a188-f9dfbec8d11d"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 1 Neubeginner, Freitag 12:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 1 Neubeginner, Freitag 12:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="amf" data-zeit="17:00" data-id="8854266f-62f1-434c-8a6c-f1afd8dcf02f" data-stile="pole">
   <div class="termin__zeit">17:00<small>60 min</small></div>
@@ -2391,7 +2396,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/8854266f-62f1-434c-8a6c-f1afd8dcf02f"
        target="_blank" rel="noopener" aria-label="Buchen: First Tricks Upside Down, Freitag 17:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: First Tricks Upside Down, Freitag 17:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="a" data-zeit="18:00" data-id="3ad954e4-c037-4dea-8372-1964e2201ce9" data-stile="pole">
   <div class="termin__zeit">18:00<small>60 min</small></div>
@@ -2404,7 +2409,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/3ad954e4-c037-4dea-8372-1964e2201ce9"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Level 1 (Neubeginner), Freitag 18:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Level 1 (Neubeginner), Freitag 18:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="am" data-zeit="19:00" data-id="b33cb7f9-92c2-475a-b5fb-0c749e4f7c31" data-stile="pole">
   <div class="termin__zeit">19:00<small>60 min</small></div>
@@ -2417,7 +2422,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/b33cb7f9-92c2-475a-b5fb-0c749e4f7c31"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 2 (Beginner), Freitag 19:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 2 (Beginner), Freitag 19:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="amf" data-zeit="20:00" data-id="f5e8b16b-e062-4a19-bc91-40d7a9b48877" data-stile="pole">
   <div class="termin__zeit">20:00<small>60 min</small></div>
@@ -2430,7 +2435,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/f5e8b16b-e062-4a19-bc91-40d7a9b48877"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Open Training, Freitag 20:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Open Training, Freitag 20:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><div class="tag"><span>Samstag <small>12.09.</small></span></div><div data-tag="Sa" data-datum="2026-09-12"><div class="termin voll-class" data-stufe="a" data-zeit="11:00" data-id="fa172969-7470-4163-8f32-81c882aac272" data-stile="pole">
   <div class="termin__zeit">11:00<small>60 min</small></div>
@@ -2443,7 +2448,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/fa172969-7470-4163-8f32-81c882aac272"
        target="_blank" rel="noopener" aria-label="Warteliste: Pole Level 1 (Neubeginner), Samstag 11:00 Uhr, &ouml;ffnet in einem neuen Tab">Warteliste<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Level 1 (Neubeginner), Samstag 11:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="m" data-zeit="12:00" data-id="7b0bad5f-f03c-4171-84ae-e79ed20f5ced" data-stile="pole">
   <div class="termin__zeit">12:00<small>60 min</small></div>
@@ -2456,7 +2461,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/7b0bad5f-f03c-4171-84ae-e79ed20f5ced"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Spinning Level 2, Samstag 12:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Spinning Level 2, Samstag 12:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="amf" data-zeit="13:00" data-id="9219d90d-6d93-465a-96f5-400faccafac9" data-stile="pole heels">
   <div class="termin__zeit">13:00<small>90 min</small></div>
@@ -2469,7 +2474,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/9219d90d-6d93-465a-96f5-400faccafac9"
        target="_blank" rel="noopener" aria-label="Buchen: Pole &amp; Heels Open Level, Samstag 13:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole &amp; Heels Open Level, Samstag 13:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="amf" data-zeit="14:30" data-id="3f65a4f0-c0ae-4f3c-961d-6c028c20a3dc" data-stile="pole">
   <div class="termin__zeit">14:30<small>60 min</small></div>
@@ -2482,7 +2487,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/3f65a4f0-c0ae-4f3c-961d-6c028c20a3dc"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Open Training, Samstag 14:30 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Open Training, Samstag 14:30 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><div class="tag"><span>Sonntag <small>13.09.</small></span></div><div data-tag="So" data-datum="2026-09-13"><div class="termin" data-stufe="a" data-zeit="11:00" data-id="11addc5f-9a13-4215-b098-a8947109e1bc" data-stile="pole">
   <div class="termin__zeit">11:00<small>60 min</small></div>
@@ -2495,7 +2500,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/11addc5f-9a13-4215-b098-a8947109e1bc"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Level 1, Sonntag 11:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Level 1, Sonntag 11:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="a" data-zeit="12:00" data-id="f8c22e1e-2873-4d1e-a81b-177c0f42a95a" data-stile="pole heels">
   <div class="termin__zeit">12:00<small>60 min</small></div>
@@ -2508,7 +2513,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/f8c22e1e-2873-4d1e-a81b-177c0f42a95a"
        target="_blank" rel="noopener" aria-label="Buchen: Pole &amp; Heels Level 1, Sonntag 12:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole &amp; Heels Level 1, Sonntag 12:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><div class="tag"><span>Montag <small>14.09.</small></span></div><div data-tag="Mo" data-datum="2026-09-14"><div class="termin" data-stufe="a" data-zeit="11:00" data-id="dc2bf4c4-eaed-4ffb-ba40-47aba631640d" data-stile="pole">
   <div class="termin__zeit">11:00<small>60 min</small></div>
@@ -2521,7 +2526,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/dc2bf4c4-eaed-4ffb-ba40-47aba631640d"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Level 1 (Neubeginner), Montag 11:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Level 1 (Neubeginner), Montag 11:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="a" data-zeit="12:00" data-id="fe01926b-e61d-49fa-91c1-6c65ca03e533" data-stile="pole">
   <div class="termin__zeit">12:00<small>60 min</small></div>
@@ -2534,7 +2539,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/fe01926b-e61d-49fa-91c1-6c65ca03e533"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Choreo Level 1 (Neubeginner), Montag 12:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Choreo Level 1 (Neubeginner), Montag 12:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="m" data-zeit="16:30" data-id="9619a498-bbcb-49e5-adca-91f819941f45" data-stile="pole">
   <div class="termin__zeit">16:30<small>60 min</small></div>
@@ -2547,7 +2552,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/9619a498-bbcb-49e5-adca-91f819941f45"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 2, Montag 16:30 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 2, Montag 16:30 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="a" data-zeit="17:30" data-id="f8997599-feb9-496d-880a-0139f3ad4b7f" data-stile="pole">
   <div class="termin__zeit">17:30<small>60 min</small></div>
@@ -2560,7 +2565,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/f8997599-feb9-496d-880a-0139f3ad4b7f"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 1, Montag 17:30 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 1, Montag 17:30 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="am" data-zeit="18:30" data-id="12a45a6c-ae0e-4887-b5d9-7ff9fcb24277" data-stile="pole">
   <div class="termin__zeit">18:30<small>60 min</small></div>
@@ -2573,7 +2578,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/12a45a6c-ae0e-4887-b5d9-7ff9fcb24277"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Flow Level 2 (Beginner), Montag 18:30 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Flow Level 2 (Beginner), Montag 18:30 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="amf" data-zeit="19:30" data-id="f6b6f0f2-fca0-4d84-a3ed-df1001bd9b93" data-stile="pole">
   <div class="termin__zeit">19:30<small>60 min</small></div>
@@ -2586,7 +2591,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/f6b6f0f2-fca0-4d84-a3ed-df1001bd9b93"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 3 (Beginner/Intermediate), Montag 19:30 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 3 (Beginner/Intermediate), Montag 19:30 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><div class="tag"><span>Dienstag <small>15.09.</small></span></div><div data-tag="Di" data-datum="2026-09-15"><div class="termin" data-stufe="a" data-zeit="10:00" data-id="8b607493-e3fb-4e49-9fb0-8c62be1af724" data-stile="pole">
   <div class="termin__zeit">10:00<small>60 min</small></div>
@@ -2599,7 +2604,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/8b607493-e3fb-4e49-9fb0-8c62be1af724"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Level 1 (Neubeginner), Dienstag 10:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Level 1 (Neubeginner), Dienstag 10:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="a" data-zeit="11:00" data-id="8f5f58bc-9a17-4ae6-99d9-b39bf989a419" data-stile="pole">
   <div class="termin__zeit">11:00<small>60 min</small></div>
@@ -2612,7 +2617,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/8f5f58bc-9a17-4ae6-99d9-b39bf989a419"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance L2 Beginner, Dienstag 11:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance L2 Beginner, Dienstag 11:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="am" data-zeit="17:00" data-id="66319363-a62d-4325-8c29-688c38d9ddcd" data-stile="pole">
   <div class="termin__zeit">17:00<small>60 min</small></div>
@@ -2625,7 +2630,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/66319363-a62d-4325-8c29-688c38d9ddcd"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 2 (Beginner), Dienstag 17:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 2 (Beginner), Dienstag 17:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="amf" data-zeit="18:00" data-id="e89d5adb-42a7-4ad7-ac71-00c9ae074dcd" data-stile="pole">
   <div class="termin__zeit">18:00<small>60 min</small></div>
@@ -2638,7 +2643,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/e89d5adb-42a7-4ad7-ac71-00c9ae074dcd"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 3 (Beginner/Intermediate), Dienstag 18:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 3 (Beginner/Intermediate), Dienstag 18:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="f" data-zeit="19:00" data-id="214aaf7b-6d35-447e-9e67-f628bdfbbbbd" data-stile="pole">
   <div class="termin__zeit">19:00<small>60 min</small></div>
@@ -2651,7 +2656,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/214aaf7b-6d35-447e-9e67-f628bdfbbbbd"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 3, Dienstag 19:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 3, Dienstag 19:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="amf" data-zeit="20:00" data-id="b17e483c-7631-4d2f-befe-28a532c8cca1" data-stile="pole contemporary">
   <div class="termin__zeit">20:00<small>60 min</small></div>
@@ -2664,7 +2669,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/b17e483c-7631-4d2f-befe-28a532c8cca1"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Contemporary All Level, Dienstag 20:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Contemporary All Level, Dienstag 20:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><div class="tag"><span>Mittwoch <small>16.09.</small></span></div><div data-tag="Mi" data-datum="2026-09-16"><div class="termin" data-stufe="am" data-zeit="10:00" data-id="564cb8ed-9958-48d8-8a07-3e8f5652ded3" data-stile="pole">
   <div class="termin__zeit">10:00<small>60 min</small></div>
@@ -2677,7 +2682,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/564cb8ed-9958-48d8-8a07-3e8f5652ded3"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 2 (Beginner), Mittwoch 10:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 2 (Beginner), Mittwoch 10:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="amf" data-zeit="11:00" data-id="0755448f-6532-45aa-a399-4d9cdbd35687" data-stile="pole">
   <div class="termin__zeit">11:00<small>60 min</small></div>
@@ -2690,7 +2695,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/0755448f-6532-45aa-a399-4d9cdbd35687"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 3 (Beginner/Intermediate), Mittwoch 11:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 3 (Beginner/Intermediate), Mittwoch 11:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="a" data-zeit="12:00" data-id="89c69a5a-0c05-47a3-82e4-530205dde306" data-stile="pole">
   <div class="termin__zeit">12:00<small>60 min</small></div>
@@ -2703,7 +2708,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/89c69a5a-0c05-47a3-82e4-530205dde306"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Level 1 (Neubeginner), Mittwoch 12:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Level 1 (Neubeginner), Mittwoch 12:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="am" data-zeit="17:00" data-id="9127b9d4-c67d-4478-ba13-598b5a8deccc" data-stile="pole">
   <div class="termin__zeit">17:00<small>60 min</small></div>
@@ -2716,7 +2721,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/9127b9d4-c67d-4478-ba13-598b5a8deccc"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Spinning Level 2 (Beginner), Mittwoch 17:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Spinning Level 2 (Beginner), Mittwoch 17:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="amf" data-zeit="18:00" data-id="e79a7b83-ee10-429b-9a08-3ba234fb6f46" data-stile="pole">
   <div class="termin__zeit">18:00<small>60 min</small></div>
@@ -2729,7 +2734,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/e79a7b83-ee10-429b-9a08-3ba234fb6f46"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Spinning Level 3 (Beginner/Intermediate), Mittwoch 18:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Spinning Level 3 (Beginner/Intermediate), Mittwoch 18:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="am" data-zeit="19:00" data-id="f95f94ff-aadd-474a-8d9b-5d8de7e172e9" data-stile="pole">
   <div class="termin__zeit">19:00<small>60 min</small></div>
@@ -2742,7 +2747,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/f95f94ff-aadd-474a-8d9b-5d8de7e172e9"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 2 Beginner, Mittwoch 19:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 2 Beginner, Mittwoch 19:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="a" data-zeit="20:00" data-id="05e45c18-34c4-4a15-bc3a-b8e4cc489f45" data-stile="pole">
   <div class="termin__zeit">20:00<small>60 min</small></div>
@@ -2755,7 +2760,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/05e45c18-34c4-4a15-bc3a-b8e4cc489f45"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Level 1 (Neubeginner), Mittwoch 20:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Level 1 (Neubeginner), Mittwoch 20:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><div class="tag"><span>Donnerstag <small>17.09.</small></span></div><div data-tag="Do" data-datum="2026-09-17"><div class="termin" data-stufe="amf" data-zeit="11:00" data-id="33485887-20f8-4385-b6c1-cdd04705faf6" data-stile="pole">
   <div class="termin__zeit">11:00<small>60 min</small></div>
@@ -2768,7 +2773,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/33485887-20f8-4385-b6c1-cdd04705faf6"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Open Training, Donnerstag 11:00 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Open Training, Donnerstag 11:00 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="am" data-zeit="17:15" data-id="d46d4d21-f436-4ae2-a141-b0007f39d1a7" data-stile="pole">
   <div class="termin__zeit">17:15<small>60 min</small></div>
@@ -2781,7 +2786,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/d46d4d21-f436-4ae2-a141-b0007f39d1a7"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 2 (Beginner), Donnerstag 17:15 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 2 (Beginner), Donnerstag 17:15 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="amf" data-zeit="18:15" data-id="25a0c147-b95d-4363-a143-041e6e419bd0" data-stile="pole">
   <div class="termin__zeit">18:15<small>60 min</small></div>
@@ -2794,7 +2799,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/25a0c147-b95d-4363-a143-041e6e419bd0"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Level 3 (Beginner/Intermediate), Donnerstag 18:15 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Level 3 (Beginner/Intermediate), Donnerstag 18:15 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="f" data-zeit="19:15" data-id="6f13c5e8-19d6-4bc5-80df-0eb3915b4b2a" data-stile="pole heels">
   <div class="termin__zeit">19:15<small>60 min</small></div>
@@ -2807,7 +2812,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/6f13c5e8-19d6-4bc5-80df-0eb3915b4b2a"
        target="_blank" rel="noopener" aria-label="Buchen: Pole Dance Flying Heels Level 3, Donnerstag 19:15 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole Dance Flying Heels Level 3, Donnerstag 19:15 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div><div class="termin" data-stufe="amf" data-zeit="20:15" data-id="ff4833bc-ce21-462f-8c94-b33bb315da20" data-stile="pole heels">
   <div class="termin__zeit">20:15<small>60 min</small></div>
@@ -2820,7 +2825,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <div class="termin__cta">
     <a class="buchen" href="https://www.eversports.de/org/activity/ff4833bc-ce21-462f-8c94-b33bb315da20"
        target="_blank" rel="noopener" aria-label="Buchen: Pole &amp; Heels Open Level, Donnerstag 20:15 Uhr, &ouml;ffnet in einem neuen Tab">Buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="nurSR">, &ouml;ffnet in einem neuen Tab</span></a>
-    <button type="button" class="teilen" aria-label="Class teilen" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    <button type="button" class="teilen" aria-label="Class teilen: Pole &amp; Heels Open Level, Donnerstag 20:15 Uhr" title="Class teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   </div>
 </div></div><p class="leer" hidden>Mit dieser Auswahl l&auml;uft diese Woche keine Class mehr. Nimm ein anderes Level, einen anderen Style, oder hol dir unten die n&auml;chste Woche dazu.</p></div>
       <p class="hinweis">Buchen kannst du bis zum Start, solange Pl&auml;tze frei sind.
@@ -4081,7 +4086,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     return '<div class="termin' + (kids ? ' termin--kids' : '') + (c.frei === 0 ? ' voll-class' : '') + '" data-stufe="' + (kids ? 'k' : STUFEN_KAL[lv]) + '" data-zeit="' + escKal(c.zeit) + '" data-id="' + escKal(c.id) + '" data-stile="' + st.join(' ') + '">' +
       '<div class="termin__zeit">' + escKal(c.zeit) + '<small>' + escKal(c.dauer) + ' min</small></div>' +
       '<div class="termin__was"><p class="termin__name">' + escKal(c.titel) + '</p><div class="termin__meta"><span class="stufe">' + STUFENWORT_KAL[lv] + '</span>' + '<span class="termin__coach"' + (cn(c.coach) ? '' : ' hidden') + '>' + escKal(cn(c.coach) || '') + '</span>' + '<span class="termin__ort">' + escKal(String(c.studio || '').replace(/ - /g, ' \u00b7 ')) + '</span><span class="termin__frei">' + freiHtml(c.frei) + '</span></div></div>' +
-      '<div class="termin__cta"><a class="buchen" href="' + escKal(url) + '" target="_blank" rel="noopener" aria-label="' + knopf + ': ' + escKal(c.titel) + ', ' + TAGNAME_KAL[tag] + ' ' + escKal(c.zeit) + ' Uhr, \u00f6ffnet in einem neuen Tab">' + knopf + '<span class="nurSR">, \u00f6ffnet in einem neuen Tab</span></a><button type="button" class="teilen" aria-label="Class teilen">' + (teilenSvg || '') + '</button></div></div>';
+      '<div class="termin__cta"><a class="buchen" href="' + escKal(url) + '" target="_blank" rel="noopener" aria-label="' + knopf + ': ' + escKal(c.titel) + ', ' + TAGNAME_KAL[tag] + ' ' + escKal(c.zeit) + ' Uhr, \u00f6ffnet in einem neuen Tab">' + knopf + '<span class="nurSR">, \u00f6ffnet in einem neuen Tab</span></a><button type="button" class="teilen" aria-label="Class teilen: ' + escKal(c.titel) + ', ' + TAGNAME_KAL[tag] + ' ' + escKal(c.zeit) + ' Uhr">' + (teilenSvg || '') + '</button></div></div>';
   }
   function naechsterTerminSetzen(){
     var nt = document.querySelector('.naechster-termin'); if(!nt) return;
@@ -4096,6 +4101,15 @@ body[data-frag="1"] .frag-knopf{display:none}
     }
   }
   function teilenSymbol(){ var v = document.querySelector('.termin .teilen'); return v ? v.innerHTML : ''; }
+  /* Gutschein-Formular (Eversports): sobald es im Rahmen steht, faellt der
+     Ersatzweg darunter weg. Steht es nach zehn Sekunden nicht, bleibt er. */
+  (function(){
+    var box = document.querySelector('.gutschein'); if(!box) return;
+    var rahmen = box.querySelector('[data-eversports-widget-id]'); if(!rahmen) return;
+    function pruefen(){ if(rahmen.getBoundingClientRect().height > 200 || rahmen.shadowRoot || rahmen.children.length){ box.dataset.steht = '1'; return true; } return false; }
+    if(pruefen()) return;
+    var n = 0, t = setInterval(function(){ if(pruefen() || ++n > 20) clearInterval(t); }, 500);
+  })();
   var ruhig = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var spar  = (navigator.connection && (navigator.connection.saveData ||
               /2g/.test(navigator.connection.effectiveType || ''))) || false;
@@ -4904,6 +4918,9 @@ body[data-frag="1"] .frag-knopf{display:none}
         }
         if(morgen) leis += (leis ? ' ' : '') + 'Weiter ' + morgen.tag + ' ' + morgen.zeit + ' mit ' + morgen.titel + '.';
       }
+      /* Kommt der Plan aus der letzten guten Kopie (Eversports nicht
+         erreichbar), steht der Stand dabei, statt als live zu gelten. */
+      if(d.quelle === 'kv-letzte-kopie' && d.stand) leis += ' Stand ' + String(d.stand).slice(11, 16) + ' Uhr.';
       zeile.querySelector('b').textContent = stark;
       zeile.querySelector('span').textContent = leis;
       zeile.hidden = false;
