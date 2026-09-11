@@ -6,6 +6,18 @@
 <meta name="robots" content="index,follow">
 <title>Schulprojekte für Berliner Schulen | D!&#8217;s Dance School</title>
 <link rel="canonical" href="https://deesdanceschool.de/schulprojekte/">
+<!-- Pruefung 10.09.2026, Runde 5: die Seite hatte keine einzige Open-Graph-Angabe
+     und keine strukturierten Daten. Beim Teilen per WhatsApp kam eine leere Karte. -->
+<meta property="og:title" content="Schulprojekte für Berliner Schulen | D!’s Dance School">
+<meta property="og:description" content="Tanz-AG, D!’s Dance School Program und Wandertag: Die Schulprojekte der D!’s Dance School bringen Tanz, Energie und Selbstvertrauen an eure Schule in Berlin. Jetzt anfragen.">
+<meta property="og:image" content="https://deesdanceschool.de/schulprojekte/assets/vorschau-schulprojekte.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://deesdanceschool.de/schulprojekte/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://deesdanceschool.de/schulprojekte/#webpage", "url": "https://deesdanceschool.de/schulprojekte/", "name": "Schulprojekte für Berliner Schulen | D!’s Dance School", "description": "Tanz-AG, D!’s Dance School Program und Wandertag: Die Schulprojekte der D!’s Dance School bringen Tanz, Energie und Selbstvertrauen an eure Schule in Berlin. Jetzt anfragen.", "inLanguage": "de", "isPartOf": {"@id": "https://deesdanceschool.de/#website"}, "about": {"@id": "https://deesdanceschool.de/#danceschool"}, "primaryImageOfPage": "https://deesdanceschool.de/schulprojekte/assets/vorschau-schulprojekte.jpg", "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "D!’s Dance School", "item": "https://deesdanceschool.de/"}, {"@type": "ListItem", "position": 2, "name": "Schulprojekte", "item": "https://deesdanceschool.de/schulprojekte/"}]}}, {"@type": "Service", "@id": "https://deesdanceschool.de/schulprojekte/#tanz-ag", "name": "Tanz-AG", "serviceType": "Tanz-AG an Schulen", "provider": {"@id": "https://deesdanceschool.de/#danceschool"}, "areaServed": {"@type": "City", "name": "Berlin"}, "audience": {"@type": "EducationalAudience", "educationalRole": "Schule"}, "description": "Ein Coach der D!’s Dance School kommt jede Woche an eure Schule und unterrichtet eine Tanz-AG. Preis auf Anfrage, individuell je Schule."}, {"@type": "Service", "@id": "https://deesdanceschool.de/schulprojekte/#program", "name": "D!’s Dance School Program", "serviceType": "Choreo-Portal und Unterrichtseinheiten für Lehrkräfte", "provider": {"@id": "https://deesdanceschool.de/#danceschool"}, "areaServed": {"@type": "Country", "name": "Deutschland"}, "offers": {"@type": "Offer", "price": "99.00", "priceCurrency": "EUR", "description": "pauschal je Schule"}}, {"@type": "Service", "@id": "https://deesdanceschool.de/schulprojekte/#wandertag", "name": "Wandertag in der Dance School", "serviceType": "Tagesausflug mit Tanzworkshop", "provider": {"@id": "https://deesdanceschool.de/#danceschool"}, "areaServed": {"@type": "City", "name": "Berlin"}, "offers": {"@type": "Offer", "price": "19.00", "priceCurrency": "EUR", "description": "pro Person, unabhängig von der Gruppengröße"}}]}</script>
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -224,6 +236,12 @@ form.formkarte{background:var(--bg);border:1px solid var(--hair);border-radius:v
   font-family:inherit;font-size:16px;transition:border-color .2s;
   color-scheme:dark;
 }
+/* Pruefung 10.09.2026, Runde 5: Safari auf dem iPhone ignoriert min-height auf
+   einem select mit Systemoptik, das Feld war 27 px hoch, jedes andere 50.
+   Ohne Systemoptik gilt die Hoehe, der Pfeil kommt als Hintergrundbild. */
+.feld select{-webkit-appearance:none;appearance:none;height:50px;padding-right:44px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFA7E2' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;background-size:18px}
 .feld input:focus,.feld select:focus,.feld textarea:focus{border-color:var(--pink);outline:none}
 .feld .hinweis{font-size:13px;color:#9a9a9a}
 .feld .fehler{display:none;font-size:13.5px;color:#ffb4c8;font-weight:600}
@@ -303,7 +321,8 @@ html.js .reveal.da{opacity:1;transform:none}
   <button class="ton" id="tonBtn" aria-label="Ton einschalten" title="Ton an/aus">&#128263;</button>
   <div class="inhalt">
     <div class="wrap">
-      <a class="kicker" href="/" style="text-decoration:none;color:inherit">D!&#8217;s Dance School · Berlin Mitte</a>
+      <!-- Pruefung 10.09.2026, Runde 5: color:inherit machte den Rueckweg weiss auf Pink, Kontrast 1,77:1. Die Kicker-Regel hat schon die dunkle Farbe. -->
+      <a class="kicker" href="/" style="text-decoration:none">D!&#8217;s Dance School · Berlin Mitte</a>
       <h1>Schul<span class="p">projekte</span></h1>
       <p class="sub">Tanz, Teamgeist und Selbstvertrauen für deine Klasse. Du schickst eine Anfrage, wir übernehmen den Rest.</p>
       <div class="ctas">
@@ -323,6 +342,7 @@ html.js .reveal.da{opacity:1;transform:none}
 </div>
 
 <!-- ================= PROJEKTE ================= -->
+<main id="inhalt">
 <section class="projekte" id="projekte">
   <div class="wrap">
     <div class="sec-kopf reveal">
@@ -614,6 +634,7 @@ html.js .reveal.da{opacity:1;transform:none}
 <a class="sticky-cta" id="stickyCta" href="#anfrage">Unverbindlich anfragen</a>
 
 <!-- ================= FOOTER ================= -->
+</main>
 <footer>
   <div class="wrap">
     <div class="fuss-grid">
@@ -931,7 +952,5 @@ document.getElementById("datum").min = new Date().toISOString().slice(0,10);
   });
 })();
 </script>
-</body>
-</html>
 </body>
 </html>
