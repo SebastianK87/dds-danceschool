@@ -644,7 +644,10 @@ body[data-oben="1"] .frag-knopf{transform:translateY(calc(100% + 40px));pointer-
 .band-laeuft:hover .spur,body.coach-offen .spur{animation-play-state:paused}
 body[data-ruhe="1"] .marquee__spur,
 body[data-ruhe="1"] .spur,
-body[data-ruhe="1"] .vibes__spur{animation-play-state:paused}
+body[data-ruhe="1"] .vibes__spur,
+body[data-film-pause="1"] .marquee__spur,
+body[data-film-pause="1"] .spur,
+body[data-film-pause="1"] .vibes__spur{animation-play-state:paused}
 .marquee:hover .marquee__spur,.marquee:focus-within .marquee__spur,
 .band-laeuft:focus-within .spur,.vibes:focus-within .vibes__spur{animation-play-state:paused}
 .ruhe{display:inline-flex;align-items:center;gap:9px;margin-top:var(--s2);
@@ -1240,7 +1243,7 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
   font:600 12px/1.25 var(--grot);color:rgba(225,226,220,.9);
   background:linear-gradient(to top,rgba(0,0,0,.72),transparent)}
 @media (max-width:860px){
-  .kopf__zwei{grid-template-columns:1fr}
+  .kopf__zwei{grid-template-columns:minmax(0,1fr)}
   .kopf--reel{text-align:center}
   .kopf--reel .kopf__mitte{align-items:center;text-align:center}
   .kopf--reel .kopf__zahlen{justify-content:center}
@@ -2314,7 +2317,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <section class="block block--hell" id="termine-choreography">
     <div class="wrap">
       <div class="mitte">
-        <p class="kicker">13 Classes diese Woche</p>
+        <p class="kicker">13 Classes pro Woche</p>
         <!-- Pruefung 10.09.2026, Runde 5: der Ort stand je Kursseite nur in der H1.
              Eine H2 mit Ort ist ein sauberes Signal, und der Kursplan ist die
              Stelle, wo er hingehoert. -->
@@ -3888,7 +3891,7 @@ body[data-frag="1"] .frag-knopf{display:none}
       var steht = !video.paused;
       if(steht) video.pause(); else { var pp = video.play(); if(pp && pp.catch) pp.catch(function(){}); }
       pause.setAttribute('aria-pressed', String(steht));
-      pause.setAttribute('aria-label', steht ? 'Film abspielen' : 'Film anhalten');
+      pause.setAttribute('aria-label', steht ? 'Film und Laufschriften abspielen' : 'Film und Laufschriften anhalten');
       pause.querySelector('.laeuft').hidden = steht;
       pause.querySelector('.steht').hidden  = !steht;
       /* Der Waechter, der den Film beim Zurueckscrollen weiterlaufen laesst,
@@ -4066,7 +4069,7 @@ body[data-frag="1"] .frag-knopf{display:none}
           name = hk.textContent.replace(/\s+/g, ' ').trim();
         }
         b.textContent = name || 'Diese Woche';
-        t.textContent = m ? m[1] + ' Classes diese Woche' : 'Diese Woche';
+        t.textContent = m ? m[1] + ' Classes pro Woche' : 'Jede Woche';
         k.textContent = 'Zu den Terminen';
         k.setAttribute('href', '#termine-' + a.id.replace('kurs-',''));
         k.removeAttribute('target');
@@ -4960,7 +4963,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     var feld = document.getElementById('frag-text');
     var senden = panel.querySelector('.frag__senden');
     var url = panel.dataset.url;
-    var verlauf = [], laeuft = false;
+    var verlauf = [], laeuft = false, sperre = 0;
     var waLink = panel.querySelector('.frag__fuss a') ? panel.querySelector('.frag__fuss a').getAttribute('href') : '#';
 
     /* Pruefung 11.09.2026: geoeffnet aus der Handy-Leiste, geschlossen ueber
@@ -5061,6 +5064,7 @@ body[data-frag="1"] .frag-knopf{display:none}
       lauf.appendChild(box); lauf.scrollTop = lauf.scrollHeight;
     }
     function fragen(text){
+      if(Date.now() < sperre) return;
       text = String(text || '').trim().slice(0, 500);
       if(!text || laeuft) return;
       var start = lauf.querySelector('[data-start]'); if(start) start.remove();
@@ -5072,7 +5076,14 @@ body[data-frag="1"] .frag-knopf{display:none}
       lauf.appendChild(tipp); lauf.scrollTop = lauf.scrollHeight;
       fetch(url, {method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({nachricht: text, verlauf: verlauf.slice(-8), seite: location.hash || 'uebersicht'})})
-      .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function(r){
+        if(r.ok) return r.json();
+        /* Pruefung 11.09.2026: 429 (zu viele Anfragen) und 503 (Wissensbasis)
+           sahen aus wie ein Totalausfall mit WhatsApp-Umleitung. Der Worker
+           sagt, was los ist; das kommt jetzt durch. */
+        return r.json().catch(function(){ return {}; }).then(function(d){
+          var e = new Error('HTTP ' + r.status); e.status = r.status; e.text = d && d.fehler; e.warten = parseInt(r.headers.get('retry-after') || '0', 10); throw e; });
+      })
       .then(function(d){
         tipp.remove();
         var antwort = (d && d.antwort) ? String(d.antwort) : 'Da bin ich gerade nicht sicher. Schreib uns kurz bei WhatsApp.';
@@ -5080,7 +5091,7 @@ body[data-frag="1"] .frag-knopf{display:none}
         verlauf.push({rolle:'assistant', text: antwort});
         karten(d.karten); aktion(d.aktion); chips(d.chips);
       })
-      .catch(function(){
+      .catch(function(err){
         tipp.remove();
         if(/claude\.ai|claudeusercontent|anthropic/.test(location.hostname)){
           var m = nachricht('d', 'In dieser Vorschau bin ich stumm, weil sie keine Verbindung nach drau\u00dfen erlaubt. Live kannst du mich hier testen:');
@@ -5088,10 +5099,21 @@ body[data-frag="1"] .frag-knopf{display:none}
           var box = el('div', 'frag__aktion'); box.appendChild(a); lauf.appendChild(box); lauf.scrollTop = lauf.scrollHeight;
           return;
         }
+        if(err && err.status === 429){
+          var sek = err.warten > 0 ? err.warten : 60;
+          nachricht('d', 'Kurz durchatmen: zu viele Fragen auf einmal. In ' + sek + ' Sekunden geht es weiter.');
+          senden.disabled = true; sperre = Date.now() + sek * 1000;
+          setTimeout(function(){ sperre = 0; if(!laeuft) senden.disabled = false; }, sek * 1000);
+          return;
+        }
+        if(err && err.status === 503){
+          nachricht('d', 'Ich lade gerade meine Daten neu. Probier es in einer Minute noch einmal.');
+          return;
+        }
         nachricht('d', 'Ich bin gerade nicht erreichbar. Schreib uns bei WhatsApp, da antwortet ein Mensch.');
         aktion({typ:'whatsapp'});
       })
-      .finally(function(){ laeuft = false; senden.disabled = false; feld.focus({preventScroll:true}); });
+      .finally(function(){ laeuft = false; if(Date.now() >= sperre) senden.disabled = false; feld.focus({preventScroll:true}); });
     }
     form.addEventListener('submit', function(e){ e.preventDefault(); var t = feld.value; feld.value = ''; fragen(t); });
     panel.addEventListener('click', function(e){
