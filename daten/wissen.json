@@ -1509,7 +1509,7 @@
    "level": "All Level",
    "stufen": "amf",
    "kids": false,
-   "frei": 32,
+   "frei": 31,
    "gesamt": 35,
    "stile": [
     "fitness"
