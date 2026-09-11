@@ -92,7 +92,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .skip:focus{top:12px}
 :root{--ring:var(--pink)}
 .block--hell,.termin,.stimme,.preise,.plan,.band{--ring:var(--ink)}
-:focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:4px}
+.welcome,.plan--top,.block:not(.block--hell) .band,.top,.menu,.leiste,.frag,.buehne,.kopf{--ring:var(--pink);--ring-gegen:var(--ink)}
+.filterblock,.block--hell,.termin,.stimme,.preise,.plan:not(.plan--top),.block--hell .band{--ring:var(--ink);--ring-gegen:var(--hell2)}
+:focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:4px;
+  box-shadow:0 0 0 2px var(--ring-gegen,transparent),0 0 0 6px var(--ring)}
 [tabindex="-1"]:focus,[tabindex="-1"]:focus-visible{outline:none}
 .wrap{max-width:1220px;margin-inline:auto;padding-inline:clamp(18px,4vw,36px)}
 h1,h2,h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;
@@ -136,7 +139,7 @@ h2 em,h3 em{font-style:normal;color:var(--pink)}
 .knopf--ink{background:var(--ink);color:var(--hell)}
 .knopf--ink:hover{box-shadow:0 14px 30px -12px rgba(39,39,39,.5)}
 .top{position:fixed;inset:0 0 auto;z-index:40;
-  background:color-mix(in srgb,var(--ink) 82%,transparent);
+  background:rgba(39,39,39,.82);background:color-mix(in srgb,var(--ink) 82%,transparent);
   -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
   border-bottom:1px solid var(--linie-d);
   transition:background var(--d2) var(--e),border-color var(--d2) var(--e)}
@@ -197,7 +200,7 @@ body[data-view="kurs"] .top__nav{display:none}
   .schiene{position:fixed;left:16px;top:50%;transform:translateY(-50%);z-index:41;
     display:flex;flex-direction:column;align-items:center;gap:16px;
     width:46px;padding:14px 0 18px;border-radius:999px;
-    background:color-mix(in srgb,var(--ink) 88%,transparent);
+    background:rgba(39,39,39,.88);background:color-mix(in srgb,var(--ink) 88%,transparent);
     border:1px solid rgba(225,226,220,.4);    
     -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
     opacity:0;pointer-events:none;visibility:hidden}
@@ -233,7 +236,7 @@ body[data-view="kurs"] .top__nav{display:none}
     opacity:0;pointer-events:none;visibility:hidden;
     transition:opacity var(--d3) var(--e),visibility 0s linear var(--d3)}
   body[data-schiene="1"] .top__recht{
-    background:color-mix(in srgb,var(--ink) 76%,transparent);
+    background:rgba(39,39,39,.76);background:color-mix(in srgb,var(--ink) 76%,transparent);
     border:1px solid var(--linie-d);border-radius:999px;padding:6px 8px;
     -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
 }
@@ -291,8 +294,9 @@ body[data-film="1"] .buehne__video{opacity:1}
   background:rgba(24,24,24,.55);border:1px solid var(--linie-d);
   opacity:0;pointer-events:none;
   transition:opacity var(--d2) var(--e),border-color var(--d1b) var(--e)}
-body[data-film="1"] .buehne__ton{opacity:1;pointer-events:auto}
-body[data-oben="0"] .buehne__ton{opacity:0;pointer-events:none}
+.buehne__ton{visibility:hidden;transition:opacity var(--d2) var(--e),border-color var(--d1b) var(--e),visibility 0s linear var(--d2)}
+body[data-film="1"] .buehne__ton{opacity:1;pointer-events:auto;visibility:visible;transition-delay:0s}
+body[data-oben="0"] .buehne__ton{opacity:0;pointer-events:none;visibility:hidden;transition-delay:0s,0s,var(--d2)}
 .buehne__ton svg{width:20px;height:20px}
 .buehne__ton.buehne__pause{margin-top:30px}
 .nebenlink--ziel{display:inline-flex;align-items:center;min-height:28px;padding-block:5px}
@@ -343,8 +347,11 @@ body[data-oben="0"] .buehne__ton{opacity:0;pointer-events:none}
   color var(--d2) var(--e),max-width var(--d2) var(--e),opacity var(--d2) var(--e),
   padding var(--d2) var(--e),margin var(--d2) var(--e)}
 body[data-oben="1"]:not([data-menu="1"]):has(.ansicht:not([hidden]) .buehne) .top__pass{
-  max-width:0;padding-inline:0;margin-left:-10px;opacity:0;pointer-events:none}
-body[data-oben="1"] .frag-knopf{transform:translateY(calc(100% + 40px));pointer-events:none}
+  max-width:0;padding-inline:0;margin-left:-10px;opacity:0;pointer-events:none;visibility:hidden;
+  transition-property:transform,box-shadow,background,color,max-width,opacity,padding,margin,visibility;
+  transition-duration:var(--d2),var(--d2),var(--d2),var(--d2),var(--d2),var(--d2),var(--d2),var(--d2),0s;transition-delay:0s,0s,0s,0s,0s,0s,0s,0s,var(--d2)}
+body[data-oben="1"] .frag-knopf{transform:translateY(calc(100% + 40px));pointer-events:none;visibility:hidden;
+  transition:transform .35s var(--e),visibility 0s linear .35s}
 .buehne+.block{position:relative;z-index:2;margin-top:calc(-1 * var(--rund-blatt));
   border-radius:var(--rund-blatt) var(--rund-blatt) 0 0}
 @media (min-width:701px){
@@ -494,7 +501,7 @@ body[data-oben="1"] .frag-knopf{transform:translateY(calc(100% + 40px));pointer-
 .trainer i>.bild__echt{border-radius:9px}
 .event__bild>i,.event__bild>*:not(.bild__echt),.kachel__m>*:not(.bild__echt){position:relative;z-index:1}
 .kachel__m.bild{background-size:cover;background-position:center}
-.kachel::after{content:"";position:absolute;inset:0;
+.kachel::after{content:"";position:absolute;inset:0;z-index:1;
   background:linear-gradient(to top,rgba(24,24,24,.92) 0,rgba(24,24,24,.25) 46%,rgba(24,24,24,.12) 100%);
   pointer-events:none}
 .kachel__tag{position:absolute;top:10px;left:10px;z-index:2;font:700 12px/1 var(--grot);
@@ -716,6 +723,11 @@ a.trainer span{color:var(--pink)}
   justify-content:center}
 .kopf__mitte .kopf__tasten{margin-top:var(--s3);justify-content:center}
 .kopf__zahl b{margin-right:.4em}
+.kopf__zahl--preis a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.kopf__mitte .kopf__zahlen{flex-wrap:wrap;row-gap:10px}
+.kopf__mitte[data-auf] .kopf__zahl:nth-child(4) b{animation:stempel var(--takt) var(--e-stempel) 875ms backwards}
+.welcome--kurs{margin:var(--s3) 0}
+#welcome-kurs{scroll-margin-top:86px}
 .karte{background:var(--tief);border:1px solid var(--linie-d);border-radius:var(--rund);
   padding:26px;display:grid;gap:16px;align-content:start}
 .fakt{display:grid;gap:2px;padding-left:16px;border-left:2px solid var(--pink)}
@@ -800,7 +812,7 @@ a.trainer span{color:var(--pink)}
   font-size:12px;color:var(--auf-ink-leis)}
 .fuss__unten a{color:inherit}
 .leiste{position:fixed;inset:auto 10px 10px;z-index:31;display:none;
-  align-items:center;gap:12px;background:color-mix(in srgb,var(--nacht) 88%,transparent);
+  align-items:center;gap:12px;background:rgba(24,24,24,.88);background:color-mix(in srgb,var(--nacht) 88%,transparent);
   border:1px solid var(--linie-d);border-radius:18px;padding:10px 12px;
   -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
   transform:translateY(120%);transition:transform .45s var(--e)}
@@ -1346,6 +1358,9 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .filterblock{display:grid;gap:10px;margin-block:var(--s3);padding:18px 16px 20px;border-radius:var(--rund2);
   background:var(--hell2);border:1px solid var(--linie-h);color:var(--auf-hell)}
 .filterblock .filter,.filterblock .tagchips{margin:0}
+.filter__stand{margin:6px 0 0;font:600 15px/1.4 var(--grot);color:var(--auf-hell);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
+.filter__hin{color:var(--auf-hell);text-decoration:underline;text-underline-offset:3px;padding-block:6px}
+@media (min-width:701px){.filter__hin{display:none}}
 .filterblock .filter--stil{margin-top:0}
 .filter__label{font:700 12px/1 var(--grot);letter-spacing:.1em;text-transform:uppercase;color:var(--auf-hell-soft);
   text-align:center;margin:10px 0 0}
@@ -1355,12 +1370,13 @@ button.trainer{font:inherit;text-align:left;cursor:pointer}
 .termin__cta{display:flex;align-items:center;gap:8px}
 .teilen{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;
   background:transparent;border:0;color:var(--auf-hell-soft);cursor:pointer;flex:0 0 auto;
-  opacity:.3;transition:opacity .25s var(--e),background .25s var(--e),color .25s var(--e)}
+  opacity:.7;transition:opacity .25s var(--e),background .25s var(--e),color .25s var(--e)}
 .teilen svg{width:16px;height:16px}
+@media (hover:none){.teilen{opacity:.85}.teilen svg{width:18px;height:18px}}
 .teilen:hover,.teilen:focus-visible{opacity:1;background:var(--ink);color:var(--hell)}
 @media (hover:hover) and (pointer:fine){
   .teilen{opacity:0}
-  .termin:hover .teilen,.termin:focus-within .teilen{opacity:.5}
+  .termin:hover .teilen,.termin:focus-within .teilen{opacity:.75}
   .termin .teilen:hover,.termin .teilen:focus-visible{opacity:1}
 }
 .klappe__mehr{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
@@ -2260,6 +2276,7 @@ body[data-frag="1"] .frag-knopf{display:none}
         <div class="kopf__zahl"><b>2</b><span>Classes pro Woche</span></div>
         <div class="kopf__zahl"><b>1</b><span>Tag im Programm</span></div>
         <div class="kopf__zahl"><b>1</b><span>Coach</span></div>
+        <div class="kopf__zahl kopf__zahl--preis"><b>17&nbsp;&euro;</b><span>erste Class, <a href="#welcome-kurs">Welcome Pass 29&nbsp;&euro;</a></span></div>
       </div>
       <div class="kopf__tasten">
         <a class="knopf" href="#termine-house">Zu den Terminen</a>
@@ -2306,6 +2323,18 @@ body[data-frag="1"] .frag-knopf{display:none}
         jede direkt buchbar. Anf&auml;nger:innen starten in den Beginner-Classes.
         Kostenlos absagen in der Regel bis 6 Stunden vor Beginn.</p>
       </div>
+      <div class="welcome welcome--kurs" id="welcome-kurs">
+  <div>
+    <em>Neu hier? Starte hier.</em>
+    <h3>Welcome Pass</h3>
+    <p>Zwei Classes, zwei Styles, zehn Tage Zeit. Komm rein und schau, was passiert.</p>
+  </div>
+  <div class="welcome__preis">
+    <b>29 &euro;</b><span>2 Classes &middot; 10 Tage Zeit</span>
+    <a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      <span class="nurSR">, &ouml;ffnet Eversports in einem neuen Tab</span></a>
+  </div>
+</div>
       <div class="filter" data-filter="liste-house" role="group" aria-label="Nach Level filtern"><button type="button" data-stufe="alle" aria-pressed="true">All Level</button><button type="button" data-stufe="a" aria-pressed="false">Beginner</button><button type="button" data-stufe="m" aria-pressed="false">Intermediate</button></div>
       
       <div id="liste-house"><div class="tag"><span>Samstag <small>12.09.</small></span></div><div data-tag="Sa" data-datum="2026-09-12"><div class="termin" data-stufe="a" data-zeit="12:00" data-id="71701658-9ea7-4d09-a0de-2a4451e9719b" data-stile="house">
@@ -2339,18 +2368,6 @@ body[data-frag="1"] .frag-knopf{display:none}
         Absagen ist in der Regel bis sechs Stunden vorher kostenlos.</p>
       <p style="text-align:center;margin-top:var(--s3)">
         <a class="knopf knopf--ink" href="../../#preise" data-heim>Alle Preise ansehen</a></p>
-      <div class="welcome">
-  <div>
-    <em>Neu hier? Starte hier.</em>
-    <h3>Welcome Pass</h3>
-    <p>Zwei Classes, zwei Styles, zehn Tage Zeit. Komm rein und schau, was passiert.</p>
-  </div>
-  <div class="welcome__preis">
-    <b>29 &euro;</b><span>2 Classes &middot; 10 Tage Zeit</span>
-    <a class="knopf" href="https://www.eversports.de/o/ds-dance-school/0d983c91-9e65-4682-a221-b32171531654" target="_blank" rel="noopener">Welcome Pass holen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
-      <span class="nurSR">, &ouml;ffnet Eversports in einem neuen Tab</span></a>
-  </div>
-</div>
     </div>
   </section>
 
@@ -2890,11 +2907,22 @@ body[data-frag="1"] .frag-knopf{display:none}
     if(w.stufe && w.stufe.dataset.stufe !== 'alle') teile.push(w.stufe.textContent.trim());
     if(w.stil  && w.stil.dataset.stil   !== 'alle') teile.push(w.stil.textContent.trim());
     if(w.tag   && w.tag.dataset.chip    !== 'alle') teile.push(w.tag.textContent.trim());
-    melden((zahl === 0 ? 'Keine Class' : zahl + (zahl === 1 ? ' Class' : ' Classes'))
-      + (teile.length ? ': ' + teile.join(', ') : '') + '.');
+    var satz = (zahl === 0 ? 'Keine Class' : zahl + (zahl === 1 ? ' Class' : ' Classes'))
+      + (teile.length ? ': ' + teile.join(', ') : '') + '.';
+    melden(satz);
+    /* Sichtbare Antwort in der Filterbox (11.09.2026), nicht nur fuer den
+       Screenreader. Erst nach der ersten Handlung, beim Aufbau bleibt sie weg. */
+    var box = document.querySelector('[data-filter="' + liste.id + '"]');
+    var stand = box && box.closest('.filterblock') ? box.closest('.filterblock').querySelector('.filter__stand') : null;
+    if(stand && kalenderMelden.aktiv){ stand.querySelector('span').textContent = satz; stand.hidden = false; }
   }
   /* Der eine Einstieg. Jeder der drei Schalter setzt nur noch aria-pressed
      und ruft das hier. */
+  /* Erst eine echte Beruehrung eines Filterknopfs schaltet die sichtbare
+     Zeile frei; die Skripte klicken die Pillen auch selbst (Abgleich). */
+  document.addEventListener('click', function(e){
+    if(e.isTrusted && e.target.closest && e.target.closest('.filterblock button')) kalenderMelden.aktiv = true;
+  }, true);
   function kalenderFrisch(liste){
     if(!liste) return 0;
     var n = anwenden(liste, 0);
@@ -3069,10 +3097,26 @@ body[data-frag="1"] .frag-knopf{display:none}
      gegen das Zittern, unter 120 px bleibt sie immer stehen, und bei
      negativem y (iOS-Bounce) passiert nichts. */
   var letztesY = 0;
+  /* Pruefung 11.09.2026: ein Sprung aus dem Menue (Anker, weiches Scrollen)
+     zaehlte als Runterscrollen, die Kopfzeile tauchte ab und der Besucher
+     landete 140 px ueber dem Ziel ohne Burger. Waehrend eines Sprungs zaehlt
+     die Richtung nicht; danach steht die Kopfzeile. Die Sprungleiste macht
+     es unten genauso, hier gilt es fuer jeden Anker. */
+  var sprungBis = 0;
+  window.__sprungMerken = function(){
+    sprungBis = Date.now() + 1600;
+    document.documentElement.dataset.richtung = 'hoch';
+    if('onscrollend' in window) addEventListener('scrollend', function(){ sprungBis = 0; document.documentElement.dataset.richtung = 'hoch'; }, {once: true});
+  };
+  addEventListener('hashchange', window.__sprungMerken);
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#"]'); if(a && a.getAttribute('href').length > 1) window.__sprungMerken();
+  }, true);
   function mitziehen(){
     var y = scrollY;
     if(y >= 0){
-      if(y > letztesY + 4 && y > 120) document.documentElement.dataset.richtung = 'runter';
+      if(Date.now() < sprungBis){ letztesY = y; }
+      else if(y > letztesY + 4 && y > 120) document.documentElement.dataset.richtung = 'runter';
       else if(y < letztesY - 4) document.documentElement.dataset.richtung = 'hoch';
       letztesY = y;
     }
@@ -4173,9 +4217,12 @@ body[data-frag="1"] .frag-knopf{display:none}
              zweiten Teil der Zeile, und den blendet das Layout aus. Wer
              klickte, fand im Kalender keinen Buchen-Knopf. Der Hinweis
              gehoert deshalb in den Teil, der wirklich zu sehen ist. */
+          /* Pruefung 11.09.2026: "online buchbar ab 17:00" las sich wie ein
+             Buchungsschluss, den es nicht gibt (FAQ: buchbar bis zum Start).
+             Der Puffer ist die Anfahrt, und so heisst er jetzt. */
           stark = 'Gleich ' + laeuft.zeit + ': ' + laeuft.titel
-                + ' \u00b7 online buchbar ab ' + naechste.zeit;
-          leis = 'Heute ' + heute.length + ' Classes, ' + offen.length + ' online buchbar.' + eng;
+                + ' \u00b7 mit Anfahrt schaffst du ' + naechste.zeit + ': ' + naechste.titel;
+          leis = 'Heute ' + heute.length + ' Classes, ' + offen.length + ' davon noch mit Luft.' + eng;
         } else {
           stark = 'Als N\u00e4chstes ' + naechste.zeit + ': ' + naechste.titel;
           leis = 'Heute ' + heute.length + ' Classes, ' + offen.length + ' davon buchbar.' + eng;
@@ -4184,11 +4231,11 @@ body[data-frag="1"] .frag-knopf{display:none}
         var morgen = d.classes.filter(function(c){ return c.datum > JETZT.iso && c.frei !== 0; }).sort(function(a, b){ return a.datum.localeCompare(b.datum) || a.zeit.localeCompare(b.zeit); })[0];
         if(laeuft){
           stark = 'Gleich ' + laeuft.zeit + ': ' + laeuft.titel
-                + ' \u00b7 online ist Buchungsschluss';
-          leis = 'Heute ' + heute.length + ' Classes. Am Counter geht es weiter.';
+                + ' \u00b7 die letzte f\u00fcr heute';
+          leis = 'Heute ' + heute.length + ' Classes. Buchen geht bis zum Start.';
         } else {
           stark = heute.length ? 'Heute ' + heute.length + ' Classes' : 'Heute ist Ruhetag';
-          leis = heute.length ? 'Online ist Buchungsschluss.' : '';
+          leis = heute.length ? 'F\u00fcr heute ist alles gelaufen.' : '';
         }
         if(morgen) leis += (leis ? ' ' : '') + 'Weiter ' + morgen.tag + ' ' + morgen.zeit + ' mit ' + morgen.titel + '.';
       }
@@ -4527,20 +4574,43 @@ body[data-frag="1"] .frag-knopf{display:none}
     var verlauf = [], laeuft = false;
     var waLink = panel.querySelector('.frag__fuss a') ? panel.querySelector('.frag__fuss a').getAttribute('href') : '#';
 
-    function auf(){
+    /* Pruefung 11.09.2026: geoeffnet aus der Handy-Leiste, geschlossen ueber
+       X, landete der Fokus im Nichts (zu() fokussierte immer den schwebenden
+       Knopf, der bei sichtbarer Leiste display:none ist). Jetzt merkt sich
+       auf() den Ausloeser. Auf dem Handy deckt das Fenster 81 Prozent des
+       Schirms: dann ist es modal wie das Menue (Rest inert, kein Scrollen). */
+    var ausloeser = null;
+    var leisteD = document.querySelector('.leiste__d');
+    if(leisteD){ leisteD.setAttribute('aria-expanded', 'false'); leisteD.setAttribute('aria-controls', 'frag'); }
+    var sperrbar = document.querySelectorAll('#inhalt, .top, .fuss, .leiste, .frag-knopf, .schiene, .skip');
+    function schmal(){ return matchMedia('(max-width:700px)').matches; }
+    function modal(an){
+      if(!schmal() && an) return;
+      for(var i = 0; i < sperrbar.length; i++){ if(!panel.contains(sperrbar[i])) sperrbar[i].inert = an; }
+      if(an){ panel.setAttribute('aria-modal', 'true'); document.documentElement.style.overflow = 'hidden'; }
+      else { panel.removeAttribute('aria-modal'); document.documentElement.style.overflow = ''; }
+    }
+    function auf(e){
+      ausloeser = (e && e.currentTarget) || document.activeElement;
       panel.hidden = false; document.body.dataset.frag = '1';
       knopf.setAttribute('aria-expanded', 'true');
+      if(leisteD) leisteD.setAttribute('aria-expanded', 'true');
+      modal(true);
       setTimeout(function(){ feld.focus({preventScroll:true}); }, 60);
     }
     function zu(){
       knopf.setAttribute('aria-expanded', 'false');
+      if(leisteD) leisteD.setAttribute('aria-expanded', 'false');
       var fertig = function(){ panel.classList.remove('zu'); panel.hidden = true;
-        document.body.dataset.frag = '0'; knopf.focus({preventScroll:true}); };
+        document.body.dataset.frag = '0'; modal(false);
+        var ziel = ausloeser && ausloeser.isConnected && ausloeser.offsetParent !== null ? ausloeser
+                 : (knopf.offsetParent !== null ? knopf : (leisteD && leisteD.offsetParent !== null ? leisteD : null));
+        if(ziel) ziel.focus({preventScroll:true}); };
       if(matchMedia('(prefers-reduced-motion: reduce)').matches || panel.hidden){ fertig(); return; }
       panel.classList.add('zu'); setTimeout(fertig, 170);
     }
     knopf.addEventListener('click', auf);
-    var leisteD = document.querySelector('.leiste__d'); if(leisteD) leisteD.addEventListener('click', auf);
+    if(leisteD) leisteD.addEventListener('click', auf);
     panel.querySelector('.frag__zu').addEventListener('click', zu);
     addEventListener('keydown', function(e){ if(e.key === 'Escape' && !panel.hidden) zu(); });
 

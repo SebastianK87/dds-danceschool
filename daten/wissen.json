@@ -165,6 +165,10 @@
    "antwort": "Ja, in zwei Formen. Das Einzelticket für 17 € ist die klassische Probestunde: eine Class deiner Wahl, ohne Vertrag. Der Welcome Pass für 29 € ist die Schnupperwoche: zwei Classes in zehn Tagen, zwei Styles, und wenn du bleibst, werden die 29 € auf den ersten Membership-Monat angerechnet. Beides buchst du online über Eversports, ohne Anmeldung an der Schule."
   },
   {
+   "frage": "Wie lange laufen die Memberships, und wie kündige ich?",
+   "antwort": "Basic und Unlimited gibt es in zwei Laufzeiten: 12 Monate zum günstigeren Monatspreis, oder Flex, monatlich kündbar. Abschließen geht online über Eversports; kündigen kannst du schriftlich bei uns, per WhatsApp oder E-Mail an info@deesworld.de, wir bestätigen dir das. Wer erst schauen will, nimmt das Einzelticket oder den Welcome Pass, beides ohne Laufzeit."
+  },
+  {
    "frage": "Blamiere ich mich als Anfänger:in?",
    "antwort": "Nein. In den Beginner-Classes ist die Hälfte zum ersten Mal da, und niemand schaut, wie es bei dir aussieht. Wenn du es trotzdem erst mal ausprobieren willst: der Welcome Pass kostet 29 €, gilt für zwei Classes in zehn Tagen und ist kein Vertrag."
   },
@@ -1524,7 +1528,7 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 53,
+   "frei": 52,
    "gesamt": 70,
    "stile": [
     "heels"
@@ -1829,7 +1833,7 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 5,
+   "frei": 4,
    "gesamt": 15,
    "stile": [
     "aerial"
@@ -2286,7 +2290,7 @@
    "level": "Beginner / Intermediate",
    "stufen": "am",
    "kids": false,
-   "frei": 38,
+   "frei": 37,
    "gesamt": 50,
    "stile": [
     "commercial"
