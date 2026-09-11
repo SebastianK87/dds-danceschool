@@ -13,7 +13,7 @@
   "counter": "Classes: Mo bis Do 10 bis 21:30 Uhr, Fr 10 bis 21 Uhr, Sa 11 bis 16:30 Uhr, So 11 bis 13 Uhr<br>Counter besetzt: Mo bis Fr 16:30 bis 21:30 Uhr, Sa 10 bis 15 Uhr",
   "google": "4,7 Sterne bei 98 Bewertungen",
   "classes_pro_woche": 137,
-  "coaches": 50,
+  "coaches": 55,
   "styles": 12,
   "saele": 6,
   "seite": "https://deesdanceschool.de/",
@@ -1623,7 +1623,7 @@
    "level": "Beginner",
    "stufen": "a",
    "kids": false,
-   "frei": 46,
+   "frei": 47,
    "gesamt": 50,
    "stile": [
     "house"

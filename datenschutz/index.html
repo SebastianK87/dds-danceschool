@@ -691,6 +691,7 @@ a.trainer span{color:var(--pink)}
   color:var(--auf-ink-soft);text-align:center}
 .einordnung b{color:var(--hell);font-weight:600}
 .einordnung--links{text-align:left;margin-inline:0}
+.einordnung--vorspann{margin-bottom:var(--s3)}
 @media (max-width:700px){.einordnung{font-size:16px;text-align:left;margin-bottom:var(--s3)}}
 .fragen-mehr{margin-top:var(--s2);text-align:center;font-size:15px}
 .fragen-mehr a{text-decoration:underline;text-underline-offset:4px}
@@ -2320,7 +2321,8 @@ body[data-frag="1"] .frag-knopf{display:none}
       Kaufformular von <b>Eversports</b> eingebettet (Eversports GmbH, Wien).
       Sobald du diese eine Seite &ouml;ffnest, l&auml;dt dein Browser das
       Formular direkt von den Servern von Eversports
-      (widget-static.eversports.io, files.eversports.com) und fragt dort die
+      (widget-static.eversports.io, files.eversports.com,
+      graphql-widget-master.production.eversports.cloud) und fragt dort die
       Betr&auml;ge und Motive ab. Dabei wird <b>deine IP-Adresse an Eversports
       &uuml;bertragen</b>, ohne dass du etwas anklickst. Nach unserer Messung
       setzt das Formular keine Cookies. Der Kauf selbst l&auml;uft dann bei
@@ -2375,8 +2377,8 @@ body[data-frag="1"] .frag-knopf{display:none}
         Gespr&auml;chsverlauf liegt nur in deinem Browserfenster und ist weg,
         sobald du die Seite schlie&szlig;t.</li>
         <li>Um Missbrauch zu verhindern, wird deine IP-Adresse kurzzeitig
-        ausgewertet (h&ouml;chstens 20 Anfragen pro Minute). Sie wird daf&uuml;r
-        nicht gespeichert.</li>
+        ausgewertet (h&ouml;chstens acht Fragen pro Minute je Anschluss). Sie
+        wird daf&uuml;r nicht gespeichert.</li>
         <li><b>Bitte gib in dem Feld keine sensiblen Angaben ein</b>, also keine
         Gesundheitsdaten, keine Zahlungsdaten, keine Ausweisnummern. F&uuml;r
         pers&ouml;nliche Anliegen nutze bitte WhatsApp, Telefon oder E-Mail.</li>
@@ -2390,7 +2392,8 @@ body[data-frag="1"] .frag-knopf{display:none}
       wie beim Hosting.</p>
 
       <h3>Speicherung in deinem Browser</h3>
-      <p>Die Seite legt zwei technische Eintr&auml;ge in deinem Browser ab:</p>
+      <p>Die Seite legt bis zu f&uuml;nf technische Eintr&auml;ge in deinem
+      Browser ab, alle ohne Namen, Adresse oder Kennung:</p>
       <ul class="recht__liste">
         <li><code>dds-ruhe</code> &middot; merkt sich, ob du Animationen
         reduziert sehen willst. Bleibt, bis du den Browserspeicher
@@ -2398,9 +2401,17 @@ body[data-frag="1"] .frag-knopf{display:none}
         <li><code>dds-auftakt</code> &middot; merkt sich, dass du die
         Startanimation schon gesehen hast. Weg, sobald du den Tab
         schlie&szlig;t.</li>
+        <li><code>dds-plan</code> &middot; die Classes, die du im Welcome-Planer
+        angeklickt hast, damit sie beim Bl&auml;ttern nicht verloren gehen. Weg,
+        sobald du den Tab schlie&szlig;t.</li>
+        <li><code>dds-retter</code> und <code>dds-retter-gezeigt</code> &middot;
+        merken sich f&uuml;r h&ouml;chstens 45 Minuten, welchen Buchen-Knopf du
+        zuletzt gedr&uuml;ckt hast (Class, Tag, Uhrzeit, Buchungslink), damit
+        die Seite dir nach der R&uuml;ckkehr von Eversports den Weg zur&uuml;ck
+        zeigen kann. Weg, sobald du den Tab schlie&szlig;t.</li>
       </ul>
-      <p>Beide enthalten keine personenbezogenen Daten und dienen allein der
-      Darstellung. Sie sind technisch erforderlich nach &sect;&nbsp;25
+      <p>Keiner dieser Eintr&auml;ge enth&auml;lt personenbezogene Daten, sie
+      dienen allein der Darstellung und Bedienung. Sie sind technisch erforderlich nach &sect;&nbsp;25
       Abs.&nbsp;2 Nr.&nbsp;2 TDDDG, eine Einwilligung ist daf&uuml;r nicht
       n&ouml;tig. <b>Cookies setzt diese Seite nicht.</b></p>
 

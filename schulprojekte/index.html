@@ -321,8 +321,11 @@ html.js .reveal.da{opacity:1;transform:none}
 
 <!-- ================= HERO ================= -->
 <header class="hero">
-  <video autoplay muted loop playsinline poster="assets/poster-web.jpg" aria-hidden="true">
-    <source src="assets/trailer-hero-muted.mp4" type="video/mp4">
+  <!-- 11.09.2026: vorher 1024x576 auf 1440x828 gestreckt, 7,3 MB fuer 69 s.
+       Jetzt 12 s Schleife aus dem 1080p-Rohmaterial, AV1 2,3 MB, H.264 2,7 MB. -->
+  <video autoplay muted loop playsinline poster="assets/poster-schule.webp" aria-hidden="true">
+    <source src="assets/hero-schule.av1.mp4" type='video/mp4; codecs="av01.0.05M.08"'>
+    <source src="assets/hero-schule.h264.mp4" type="video/mp4">
   </video>
   <button class="ton" id="tonBtn" aria-label="Ton einschalten" title="Ton an/aus">&#128263;</button>
   <div class="inhalt">
