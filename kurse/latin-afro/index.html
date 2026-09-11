@@ -4198,7 +4198,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   /* -------- Live-Preise: Aktion automatisch an/aus (aus dem Eversports-Shop, einmal am Tag gelesen) -------- */
   (function(){
     var panel = document.getElementById('frag'); if(!panel || !panel.dataset.url) return;
-    var url = panel.dataset.url.replace('/frag', '/preise');
+    var url = panel.dataset.url.replace(/\/frag$/, '/preise');
     function zahl(x){ return (x === null || x === undefined) ? null : (Number.isInteger(x) ? String(x) : String(x).replace('.', ',')); }
     fetch(url).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
       if(!d || !d.memberships) return;
@@ -4354,7 +4354,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   (function(){
     var panel = document.getElementById('frag'); if(!panel || !panel.dataset.url) return;
     if(!document.querySelector('.termin[data-id]')) return;
-    var u = panel.dataset.url.replace('/frag', '/plan');
+    var u = panel.dataset.url.replace(/\/frag$/, '/plan');
     window.__planVerbraucher.push(kalenderAbgleichen);
     window.__planHolen(u).then(kalenderAbgleichen).catch(function(){});
     /* Neuabruf: Tab wird nach mehr als zehn Minuten wieder sichtbar, oder der
@@ -4437,7 +4437,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   function zaehl(ereignis, wert){
     try {
       var panel = document.getElementById('frag'); if(!panel || !panel.dataset.url) return;
-      var url = panel.dataset.url.replace('/frag', '/zaehl');
+      var url = panel.dataset.url.replace(/\/frag$/, '/zaehl');
       var body = JSON.stringify({ereignis: ereignis, wert: wert || ''});
       if(navigator.sendBeacon) navigator.sendBeacon(url, new Blob([body], {type: 'text/plain'}));
       else fetch(url, {method: 'POST', body: body, keepalive: true}).catch(function(){});
@@ -4552,12 +4552,12 @@ body[data-frag="1"] .frag-knopf{display:none}
       zeile.hidden = false;
     }
     window.__planVerbraucher.push(liveZeile);
-    window.__planHolen(panel.dataset.url.replace('/frag', '/plan')).then(liveZeile).catch(function(){});
+    window.__planHolen(panel.dataset.url.replace(/\/frag$/, '/plan')).then(liveZeile).catch(function(){});
   })();
 
   /* -------- Welcome-Pass-Planer, Deeplink ?class=, Retter-Leiste -------- */
   (function(){
-    var panel = document.getElementById('frag'); var url = panel && panel.dataset.url ? panel.dataset.url.replace('/frag', '/plan') : '';
+    var panel = document.getElementById('frag'); var url = panel && panel.dataset.url ? panel.dataset.url.replace(/\/frag$/, '/plan') : '';
     /* Der Planer ist am 04.09. aus der Seite geflogen (Commit d1322f4).
        Der Kalender-Nachlader, der ?class=-Deeplink und die Retter-Leiste
        stehen aber im selben Block und starben an seinem Wachposten mit.
