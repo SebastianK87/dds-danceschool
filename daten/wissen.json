@@ -166,7 +166,7 @@
   },
   {
    "frage": "Wie lange laufen die Memberships, und wie kündige ich?",
-   "antwort": "Basic und Unlimited gibt es in zwei Laufzeiten: 12 Monate zum günstigeren Monatspreis, oder Flex, monatlich kündbar. Abschließen geht online über Eversports; kündigen kannst du schriftlich bei uns, per WhatsApp oder E-Mail an info@deesworld.de, wir bestätigen dir das. Wer erst schauen will, nimmt das Einzelticket oder den Welcome Pass, beides ohne Laufzeit."
+   "antwort": "Basic und Unlimited gibt es in zwei Laufzeiten: 12 Monate zum günstigeren Monatspreis, oder Flex, monatlich kündbar. Die 12-Monats-Membership kündigst du mit 30 Tagen Frist zum Laufzeitende, sonst läuft sie weiter. Abschließen geht online über Eversports; kündigen kannst du schriftlich bei uns, per WhatsApp oder E-Mail an info@deesworld.de, wir bestätigen dir das. Wer erst schauen will, nimmt das Einzelticket oder den Welcome Pass, beides ohne Laufzeit."
   },
   {
    "frage": "Blamiere ich mich als Anfänger:in?",
@@ -1452,7 +1452,7 @@
    "level": "Intermediate",
    "stufen": "m",
    "kids": false,
-   "frei": 51,
+   "frei": 50,
    "gesamt": 70,
    "stile": [
     "choreography"

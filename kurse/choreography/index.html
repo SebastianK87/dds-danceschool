@@ -321,7 +321,8 @@ body[data-oben="0"] .buehne__ton{opacity:0;pointer-events:none;visibility:hidden
   color:inherit;text-decoration:none;transition:color var(--d1b) var(--e)}
 .buehne__live:hover{color:var(--pink);text-decoration:underline;text-underline-offset:3px}
 .buehne__live b{color:var(--pink)}
-.buehne__live span{display:none}
+.buehne__live span{margin-left:.7em;opacity:.85}
+@media (max-width:700px){.buehne__live span{display:none}}
 .buehne__zeile{display:block;white-space:nowrap;line-height:.92;max-width:100%}
 .buehne__zeile>span,.buehne__zeile .buehne__schnitt{display:block}
 .buehne__zeile--1{font-size:min(15.6cqw,21svh);align-self:flex-start}
@@ -859,7 +860,7 @@ a.trainer span{color:var(--pink)}
     linear-gradient(to top,rgba(24,24,24,.96),rgba(24,24,24,.72) 55%,rgba(24,24,24,.52))}
 }
 .raster{grid-auto-flow:dense}
-.kachel::after{background:linear-gradient(to top,rgba(24,24,24,.9),transparent 52%)}
+.kachel::after{background:linear-gradient(to top,rgba(24,24,24,.95),rgba(24,24,24,.55) 40%,transparent 64%)}
 .buchen{background:transparent;color:var(--ink);
   box-shadow:inset 0 0 0 1.5px rgba(39,39,39,.4)}
 .buchen:hover{background:var(--pink);color:var(--ink);box-shadow:none}
@@ -1472,7 +1473,7 @@ body[data-frag="1"] .frag-knopf{display:none}
 .frag__m--du{align-self:flex-end;background:var(--pink);color:var(--ink);border-bottom-right-radius:6px}
 .frag__m p+p{margin-top:8px}
 .frag__chips{display:flex;flex-wrap:wrap;gap:8px}
-.frag__chip{font:700 14px/1 var(--grot);padding:10px 14px;border-radius:999px;background:transparent;
+.frag__chip{font:700 14px/1 var(--grot);padding:10px 14px;border-radius:999px;background:transparent;text-decoration:none;display:inline-block;
   border:1px solid rgba(225,226,220,.35);color:var(--hell);cursor:pointer;
   transition:background .25s,border-color .25s,color .25s}
 .frag__chip:hover{background:var(--pink);color:var(--ink);border-color:var(--pink)}
@@ -2529,7 +2530,7 @@ body[data-frag="1"] .frag-knopf{display:none}
         <p class="kicker">Das Team</p>
         <h2>Deine Coaches</h2>
       </div>
-      <div class="band-laeuft"><div class="spur"><button type="button" class="trainer" data-coach="c-11"><i class="cf-c-11" aria-hidden="true"><img class="bild__echt" src="../../medien/bda479d82c6.webp" alt="" loading="lazy" decoding="async"></i><b>Emma Schorb</b><span>Choreography Coach</span></button><button type="button" class="trainer" data-coach="c-27"><i class="cf-c-27" aria-hidden="true"></i><b>Laura Klein</b><span>Commercial Coach</span></button><button type="button" class="trainer" data-coach="c-8"><i class="cf-c-8" aria-hidden="true"><img class="bild__echt" src="../../medien/b5fe61fe59a.webp" alt="" loading="lazy" decoding="async"></i><b>Dominik</b><span>Commercial &amp; Hip Hop Coach</span></button><button type="button" class="trainer" data-coach="c-0"><i class="cf-c-0" aria-hidden="true"><img class="bild__echt" src="../../medien/b14314695f9.webp" alt="" loading="lazy" decoding="async"></i><b>Ada</b><span>Choreography Coach</span></button><button type="button" class="trainer" data-coach="c-38"><i class="cf-c-38" aria-hidden="true"><img class="bild__echt" src="../../medien/bc9c09ea68e.webp" alt="" loading="lazy" decoding="async"></i><b>Moritz</b><span>Coach</span></button><button type="button" class="trainer" data-coach="c-21"><i class="cf-c-21" aria-hidden="true"><img class="bild__echt" src="../../medien/b5ad240de03.webp" alt="" loading="lazy" decoding="async"></i><b>Julia</b><span>Commercial Coach</span></button><button type="button" class="trainer" data-coach="c-4"><i class="cf-c-4" aria-hidden="true"><img class="bild__echt" src="../../medien/bb9bb146f96.webp" alt="" loading="lazy" decoding="async"></i><b>Chani</b><span>Hip Hop &amp; Commercial Coach</span></button><button type="button" class="trainer" data-coach="c-41"><i class="cf-c-41" aria-hidden="true"><img class="bild__echt" src="../../medien/b60aea7c6c5.webp" alt="" loading="lazy" decoding="async"></i><b>Parmida</b><span>Choreography Coach</span></button><button type="button" class="trainer" data-coach="c-9"><i class="cf-c-9" aria-hidden="true"><img class="bild__echt" src="../../medien/b92ccc81f17.webp" alt="" loading="lazy" decoding="async"></i><b>Elisa</b><span>Hip Hop Coach &amp; Choreographer</span></button><button type="button" class="trainer trainer--mehr" data-coach="c-alle"><i aria-hidden="true">+1</i><b>Weitere Coaches</b><span>Alle ansehen</span></button><span class="spur__kopie" aria-hidden="true" inert><button type="button" class="trainer" data-coach="c-11"><i class="cf-c-11" aria-hidden="true"><img class="bild__echt" src="../../medien/bda479d82c6.webp" alt="" loading="lazy" decoding="async"></i><b>Emma Schorb</b><span>Choreography Coach</span></button><button type="button" class="trainer" data-coach="c-27"><i class="cf-c-27" aria-hidden="true"></i><b>Laura Klein</b><span>Commercial Coach</span></button><button type="button" class="trainer" data-coach="c-8"><i class="cf-c-8" aria-hidden="true"><img class="bild__echt" src="../../medien/b5fe61fe59a.webp" alt="" loading="lazy" decoding="async"></i><b>Dominik</b><span>Commercial &amp; Hip Hop Coach</span></button><button type="button" class="trainer" data-coach="c-0"><i class="cf-c-0" aria-hidden="true"><img class="bild__echt" src="../../medien/b14314695f9.webp" alt="" loading="lazy" decoding="async"></i><b>Ada</b><span>Choreography Coach</span></button><button type="button" class="trainer" data-coach="c-38"><i class="cf-c-38" aria-hidden="true"><img class="bild__echt" src="../../medien/bc9c09ea68e.webp" alt="" loading="lazy" decoding="async"></i><b>Moritz</b><span>Coach</span></button><button type="button" class="trainer" data-coach="c-21"><i class="cf-c-21" aria-hidden="true"><img class="bild__echt" src="../../medien/b5ad240de03.webp" alt="" loading="lazy" decoding="async"></i><b>Julia</b><span>Commercial Coach</span></button><button type="button" class="trainer" data-coach="c-4"><i class="cf-c-4" aria-hidden="true"><img class="bild__echt" src="../../medien/bb9bb146f96.webp" alt="" loading="lazy" decoding="async"></i><b>Chani</b><span>Hip Hop &amp; Commercial Coach</span></button><button type="button" class="trainer" data-coach="c-41"><i class="cf-c-41" aria-hidden="true"><img class="bild__echt" src="../../medien/b60aea7c6c5.webp" alt="" loading="lazy" decoding="async"></i><b>Parmida</b><span>Choreography Coach</span></button><button type="button" class="trainer" data-coach="c-9"><i class="cf-c-9" aria-hidden="true"><img class="bild__echt" src="../../medien/b92ccc81f17.webp" alt="" loading="lazy" decoding="async"></i><b>Elisa</b><span>Hip Hop Coach &amp; Choreographer</span></button><button type="button" class="trainer trainer--mehr" data-coach="c-alle"><i aria-hidden="true">+1</i><b>Weitere Coaches</b><span>Alle ansehen</span></button></span></div></div>
+      <div class="band-laeuft"><div class="spur"><button type="button" class="trainer" data-coach="c-11"><i class="cf-c-11" aria-hidden="true"><img class="bild__echt" src="../../medien/bda479d82c6.webp" alt="" loading="lazy" decoding="async"></i><b>Emma Schorb</b><span>Choreography Coach</span></button><button type="button" class="trainer" data-coach="c-27"><i class="cf-c-27" aria-hidden="true"></i><b>Laura Klein</b><span>Commercial Coach</span></button><button type="button" class="trainer" data-coach="c-8"><i class="cf-c-8" aria-hidden="true"><img class="bild__echt" src="../../medien/b5fe61fe59a.webp" alt="" loading="lazy" decoding="async"></i><b>Dominik</b><span>Commercial &amp; Hip Hop Coach</span></button><button type="button" class="trainer" data-coach="c-0"><i class="cf-c-0" aria-hidden="true"><img class="bild__echt" src="../../medien/b14314695f9.webp" alt="" loading="lazy" decoding="async"></i><b>Ada</b><span>Choreography Coach</span></button><button type="button" class="trainer" data-coach="c-38"><i class="cf-c-38" aria-hidden="true"><img class="bild__echt" src="../../medien/bc9c09ea68e.webp" alt="" loading="lazy" decoding="async"></i><b>Moritz</b><span>Coach</span></button><button type="button" class="trainer" data-coach="c-21"><i class="cf-c-21" aria-hidden="true"><img class="bild__echt" src="../../medien/b5ad240de03.webp" alt="" loading="lazy" decoding="async"></i><b>Julia</b><span>Commercial Coach</span></button><button type="button" class="trainer" data-coach="c-4"><i class="cf-c-4" aria-hidden="true"><img class="bild__echt" src="../../medien/bb9bb146f96.webp" alt="" loading="lazy" decoding="async"></i><b>Chani</b><span>Hip Hop &amp; Commercial Coach</span></button><button type="button" class="trainer" data-coach="c-41"><i class="cf-c-41" aria-hidden="true"><img class="bild__echt" src="../../medien/b60aea7c6c5.webp" alt="" loading="lazy" decoding="async"></i><b>Parmida</b><span>Choreography Coach</span></button><button type="button" class="trainer" data-coach="c-9"><i class="cf-c-9" aria-hidden="true"><img class="bild__echt" src="../../medien/b92ccc81f17.webp" alt="" loading="lazy" decoding="async"></i><b>Elisa</b><span>Hip Hop Coach &amp; Choreographer</span></button><button type="button" class="trainer trainer--mehr" data-coach="c-alle"><i aria-hidden="true">+16</i><b>Weitere Coaches</b><span>Alle ansehen</span></button><span class="spur__kopie" aria-hidden="true" inert><button type="button" class="trainer" data-coach="c-11"><i class="cf-c-11" aria-hidden="true"><img class="bild__echt" src="../../medien/bda479d82c6.webp" alt="" loading="lazy" decoding="async"></i><b>Emma Schorb</b><span>Choreography Coach</span></button><button type="button" class="trainer" data-coach="c-27"><i class="cf-c-27" aria-hidden="true"></i><b>Laura Klein</b><span>Commercial Coach</span></button><button type="button" class="trainer" data-coach="c-8"><i class="cf-c-8" aria-hidden="true"><img class="bild__echt" src="../../medien/b5fe61fe59a.webp" alt="" loading="lazy" decoding="async"></i><b>Dominik</b><span>Commercial &amp; Hip Hop Coach</span></button><button type="button" class="trainer" data-coach="c-0"><i class="cf-c-0" aria-hidden="true"><img class="bild__echt" src="../../medien/b14314695f9.webp" alt="" loading="lazy" decoding="async"></i><b>Ada</b><span>Choreography Coach</span></button><button type="button" class="trainer" data-coach="c-38"><i class="cf-c-38" aria-hidden="true"><img class="bild__echt" src="../../medien/bc9c09ea68e.webp" alt="" loading="lazy" decoding="async"></i><b>Moritz</b><span>Coach</span></button><button type="button" class="trainer" data-coach="c-21"><i class="cf-c-21" aria-hidden="true"><img class="bild__echt" src="../../medien/b5ad240de03.webp" alt="" loading="lazy" decoding="async"></i><b>Julia</b><span>Commercial Coach</span></button><button type="button" class="trainer" data-coach="c-4"><i class="cf-c-4" aria-hidden="true"><img class="bild__echt" src="../../medien/bb9bb146f96.webp" alt="" loading="lazy" decoding="async"></i><b>Chani</b><span>Hip Hop &amp; Commercial Coach</span></button><button type="button" class="trainer" data-coach="c-41"><i class="cf-c-41" aria-hidden="true"><img class="bild__echt" src="../../medien/b60aea7c6c5.webp" alt="" loading="lazy" decoding="async"></i><b>Parmida</b><span>Choreography Coach</span></button><button type="button" class="trainer" data-coach="c-9"><i class="cf-c-9" aria-hidden="true"><img class="bild__echt" src="../../medien/b92ccc81f17.webp" alt="" loading="lazy" decoding="async"></i><b>Elisa</b><span>Hip Hop Coach &amp; Choreographer</span></button><button type="button" class="trainer trainer--mehr" data-coach="c-alle"><i aria-hidden="true">+16</i><b>Weitere Coaches</b><span>Alle ansehen</span></button></span></div></div>
 
       <div class="zwei" style="margin-top:var(--s4)">
         <div>
@@ -2668,7 +2669,7 @@ body[data-frag="1"] .frag-knopf{display:none}
   <span class="frag-knopf__d" aria-hidden="true"><svg class="dlogo" aria-hidden="true"><use href="#dlogo"/></svg></span>
   <span class="frag-knopf__t">Frag D!</span>
 </button>
-<section class="frag" id="frag" role="dialog" aria-label="Frag D!, dein digitaler Welcomer" hidden data-url="https://dds-frag.s-kellerberlin.workers.dev/frag">
+<section class="frag" id="frag" role="dialog" aria-label="Frag D!, dein digitaler Welcomer" hidden data-url="https://frag.deesdanceschool.de/frag">
   <header class="frag__kopf">
     <span class="frag__ava" aria-hidden="true"><svg class="dlogo" aria-hidden="true"><use href="#dlogo"/></svg></span>
     <div class="frag__titel"><b>Frag D!</b><span>Dein Welcomer. Findet deine Class, antwortet in Sekunden.</span></div>
@@ -3475,7 +3476,19 @@ body[data-frag="1"] .frag-knopf{display:none}
     if(hier === hierStand) return;
     hierStand = hier;
     for(var j = 0; j < punkte.length; j++){
-      if(punkte[j].dataset.abschnitt === hier) punkte[j].setAttribute('aria-current', 'true');
+      if(punkte[j].dataset.abschnitt === hier){
+        punkte[j].setAttribute('aria-current', 'true');
+        /* 11.09.2026: die Sprungleiste ist breiter als der Schirm; der aktive
+           Chip ("Fragen") lag rechts ausserhalb. Er wird nachgezogen. */
+        var bar = punkte[j].closest('.sprung');
+        if(bar && bar.scrollWidth > bar.clientWidth + 4){
+          var r = punkte[j].getBoundingClientRect(), b = bar.getBoundingClientRect();
+          if(r.left < b.left + 12 || r.right > b.right - 12){
+            try { bar.scrollTo({left: bar.scrollLeft + (r.left - b.left) - 18, behavior: 'smooth'}); }
+            catch(e){ bar.scrollLeft = bar.scrollLeft + (r.left - b.left) - 18; }
+          }
+        }
+      }
       else punkte[j].removeAttribute('aria-current');
     }
   }
@@ -3784,7 +3797,7 @@ body[data-frag="1"] .frag-knopf{display:none}
     if(/pole|first tricks/.test(n)) s.push('pole');
     if(/heels/.test(n)) s.push('heels');
     if(/hip hop/.test(n)) s.push('hip-hop');
-    if(/commercial|\u00fc25|u25|25\+/.test(n)) s.push('commercial');
+    if(/commercial/.test(n) && !/\u00fc25|u25|25\+/.test(n)) s.push('commercial');
     if(/choreo/.test(n)) s.push('choreo');
     if(/contemporary|jazz|ballett/.test(n)) s.push('contemporary');
     if(/athletic|stretch|fit|flavour|power|cardio|core|legs|yoga|female fitness/.test(n)) s.push('fitness');
@@ -5075,6 +5088,13 @@ body[data-frag="1"] .frag-knopf{display:none}
       }
       if(box.children.length){ lauf.appendChild(box); lauf.scrollTop = lauf.scrollHeight; }
     }
+    function ankerChips(){
+      var box = el('div', 'frag__chips');
+      [['Preise', '#preise'], ['Kursplan', '#kalender'], ['Fragen', '#faq']].forEach(function(p){
+        var a = el('a', 'frag__chip', p[0]); a.href = p[1]; a.setAttribute('data-heim', ''); a.addEventListener('click', zu); box.appendChild(a);
+      });
+      lauf.appendChild(box); lauf.scrollTop = lauf.scrollHeight;
+    }
     function chips(liste){
       if(!liste || !liste.length) return;
       var box = el('div', 'frag__chips');
@@ -5107,7 +5127,12 @@ body[data-frag="1"] .frag-knopf{display:none}
         var antwort = (d && d.antwort) ? String(d.antwort) : 'Da bin ich gerade nicht sicher. Schreib uns kurz bei WhatsApp.';
         nachricht('d', antwort);
         verlauf.push({rolle:'assistant', text: antwort});
-        karten(d.karten); aktion(d.aktion); chips(d.chips);
+        karten(d.karten); aktion(d.aktion);
+        /* Pruefung 11.09.2026: bei leerem Tageskontingent boten die Chips
+           wieder Fragen ans Modell an, der Gast lief dreimal in dieselbe
+           Absage. Meldet der Worker einen Fehler, fuehren die Chips zur
+           Seite statt zum Modell. */
+        if(d.meta && d.meta.fehler){ ankerChips(); } else { chips(d.chips); }
       })
       .catch(function(err){
         tipp.remove();
